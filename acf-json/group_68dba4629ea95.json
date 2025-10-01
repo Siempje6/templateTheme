@@ -520,6 +520,79 @@
                     ],
                     "min": "",
                     "max": ""
+                },
+                "layout_68dd341b81838": {
+                    "key": "layout_68dd341b81838",
+                    "name": "bloglink",
+                    "label": "BlogLink",
+                    "display": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_68dd34608183a",
+                            "label": "ImageBlog",
+                            "name": "imageblog",
+                            "aria-label": "",
+                            "type": "image",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "return_format": "array",
+                            "library": "all",
+                            "min_width": "",
+                            "min_height": "",
+                            "min_size": "",
+                            "max_width": "",
+                            "max_height": "",
+                            "max_size": "",
+                            "mime_types": "",
+                            "allow_in_bindings": 0,
+                            "preview_size": "medium"
+                        },
+                        {
+                            "key": "field_68dd349d8183b",
+                            "label": "DateBlog",
+                            "name": "dateblog",
+                            "aria-label": "",
+                            "type": "date_picker",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "display_format": "F j, Y",
+                            "return_format": "F j, Y",
+                            "first_day": 1,
+                            "default_to_current_date": 1,
+                            "allow_in_bindings": 0
+                        },
+                        {
+                            "key": "field_68dd34ce8183c",
+                            "label": "TitleBlog",
+                            "name": "titleblog",
+                            "aria-label": "",
+                            "type": "link",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "return_format": "array",
+                            "allow_in_bindings": 0
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
                 }
             },
             "min": "",
@@ -545,5 +618,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1759325987
+    "modified": 1759327681
 }

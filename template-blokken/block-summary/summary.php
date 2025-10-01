@@ -48,9 +48,9 @@ if ($border_repeater && is_array($border_repeater) && isset($border_repeater[0][
 .summary-item {
     display: flex;
     justify-content: space-between; 
-    align-items: center;           
-    padding: 0px 20px;
+    align-items: center;  
     transition: all 0.3s ease;
+    padding: 0 20px;
     opacity: 1;
     filter: blur(0);
 }
