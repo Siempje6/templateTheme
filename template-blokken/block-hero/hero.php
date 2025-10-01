@@ -74,7 +74,6 @@ if ($align_option && isset($align_option[0]['alignment'])) {
     font-size: 3rem;
     font-weight: 700;
     margin: 0 0 20px 0;
-    color: #222;
 }
 
 .hero-text {

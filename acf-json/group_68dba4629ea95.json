@@ -384,6 +384,142 @@
                     ],
                     "min": "",
                     "max": ""
+                },
+                "layout_68dd269904f04": {
+                    "key": "layout_68dd269904f04",
+                    "name": "summary",
+                    "label": "Summary",
+                    "display": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_68dd26a9f453e",
+                            "label": "CustomSummary",
+                            "name": "customsummary",
+                            "aria-label": "",
+                            "type": "repeater",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "layout": "table",
+                            "min": 0,
+                            "max": 0,
+                            "collapsed": "",
+                            "button_label": "Nieuwe rij",
+                            "rows_per_page": 20,
+                            "sub_fields": [
+                                {
+                                    "key": "field_68dd26b0f453f",
+                                    "label": "TitleSummary",
+                                    "name": "titlesummary",
+                                    "aria-label": "",
+                                    "type": "text",
+                                    "instructions": "",
+                                    "required": 0,
+                                    "conditional_logic": 0,
+                                    "wrapper": {
+                                        "width": "",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "default_value": "",
+                                    "maxlength": "",
+                                    "allow_in_bindings": 0,
+                                    "placeholder": "",
+                                    "prepend": "",
+                                    "append": "",
+                                    "parent_repeater": "field_68dd26a9f453e"
+                                },
+                                {
+                                    "key": "field_68dd26cbf4540",
+                                    "label": "YearSummary",
+                                    "name": "yearsummary",
+                                    "aria-label": "",
+                                    "type": "number",
+                                    "instructions": "",
+                                    "required": 0,
+                                    "conditional_logic": 0,
+                                    "wrapper": {
+                                        "width": "",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "default_value": "",
+                                    "min": "",
+                                    "max": "",
+                                    "allow_in_bindings": 0,
+                                    "placeholder": "",
+                                    "step": "",
+                                    "prepend": "",
+                                    "append": "",
+                                    "parent_repeater": "field_68dd26a9f453e"
+                                }
+                            ]
+                        },
+                        {
+                            "key": "field_68dd2e34831bb",
+                            "label": "Border",
+                            "name": "border",
+                            "aria-label": "",
+                            "type": "repeater",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "layout": "table",
+                            "min": 0,
+                            "max": 0,
+                            "collapsed": "",
+                            "button_label": "Nieuwe rij",
+                            "rows_per_page": 20,
+                            "sub_fields": [
+                                {
+                                    "key": "field_68dd2ee8831bc",
+                                    "label": "BorderSummary",
+                                    "name": "bordersummary",
+                                    "aria-label": "",
+                                    "type": "select",
+                                    "instructions": "",
+                                    "required": 0,
+                                    "conditional_logic": 0,
+                                    "wrapper": {
+                                        "width": "",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "choices": {
+                                        "none": "none",
+                                        "full": "full",
+                                        "left": "left",
+                                        "right": "right",
+                                        "bottom": "bottom",
+                                        "top": "top"
+                                    },
+                                    "default_value": "bottom",
+                                    "return_format": "value",
+                                    "multiple": 0,
+                                    "allow_null": 0,
+                                    "allow_in_bindings": 0,
+                                    "ui": 0,
+                                    "ajax": 0,
+                                    "placeholder": "",
+                                    "create_options": 0,
+                                    "save_options": 0,
+                                    "parent_repeater": "field_68dd2e34831bb"
+                                }
+                            ]
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
                 }
             },
             "min": "",
@@ -409,5 +545,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1759320595
+    "modified": 1759325987
 }
