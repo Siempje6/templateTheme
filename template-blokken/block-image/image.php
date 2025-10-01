@@ -44,7 +44,7 @@ if ($size_repeater && is_array($size_repeater) && isset($size_repeater[0]['image
 
 .image-container.small { width: 40%; }
 .image-container.normal { width: 60%; }
-.image-container.large { width: 80%; }
+.image-container.large { width: 70%; }
 
 .image-content {
     width: 100%;

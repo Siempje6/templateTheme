@@ -8,12 +8,15 @@ $alignment = 'left';
 if ($align_option && isset($align_option[0]['alignment'])) {
     $alignment = $align_option[0]['alignment'];
 }
+
 ?>
 
 <section id="pagina-hero" class="hero-block">
     <div class="container hero-align-<?php echo esc_attr($alignment); ?>">
         <?php if ($title): ?>
-            <h1 class="hero-title"><?php echo esc_html($title); ?></h1>
+            <h1 class="hero-title">
+                <?php echo esc_html($title); ?>
+            </h1>
         <?php endif; ?>
 
         <?php if ($text): ?>
@@ -68,7 +71,7 @@ if ($align_option && isset($align_option[0]['alignment'])) {
 
 .hero-title {
     font-family: serif;
-    font-size: 4rem;
+    font-size: 3rem;
     font-weight: 700;
     margin: 0 0 20px 0;
     color: #222;
