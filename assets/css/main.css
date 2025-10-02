@@ -67,6 +67,13 @@ body {
 }
 
 
+.site-footer {
+    width: 100%;
+    background-color: #f8f6f2;
+    padding: 20px 0;
+    font-family: Arial, sans-serif;
+}
+
 .site-footer .footer-inner {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr; 
@@ -95,26 +102,11 @@ body {
     padding: 0;
     margin: 0;
     display: flex;
-    gap: 10px;
-}
-
-.footer-social a,
-.footer-policy a {
-    text-decoration: none;
-    color: #333;
-}
-
-
-
-.footer-policy ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    display: flex;
     gap: 20px;
     justify-content: center;
 }
 
+.footer-social a,
 .footer-policy a {
     text-decoration: none;
     color: #333;
@@ -131,24 +123,6 @@ body {
     filter: blur(0);
 }
 
-
-
-
-.footer-social ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    display: flex;
-    gap: 20px;
-    justify-content: center;
-}
-
-.footer-social a {
-    text-decoration: none;
-    color: #333;
-    transition: opacity 0.3s ease;
-}
-
 .footer-social ul:hover li a{
     opacity: 0.2;
     filter: blur(1px);
@@ -157,4 +131,66 @@ body {
 .footer-social ul li:hover a{
     opacity: 1;
     filter: blur(0);
+}
+
+/* Nieuwsbrief formulier */
+.footer-nieuwsletter .newsletter-text {
+    margin-bottom: 10px;
+    font-size: 1rem;
+}
+
+.footer-nieuwsletter .newsletter-form {
+    display: flex;
+    gap: 10px;
+}
+
+.footer-nieuwsletter .newsletter-form input[type="email"] {
+    padding: 10px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    width: 200px;
+}
+
+.footer-nieuwsletter .newsletter-form button {
+    padding: 10px 20px;
+    border-radius: 6px;
+    border: none;
+    background-color: #222;
+    color: #fff;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.footer-nieuwsletter .newsletter-form button:hover {
+    background-color: #555;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .site-footer .footer-inner {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+
+    .footer-nieuwsletter,
+    .footer-social,
+    .footer-policy {
+        justify-self: center;
+    }
+
+    .footer-nieuwsletter .newsletter-form {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .footer-nieuwsletter .newsletter-form input[type="email"] {
+        width: 100%;
+        max-width: 300px;
+    }
+
+    .footer-social ul,
+    .footer-policy ul {
+        flex-direction: column;
+        gap: 10px;
+    }
 }
