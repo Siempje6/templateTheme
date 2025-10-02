@@ -52,7 +52,7 @@ if (!is_array($slides)) {
     cursor: grab;
     flex: 0 0 auto; 
     height: 500px;
-    border-radius: 24px;
+    border-radius: 12px;
     background: #fff;
     box-shadow: 0 2px 16px rgba(0,0,0,0.08);
     display: flex;
