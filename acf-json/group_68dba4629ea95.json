@@ -1005,6 +1005,171 @@
                     ],
                     "min": "",
                     "max": ""
+                },
+                "layout_68de72a4d9f8a": {
+                    "key": "layout_68de72a4d9f8a",
+                    "name": "blogheadtext",
+                    "label": "BlogheadText",
+                    "display": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_68de732cd9f8c",
+                            "label": "TextRepeater",
+                            "name": "textrepeater",
+                            "aria-label": "",
+                            "type": "repeater",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "layout": "table",
+                            "min": 0,
+                            "max": 0,
+                            "collapsed": "",
+                            "button_label": "Nieuwe rij",
+                            "rows_per_page": 20,
+                            "sub_fields": [
+                                {
+                                    "key": "field_68de733cd9f8d",
+                                    "label": "BlogTekst",
+                                    "name": "blogtekst",
+                                    "aria-label": "",
+                                    "type": "textarea",
+                                    "instructions": "",
+                                    "required": 0,
+                                    "conditional_logic": 0,
+                                    "wrapper": {
+                                        "width": "",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "default_value": "",
+                                    "maxlength": "",
+                                    "allow_in_bindings": 0,
+                                    "rows": "",
+                                    "placeholder": "",
+                                    "new_lines": "",
+                                    "parent_repeater": "field_68de732cd9f8c"
+                                }
+                            ]
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
+                },
+                "layout_68de768b0fe12": {
+                    "key": "layout_68de768b0fe12",
+                    "name": "dottedlist",
+                    "label": "DottedList",
+                    "display": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_68de76930fe14",
+                            "label": "TextRepeater",
+                            "name": "textrepeater",
+                            "aria-label": "",
+                            "type": "repeater",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "layout": "table",
+                            "min": 0,
+                            "max": 0,
+                            "collapsed": "",
+                            "button_label": "Nieuwe rij",
+                            "rows_per_page": 20,
+                            "sub_fields": [
+                                {
+                                    "key": "field_68de769e0fe15",
+                                    "label": "ListItems",
+                                    "name": "listitems",
+                                    "aria-label": "",
+                                    "type": "text",
+                                    "instructions": "",
+                                    "required": 0,
+                                    "conditional_logic": 0,
+                                    "wrapper": {
+                                        "width": "",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "default_value": "",
+                                    "maxlength": "",
+                                    "allow_in_bindings": 0,
+                                    "placeholder": "",
+                                    "prepend": "",
+                                    "append": "",
+                                    "parent_repeater": "field_68de76930fe14"
+                                }
+                            ]
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
+                },
+                "layout_68de7ba960175": {
+                    "key": "layout_68de7ba960175",
+                    "name": "numberdlist",
+                    "label": "NumberdList",
+                    "display": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_68de7ba960176",
+                            "label": "TextRepeater",
+                            "name": "textrepeater",
+                            "aria-label": "",
+                            "type": "repeater",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "layout": "table",
+                            "min": 0,
+                            "max": 0,
+                            "collapsed": "",
+                            "button_label": "Nieuwe rij",
+                            "rows_per_page": 20,
+                            "sub_fields": [
+                                {
+                                    "key": "field_68de7ba960177",
+                                    "label": "Listitems",
+                                    "name": "listitems",
+                                    "aria-label": "",
+                                    "type": "text",
+                                    "instructions": "",
+                                    "required": 0,
+                                    "conditional_logic": 0,
+                                    "wrapper": {
+                                        "width": "",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "default_value": "",
+                                    "maxlength": "",
+                                    "allow_in_bindings": 0,
+                                    "placeholder": "",
+                                    "prepend": "",
+                                    "append": "",
+                                    "parent_repeater": "field_68de7ba960176"
+                                }
+                            ]
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
                 }
             },
             "min": "",
@@ -1030,5 +1195,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1759406362
+    "modified": 1759414009
 }
