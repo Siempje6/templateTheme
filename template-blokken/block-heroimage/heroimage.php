@@ -1,0 +1,158 @@
+<?php
+$title   = get_sub_field('title');
+$text    = get_sub_field('text'); 
+$buttons = get_sub_field('buttonmenu'); 
+$image   = get_sub_field('image');
+
+$align_option = get_sub_field('align');
+$alignment = 'left';
+if ($align_option && isset($align_option[0]['alignment'])) {
+    $alignment = $align_option[0]['alignment'];
+}
+?>
+
+<section id="pagina-hero" class="hero-block">
+    <div class="container hero-align-<?php echo esc_attr($alignment); ?>">
+        <?php if ($title): ?>
+            <h1 class="hero-title"><?php echo esc_html($title); ?></h1>
+        <?php endif; ?>
+
+        <?php if ($text): ?>
+            <p class="hero-text"><?php echo esc_html($text); ?></p>
+        <?php endif; ?>
+
+        <?php if ($buttons): ?>
+            <div class="hero-buttons hero-buttons-<?php echo esc_attr($alignment); ?>">
+                <?php foreach ($buttons as $btn): 
+                    $link = $btn['items']; 
+                    if ($link):
+                        $url    = $link['url'] ?? '#';
+                        $target = $link['target'] ?? '_self';
+                        $titleBtn = $link['title'] ?? 'Button';
+                ?>
+                    <a href="<?php echo esc_url($url); ?>" target="<?php echo esc_attr($target); ?>" class="hero-btn">
+                        <?php echo esc_html($titleBtn); ?>
+                    </a>
+                <?php 
+                    endif;
+                endforeach; ?>
+            </div>
+        <?php endif; ?>
+
+        <?php if ($image): ?>
+            <div class="image-container">
+                <img 
+                    src="<?php echo esc_url($image['url']); ?>" 
+                    alt="<?php echo esc_attr($image['alt']); ?>" 
+                    class="image-content">
+            </div>
+        <?php endif; ?>
+    </div>
+</section>
+
+<style>
+.hero-block {
+    width: 55%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 40px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #f8f6f2;
+}
+
+.hero-align-left .hero-title,
+.hero-align-left .hero-text,
+.hero-align-left .hero-buttons {
+    text-align: left;
+    align-self: flex-start;
+}
+
+.hero-align-center .hero-title,
+.hero-align-center .hero-text,
+.hero-align-center .hero-buttons {
+    text-align: center;
+    align-self: center;
+}
+
+.hero-align-right .hero-title,
+.hero-align-right .hero-text,
+.hero-align-right .hero-buttons {
+    text-align: right;
+    align-self: flex-end;
+}
+
+.hero-title {
+    font-family: serif;
+    font-size: 3rem;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+.hero-text {
+    font-size: 1.25rem;
+    color: #555;
+    line-height: 1.6;
+    max-width: 800px;
+    margin-bottom: 20px;
+}
+
+.hero-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-bottom: 30px;
+}
+
+.hero-btn {
+    display: inline-block;
+    padding: 12px 30px;
+    font-size: 1rem;
+    text-decoration: none;
+    color: #fff;
+    background-color: #1a5427;
+    border-radius: 6px;
+    transition: all 0.3s ease;
+}
+
+.hero-btn:hover {
+    background-color: #247937;
+    transform: translateY(-1px);
+}
+
+.image-container {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.image-content {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    object-fit: cover;
+    transition: all 0.3s ease;
+}
+
+img{
+    border-radius: 12px;
+}
+
+@media (max-width: 768px) {
+    .hero-title {
+        font-size: 2.2rem;
+    }
+    .hero-text {
+        font-size: 1rem;
+    }
+    .hero-buttons {
+        flex-direction: column;
+        align-items: center;
+    }
+    .hero-btn {
+        width: 100%;
+        text-align: center;
+    }
+}
+</style>

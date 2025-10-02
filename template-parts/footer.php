@@ -5,7 +5,6 @@ $menupolicy   = get_field('menupolicy', 'option');
 ?>
 
 <footer id="site-footer" class="site-footer">
-
     <div class="footer-inner">
 
         <!-- Nieuwsbrief -->
@@ -20,7 +19,6 @@ $menupolicy   = get_field('menupolicy', 'option');
                     <?php endif; ?>
 
                     <form class="newsletter-form" method="post" action="#">
-                        
                         <input type="email" name="newsletter_email" placeholder="Vul je e-mail in" value="<?php echo esc_attr($email); ?>" required>
                         <button type="submit"></button>
                     </form>
@@ -72,64 +70,3 @@ $menupolicy   = get_field('menupolicy', 'option');
 <?php wp_footer(); ?>
 </body>
 </html>
-
-<style>
-.footer-nieuwsletter {
-    max-width: 400px;
-    position: relative;
-}
-
-.newsletter-text {
-    display: block;
-    margin-bottom: 12px;
-    margin-left: 12px;
-    font-weight: 500;
-    font-size: 0.95rem;
-}
-
-.newsletter-form input[type="email"] {
-    width: 100%;
-    padding: 12px 50px 12px 40px; 
-    border-radius: 24px;
-    border: 1px solid #ccc;
-    font-size: 1rem;
-    outline: none;
-    background: #fff;
-    background-size: 20px 20px;
-}
-
-.newsletter-form button {
-    position: absolute;
-    right: 2px;
-    top: 50%;
-    transform: translateY(-50%);
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    border: none;
-    background-color: #e7e3db;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    cursor: pointer;
-    font-size: 1rem;
-    opacity: 0;
-    transition: opacity 0.3s ease;
-}
-
-.newsletter-form button::after {
-    content: '→';
-    display: block;
-}
-
-.newsletter-form input[type="email"]:not(:placeholder-shown) + button {
-    opacity: 1;
-}
-
-.newsletter-form {
-    position: relative;
-    display: block;
-}
-
-
-</style>
