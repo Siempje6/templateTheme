@@ -14,3 +14,7 @@ function register_nav_menus($locations) {}
 function get_sub_field($field_name) { return ''; }
 function esc_url($url) { return $url; }
 function esc_attr($text) { return $text; }
+function have_rows($field_name) { return false; }
+function the_row() {}
+function get_row_layout() { return ''; }
+function get_template_part($slug, $name = null) {}
