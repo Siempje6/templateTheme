@@ -1,3 +1,80 @@
+
+.contact-form {
+    width: 100%;
+    max-width: 600px;
+    margin: 10px auto;
+    padding: 20px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    box-sizing: border-box;
+}
+
+.contact-form label {
+    font-weight: 600;
+    margin: 2px;
+    font-size: 1rem;
+    color: #333;
+}
+
+.contact-form input[type="text"],
+.contact-form input[type="email"],
+.contact-form input[type="tel"],
+.contact-form textarea {
+    font-family: Arial, sans-serif;
+    width: 100%;
+    padding: 14px 20px;
+    border-radius: 8px;
+    border: 1px solid #e0e0e0;
+    font-size: 0.9rem;
+    outline: none;
+    background-color: #f9f9f9;
+    box-sizing: border-box;
+    transition: border-color 0.3s ease;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+    border-color: #007bff;
+}
+
+.contact-form textarea {
+    resize: vertical;
+    min-height: 120px;
+}
+
+.contact-form button[type="submit"] {
+    padding: 12px 30px;
+    font-size: 1rem;
+    text-decoration: none;
+    color: #fff;
+    background-color: #1a5427;
+    border-radius: 6px;
+    transition: all 0.3s ease;
+    border: none;
+}
+
+.contact-form button[type="submit"]:hover {
+    background-color: #247937;
+    transform: translateY(-px);
+}
+
+@media (max-width: 768px) {
+    .contact-form {
+        width: 90%;
+        padding: 15px;
+    }
+
+    .contact-form button[type="submit"] {
+        width: 100%;
+        text-align: center;
+    }
+}
+
+
+
+
 body {
     margin: 0;
     font-family: Arial, sans-serif;
@@ -170,7 +247,8 @@ body {
     height: 40px;
     border-radius: 50%;
     border: none;
-    background-color: #e7e3db;
+    background-color: #1a5427;
+    color: #fff;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -185,7 +263,7 @@ body {
 }
 
 .footer-nieuwsletter .newsletter-form button:hover {
-    background-color: #d6d2c8;
+    background-color: #247937;
 
 }
 

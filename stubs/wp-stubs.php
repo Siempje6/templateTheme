@@ -18,3 +18,4 @@ function have_rows($field_name) { return false; }
 function the_row() {}
 function get_row_layout() { return ''; }
 function get_template_part($slug, $name = null) {}
+function esc_html($text) { return $text; }
