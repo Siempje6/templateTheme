@@ -59,19 +59,5 @@ if ($size_repeater && is_array($size_repeater) && isset($size_repeater[0]['image
 .image-content.medium { border-radius: 12px; }
 .image-content.large { border-radius: 24px; }
 
-@media (max-width: 1024px) {
-    .image-container.small,
-    .image-container.normal,
-    .image-container.large {
-        width: 80%;
-    }
-}
 
-@media (max-width: 768px) {
-    .image-container.small,
-    .image-container.normal,
-    .image-container.large {
-        width: 90%;
-    }
-}
 </style>

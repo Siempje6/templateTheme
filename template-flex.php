@@ -13,13 +13,28 @@
     </header>
 
     <main class="site-main">
-        <?php if( have_rows('flex_fields') ): ?>
-            <?php while( have_rows('flex_fields') ): the_row(); ?>
+        <?php if (have_rows('flex_fields')): ?>
+            <?php while (have_rows('flex_fields')): the_row(); ?>
                 <?php
                 $layout = get_row_layout();
                 get_template_part('template-blokken/block-' . $layout . '/' . $layout);
                 ?>
             <?php endwhile; ?>
+        <?php endif; ?>
+
+        <?php if (have_rows('contact_form_fields')): ?>
+            <section class="contact-form">
+                <?php get_template_part('contact-form/form-start'); ?>
+
+                <?php while (have_rows('contact_form_fields')): the_row(); ?>
+                    <?php
+                    $layout = get_row_layout();
+                    get_template_part('contact-form/' . $layout);
+                    ?>
+                <?php endwhile; ?>
+
+                <?php get_template_part('contact-form/form-end'); ?>
+            </section>
         <?php endif; ?>
     </main>
 

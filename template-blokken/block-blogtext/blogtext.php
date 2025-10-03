@@ -1,16 +1,14 @@
 <?php
-
-$textrepeater = get_sub_field('textrepeater');
+$blogtekst = get_sub_field('blogtekst');
 ?>
 
 <section id="pagina-blogtext" class="blogtext-block">
     <div class="container blogtext-container">
-        <?php foreach ($textrepeater as $row): ?>
-            <?php if (!empty($row['blogtekst'])): ?>
-                <p class="blog-text"><?php echo esc_html($row['blogtekst']); ?></p>
-            <?php endif; ?>
-        <?php endforeach; ?>
-
+        <?php if (!empty($blogtekst)): ?>
+            <div class="blog-text">
+                <?php echo $blogtekst; ?>
+            </div>
+        <?php endif; ?>
     </div>
 </section>
 
@@ -18,6 +16,7 @@ $textrepeater = get_sub_field('textrepeater');
     .blogtext-block {
         width: 100%;
         background-color: #f8f6f2;
+        margin-top: 10px;
     }
 
     .blogtext-container {

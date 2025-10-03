@@ -958,11 +958,11 @@
                     "display": "block",
                     "sub_fields": [
                         {
-                            "key": "field_68de42d0e2a4e",
-                            "label": "TextRepeater",
-                            "name": "textrepeater",
+                            "key": "field_68de42f4e2a4f",
+                            "label": "BlogTekst",
+                            "name": "blogtekst",
                             "aria-label": "",
-                            "type": "repeater",
+                            "type": "wysiwyg",
                             "instructions": "",
                             "required": 0,
                             "conditional_logic": 0,
@@ -971,36 +971,12 @@
                                 "class": "",
                                 "id": ""
                             },
-                            "layout": "table",
-                            "min": 0,
-                            "max": 0,
-                            "collapsed": "",
-                            "button_label": "Nieuwe rij",
-                            "rows_per_page": 20,
-                            "sub_fields": [
-                                {
-                                    "key": "field_68de42f4e2a4f",
-                                    "label": "BlogTekst",
-                                    "name": "blogtekst",
-                                    "aria-label": "",
-                                    "type": "textarea",
-                                    "instructions": "",
-                                    "required": 0,
-                                    "conditional_logic": 0,
-                                    "wrapper": {
-                                        "width": "",
-                                        "class": "",
-                                        "id": ""
-                                    },
-                                    "default_value": "",
-                                    "maxlength": "",
-                                    "allow_in_bindings": 0,
-                                    "rows": "",
-                                    "placeholder": "",
-                                    "new_lines": "",
-                                    "parent_repeater": "field_68de42d0e2a4e"
-                                }
-                            ]
+                            "default_value": "",
+                            "allow_in_bindings": 0,
+                            "tabs": "all",
+                            "toolbar": "full",
+                            "media_upload": 1,
+                            "delay": 0
                         }
                     ],
                     "min": "",
@@ -1195,5 +1171,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1759414009
+    "modified": 1759475361
 }

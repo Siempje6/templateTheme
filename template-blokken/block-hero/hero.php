@@ -118,33 +118,5 @@ if ($align_option && isset($align_option[0]['alignment'])) {
     transform: translateY(-1px);
 }
 
-@media (max-width: 1024px) {
-    .hero-block {
-        width: 80%;
-    }
-}
 
-@media (max-width: 768px) {
-    .hero-block {
-        width: 90%;
-    }
-
-    .hero-title {
-        font-size: 2.2rem;
-    }
-
-    .hero-text {
-        font-size: 1rem;
-    }
-
-    .hero-buttons {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .hero-btn {
-        width: 100%;
-        text-align: center;
-    }
-}
 </style>

@@ -189,32 +189,3 @@ body {
 
 }
 
-/* Responsive */
-@media (max-width: 768px) {
-    .site-footer .footer-inner {
-        grid-template-columns: 1fr;
-        gap: 30px;
-    }
-
-    .footer-nieuwsletter,
-    .footer-social,
-    .footer-policy {
-        justify-self: center;
-    }
-
-    .footer-nieuwsletter .newsletter-form {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .footer-nieuwsletter .newsletter-form input[type="email"] {
-        width: 100%;
-        max-width: 300px;
-    }
-
-    .footer-social ul,
-    .footer-policy ul {
-        flex-direction: column;
-        gap: 10px;
-    }
-}
