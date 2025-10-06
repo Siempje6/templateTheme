@@ -42,4 +42,24 @@
         <?php get_template_part('template-parts/footer'); ?>
     </footer>
 
+    <style>
+        .site-wrapper {
+            display: flex;
+            flex-direction: column;
+            max-width: 100vw;
+        }
+
+        .site-header {
+            flex: 0 0 auto;
+        }
+
+        .site-main {
+            flex: 1 0 auto;
+        }
+
+        .site-footer {
+            flex: 0 0 auto;
+        }
+    </style>
+
 </div>

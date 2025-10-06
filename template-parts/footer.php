@@ -71,6 +71,11 @@ $menupolicy   = get_field('menupolicy', 'option');
 </body>
 
 <style>
+/* ===== Box Sizing ===== */
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
 /* ================= BASIS STYLING ================= */
 body, html {
     margin: 0;
@@ -83,37 +88,36 @@ body, html {
     background-color: #f8f6f2;
     padding: 20px 0;
     font-family: Arial, sans-serif;
-    margin: 0; /* geen extra witruimte */
 }
 
 .footer .footer-inner {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr; 
+    display: flex;           /* Flex gebruiken i.p.v. grid */
+    flex-wrap: wrap;         /* Items kunnen onder elkaar komen */
+    justify-content: center; /* Altijd horizontaal gecentreerd */
     align-items: center;
-    gap: 20px; 
-    max-width: 1200px; 
+    gap: 40px;               /* Ruimte tussen secties */
+    width: 100%;
+    max-width: 1200px;       /* Behoud maximale breedte */
     margin: 0 auto;
-    padding: 20px 0;
+    padding: 0 20px;
 }
 
 /* ===== Nieuwsbrief ===== */
 .footer-nieuwsletter {
-    justify-self: start; 
+    width: 100%;
     max-width: 400px;
-    position: relative;
 }
 
 .footer-nieuwsletter .newsletter-text {
     display: block;
     margin-bottom: 12px;
-    margin-left: 12px;
     font-weight: 500;
     font-size: 0.95rem;
+    text-align: center; /* Gecentreerd */
 }
 
 .footer-nieuwsletter .newsletter-form {
     position: relative;
-    display: block;
 }
 
 .footer-nieuwsletter .newsletter-form input[type="email"] {
@@ -124,7 +128,6 @@ body, html {
     font-size: 1rem;
     outline: none;
     background: #fff;
-    background-size: 20px 20px;
 }
 
 .footer-nieuwsletter .newsletter-form button {
@@ -138,17 +141,15 @@ body, html {
     border: none;
     background-color: #1a5427;
     color: #fff;
+    cursor: pointer;
+    font-size: 1.2rem;
     display: flex;
     align-items: center;
     justify-content: center;
-    cursor: pointer;
-    font-size: 1.2rem;
-    transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
 .footer-nieuwsletter .newsletter-form button::after {
     content: '→';
-    display: block;
 }
 
 .footer-nieuwsletter .newsletter-form button:hover {
@@ -156,14 +157,6 @@ body, html {
 }
 
 /* ===== Social & Policy ===== */
-.footer-social {
-    justify-self: center;
-}
-
-.footer-policy {
-    justify-self: end;
-}
-
 .footer-social ul,
 .footer-policy ul {
     list-style: none;
@@ -194,37 +187,22 @@ body, html {
 }
 
 /* ===== RESPONSIVE ===== */
-@media screen and (max-width: 1300px) {
-    /* Alles horizontaal blijft hetzelfde */
-    .footer .footer-inner {
-        grid-template-columns: 1fr 1fr 1fr; 
-        gap: 15px;
-        max-width: 800px;
-    }
-}
-
-/* Vanaf kleiner scherm alles gecentreerd */
-@media screen and (max-width: 1178px) {
-
-    .footer .footer-inner {
-        display: grid;
-        grid-template-columns: 1fr;
-        justify-items: center;
-        gap: 20px;
-        max-width: 400px;
-        text-align: center;
+@media screen and (max-width: 768px) {
+    .footer-inner {
+        flex-direction: column;
+        gap: 25px;
     }
 
     .footer-nieuwsletter,
     .footer-social,
     .footer-policy {
-        justify-self: center;
+        max-width: 100%;
+        text-align: center;
     }
 
     .footer-nieuwsletter .newsletter-text {
         margin-left: 0;
     }
 }
-
 </style>
 </html>

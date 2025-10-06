@@ -1,0 +1,27 @@
+Naam: Om te weten wie het bericht stuurt. 
+E-mailadres: Om een reactie te kunnen sturen. 
+Bericht: Een tekstveld (vaak een tekstgebied) waar de bezoeker zijn boodschap kan typen. 
+
+Aanvullende velden
+Deze velden zijn optioneel en afhankelijk van de context van het formulier: 
+
+Onderwerp: Om het bericht te categoriseren. 
+Telefoonnummer: Voor een alternatieve manier van contact. 
+Bedrijfsnaam: Handig voor zakelijke formulieren. 
+Adres: Soms nodig voor specifieke aanvragen. 
+
+Keuze-opties
+Deze velden bieden meer gestructureerde invoer:
+
+Meerkeuze/Dropdown menu: Gebruiker kiest uit een lijst, bijvoorbeeld voor een reden van contact. 
+Selectievakjes (Checkboxes): Gebruiker kan één of meerdere opties selecteren. 
+Keuzerondjes (Radiobuttons): Gebruiker kan slechts één optie uit een groep kiezen. 
+Datum: Een veld om een specifieke datum te kiezen. 
+
+Functionele opties
+Dit zijn elementen die het gebruiksgemak of de veiligheid verbeteren:
+
+Bestand uploaden: Bezoekers kunnen bestanden meesturen. 
+reCAPTCHA: Een beveiliging om spam te voorkomen. 
+Verzendknop: De knop om het formulier in te dienen. 
+Acceptatie checkbox: Om akkoord te gaan met voorwaarden of privacybeleid. 
