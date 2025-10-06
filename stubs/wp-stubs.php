@@ -19,3 +19,6 @@ function the_row() {}
 function get_row_layout() { return ''; }
 function get_template_part($slug, $name = null) {}
 function esc_html($text) { return $text; }
+function wp_dequeue_style($handle) {}
+function remove_action($hook, $function_to_remove, $priority = 10) {}
+?>
