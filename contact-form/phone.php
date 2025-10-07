@@ -3,7 +3,6 @@ $label = get_sub_field('input_label');
 $name = get_sub_field('input_name');
 $placeholder = get_sub_field('placeholder');
 
-// Unieke lijst van landen
 $country_codes = [
     ['code' => '+61', 'label' => 'Australië (+61)'],
     ['code' => '+32', 'label' => 'België (+32)'],
@@ -57,7 +56,6 @@ $country_codes = [
     ['code' => '+84', 'label' => 'Vietnam (+84)'],
 ];
 
-// Patterns met optionele spatie (\s?) na het startnummer
 $patterns = [
     '+61'  => '^4\s?\d{8}$',
     '+32'  => '^4\s?\d{8}$',
@@ -111,7 +109,6 @@ $patterns = [
     '+84'  => '^((3[2-9]|5[689]|7[06789]|8[1-5]|9[0-9]))\s?\d{7}$',
 ];
 
-// Default startnummers met '0' waar nodig
 $default_starts = [
     '+61'  => '4',
     '+32'  => '4',

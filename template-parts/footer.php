@@ -18,10 +18,20 @@ $menupolicy   = get_field('menupolicy', 'option');
                         <p class="newsletter-text"><?php echo esc_html($text); ?></p>
                     <?php endif; ?>
 
-                    <form class="newsletter-form" method="post" action="#">
+                    <!-- Nieuwsbriefformulier -->
+                    <form class="newsletter-form" method="post" action="<?php echo esc_url(admin_url('admin-post.php')); ?>">
                         <input type="email" name="newsletter_email" placeholder="Vul je e-mail in" value="<?php echo esc_attr($email); ?>" required>
+                        <input type="hidden" name="action" value="send_newsletter_email">
+                        <?php wp_nonce_field('newsletter_nonce', 'newsletter_nonce_field'); ?>
                         <button type="submit"></button>
                     </form>
+
+                    <!-- Succesmelding -->
+                    <?php
+                    if (isset($_GET['newsletter']) && $_GET['newsletter'] == 'success') {
+                        echo '<p class="newsletter-success">Bedankt! Je bent ingeschreven voor de nieuwsbrief.</p>';
+                    }
+                    ?>
                 <?php endforeach; ?>
             </div>
         <?php endif; ?>
@@ -68,7 +78,6 @@ $menupolicy   = get_field('menupolicy', 'option');
 </footer>
 
 <?php wp_footer(); ?>
-</body>
 
 <style>
 /* ===== Box Sizing ===== */
@@ -91,13 +100,13 @@ body, html {
 }
 
 .footer .footer-inner {
-    display: flex;           /* Flex gebruiken i.p.v. grid */
-    flex-wrap: wrap;         /* Items kunnen onder elkaar komen */
-    justify-content: center; /* Altijd horizontaal gecentreerd */
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
     align-items: center;
-    gap: 40px;               /* Ruimte tussen secties */
+    gap: 40px;
     width: 100%;
-    max-width: 1200px;       /* Behoud maximale breedte */
+    max-width: 1200px;
     margin: 0 auto;
     padding: 0 20px;
 }
@@ -113,7 +122,7 @@ body, html {
     margin-bottom: 12px;
     font-weight: 500;
     font-size: 0.95rem;
-    text-align: center; /* Gecentreerd */
+    text-align: center;
 }
 
 .footer-nieuwsletter .newsletter-form {
@@ -122,7 +131,7 @@ body, html {
 
 .footer-nieuwsletter .newsletter-form input[type="email"] {
     width: 100%;
-    padding: 12px 50px 12px 40px; 
+    padding: 12px 50px 12px 40px;
     border-radius: 24px;
     border: 1px solid #ccc;
     font-size: 1rem;
@@ -154,6 +163,13 @@ body, html {
 
 .footer-nieuwsletter .newsletter-form button:hover {
     background-color: #247937;
+}
+
+.newsletter-success {
+    color: green;
+    font-weight: bold;
+    text-align: center;
+    margin-top: 10px;
 }
 
 /* ===== Social & Policy ===== */
@@ -205,4 +221,3 @@ body, html {
     }
 }
 </style>
-</html>
