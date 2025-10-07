@@ -60,17 +60,8 @@
     transform: translateY(-px);
 }
 
-@media (max-width: 768px) {
-    .contact-form {
-        width: 90%;
-        padding: 15px;
-    }
 
-    .contact-form button[type="submit"] {
-        width: 100%;
-        text-align: center;
-    }
-}
+
 
 
 
