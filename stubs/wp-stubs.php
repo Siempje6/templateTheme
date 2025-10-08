@@ -41,4 +41,5 @@ function add_query_arg($key, $value, $url = '') { return $url .
     (strpos($url, '?') === false ? '?' : '&') . urlencode($key) . '=' . urlencode($value); 
 }
 function wp_get_referer() { return ''; }
+function wp_kses_post($data) { return $data; }
 ?>

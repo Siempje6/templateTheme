@@ -1,5 +1,4 @@
 <?php
-// Haal ACF subvelden op voor het adresveld
 $label = function_exists('get_sub_field') ? get_sub_field('input_label') : 'Adres';
 $name = function_exists('get_sub_field') ? get_sub_field('input_name') : 'adres';
 $placeholder = function_exists('get_sub_field') ? get_sub_field('input_placeholder') : 'Vul je adres in';
@@ -15,3 +14,4 @@ $placeholder = function_exists('get_sub_field') ? get_sub_field('input_placehold
     placeholder="<?php echo esc_attr($placeholder); ?>" 
     required
 >
+
