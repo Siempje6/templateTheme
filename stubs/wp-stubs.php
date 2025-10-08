@@ -42,4 +42,5 @@ function add_query_arg($key, $value, $url = '') { return $url .
 }
 function wp_get_referer() { return ''; }
 function wp_kses_post($data) { return $data; }
+function do_shortcode($shortcode) { return $shortcode; }
 ?>
