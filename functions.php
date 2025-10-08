@@ -74,38 +74,33 @@ add_action('admin_post_nopriv_send_newsletter_email', 'handle_newsletter_form');
 add_action('admin_post_send_newsletter_email', 'handle_newsletter_form');
 
 function handle_newsletter_form() {
-    // Nonce check
     if (!isset($_POST['newsletter_nonce_field']) || !wp_verify_nonce($_POST['newsletter_nonce_field'], 'newsletter_nonce')) {
         wp_die('Beveiligingscheck mislukt!');
     }
 
-    // Valideer e-mailadres van gebruiker
     if (!isset($_POST['newsletter_email']) || !is_email($_POST['newsletter_email'])) {
         wp_die('Ongeldig e-mailadres!');
     }
 
-    $user_email = sanitize_email($_POST['newsletter_email']); // gebruiker
-    $admin_email = get_field('email', 'option'); // admin uit optiespagina
+    $user_email = sanitize_email($_POST['newsletter_email']); 
+    $admin_email = get_field('email', 'option'); 
 
     if (!$admin_email || !is_email($admin_email)) {
         wp_die('Geen geldig admin e-mailadres ingesteld.');
     }
 
-    // 1️⃣ Mail naar admin (notificatie)
     $admin_subject = 'Nieuwe nieuwsbriefinschrijving';
     $admin_message = 'Er is een nieuwe inschrijving voor de nieuwsbrief: ' . $user_email;
     $admin_headers = array('Content-Type: text/plain; charset=UTF-8');
 
     wp_mail($admin_email, $admin_subject, $admin_message, $admin_headers);
 
-    // 2️⃣ Mail naar gebruiker (bevestiging)
     $user_subject = 'Bevestiging nieuwsbriefinschrijving';
     $user_message = "Hallo,\n\nBedankt voor je inschrijving voor onze nieuwsbrief!\n\nMet vriendelijke groet,\n[Je Bedrijf]";
     $user_headers = array('Content-Type: text/plain; charset=UTF-8');
 
     wp_mail($user_email, $user_subject, $user_message, $user_headers);
 
-    // Redirect terug met succesmelding
     wp_redirect(add_query_arg('newsletter', 'success', wp_get_referer()));
     exit;
 }

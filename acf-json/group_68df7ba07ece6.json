@@ -412,7 +412,7 @@
                             "label": "Date Option",
                             "name": "date_option",
                             "aria-label": "",
-                            "type": "date_picker",
+                            "type": "text",
                             "instructions": "",
                             "required": 0,
                             "conditional_logic": 0,
@@ -421,11 +421,38 @@
                                 "class": "",
                                 "id": ""
                             },
-                            "display_format": "d\/m\/Y",
-                            "return_format": "d\/m\/Y",
-                            "first_day": 1,
-                            "default_to_current_date": 0,
-                            "allow_in_bindings": 0
+                            "default_value": "",
+                            "maxlength": "",
+                            "allow_in_bindings": 0,
+                            "placeholder": "",
+                            "prepend": "",
+                            "append": ""
+                        },
+                        {
+                            "key": "field_68e6273fa8877",
+                            "label": "Required",
+                            "name": "required",
+                            "aria-label": "",
+                            "type": "checkbox",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "choices": {
+                                "Required": "Required"
+                            },
+                            "default_value": [],
+                            "return_format": "value",
+                            "allow_custom": 0,
+                            "allow_in_bindings": 0,
+                            "layout": "vertical",
+                            "toggle": 0,
+                            "save_custom": 0,
+                            "custom_choice_button_text": "Nieuwe keuze toevoegen"
                         }
                     ],
                     "min": "",
@@ -1278,6 +1305,7 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
+    "display_title": "",
     "acfe_display_title": "",
     "acfe_autosync": [
         "json"
@@ -1285,5 +1313,5 @@
     "acfe_form": 0,
     "acfe_meta": "",
     "acfe_note": "",
-    "modified": 1759752749
+    "modified": 1759913823
 }

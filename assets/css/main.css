@@ -21,6 +21,7 @@
 .contact-form input[type="text"],
 .contact-form input[type="email"],
 .contact-form input[type="tel"],
+.contact-form input[type="date"],
 .contact-form textarea {
     font-family: Arial, sans-serif;
     width: 100%;
