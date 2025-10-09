@@ -574,6 +574,40 @@
                                 }
                             ],
                             "acfe_repeater_stylised_button": 0
+                        },
+                        {
+                            "key": "field_68e7b6f69f191",
+                            "label": "Animatie",
+                            "name": "animatie",
+                            "aria-label": "",
+                            "type": "radio",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "choices": {
+                                "fade-up": "fade-up",
+                                "fade-down": "fade-down",
+                                "fade-left": "fade-left",
+                                "fade-right": "fade-right",
+                                "zoom-in": "zoom-in",
+                                "zoom-out": "zoom-out",
+                                "rotate-left": "rotate-left",
+                                "rotate-right": "rotate-right",
+                                "bounce": "bounce",
+                                "slide-up": "slide-up"
+                            },
+                            "default_value": "fade-up",
+                            "return_format": "value",
+                            "allow_null": 0,
+                            "other_choice": 0,
+                            "allow_in_bindings": 0,
+                            "layout": "vertical",
+                            "save_other_choice": 0
                         }
                     ],
                     "min": "",
@@ -1526,7 +1560,7 @@
             },
             "min": "",
             "max": "",
-            "button_label": "Custom Fields",
+            "button_label": "Nieuwe rij",
             "acfe_flexible_stylised_button": false,
             "acfe_flexible_hide_empty_message": false,
             "acfe_flexible_empty_message": "",
@@ -1585,5 +1619,5 @@
     "acfe_form": 0,
     "acfe_meta": "",
     "acfe_note": "",
-    "modified": 1759923612
+    "modified": 1760016423
 }

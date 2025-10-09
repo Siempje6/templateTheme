@@ -7,7 +7,6 @@
 // 1. Scripts & Styles inladen
 // ===============================
 function thema_enqueue_assets() {
-
     // ---------- CSS ----------
     wp_enqueue_style(
         'theme-main',
@@ -15,16 +14,6 @@ function thema_enqueue_assets() {
         array(),
         null
     );
-
-    // Blok specifieke CSS (image)
-    if (file_exists(get_template_directory() . '/template-blokken/block-image/style.css')) {
-        wp_enqueue_style(
-            'image-block-style',
-            get_template_directory_uri() . '/template-blokken/block-image/style.css',
-            array(),
-            null
-        );
-    }
 
     // ---------- JS ----------
     // GSAP core
@@ -36,7 +25,7 @@ function thema_enqueue_assets() {
         true
     );
 
-    // ScrollTrigger plugin
+    // ScrollTrigger plugin (optioneel, kan in de toekomst)
     wp_enqueue_script(
         'gsap-scrolltrigger',
         'https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/ScrollTrigger.min.js',
@@ -94,4 +83,26 @@ add_filter('acf/settings/load_json', function ($paths) {
     $paths[] = get_stylesheet_directory() . '/acf-json';
     return $paths;
 });
-?>
+
+// ===============================
+// 5. Block Image CSS & JS
+// ===============================
+function image_block_assets() {
+    // CSS
+    wp_enqueue_style(
+        'image-block-style',
+        get_template_directory_uri() . '/template-blokken/block-image/style.css',
+        array(),
+        null
+    );
+
+    // JS
+    wp_enqueue_script(
+        'image-block-script',
+        get_template_directory_uri() . '/template-blokken/block-image/script.js',
+        array('gsap-core'),
+        null,
+        true
+    );
+}
+add_action('wp_enqueue_scripts', 'image_block_assets');
