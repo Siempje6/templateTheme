@@ -6,10 +6,6 @@
 
     <header class="site-header">
         <?php get_template_part('template-parts/header'); ?>
-
-    </header>
-
-
     </header>
 
     <main class="site-main">
@@ -39,7 +35,19 @@
     </main>
 
     <footer class="site-footer">
-        <?php get_template_part('template-parts/footer'); ?>
+        <?php if (have_rows('footerbuilder', 'option')): ?>
+            <div class="footer-grid">
+                <?php while (have_rows('footerbuilder', 'option')): the_row(); ?>
+                    <?php
+                    $layout = get_row_layout();
+                    if ($layout && locate_template('footer-builder/block-' . $layout . '/' . $layout . '.php')): ?>
+                        <div class="footer-grid__item">
+                            <?php get_template_part('footer-builder/block-' . $layout . '/' . $layout); ?>
+                        </div>
+                    <?php endif; ?>
+                <?php endwhile; ?>
+            </div>
+        <?php endif; ?>
     </footer>
 
     <style>
@@ -59,6 +67,53 @@
 
         .site-footer {
             flex: 0 0 auto;
+            background-color: #f5f5f5;
+            padding: 20px 20px;
+        }
+
+        .footer-grid {
+            display: flex;
+            flex-wrap: wrap; 
+            justify-content: space-between;
+            gap: 40px;
+            max-width: 1200px;
+            margin: 0 auto;
+            box-sizing: border-box;
+        }
+
+        .footer-grid__item {
+            flex: 1 1 calc(33.333% - 26.66px); 
+            min-width: 250px;
+            box-sizing: border-box;
+        }
+
+        @media (max-width: 900px) {
+            .footer-grid__item {
+                flex: 1 1 calc(50% - 20px);
+            }
+
+            .footer-grid {
+                gap: 0px;
+            }
+        }
+
+        @media (max-width: 600px) {
+            .footer-grid__item {
+                flex: 1 1 100%;
+            }
+        }
+
+        .footer-grid__item h4 {
+            margin-bottom: 15px;
+            font-size: 1.2rem;
+            color: #333;
+        }
+
+        .footer-grid__item p,
+        .footer-grid__item a {
+            color: #555;
+            font-size: 0.95rem;
+            line-height: 1.6;
         }
     </style>
 

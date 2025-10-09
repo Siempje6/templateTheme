@@ -25,11 +25,11 @@
                     "display": "block",
                     "sub_fields": [
                         {
-                            "key": "field_68e76bfe575c5",
-                            "label": "MenuTitle",
-                            "name": "menutitle",
+                            "key": "field_68e770d809ac0",
+                            "label": "MenuRepeater",
+                            "name": "menurepeater",
                             "aria-label": "",
-                            "type": "text",
+                            "type": "repeater",
                             "instructions": "",
                             "required": 0,
                             "conditional_logic": 0,
@@ -38,29 +38,55 @@
                                 "class": "",
                                 "id": ""
                             },
-                            "default_value": "",
-                            "maxlength": "",
-                            "allow_in_bindings": 0,
-                            "placeholder": "",
-                            "prepend": "",
-                            "append": ""
-                        },
-                        {
-                            "key": "field_68e76bea575c4",
-                            "label": "MenuLink",
-                            "name": "menulink",
-                            "aria-label": "",
-                            "type": "link",
-                            "instructions": "",
-                            "required": 0,
-                            "conditional_logic": 0,
-                            "wrapper": {
-                                "width": "",
-                                "class": "",
-                                "id": ""
-                            },
-                            "return_format": "array",
-                            "allow_in_bindings": 0
+                            "acfe_repeater_stylised_button": 0,
+                            "layout": "table",
+                            "min": 0,
+                            "max": 0,
+                            "collapsed": "",
+                            "button_label": "Nieuwe rij",
+                            "rows_per_page": 20,
+                            "sub_fields": [
+                                {
+                                    "key": "field_68e76bfe575c5",
+                                    "label": "MenuTitle",
+                                    "name": "menutitle",
+                                    "aria-label": "",
+                                    "type": "text",
+                                    "instructions": "",
+                                    "required": 0,
+                                    "conditional_logic": 0,
+                                    "wrapper": {
+                                        "width": "",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "default_value": "",
+                                    "maxlength": "",
+                                    "allow_in_bindings": 0,
+                                    "placeholder": "",
+                                    "prepend": "",
+                                    "append": "",
+                                    "parent_repeater": "field_68e770d809ac0"
+                                },
+                                {
+                                    "key": "field_68e76bea575c4",
+                                    "label": "MenuLink",
+                                    "name": "menulink",
+                                    "aria-label": "",
+                                    "type": "link",
+                                    "instructions": "",
+                                    "required": 0,
+                                    "conditional_logic": 0,
+                                    "wrapper": {
+                                        "width": "",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "return_format": "array",
+                                    "allow_in_bindings": 0,
+                                    "parent_repeater": "field_68e770d809ac0"
+                                }
+                            ]
                         }
                     ],
                     "min": "",
@@ -81,11 +107,11 @@
                     "display": "block",
                     "sub_fields": [
                         {
-                            "key": "field_68e76c76575c8",
-                            "label": "SocialTitle",
-                            "name": "socialtitle",
+                            "key": "field_68e7710b09ac1",
+                            "label": "SocialRepeater",
+                            "name": "socialrepeater",
                             "aria-label": "",
-                            "type": "text",
+                            "type": "repeater",
                             "instructions": "",
                             "required": 0,
                             "conditional_logic": 0,
@@ -94,29 +120,55 @@
                                 "class": "",
                                 "id": ""
                             },
-                            "default_value": "",
-                            "maxlength": "",
-                            "allow_in_bindings": 0,
-                            "placeholder": "",
-                            "prepend": "",
-                            "append": ""
-                        },
-                        {
-                            "key": "field_68e76c2c575c7",
-                            "label": "SocialLink",
-                            "name": "sociallink",
-                            "aria-label": "",
-                            "type": "link",
-                            "instructions": "",
-                            "required": 0,
-                            "conditional_logic": 0,
-                            "wrapper": {
-                                "width": "",
-                                "class": "",
-                                "id": ""
-                            },
-                            "return_format": "array",
-                            "allow_in_bindings": 0
+                            "acfe_repeater_stylised_button": 0,
+                            "layout": "table",
+                            "min": 0,
+                            "max": 0,
+                            "collapsed": "",
+                            "button_label": "Nieuwe rij",
+                            "rows_per_page": 20,
+                            "sub_fields": [
+                                {
+                                    "key": "field_68e76c76575c8",
+                                    "label": "SocialTitle",
+                                    "name": "socialtitle",
+                                    "aria-label": "",
+                                    "type": "text",
+                                    "instructions": "",
+                                    "required": 0,
+                                    "conditional_logic": 0,
+                                    "wrapper": {
+                                        "width": "",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "default_value": "",
+                                    "maxlength": "",
+                                    "allow_in_bindings": 0,
+                                    "placeholder": "",
+                                    "prepend": "",
+                                    "append": "",
+                                    "parent_repeater": "field_68e7710b09ac1"
+                                },
+                                {
+                                    "key": "field_68e76c2c575c7",
+                                    "label": "SocialLink",
+                                    "name": "sociallink",
+                                    "aria-label": "",
+                                    "type": "link",
+                                    "instructions": "",
+                                    "required": 0,
+                                    "conditional_logic": 0,
+                                    "wrapper": {
+                                        "width": "",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "return_format": "array",
+                                    "allow_in_bindings": 0,
+                                    "parent_repeater": "field_68e7710b09ac1"
+                                }
+                            ]
                         }
                     ],
                     "min": "",
@@ -159,50 +211,8 @@
                         },
                         {
                             "key": "field_68e76cb7575cb",
-                            "label": "Input",
-                            "name": "input",
-                            "aria-label": "",
-                            "type": "text",
-                            "instructions": "",
-                            "required": 0,
-                            "conditional_logic": 0,
-                            "wrapper": {
-                                "width": "",
-                                "class": "",
-                                "id": ""
-                            },
-                            "default_value": "",
-                            "maxlength": "",
-                            "allow_in_bindings": 0,
-                            "placeholder": "",
-                            "prepend": "",
-                            "append": ""
-                        },
-                        {
-                            "key": "field_68e76cc2575cc",
-                            "label": "Input Placeholder",
-                            "name": "input_placeholder",
-                            "aria-label": "",
-                            "type": "text",
-                            "instructions": "",
-                            "required": 0,
-                            "conditional_logic": 0,
-                            "wrapper": {
-                                "width": "",
-                                "class": "",
-                                "id": ""
-                            },
-                            "default_value": "",
-                            "maxlength": "",
-                            "allow_in_bindings": 0,
-                            "placeholder": "",
-                            "prepend": "",
-                            "append": ""
-                        },
-                        {
-                            "key": "field_68e76cce575cd",
-                            "label": "Input Button",
-                            "name": "input_button",
+                            "label": "InputShortcode",
+                            "name": "inputshortcode",
                             "aria-label": "",
                             "type": "text",
                             "instructions": "",
@@ -287,5 +297,5 @@
     "acfe_form": 0,
     "acfe_meta": "",
     "acfe_note": "",
-    "modified": 1759997366
+    "modified": 1760000502
 }
