@@ -119,7 +119,7 @@ if ($align_option && isset($align_option[0]['alignment'])) {
 }
 
 
-@media screen and (max-width: 1178px) {
+@media screen and (max-width: 768px) {
     .hero-block {
         width: 80%;
         padding: 30px 15px;
@@ -127,7 +127,7 @@ if ($align_option && isset($align_option[0]['alignment'])) {
     }
 
     .hero-title {
-        font-size: 2.5rem;
+        font-size: 2.2rem;
     }
 
     .hero-text {

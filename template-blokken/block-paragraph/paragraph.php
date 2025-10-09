@@ -46,4 +46,19 @@ $textrepeater = get_sub_field('textrepeater');
     line-height: 1.6;
     margin-bottom: 10px;
 }
+
+@media screen and (max-width: 768px) {
+    .paragraph-container {
+        width: 80%;          
+        padding: 20px;      
+    }
+
+    .paragraph-title {
+        font-size: 2.3rem;
+    }
+
+    .paragraph-text {
+        font-size: 1rem;
+    }
+}
 </style>
