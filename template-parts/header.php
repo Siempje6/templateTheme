@@ -18,7 +18,6 @@
     <?php wp_body_open(); ?>
 
     <?php
-    // Haal ACF velden op
     $title = get_field('title', 'option');
     $logo  = get_field('logo', 'option');
     $menu  = get_field('menu', 'option');
@@ -89,7 +88,8 @@
         }
 
         .header-nav {
-            justify-self: end;
+            
+            justify-self: center;
         }
 
         .header-nav ul {
