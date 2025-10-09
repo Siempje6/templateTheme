@@ -76,7 +76,6 @@
             display: flex;
             flex-wrap: wrap; 
             justify-content: space-between;
-            gap: 40px;
             max-width: 1200px;
             margin: 0 auto;
             box-sizing: border-box;
@@ -107,13 +106,11 @@
         .footer-grid__item h4 {
             margin-bottom: 15px;
             font-size: 1.2rem;
-            color: #333;
         }
 
         .footer-grid__item p,
         .footer-grid__item a {
-            color: #555;
-            font-size: 0.95rem;
+            font-size: 1rem;
             line-height: 1.6;
         }
     </style>

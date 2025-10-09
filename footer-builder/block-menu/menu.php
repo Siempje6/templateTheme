@@ -45,9 +45,9 @@ if (have_rows('menurepeater')): ?>
     }
 
     .footer-menu__link {
-        text-decoration: none;
-        color: #333;
+        text-decoration: none; 
         font-weight: 500;
+        color: #333333;
         transition: color 0.3s ease;
     }
 

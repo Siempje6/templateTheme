@@ -1526,7 +1526,7 @@
             },
             "min": "",
             "max": "",
-            "button_label": "Nieuwe rij",
+            "button_label": "Custom Fields",
             "acfe_flexible_stylised_button": false,
             "acfe_flexible_hide_empty_message": false,
             "acfe_flexible_empty_message": "",
