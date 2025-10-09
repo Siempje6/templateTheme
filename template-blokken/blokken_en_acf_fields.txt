@@ -1,0 +1,134 @@
+🧱 LIJST VAN BLOKKEN + ACF FIELDS
+
+------------------------------------------------------
+block-summary
+------------------------------------------------------
+ACF Fields:
+- customsummary (Repeater): Titel + beschrijving + link.
+- border (Repeater): Bepaalt randstijl (top, bottom, left, right, full, none).
+
+------------------------------------------------------
+block-hero
+------------------------------------------------------
+ACF Fields:
+- title (Text): Hoofdtitel.
+- subtitle (Text): Ondertitel.
+- background_image (Image): Achtergrondafbeelding.
+- button (Link): Knop met tekst, URL en target.
+
+------------------------------------------------------
+block-paragraph
+------------------------------------------------------
+ACF Fields:
+- content (WYSIWYG): Tekstinhoud.
+- alignment (Select): Links, midden, rechts.
+- color (Color Picker): Tekstkleur.
+
+------------------------------------------------------
+block-image
+------------------------------------------------------
+ACF Fields:
+- image (Image): De afbeelding zelf.
+- caption (Text): Onderschrift onder de afbeelding.
+- alignment (Select): Plaatsing (links, midden, rechts).
+
+------------------------------------------------------
+block-buttonrepeater
+------------------------------------------------------
+ACF Fields:
+- buttons (Repeater): Herhaalbare knoppen.
+  - text (Text): Tekst op knop.
+  - link (Link): Doel-URL.
+  - style (Select): Primair, secundair, transparant.
+
+------------------------------------------------------
+block-faq
+------------------------------------------------------
+ACF Fields:
+- faq_items (Repeater): Vraag/antwoord sectie.
+  - question (Text): De vraag.
+  - answer (WYSIWYG): Het antwoord.
+
+------------------------------------------------------
+block-gallery
+------------------------------------------------------
+ACF Fields:
+- images (Gallery): Meerdere afbeeldingen selecteren.
+- columns (Number): Aantal kolommen in grid.
+- lightbox (True/False): Open afbeelding in pop-up.
+
+------------------------------------------------------
+block-videoblock
+------------------------------------------------------
+ACF Fields:
+- video_url (URL): YouTube/Vimeo-link.
+- thumbnail (Image): Voorbeeldafbeelding.
+- autoplay (True/False): Start automatisch.
+- caption (Text): Korte omschrijving onder video.
+
+------------------------------------------------------
+block-cta-banner
+------------------------------------------------------
+ACF Fields:
+- title (Text): Hoofdtitel van de banner.
+- text (Textarea): Korte beschrijving of call to action.
+- button (Link): Knop met tekst en URL.
+- background_color (Color Picker): Achtergrondkleur.
+
+------------------------------------------------------
+block-iconlist
+------------------------------------------------------
+ACF Fields:
+- items (Repeater): Elke rij bevat:
+  - icon (Image of select): Pictogram.
+  - title (Text): Titel van item.
+  - text (Text): Beschrijving.
+  - link (Link): Optionele link.
+
+------------------------------------------------------
+block-pricingtable
+------------------------------------------------------
+ACF Fields:
+- plans (Repeater): Elke kolom bevat:
+  - title (Text): Naam van plan.
+  - price (Text): Prijs.
+  - features (Repeater): Puntenlijst.
+  - button (Link): Aanmeldknop.
+  - highlight (True/False): Accentueer dit plan.
+
+------------------------------------------------------
+block-testimonialslider
+------------------------------------------------------
+ACF Fields:
+- testimonials (Repeater):
+  - quote (Textarea): De testimonialtekst.
+  - name (Text): Naam van persoon.
+  - role (Text): Functie of bedrijf.
+  - image (Image): Profielfoto.
+- autoplay (True/False): Automatisch doorschuiven.
+
+------------------------------------------------------
+block-sociallinks
+------------------------------------------------------
+ACF Fields:
+- platforms (Repeater):
+  - icon (Image or Select): Socialmedia-icoon.
+  - url (URL): Link naar profiel.
+  - label (Text): Naam van het platform.
+
+------------------------------------------------------
+block-backgroundsection
+------------------------------------------------------
+ACF Fields:
+- title (Text): Titel van de sectie.
+- content (WYSIWYG): Tekstinhoud.
+- background_type (Select): Kleur of afbeelding.
+- background_color (Color Picker): Achtergrondkleur.
+- background_image (Image): Achtergrondafbeelding.
+
+------------------------------------------------------
+block-spacer
+------------------------------------------------------
+ACF Fields:
+- height (Number): Hoogte in pixels of rem.
+- visible_on_mobile (True/False): Verberg op mobiel.

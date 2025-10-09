@@ -11,12 +11,16 @@ $bloglink_target = $bloglink_field['target'] ?? '_self';
 <section id="pagina-bloglink" class="bloglink-block">
     <div class="container bloglink-container">
         <?php if ($image): ?>
-            <div class="bloglink-image">
-                <img
-                    src="<?php echo esc_url($image['url']); ?>"
-                    alt="<?php echo esc_attr($image['alt']); ?>"
-                    class="bloglink-img">
-            </div>
+            <a href="<?php echo esc_url($bloglink_url); ?>">
+                <div class="bloglink-image">
+                    <img
+                        src="<?php echo esc_url($image['url']); ?>"
+                        alt="<?php echo esc_attr($image['alt']); ?>"
+                        class="bloglink-img"
+                        href="<?php echo esc_url($bloglink_url); ?>"
+                        target="<?php echo esc_attr($bloglink_target); ?>" />
+                </div>
+            </a>
         <?php endif; ?>
 
         <div class="bloglink-content">
@@ -36,65 +40,65 @@ $bloglink_target = $bloglink_field['target'] ?? '_self';
 </section>
 
 <style>
-.bloglink-block {
-    width: 100%;
-    padding-top: 40px;
-    display: flex;
-    justify-content: center;
-    background-color: #f8f6f2;
-}
-
-.bloglink-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center; 
-    gap: 20px; 
-    max-width: 800px; 
-    width: 100%;
-}
-
-.bloglink-image {
-    width: 100%;
-    height: auto;
-    max-width: 800px; 
-}
-
-.bloglink-image img {
-    width: 100%;
-    height: auto;
-    display: block;
-    border-radius: 6px;
-}
-
-.bloglink-content {
-    text-align: center; 
-}
-
-.bloglink-date {
-    font-size: 1rem;
-    color: #7f7f7d;
-    margin-bottom: 10px;
-}
-
-.bloglink-title a {
-    color: #333333;
-    text-decoration: none;
-    font-size: 1.5rem;
-    font-weight: 700;
-    text-decoration: underline #333333 2px;
-}
-
-@media (max-width: 768px) {
-    .bloglink-container {
-        max-width: 90%;
+    .bloglink-block {
+        width: 100%;
+        padding-top: 40px;
+        display: flex;
+        justify-content: center;
+        background-color: #f8f6f2;
     }
 
-    .bloglink-title a {
-        font-size: 1.25rem;
+    .bloglink-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+        max-width: 800px;
+        width: 100%;
+    }
+
+    .bloglink-image {
+        width: 100%;
+        height: auto;
+        max-width: 800px;
+    }
+
+    .bloglink-image img {
+        width: 100%;
+        height: auto;
+        display: block;
+        border-radius: 6px;
+    }
+
+    .bloglink-content {
+        text-align: center;
     }
 
     .bloglink-date {
-        font-size: 0.9rem;
+        font-size: 1rem;
+        color: #7f7f7d;
+        margin-bottom: 10px;
     }
-}
+
+    .bloglink-title a {
+        color: #333333;
+        text-decoration: none;
+        font-size: 1.5rem;
+        font-weight: 700;
+        text-decoration: underline #333333 2px;
+    }
+
+    @media (max-width: 768px) {
+        .bloglink-container {
+            max-width: 90%;
+        }
+
+        .bloglink-title a {
+            font-size: 1.25rem;
+        }
+
+        .bloglink-date {
+            font-size: 0.9rem;
+        }
+    }
 </style>
