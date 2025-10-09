@@ -115,7 +115,8 @@ if ($border_repeater && is_array($border_repeater) && isset($border_repeater[0][
         }
 
         .summary-container {
-            width: 80%;
+            max-width: 800px;
+            width: 70%;
         }
 
         .summary-item {
@@ -176,6 +177,5 @@ if ($border_repeater && is_array($border_repeater) && isset($border_repeater[0][
             font-weight: 500;
             color: #7f7f7d;
         }
-
     }
 </style>
