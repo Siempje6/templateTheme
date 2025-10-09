@@ -61,4 +61,40 @@ $blogdate = get_sub_field('blogdate');
     font-size: 0.9rem;
     color: #111f15;
 }
+
+@media screen and (max-width: 768px) {
+    .bloghero-block {
+    width: 100%;
+    background-color: #f8f6f2;
+}   
+.bloghero-container {
+    width: 70%;              
+    margin: 0 auto;         
+    max-width: 800px;
+    display: flex;
+    flex-direction: column;
+    text-align: left;      
+}
+.bloghero-author {
+    font-size: 1.2rem;
+    font-weight: normal;
+    margin-bottom: 0px;
+    color: #4e4e4e;
+}
+.bloghero-title {
+    font-family: serif;
+    font-size: 2.2rem;
+    font-weight: bold;
+    margin-bottom: 0px;
+}
+.bloghero-text {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    margin-bottom: 0px;
+}
+.bloghero-date {
+    font-size: 0.9rem;
+    color: #111f15;
+}
+}
 </style>    

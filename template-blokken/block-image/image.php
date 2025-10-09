@@ -77,17 +77,5 @@ if ($size_repeater && is_array($size_repeater) && isset($size_repeater[0]['image
         border-radius: 24px;
     }
 
-    @media screen and (max-width: 1300px) {
-        .image-container.small {
-            width: 40%;
-        }
-
-        .image-container.normal {
-            width: 50%;
-        }
-
-        .image-container.large {
-            width: 60%;
-        }
-    }
+    
 </style>
