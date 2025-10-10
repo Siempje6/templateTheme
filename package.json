@@ -19,6 +19,7 @@
   },
   "homepage": "https://github.com/Siempje6/templateTheme#readme",
   "dependencies": {
+    "@blossom-carousel/web": "^0.2.0",
     "gsap": "^3.13.0"
   }
 }

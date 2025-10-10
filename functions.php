@@ -106,3 +106,30 @@ function image_block_assets() {
     );
 }
 add_action('wp_enqueue_scripts', 'image_block_assets');
+
+
+// ===============================
+// 6. Blossom Carousel inladen
+// ===============================
+function thema_enqueue_blossom_carousel() {
+    $js_uri  = get_template_directory_uri() . '/assets/js/vendor/blossom-carousel.js';
+    $css_uri = get_template_directory_uri() . '/assets/css/vendor/blossom-carousel.css';
+
+    // JS
+    wp_enqueue_script(
+        'blossom-carousel',
+        $js_uri,
+        array(), // afhankelijkheden, voeg toe indien nodig
+        null,
+        true
+    );
+
+    // CSS
+    wp_enqueue_style(
+        'blossom-carousel-style',
+        $css_uri,
+        array(),
+        null
+    );
+}
+add_action('wp_enqueue_scripts', 'thema_enqueue_blossom_carousel');
