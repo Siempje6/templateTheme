@@ -161,8 +161,69 @@
 }
 
 .acf-link.-value .link-wrap {
-  border-radius: 10px;
+  border-radius: 4px;
 }
 .acf-fields.-border {
   border-radius: 1rem;
+}
+.layout > .acfe-fc-placeholder {
+  border-radius: 1rem;
+}
+.layout > .acf-fields > .acfe-flexible-opened-actions, .layout > .acf-table > .acfe-flexible-opened-actions {
+  border-bottom-right-radius: 1rem;
+  border-bottom-left-radius: 1rem;
+}
+
+.acf-button-group img{
+  max-width: 50px;
+}
+
+.icon_yellow {
+  color: rgb(123, 123, 43) !important;
+}
+
+.acf-button-group label {
+  color: black !important;
+  background-color: transparent;
+}
+
+.acf-button-group label.selected {
+  border: 2px solid #2271b1 !important;
+}
+
+
+.acf-button-group label:not(.selected) i {
+  color: black !important;
+}
+
+.acf-button-group label:last-child {
+  background-color: #ccd0d4 !important;
+  border: #ccd0d4 solid 1px;
+  border-radius: 2rem !important;
+  padding: 10px 10px !important;
+  margin: 2px !important;
+}
+.acf-button-group label {
+  background-color: #ccd0d4 !important;
+  border: #ccd0d4 solid 1px !important;
+  border-radius: 2rem !important;
+  padding: 10px 10px !important;
+  margin: 2px !important;
+}
+.acf-button-group label:first-child {
+  background-color: #ccd0d4 !important;
+  border: #ccd0d4 solid 1px;
+  border-radius: 2rem !important;
+  padding: 10px 10px !important;
+  margin: 2px !important;
+}
+
+.whitebtn{
+  color: #fff !important;
+}
+.blackbtn{
+  color: black !important;
+}
+.greenbtn{
+  color: #1a5427 !important;
 }
