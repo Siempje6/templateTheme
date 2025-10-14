@@ -1,0 +1,92 @@
+1. Tekst & Typografie
+
+Title font size – Pas grootte aan: bijvoorbeeld text-xl, text-2xl, text-4xl.
+
+Title font weight – Bold, semi-bold, light.
+
+Title color – Tekstkleur van de titel (#000, #fff, accentkleuren).
+
+Text font size – Kleinere tekst, standaard paragraaf.
+
+Text font weight – Normaal, light, italic.
+
+Text color – Paragraafkleur.
+
+Text alignment – Links, rechts, gecentreerd (je hebt al een repeater voor alignment).
+
+
+
+
+
+
+
+2. Layout & Spacing
+
+Padding – Boven, onder, links, rechts (p-4, pt-10, pb-20).
+
+Margin – Buitenmarges voor hero (m-0, mb-10).
+
+Width / Max-width – Beperk breedte van content (max-w-screen-lg).
+
+Height / Min-height – Hoogte van hero, bv. fullscreen of 50vh.
+
+
+
+
+
+
+3. Achtergrond & Kleuren
+
+Background color – Achtergrondkleur van het hero-block.
+
+Background image – Optioneel beeld als hero-achtergrond.
+
+Background overlay – Semi-transparante overlay voor contrast.
+
+Background gradient – Bijvoorbeeld van links naar rechts of top naar bottom.
+
+
+
+
+
+
+
+4. Buttons & Links
+
+Button styles – Kleur, grootte, shape (rounded, pill).
+
+Button hover effect – Oplichten, schaduweffect.
+
+Button spacing – Afstand tussen meerdere buttons (gap-4).
+
+Button alignment – Links, gecentreerd, rechts.
+
+
+
+
+
+
+
+
+5. Animaties / Effects
+
+Text animation – Fade-in, slide-in.
+
+Image / hero animation – Parallax scroll effect.
+
+Button animation – Hover scale of bounce.
+
+
+
+
+
+
+
+
+
+6. Overige nuttige opties
+
+Shadow / Box-shadow – Hero text of buttons.
+
+Border radius / Rounded corners – Voor hero box of buttons.
+

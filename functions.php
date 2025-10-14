@@ -119,12 +119,11 @@ function thema_enqueue_blossom_carousel() {
     wp_enqueue_script(
         'blossom-carousel',
         $js_uri,
-        array(), // afhankelijkheden, voeg toe indien nodig
+        array(), 
         null,
         true
     );
 
-    // CSS
     wp_enqueue_style(
         'blossom-carousel-style',
         $css_uri,
@@ -133,3 +132,15 @@ function thema_enqueue_blossom_carousel() {
     );
 }
 add_action('wp_enqueue_scripts', 'thema_enqueue_blossom_carousel');
+
+
+
+function my_acf_admin_enqueue_styles() {
+    wp_enqueue_style(
+        'acf-admin-custom',
+        get_template_directory_uri() . '/admin/acf-admin.css',
+        [],
+        filemtime(get_template_directory() . '/admin/acf-admin.css')
+    );
+}
+add_action('admin_enqueue_scripts', 'my_acf_admin_enqueue_styles');

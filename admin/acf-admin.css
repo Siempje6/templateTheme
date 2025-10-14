@@ -1,0 +1,130 @@
+
+.acf-input-wrap input[type="text"] {
+  font-family: Arial, sans-serif;
+  width: 100%;
+  padding: 8px 15px;
+  border-radius: 6px;
+  border: 1px solid #1a5427;
+  font-size: 1rem;
+  background-color: #f9f9f9;
+  outline: none;
+  box-sizing: border-box;
+  transition: border-color 0.3s ease;
+}
+
+#titlewrap input[type="text"] {
+  font-family: Arial, sans-serif;
+  width: 100%;
+  padding: 8px 15px;
+  border-radius: 6px;
+  border: 1.5px solid #1a5427;
+  font-size: 1rem;
+  background-color: #f9f9f9;
+  outline: none;
+  box-sizing: border-box;
+  transition: border-color 0.3s ease;
+} 
+
+.inside input[type="text"],
+.inside select {
+  font-family: Arial, sans-serif;
+  width: 100%;
+  border-radius: 6px;
+  border: 1px solid #1a5427;
+  font-size: 1rem;
+  background-color: #f9f9f9;
+  outline: none;
+  box-sizing: border-box;
+  transition: border-color 0.3s ease;
+}
+
+
+
+.inside select:active {
+  border: 1px solid #1a5427;
+}
+
+.inside input[type="text"]:active {
+  border: 1px solid #1a5427;
+}
+
+.acfe-layout-title span {
+  font-family: Arial, sans-serif;
+  font-size: 1rem;
+  margin: 10px;
+  color: black;
+}
+
+.acf-fc-layout-handle {
+  border-radius: 1rem;
+}
+
+.acf-fc-layout-handle:hover {
+  border-radius: 1rem;
+}
+
+.layout,
+.postbox,
+.postbox-header{
+  border-radius: 1.05rem;
+}
+
+#major-publishing-actions{
+  border-bottom-left-radius: 1rem;
+  border-bottom-right-radius: 1rem;
+}
+
+
+
+.handle-order-lower,
+.order-higher-indicator,
+.toggle-indicator,
+.dashicons{
+  color: black !important;
+}
+
+.acf-table thead tr th {
+  color: black;
+  font-family: Arial, sans-serif;
+  font-weight: 900;
+}
+
+.postbox-header h2 {
+  color: black;
+}
+
+.acf-input textarea {
+  width: 100%;
+  min-height: 150px;
+  padding: 12px 14px;
+  font-size: 14px;
+  line-height: 1.5;
+  background-color: #f9f9f9;
+  border: 1px solid #1a5427;
+  border-radius: 6px;
+  box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.03);
+  transition: all 0.2s ease-in-out;
+  font-family: "Inter", system-ui, sans-serif;
+}
+
+#publish,
+#post-preview{
+  border-radius: 2rem
+}
+.wp-color-result-text{
+  background-color: transparent;
+  border-left: 1px solid #c3c4c7;
+  color: #50575e;
+  display: block;
+  line-height: 2.54;
+  padding: 0 6px;
+  text-align: center;
+}
+.wp-core-ui .button,
+.wp-core-ui .button-secondary{
+  border-radius: 2rem;
+}
+
+.acf-actions .acf-button{
+  border-radius: 2rem;
+}
