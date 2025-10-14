@@ -1,118 +1,78 @@
 <?php
-$title   = get_sub_field('title');
-$text    = get_sub_field('text'); 
-$buttons = get_sub_field('buttonmenu'); 
 
-$align_option = get_sub_field('align');
-$alignment = 'left';
+$title         = get_sub_field('title');
+$text          = get_sub_field('text'); 
+$buttons       = get_sub_field('buttonmenu'); 
+$textstyling   = get_sub_field('textstyling');
+$textalignment = get_sub_field('textalignment');// <- juiste alignment groep
 
-if ($align_option && isset($align_option[0]['alignment'])) {
-    $alignment = $align_option[0]['alignment'];
-}
+$title_tag        = 'h2';
+$title_styles     = '';
+$alignment_text   = 'left';
+$alignment_button = 'left';
 
-$styling = get_sub_field('styling');
+if ($textstyling) {
+    $title_font_size  = $textstyling['title_font_size'] ?? 'select';
+    $title_font_color = $textstyling['title_font_color'] ?? 'select';
 
-$title_styles = '';
-$text_styles = '';
-$section_styles = '';
+    if ($title_font_size && $title_font_size !== 'select') {
+        $title_tag = esc_attr($title_font_size);
+    }
 
-if ($styling) {
-    foreach ($styling as $layout) {
-
-        if ($layout['acf_fc_layout'] === 'text_styling') {
-            $title_font_size   = $layout['title_font_size'] ?? '';
-            $title_font_weight = $layout['title_font_weight'] ?? '';
-            $title_color       = $layout['title_color'] ?? '';
-            $text_font_size    = $layout['text_font_size'] ?? '';
-            $text_font_weight  = $layout['text_font_weight'] ?? '';
-            $text_color        = $layout['text_color'] ?? '';
-            $text_alignment    = $layout['text_alignment'] ?? '';
-
-            if ($title_font_size)   $title_styles .= "font-size: {$title_font_size};";
-            if ($title_font_weight) $title_styles .= "font-weight: {$title_font_weight};";
-            if ($title_color)       $title_styles .= "color: {$title_color};";
-
-            if ($text_font_size)    $text_styles .= "font-size: {$text_font_size};";
-            if ($text_font_weight)  $text_styles .= "font-weight: {$text_font_weight};";
-            if ($text_color)        $text_styles .= "color: {$text_color};";
-
-            if ($text_alignment) {
-                $alignment = $text_alignment;
-            }
-        }
-
-        if ($layout['acf_fc_layout'] === 'layout_spacing') {
-
-            if (!empty($layout['paddingoptions'])) {
-                foreach ($layout['paddingoptions'] as $padding) {
-                    if ($padding['acf_fc_layout'] === 'padding_sides') {
-                        if (!empty($padding['padding_all_sides'])) {
-                            $section_styles .= "padding: {$padding['padding_all_sides']};";
-                        } else {
-                            if (!empty($padding['padding_top']))    $section_styles .= "padding-top: {$padding['padding_top']};";
-                            if (!empty($padding['padding_right']))  $section_styles .= "padding-right: {$padding['padding_right']};";
-                            if (!empty($padding['padding_bottom'])) $section_styles .= "padding-bottom: {$padding['padding_bottom']};";
-                            if (!empty($padding['padding_left']))   $section_styles .= "padding-left: {$padding['padding_left']};";
-                        }
-                    }
-                }
-            }
-
-            if (!empty($layout['marginoptions'])) {
-                foreach ($layout['marginoptions'] as $margin) {
-                    if ($margin['acf_fc_layout'] === 'marginsides') {
-                        if (!empty($margin['margin_all_sides'])) {
-                            $section_styles .= "margin: {$margin['margin_all_sides']};";
-                        } else {
-                            if (!empty($margin['margin_top']))    $section_styles .= "margin-top: {$margin['margin_top']};";
-                            if (!empty($margin['margin_right']))  $section_styles .= "margin-right: {$margin['margin_right']};";
-                            if (!empty($margin['margin_bottom'])) $section_styles .= "margin-bottom: {$margin['margin_bottom']};";
-                            if (!empty($margin['margin_left']))   $section_styles .= "margin-left: {$margin['margin_left']};";
-                        }
-                    }
-                }
-            }
-
-            if (!empty($layout['width_content'])) {
-                $section_styles .= "width: {$layout['width_content']};";
-            }
-            if (!empty($layout['height_content'])) {
-                $section_styles .= "height: {$layout['height_content']};";
-            }
+    if ($title_font_color && $title_font_color !== 'select') {
+        switch ($title_font_color) {
+            case 'wit':  $title_styles .= "color:#fff;"; break;
+            case 'zwart':$title_styles .= "color:#000;"; break;
+            case 'groen':$title_styles .= "color:#1a5427;"; break;
         }
     }
 }
+
+if ($textalignment) {
+    $alignment_text   = $textalignment['alignment_text'] ?? 'left';
+    $alignment_button = $textalignment['alignment_button'] ?? 'left';
+}
+
+if (!$alignment_text) $alignment_text = 'left';
+if (!$alignment_button) $alignment_button = 'left';
 ?>
 
-<section id="pagina-hero" class="hero-block hero-align-<?php echo esc_attr($alignment); ?>" style="<?php echo esc_attr($section_styles); ?>">
+<section id="pagina-hero" class="hero-block hero-align-<?php echo esc_attr($alignment_text); ?>">
     <div class="container">
+
         <?php if ($title): ?>
-            <h1 class="hero-title" style="<?php echo esc_attr($title_styles); ?>">
+            <<?php echo esc_attr($title_tag); ?> 
+                class="hero-title hero-title-<?php echo esc_attr($title_tag); ?>" 
+                style="<?php echo esc_attr($title_styles); ?>">
                 <?php echo esc_html($title); ?>
-            </h1>
+            </<?php echo esc_attr($title_tag); ?>>
         <?php endif; ?>
 
         <?php if ($text): ?>
-            <p class="hero-text" style="<?php echo esc_attr($text_styles); ?>">
+            <p class="hero-text hero-text-<?php echo esc_attr($alignment_text); ?>">
                 <?php echo esc_html($text); ?>
             </p>
         <?php endif; ?>
 
         <?php if ($buttons): ?>
-            <div class="hero-buttons hero-buttons-<?php echo esc_attr($alignment); ?>">
+            <div class="hero-buttons hero-buttons-<?php echo esc_attr($alignment_button); ?>">
                 <?php foreach ($buttons as $btn): 
-                    $link = $btn['items']; 
+                    $link  = $btn['items'] ?? null; 
+                    $color = $btn['buttoncolor'] ?? 'zwart';
                     if ($link):
-                        $url    = $link['url'] ?? '#';
-                        $target = $link['target'] ?? '_self';
+                        $url      = $link['url'] ?? '#';
+                        $target   = $link['target'] ?? '_self';
                         $titleBtn = $link['title'] ?? 'Button';
                 ?>
-                    <a href="<?php echo esc_url($url); ?>" target="<?php echo esc_attr($target); ?>" class="hero-btn">
+                    <a href="<?php echo esc_url($url); ?>" 
+                       target="<?php echo esc_attr($target); ?>" 
+                       class="hero-btn hero-btn-<?php echo esc_attr($color); ?>">
                         <?php echo esc_html($titleBtn); ?>
                     </a>
                 <?php endif; endforeach; ?>
             </div>
         <?php endif; ?>
+
     </div>
 </section>
 
@@ -144,10 +104,18 @@ if ($styling) {
 
 .hero-title {
     font-family: serif;
-    font-size: 3rem;
     font-weight: 700;
     margin: 0 0 20px 0;
 }
+
+.hero-title-h1 { font-size: 3rem; }
+.hero-title-h2 { font-size: 2.5rem; }
+.hero-title-h3 { font-size: 2rem; }
+.hero-title-h4 { font-size: 1.75rem; }
+.hero-title-h5 { font-size: 1.5rem; }
+.hero-title-h6 { font-size: 1.25rem; }
+.hero-title-p,
+.hero-title-div { font-size: 1.1rem; }
 
 .hero-text {
     font-size: 1.25rem;
@@ -163,17 +131,9 @@ if ($styling) {
     gap: 15px;
 }
 
-.hero-buttons-left {
-    justify-content: flex-start;
-}
-
-.hero-buttons-center {
-    justify-content: center;
-}
-
-.hero-buttons-right {
-    justify-content: flex-end;
-}
+.hero-buttons-left { justify-content: flex-start; }
+.hero-buttons-center { justify-content: center; }
+.hero-buttons-right { justify-content: flex-end; }
 
 .hero-btn {
     display: inline-block;
@@ -181,13 +141,26 @@ if ($styling) {
     font-size: 1rem;
     text-decoration: none;
     color: #fff;
-    background-color: #1a5427;
     border-radius: 6px;
     transition: all 0.3s ease;
 }
 
+.hero-btn-wit {
+    background-color: #fff;
+    color: #000;
+    border: 1px solid #000;
+}
+
+.hero-btn-groen {
+    background-color: #1a5427;
+}
+
+.hero-btn-zwart {
+    background-color: #000;
+}
+
 .hero-btn:hover {
-    background-color: #247937;
+    opacity: 0.9;
     transform: translateY(-1px);
 }
 
@@ -198,9 +171,10 @@ if ($styling) {
         max-width: 700px;
     }
 
-    .hero-title {
-        font-size: 2.2rem;
-    }
+    .hero-title-h1 { font-size: 2.4rem; }
+    .hero-title-h2 { font-size: 2rem; }
+    .hero-title-h3 { font-size: 1.75rem; }
+    .hero-title-h4 { font-size: 1.5rem; }
 
     .hero-text {
         font-size: 1.1rem;

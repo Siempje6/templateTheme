@@ -106,15 +106,49 @@
                                     "return_format": "array",
                                     "allow_in_bindings": 0,
                                     "parent_repeater": "field_68dba646d90e2"
+                                },
+                                {
+                                    "key": "field_68ee0c33ece4b",
+                                    "label": "ButtonColor",
+                                    "name": "buttoncolor",
+                                    "aria-label": "",
+                                    "type": "select",
+                                    "instructions": "",
+                                    "required": 0,
+                                    "conditional_logic": 0,
+                                    "wrapper": {
+                                        "width": "",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "choices": {
+                                        "select": "Selecteer een kleur",
+                                        "wit": "Wit",
+                                        "groen": "Groen",
+                                        "zwart": "Zwart"
+                                    },
+                                    "default_value": "select",
+                                    "return_format": "value",
+                                    "multiple": 0,
+                                    "allow_null": 0,
+                                    "allow_in_bindings": 0,
+                                    "ui": 0,
+                                    "ajax": 0,
+                                    "placeholder": "",
+                                    "create_options": 0,
+                                    "save_options": 0,
+                                    "allow_custom": 0,
+                                    "search_placeholder": "",
+                                    "parent_repeater": "field_68dba646d90e2"
                                 }
                             ]
                         },
                         {
-                            "key": "field_68e8f8efd0e80",
-                            "label": "Styling",
-                            "name": "styling",
+                            "key": "field_68ee0b42d1c4c",
+                            "label": "TextStyling",
+                            "name": "",
                             "aria-label": "",
-                            "type": "flexible_content",
+                            "type": "tab",
                             "instructions": "",
                             "required": 0,
                             "conditional_logic": 0,
@@ -123,634 +157,210 @@
                                 "class": "",
                                 "id": ""
                             },
-                            "acfe_flexible_advanced": 0,
-                            "layouts": {
-                                "layout_68e8f9abaf371": {
-                                    "key": "layout_68e8f9abaf371",
-                                    "name": "text_styling",
-                                    "label": "Text Styling",
-                                    "display": "block",
-                                    "sub_fields": [
-                                        {
-                                            "key": "field_68e8f9c7d0e81",
-                                            "label": "Title Font Size",
-                                            "name": "title_font_size",
-                                            "aria-label": "",
-                                            "type": "text",
-                                            "instructions": "",
-                                            "required": 0,
-                                            "conditional_logic": 0,
-                                            "wrapper": {
-                                                "width": "",
-                                                "class": "",
-                                                "id": ""
-                                            },
-                                            "default_value": "",
-                                            "maxlength": "",
-                                            "allow_in_bindings": 0,
-                                            "placeholder": "",
-                                            "prepend": "",
-                                            "append": ""
-                                        },
-                                        {
-                                            "key": "field_68e8f9d9d0e82",
-                                            "label": "Title Font Weight",
-                                            "name": "title_font_weight",
-                                            "aria-label": "",
-                                            "type": "text",
-                                            "instructions": "",
-                                            "required": 0,
-                                            "conditional_logic": 0,
-                                            "wrapper": {
-                                                "width": "",
-                                                "class": "",
-                                                "id": ""
-                                            },
-                                            "default_value": "",
-                                            "maxlength": "",
-                                            "allow_in_bindings": 0,
-                                            "placeholder": "",
-                                            "prepend": "",
-                                            "append": ""
-                                        },
-                                        {
-                                            "key": "field_68e8f9e9d0e83",
-                                            "label": "Title Color",
-                                            "name": "title_color",
-                                            "aria-label": "",
-                                            "type": "color_picker",
-                                            "instructions": "",
-                                            "required": 0,
-                                            "conditional_logic": 0,
-                                            "wrapper": {
-                                                "width": "",
-                                                "class": "",
-                                                "id": ""
-                                            },
-                                            "default_value": "",
-                                            "enable_opacity": 0,
-                                            "return_format": "string",
-                                            "allow_in_bindings": 0,
-                                            "show_custom_palette": 0,
-                                            "show_color_wheel": 1,
-                                            "custom_palette_source": "",
-                                            "palette_colors": ""
-                                        },
-                                        {
-                                            "key": "field_68e8f9f6d0e84",
-                                            "label": "Text Font Size",
-                                            "name": "text_font_size",
-                                            "aria-label": "",
-                                            "type": "text",
-                                            "instructions": "",
-                                            "required": 0,
-                                            "conditional_logic": 0,
-                                            "wrapper": {
-                                                "width": "",
-                                                "class": "",
-                                                "id": ""
-                                            },
-                                            "default_value": "",
-                                            "maxlength": "",
-                                            "allow_in_bindings": 0,
-                                            "placeholder": "",
-                                            "prepend": "",
-                                            "append": ""
-                                        },
-                                        {
-                                            "key": "field_68e8fa27d0e85",
-                                            "label": "Text Font Weight",
-                                            "name": "text_font_weight",
-                                            "aria-label": "",
-                                            "type": "text",
-                                            "instructions": "",
-                                            "required": 0,
-                                            "conditional_logic": 0,
-                                            "wrapper": {
-                                                "width": "",
-                                                "class": "",
-                                                "id": ""
-                                            },
-                                            "default_value": "",
-                                            "maxlength": "",
-                                            "allow_in_bindings": 0,
-                                            "placeholder": "",
-                                            "prepend": "",
-                                            "append": ""
-                                        },
-                                        {
-                                            "key": "field_68e8fa36d0e86",
-                                            "label": "Text Color",
-                                            "name": "text_color",
-                                            "aria-label": "",
-                                            "type": "color_picker",
-                                            "instructions": "",
-                                            "required": 0,
-                                            "conditional_logic": 0,
-                                            "wrapper": {
-                                                "width": "",
-                                                "class": "",
-                                                "id": ""
-                                            },
-                                            "default_value": "",
-                                            "enable_opacity": 0,
-                                            "return_format": "string",
-                                            "allow_in_bindings": 0,
-                                            "show_custom_palette": 0,
-                                            "show_color_wheel": 1,
-                                            "custom_palette_source": "",
-                                            "palette_colors": ""
-                                        },
-                                        {
-                                            "key": "field_68e8fa4cd0e87",
-                                            "label": "Text Alignment",
-                                            "name": "text_alignment",
-                                            "aria-label": "",
-                                            "type": "text",
-                                            "instructions": "",
-                                            "required": 0,
-                                            "conditional_logic": 0,
-                                            "wrapper": {
-                                                "width": "",
-                                                "class": "",
-                                                "id": ""
-                                            },
-                                            "default_value": "",
-                                            "maxlength": "",
-                                            "allow_in_bindings": 0,
-                                            "placeholder": "",
-                                            "prepend": "",
-                                            "append": ""
-                                        }
-                                    ],
-                                    "min": "",
-                                    "max": "",
-                                    "acfe_flexible_render_template": false,
-                                    "acfe_flexible_render_style": false,
-                                    "acfe_flexible_render_script": false,
-                                    "acfe_flexible_thumbnail": false,
-                                    "acfe_flexible_settings": false,
-                                    "acfe_flexible_settings_size": "medium",
-                                    "acfe_flexible_modal_edit_size": false,
-                                    "acfe_flexible_category": false
+                            "placement": "top",
+                            "endpoint": 0,
+                            "selected": 0
+                        },
+                        {
+                            "key": "field_68ee0bc0d1c4d",
+                            "label": "TextStyling",
+                            "name": "textstyling",
+                            "aria-label": "",
+                            "type": "group",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "layout": "block",
+                            "acfe_seamless_style": 0,
+                            "acfe_group_modal": 0,
+                            "sub_fields": [
+                                {
+                                    "key": "field_68e8f9c7d0e81",
+                                    "label": "Title Font Size",
+                                    "name": "title_font_size",
+                                    "aria-label": "",
+                                    "type": "select",
+                                    "instructions": "",
+                                    "required": 0,
+                                    "conditional_logic": 0,
+                                    "wrapper": {
+                                        "width": "",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "choices": {
+                                        "select": "Selecteer een Grootte",
+                                        "h1": "H1",
+                                        "h2": "H2",
+                                        "h3": "H3",
+                                        "h4": "H4",
+                                        "h5": "H5",
+                                        "h6": "H6",
+                                        "p": "P",
+                                        "div": "Div"
+                                    },
+                                    "default_value": "select",
+                                    "return_format": "value",
+                                    "multiple": 0,
+                                    "allow_null": 0,
+                                    "allow_in_bindings": 0,
+                                    "ui": 0,
+                                    "ajax": 0,
+                                    "placeholder": "",
+                                    "create_options": 0,
+                                    "save_options": 0,
+                                    "allow_custom": 0,
+                                    "search_placeholder": ""
                                 },
-                                "layout_68e8fbb438acb": {
-                                    "key": "layout_68e8fbb438acb",
-                                    "name": "layout_&_spacing",
-                                    "label": "Layout & Spacing",
-                                    "display": "block",
-                                    "sub_fields": [
-                                        {
-                                            "key": "field_68e8fbcf38acd",
-                                            "label": "PaddingOptions",
-                                            "name": "paddingoptions",
-                                            "aria-label": "",
-                                            "type": "flexible_content",
-                                            "instructions": "",
-                                            "required": 0,
-                                            "conditional_logic": 0,
-                                            "wrapper": {
-                                                "width": "",
-                                                "class": "",
-                                                "id": ""
-                                            },
-                                            "acfe_flexible_advanced": 0,
-                                            "layouts": {
-                                                "layout_68e8fbeed0418": {
-                                                    "key": "layout_68e8fbeed0418",
-                                                    "name": "padding_sides",
-                                                    "label": "Padding Sides",
-                                                    "display": "block",
-                                                    "sub_fields": [
-                                                        {
-                                                            "key": "field_68e8fc0538acf",
-                                                            "label": "Padding Top",
-                                                            "name": "padding_top",
-                                                            "aria-label": "",
-                                                            "type": "text",
-                                                            "instructions": "",
-                                                            "required": 0,
-                                                            "conditional_logic": 0,
-                                                            "wrapper": {
-                                                                "width": "",
-                                                                "class": "",
-                                                                "id": ""
-                                                            },
-                                                            "default_value": "",
-                                                            "maxlength": "",
-                                                            "allow_in_bindings": 0,
-                                                            "placeholder": "",
-                                                            "prepend": "",
-                                                            "append": ""
-                                                        },
-                                                        {
-                                                            "key": "field_68e8fc0f38ad0",
-                                                            "label": "Padding Left",
-                                                            "name": "padding_left",
-                                                            "aria-label": "",
-                                                            "type": "text",
-                                                            "instructions": "",
-                                                            "required": 0,
-                                                            "conditional_logic": 0,
-                                                            "wrapper": {
-                                                                "width": "",
-                                                                "class": "",
-                                                                "id": ""
-                                                            },
-                                                            "default_value": "",
-                                                            "maxlength": "",
-                                                            "allow_in_bindings": 0,
-                                                            "placeholder": "",
-                                                            "prepend": "",
-                                                            "append": ""
-                                                        },
-                                                        {
-                                                            "key": "field_68e8fc1a38ad1",
-                                                            "label": "Padding Bottom",
-                                                            "name": "padding_bottom",
-                                                            "aria-label": "",
-                                                            "type": "text",
-                                                            "instructions": "",
-                                                            "required": 0,
-                                                            "conditional_logic": 0,
-                                                            "wrapper": {
-                                                                "width": "",
-                                                                "class": "",
-                                                                "id": ""
-                                                            },
-                                                            "default_value": "",
-                                                            "maxlength": "",
-                                                            "allow_in_bindings": 0,
-                                                            "placeholder": "",
-                                                            "prepend": "",
-                                                            "append": ""
-                                                        },
-                                                        {
-                                                            "key": "field_68e8fc2338ad2",
-                                                            "label": "Padding Right",
-                                                            "name": "padding_right",
-                                                            "aria-label": "",
-                                                            "type": "text",
-                                                            "instructions": "",
-                                                            "required": 0,
-                                                            "conditional_logic": 0,
-                                                            "wrapper": {
-                                                                "width": "",
-                                                                "class": "",
-                                                                "id": ""
-                                                            },
-                                                            "default_value": "",
-                                                            "maxlength": "",
-                                                            "allow_in_bindings": 0,
-                                                            "placeholder": "",
-                                                            "prepend": "",
-                                                            "append": ""
-                                                        },
-                                                        {
-                                                            "key": "field_68e8fc2c38ad3",
-                                                            "label": "Padding All Sides",
-                                                            "name": "padding_all_sides",
-                                                            "aria-label": "",
-                                                            "type": "text",
-                                                            "instructions": "",
-                                                            "required": 0,
-                                                            "conditional_logic": 0,
-                                                            "wrapper": {
-                                                                "width": "",
-                                                                "class": "",
-                                                                "id": ""
-                                                            },
-                                                            "default_value": "",
-                                                            "maxlength": "",
-                                                            "allow_in_bindings": 0,
-                                                            "placeholder": "",
-                                                            "prepend": "",
-                                                            "append": ""
-                                                        },
-                                                        {
-                                                            "key": "field_68e8fc3c38ad4",
-                                                            "label": "Info!!",
-                                                            "name": "",
-                                                            "aria-label": "",
-                                                            "type": "message",
-                                                            "instructions": "",
-                                                            "required": 0,
-                                                            "conditional_logic": 0,
-                                                            "wrapper": {
-                                                                "width": "",
-                                                                "class": "",
-                                                                "id": ""
-                                                            },
-                                                            "message": "Bij de Padding All Sides niks invullen als je de andere opties gebruikt",
-                                                            "new_lines": "wpautop",
-                                                            "esc_html": 0
-                                                        }
-                                                    ],
-                                                    "min": "",
-                                                    "max": "",
-                                                    "acfe_flexible_render_template": false,
-                                                    "acfe_flexible_render_style": false,
-                                                    "acfe_flexible_render_script": false,
-                                                    "acfe_flexible_thumbnail": false,
-                                                    "acfe_flexible_settings": false,
-                                                    "acfe_flexible_settings_size": "medium",
-                                                    "acfe_flexible_modal_edit_size": false,
-                                                    "acfe_flexible_category": false
-                                                }
-                                            },
-                                            "min": "",
-                                            "max": "",
-                                            "button_label": "Nieuwe rij",
-                                            "acfe_flexible_stylised_button": false,
-                                            "acfe_flexible_hide_empty_message": false,
-                                            "acfe_flexible_empty_message": "",
-                                            "acfe_flexible_layouts_templates": false,
-                                            "acfe_flexible_layouts_previews": false,
-                                            "acfe_flexible_layouts_placeholder": false,
-                                            "acfe_flexible_layouts_thumbnails": false,
-                                            "acfe_flexible_layouts_settings": false,
-                                            "acfe_flexible_async": [],
-                                            "acfe_flexible_add_actions": [],
-                                            "acfe_flexible_remove_button": [],
-                                            "acfe_flexible_layouts_state": false,
-                                            "acfe_flexible_modal_edit": {
-                                                "acfe_flexible_modal_edit_enabled": false,
-                                                "acfe_flexible_modal_edit_size": "large"
-                                            },
-                                            "acfe_flexible_modal": {
-                                                "acfe_flexible_modal_enabled": false,
-                                                "acfe_flexible_modal_title": false,
-                                                "acfe_flexible_modal_size": "full",
-                                                "acfe_flexible_modal_col": "4",
-                                                "acfe_flexible_modal_categories": false
-                                            }
-                                        },
-                                        {
-                                            "key": "field_68e8fd0457ae4",
-                                            "label": "MarginOptions",
-                                            "name": "marginoptions",
-                                            "aria-label": "",
-                                            "type": "flexible_content",
-                                            "instructions": "",
-                                            "required": 0,
-                                            "conditional_logic": 0,
-                                            "wrapper": {
-                                                "width": "",
-                                                "class": "",
-                                                "id": ""
-                                            },
-                                            "acfe_flexible_advanced": 0,
-                                            "layouts": {
-                                                "layout_68e8fd1033e7c": {
-                                                    "key": "layout_68e8fd1033e7c",
-                                                    "name": "marginsides",
-                                                    "label": "MarginSides",
-                                                    "display": "block",
-                                                    "sub_fields": [
-                                                        {
-                                                            "key": "field_68e8fd5057ae5",
-                                                            "label": "Margin Top",
-                                                            "name": "margin_top",
-                                                            "aria-label": "",
-                                                            "type": "text",
-                                                            "instructions": "",
-                                                            "required": 0,
-                                                            "conditional_logic": 0,
-                                                            "wrapper": {
-                                                                "width": "",
-                                                                "class": "",
-                                                                "id": ""
-                                                            },
-                                                            "default_value": "",
-                                                            "maxlength": "",
-                                                            "allow_in_bindings": 0,
-                                                            "placeholder": "",
-                                                            "prepend": "",
-                                                            "append": ""
-                                                        },
-                                                        {
-                                                            "key": "field_68e8fd5b57ae6",
-                                                            "label": "Margin Left",
-                                                            "name": "margin_left",
-                                                            "aria-label": "",
-                                                            "type": "text",
-                                                            "instructions": "",
-                                                            "required": 0,
-                                                            "conditional_logic": 0,
-                                                            "wrapper": {
-                                                                "width": "",
-                                                                "class": "",
-                                                                "id": ""
-                                                            },
-                                                            "default_value": "",
-                                                            "maxlength": "",
-                                                            "allow_in_bindings": 0,
-                                                            "placeholder": "",
-                                                            "prepend": "",
-                                                            "append": ""
-                                                        },
-                                                        {
-                                                            "key": "field_68e8fd6957ae7",
-                                                            "label": "Margin Bottom",
-                                                            "name": "margin_bottom",
-                                                            "aria-label": "",
-                                                            "type": "text",
-                                                            "instructions": "",
-                                                            "required": 0,
-                                                            "conditional_logic": 0,
-                                                            "wrapper": {
-                                                                "width": "",
-                                                                "class": "",
-                                                                "id": ""
-                                                            },
-                                                            "default_value": "",
-                                                            "maxlength": "",
-                                                            "allow_in_bindings": 0,
-                                                            "placeholder": "",
-                                                            "prepend": "",
-                                                            "append": ""
-                                                        },
-                                                        {
-                                                            "key": "field_68e8fd7357ae8",
-                                                            "label": "Margin Right",
-                                                            "name": "margin_right",
-                                                            "aria-label": "",
-                                                            "type": "text",
-                                                            "instructions": "",
-                                                            "required": 0,
-                                                            "conditional_logic": 0,
-                                                            "wrapper": {
-                                                                "width": "",
-                                                                "class": "",
-                                                                "id": ""
-                                                            },
-                                                            "default_value": "",
-                                                            "maxlength": "",
-                                                            "allow_in_bindings": 0,
-                                                            "placeholder": "",
-                                                            "prepend": "",
-                                                            "append": ""
-                                                        },
-                                                        {
-                                                            "key": "field_68e8fd9b57ae9",
-                                                            "label": "Margin All Sides",
-                                                            "name": "margin_all_sides",
-                                                            "aria-label": "",
-                                                            "type": "text",
-                                                            "instructions": "",
-                                                            "required": 0,
-                                                            "conditional_logic": 0,
-                                                            "wrapper": {
-                                                                "width": "",
-                                                                "class": "",
-                                                                "id": ""
-                                                            },
-                                                            "default_value": "",
-                                                            "maxlength": "",
-                                                            "allow_in_bindings": 0,
-                                                            "placeholder": "",
-                                                            "prepend": "",
-                                                            "append": ""
-                                                        },
-                                                        {
-                                                            "key": "field_68e8fda657aea",
-                                                            "label": "Info!!!",
-                                                            "name": "",
-                                                            "aria-label": "",
-                                                            "type": "message",
-                                                            "instructions": "",
-                                                            "required": 0,
-                                                            "conditional_logic": 0,
-                                                            "wrapper": {
-                                                                "width": "",
-                                                                "class": "",
-                                                                "id": ""
-                                                            },
-                                                            "message": "Bij de Margin All Sides niks invullen als je de andere opties gebruikt",
-                                                            "new_lines": "wpautop",
-                                                            "esc_html": 0
-                                                        }
-                                                    ],
-                                                    "min": "",
-                                                    "max": "",
-                                                    "acfe_flexible_render_template": false,
-                                                    "acfe_flexible_render_style": false,
-                                                    "acfe_flexible_render_script": false,
-                                                    "acfe_flexible_thumbnail": false,
-                                                    "acfe_flexible_settings": false,
-                                                    "acfe_flexible_settings_size": "medium",
-                                                    "acfe_flexible_modal_edit_size": false,
-                                                    "acfe_flexible_category": false
-                                                }
-                                            },
-                                            "min": "",
-                                            "max": "",
-                                            "button_label": "Nieuwe rij",
-                                            "acfe_flexible_stylised_button": false,
-                                            "acfe_flexible_hide_empty_message": false,
-                                            "acfe_flexible_empty_message": "",
-                                            "acfe_flexible_layouts_templates": false,
-                                            "acfe_flexible_layouts_previews": false,
-                                            "acfe_flexible_layouts_placeholder": false,
-                                            "acfe_flexible_layouts_thumbnails": false,
-                                            "acfe_flexible_layouts_settings": false,
-                                            "acfe_flexible_async": [],
-                                            "acfe_flexible_add_actions": [],
-                                            "acfe_flexible_remove_button": [],
-                                            "acfe_flexible_layouts_state": false,
-                                            "acfe_flexible_modal_edit": {
-                                                "acfe_flexible_modal_edit_enabled": false,
-                                                "acfe_flexible_modal_edit_size": "large"
-                                            },
-                                            "acfe_flexible_modal": {
-                                                "acfe_flexible_modal_enabled": false,
-                                                "acfe_flexible_modal_title": false,
-                                                "acfe_flexible_modal_size": "full",
-                                                "acfe_flexible_modal_col": "4",
-                                                "acfe_flexible_modal_categories": false
-                                            }
-                                        },
-                                        {
-                                            "key": "field_68e8fdd757aeb",
-                                            "label": "Width Content",
-                                            "name": "width_content",
-                                            "aria-label": "",
-                                            "type": "text",
-                                            "instructions": "",
-                                            "required": 0,
-                                            "conditional_logic": 0,
-                                            "wrapper": {
-                                                "width": "",
-                                                "class": "",
-                                                "id": ""
-                                            },
-                                            "default_value": "",
-                                            "maxlength": "",
-                                            "allow_in_bindings": 0,
-                                            "placeholder": "",
-                                            "prepend": "",
-                                            "append": ""
-                                        },
-                                        {
-                                            "key": "field_68e8fdee57aec",
-                                            "label": "Height Content",
-                                            "name": "height_content",
-                                            "aria-label": "",
-                                            "type": "text",
-                                            "instructions": "",
-                                            "required": 0,
-                                            "conditional_logic": 0,
-                                            "wrapper": {
-                                                "width": "",
-                                                "class": "",
-                                                "id": ""
-                                            },
-                                            "default_value": "",
-                                            "maxlength": "",
-                                            "allow_in_bindings": 0,
-                                            "placeholder": "",
-                                            "prepend": "",
-                                            "append": ""
-                                        }
-                                    ],
-                                    "min": "",
-                                    "max": "",
-                                    "acfe_flexible_render_template": false,
-                                    "acfe_flexible_render_style": false,
-                                    "acfe_flexible_render_script": false,
-                                    "acfe_flexible_thumbnail": false,
-                                    "acfe_flexible_settings": false,
-                                    "acfe_flexible_settings_size": "medium",
-                                    "acfe_flexible_modal_edit_size": false,
-                                    "acfe_flexible_category": false
+                                {
+                                    "key": "field_68ee110260151",
+                                    "label": "Title Font Color",
+                                    "name": "title_font_color",
+                                    "aria-label": "",
+                                    "type": "select",
+                                    "instructions": "",
+                                    "required": 0,
+                                    "conditional_logic": 0,
+                                    "wrapper": {
+                                        "width": "",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "choices": {
+                                        "select": "Selecteer een kleur",
+                                        "wit": "Wit",
+                                        "zwart": "Zwart",
+                                        "groen": "Groen"
+                                    },
+                                    "default_value": "select",
+                                    "return_format": "value",
+                                    "multiple": 0,
+                                    "allow_null": 0,
+                                    "allow_in_bindings": 0,
+                                    "ui": 0,
+                                    "ajax": 0,
+                                    "placeholder": "",
+                                    "create_options": 0,
+                                    "save_options": 0,
+                                    "allow_custom": 0,
+                                    "search_placeholder": ""
                                 }
+                            ],
+                            "acfe_group_modal_close": 0,
+                            "acfe_group_modal_button": "",
+                            "acfe_group_modal_size": "large"
+                        },
+                        {
+                            "key": "field_68ee172e2c2c9",
+                            "label": "TextAlignment",
+                            "name": "",
+                            "aria-label": "",
+                            "type": "tab",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
                             },
-                            "min": "",
-                            "max": "",
-                            "button_label": "Nieuwe rij",
-                            "acfe_flexible_stylised_button": false,
-                            "acfe_flexible_hide_empty_message": false,
-                            "acfe_flexible_empty_message": "",
-                            "acfe_flexible_layouts_templates": false,
-                            "acfe_flexible_layouts_previews": false,
-                            "acfe_flexible_layouts_placeholder": false,
-                            "acfe_flexible_layouts_thumbnails": false,
-                            "acfe_flexible_layouts_settings": false,
-                            "acfe_flexible_async": [],
-                            "acfe_flexible_add_actions": [],
-                            "acfe_flexible_remove_button": [],
-                            "acfe_flexible_layouts_state": false,
-                            "acfe_flexible_modal_edit": {
-                                "acfe_flexible_modal_edit_enabled": false,
-                                "acfe_flexible_modal_edit_size": "large"
+                            "placement": "top",
+                            "endpoint": 0,
+                            "selected": 0
+                        },
+                        {
+                            "key": "field_68ee175f2c2ca",
+                            "label": "TextAlignment",
+                            "name": "textalignment",
+                            "aria-label": "",
+                            "type": "group",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
                             },
-                            "acfe_flexible_modal": {
-                                "acfe_flexible_modal_enabled": false,
-                                "acfe_flexible_modal_title": false,
-                                "acfe_flexible_modal_size": "full",
-                                "acfe_flexible_modal_col": "4",
-                                "acfe_flexible_modal_categories": false
-                            }
+                            "layout": "block",
+                            "acfe_seamless_style": 0,
+                            "acfe_group_modal": 0,
+                            "sub_fields": [
+                                {
+                                    "key": "field_68ee175f2c2cd",
+                                    "label": "Alignment Button",
+                                    "name": "alignment_button",
+                                    "aria-label": "",
+                                    "type": "select",
+                                    "instructions": "",
+                                    "required": 0,
+                                    "conditional_logic": 0,
+                                    "wrapper": {
+                                        "width": "",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "choices": {
+                                        "select": "Selecteer de alignment",
+                                        "left": "Left",
+                                        "center": "Center",
+                                        "right": "Right"
+                                    },
+                                    "default_value": "select",
+                                    "return_format": "value",
+                                    "multiple": 0,
+                                    "allow_null": 0,
+                                    "allow_in_bindings": 0,
+                                    "ui": 0,
+                                    "ajax": 0,
+                                    "placeholder": "",
+                                    "create_options": 0,
+                                    "save_options": 0,
+                                    "allow_custom": 0,
+                                    "search_placeholder": ""
+                                },
+                                {
+                                    "key": "field_68ee175f2c2ce",
+                                    "label": "Alignment Text",
+                                    "name": "alignment_text",
+                                    "aria-label": "",
+                                    "type": "select",
+                                    "instructions": "",
+                                    "required": 0,
+                                    "conditional_logic": 0,
+                                    "wrapper": {
+                                        "width": "",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "choices": {
+                                        "select": "Selecteer de alignment",
+                                        "left": "Left",
+                                        "center": "Center",
+                                        "right": "Right"
+                                    },
+                                    "default_value": "select",
+                                    "return_format": "value",
+                                    "multiple": 0,
+                                    "allow_null": 0,
+                                    "allow_in_bindings": 0,
+                                    "ui": 0,
+                                    "ajax": 0,
+                                    "placeholder": "",
+                                    "create_options": 0,
+                                    "save_options": 0,
+                                    "allow_custom": 0,
+                                    "search_placeholder": ""
+                                }
+                            ],
+                            "acfe_group_modal_close": 0,
+                            "acfe_group_modal_button": "",
+                            "acfe_group_modal_size": "large"
                         }
                     ],
                     "min": "",
@@ -1160,40 +770,6 @@
                                 }
                             ],
                             "acfe_repeater_stylised_button": 0
-                        },
-                        {
-                            "key": "field_68e7b6f69f191",
-                            "label": "Animatie",
-                            "name": "animatie",
-                            "aria-label": "",
-                            "type": "radio",
-                            "instructions": "",
-                            "required": 0,
-                            "conditional_logic": 0,
-                            "wrapper": {
-                                "width": "",
-                                "class": "",
-                                "id": ""
-                            },
-                            "choices": {
-                                "fade-up": "fade-up",
-                                "fade-down": "fade-down",
-                                "fade-left": "fade-left",
-                                "fade-right": "fade-right",
-                                "zoom-in": "zoom-in",
-                                "zoom-out": "zoom-out",
-                                "rotate-left": "rotate-left",
-                                "rotate-right": "rotate-right",
-                                "bounce": "bounce",
-                                "slide-up": "slide-up"
-                            },
-                            "default_value": "fade-up",
-                            "return_format": "value",
-                            "allow_null": 0,
-                            "other_choice": 0,
-                            "allow_in_bindings": 0,
-                            "layout": "vertical",
-                            "save_other_choice": 0
                         }
                     ],
                     "min": "",
@@ -2193,7 +1769,10 @@
     "style": "default",
     "label_placement": "top",
     "instruction_placement": "label",
-    "hide_on_screen": "",
+    "hide_on_screen": [
+        "block_editor",
+        "the_content"
+    ],
     "active": true,
     "description": "",
     "show_in_rest": 0,
@@ -2205,5 +1784,5 @@
     "acfe_form": 0,
     "acfe_meta": "",
     "acfe_note": "",
-    "modified": 1760100012
+    "modified": 1760434698
 }
