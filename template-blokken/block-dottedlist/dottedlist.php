@@ -15,38 +15,3 @@ $textrepeater = get_sub_field('textrepeater');
         <?php endif; ?>
     </div>
 </section>
-
-<style>
-    .blogtext-block {
-        margin-top: 10px;
-        width: 100%;
-        background-color: #f8f6f2;
-    }
-
-    .blogtext-container {
-        width: 55%;
-        margin: 0 auto;
-        max-width: 800px;
-        display: flex;
-        flex-direction: column;
-        text-align: left;
-    }
-
-    .blog-list {
-        list-style-type: disc;
-        padding-left: 20px;   
-        margin: 0;
-    }
-
-    .blog-list li::marker {
-    color: rgba(0, 0, 0, 0.3);
-    }
-
-
-
-    .blog-text {
-        font-size: 1.1rem;
-        line-height: 1.6;
-        margin-bottom: 8px;
-    }
-</style>

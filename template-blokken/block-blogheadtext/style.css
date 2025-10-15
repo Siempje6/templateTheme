@@ -1,0 +1,19 @@
+.blogtext-block {
+    width: 100%;
+    background-color: #f8f6f2;
+}
+
+.blogtext-container {
+    width: 55%;
+    margin: 0 auto;
+    max-width: 800px;
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+}
+
+.blog-text {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    margin-bottom: 10px;
+}

@@ -85,27 +85,43 @@ add_filter('acf/settings/load_json', function ($paths) {
 });
 
 // ===============================
-// 5. Block Image CSS & JS
+// 5. Block CSS automatisch inladen
 // ===============================
-function image_block_assets() {
-    // CSS
-    wp_enqueue_style(
-        'image-block-style',
-        get_template_directory_uri() . '/template-blokken/block-image/style.css',
-        array(),
-        null
-    );
 
-    // JS
-    wp_enqueue_script(
-        'image-block-script',
-        get_template_directory_uri() . '/template-blokken/block-image/script.js',
-        array('gsap-core'),
-        null,
-        true
-    );
+function enqueue_all_block_assets() {
+    $blocks_dir = get_template_directory() . '/template-blokken';
+    $blocks_uri = get_template_directory_uri() . '/template-blokken';
+
+    $folders = glob($blocks_dir . '/*', GLOB_ONLYDIR);
+
+    foreach ($folders as $folder) {
+        $folder_name = basename($folder);
+        $css_file = $folder . '/style.css';
+        $js_file  = $folder . '/script.js';
+
+        if (file_exists($css_file)) {
+            wp_enqueue_style(
+                $folder_name . '-block-style',
+                $blocks_uri . '/' . $folder_name . '/style.css',
+                array(),
+                filemtime($css_file)
+            );
+        }
+
+        if (file_exists($js_file)) {
+            wp_enqueue_script(
+                $folder_name . '-block-script',
+                $blocks_uri . '/' . $folder_name . '/script.js',
+                array('jquery'), // pas dependencies aan
+                filemtime($js_file),
+                true
+            );
+        }
+    }
 }
-add_action('wp_enqueue_scripts', 'image_block_assets');
+add_action('wp_enqueue_scripts', 'enqueue_all_block_assets');
+
+
 
 
 // ===============================

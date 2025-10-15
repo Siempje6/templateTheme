@@ -22,61 +22,6 @@ if (!is_array($slides)) $slides = [];
     </section>
 <?php endif; ?>
 
-<style>
-    .slider-block {
-        width: 100%;
-        padding: 80px 0;
-        display: flex;
-        justify-content: center;
-        background: #f8f6f2;
-    }
-
-    .slider-wrapper {
-        width: 90%;
-        max-width: 1200px;
-        overflow: hidden;
-    }
-
-    .carousel {
-        display: flex;
-        gap: 16px;
-        cursor: grab;
-        user-select: none;
-        transform: translateX(0);
-    }
-
-    .carousel.grabbing {
-        cursor: grabbing;
-    }
-
-    .slide {
-        flex-shrink: 0;
-        border-radius: 12px;
-        overflow: hidden;
-        user-select: none;
-    }
-
-    .slide img {
-        width: 100%;
-        height: 400px;
-        object-fit: cover;
-        display: block;
-        pointer-events: none;
-        user-select: none;
-        min-width: 300px;
-    }
-
-    .slide:nth-child(even) img {
-        min-width: 500px;
-    }
-
-    @media (max-width:768px) {
-        .slide img {
-            height: 250px;
-            min-width: 80%;
-        }
-    }
-</style>
 
 <script>
     document.addEventListener("DOMContentLoaded", () => {
