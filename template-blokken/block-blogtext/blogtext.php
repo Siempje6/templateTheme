@@ -12,3 +12,7 @@ $blogtekst = get_sub_field('blogtekst');
     </div>
 </section>
 
+<style>
+
+
+</style>
