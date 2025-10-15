@@ -214,7 +214,7 @@
                                     "label": "Title Font Color",
                                     "name": "title_font_color",
                                     "aria-label": "",
-                                    "type": "select",
+                                    "type": "button_group",
                                     "instructions": "",
                                     "required": 0,
                                     "conditional_logic": 0,
@@ -224,23 +224,15 @@
                                         "id": ""
                                     },
                                     "choices": {
-                                        "select": "Selecteer een kleur",
-                                        "wit": "Wit",
-                                        "zwart": "Zwart",
-                                        "groen": "Groen"
+                                        "wit": "<span class=\"dashicons dashicons-color-picker whitebtn\"><\/span> White",
+                                        "groen": "<span class=\"dashicons dashicons-color-picker greenbtn\"><\/span> Green",
+                                        "zwart": "<span class=\"dashicons dashicons-color-picker blackbtn\"><\/span> Black"
                                     },
-                                    "default_value": "select",
+                                    "default_value": "",
                                     "return_format": "value",
-                                    "multiple": 0,
                                     "allow_null": 0,
                                     "allow_in_bindings": 0,
-                                    "ui": 0,
-                                    "ajax": 0,
-                                    "placeholder": "",
-                                    "create_options": 0,
-                                    "save_options": 0,
-                                    "allow_custom": 0,
-                                    "search_placeholder": ""
+                                    "layout": "horizontal"
                                 }
                             ],
                             "acfe_group_modal_close": 0,
@@ -570,7 +562,7 @@
                     ],
                     "min": "",
                     "max": "",
-                    "acfe_flexible_render_template": "",
+                    "acfe_flexible_render_template": "template-blokken\/heroimage\/heroimage.php",
                     "acfe_flexible_render_style": "",
                     "acfe_flexible_render_script": "",
                     "acfe_flexible_settings": "",
@@ -630,7 +622,7 @@
                     ],
                     "min": "",
                     "max": "",
-                    "acfe_flexible_render_template": "",
+                    "acfe_flexible_render_template": "template-blokken\/block-buttonrepeater.php",
                     "acfe_flexible_render_style": "",
                     "acfe_flexible_render_script": "",
                     "acfe_flexible_settings": "",
@@ -791,7 +783,7 @@
                     ],
                     "min": "",
                     "max": "",
-                    "acfe_flexible_render_template": "",
+                    "acfe_flexible_render_template": "template-blokken\/block-image\/image.php",
                     "acfe_flexible_render_style": "",
                     "acfe_flexible_render_script": "",
                     "acfe_flexible_settings": "",
@@ -981,12 +973,12 @@
                     ],
                     "min": "",
                     "max": "",
-                    "acfe_flexible_render_template": "",
+                    "acfe_flexible_render_template": "template-blokken\/block-paragraph\/paragraph.php",
                     "acfe_flexible_render_style": "",
                     "acfe_flexible_render_script": "",
                     "acfe_flexible_settings": "",
                     "acfe_flexible_settings_size": "medium",
-                    "acfe_flexible_thumbnail": "",
+                    "acfe_flexible_thumbnail": "583",
                     "acfe_flexible_modal_edit_size": false,
                     "acfe_flexible_category": false
                 },
@@ -1452,11 +1444,231 @@
                             "first_day": 1,
                             "default_to_current_date": 0,
                             "allow_in_bindings": 0
+                        },
+                        {
+                            "key": "field_68ef527b7e643",
+                            "label": "Text Styling",
+                            "name": "",
+                            "aria-label": "",
+                            "type": "tab",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "placement": "top",
+                            "endpoint": 0,
+                            "selected": 0
+                        },
+                        {
+                            "key": "field_68ef52907e644",
+                            "label": "TextStyling",
+                            "name": "textstyling",
+                            "aria-label": "",
+                            "type": "group",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "layout": "block",
+                            "acfe_seamless_style": 0,
+                            "acfe_group_modal": 0,
+                            "sub_fields": [
+                                {
+                                    "key": "field_68ef52b37e645",
+                                    "label": "Title Size",
+                                    "name": "title_size",
+                                    "aria-label": "",
+                                    "type": "select",
+                                    "instructions": "",
+                                    "required": 0,
+                                    "conditional_logic": 0,
+                                    "wrapper": {
+                                        "width": "",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "choices": {
+                                        "select": "Selecteer een Grootte",
+                                        "h1": "H1",
+                                        "h2": "H2",
+                                        "h3": "H3",
+                                        "h4": "H4",
+                                        "h5": "H5",
+                                        "h6": "H6",
+                                        "p": "P",
+                                        "div": "Div"
+                                    },
+                                    "default_value": "select",
+                                    "return_format": "value",
+                                    "multiple": 0,
+                                    "allow_null": 0,
+                                    "allow_in_bindings": 0,
+                                    "ui": 0,
+                                    "ajax": 0,
+                                    "placeholder": "",
+                                    "create_options": 0,
+                                    "save_options": 0,
+                                    "allow_custom": 0,
+                                    "search_placeholder": ""
+                                },
+                                {
+                                    "key": "field_68ef52ee7e646",
+                                    "label": "Blog Title Color",
+                                    "name": "blog_title_color",
+                                    "aria-label": "",
+                                    "type": "button_group",
+                                    "instructions": "",
+                                    "required": 0,
+                                    "conditional_logic": 0,
+                                    "wrapper": {
+                                        "width": "",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "choices": {
+                                        "wit": "<span class=\"dashicons dashicons-color-picker whitebtn\"><\/span> White",
+                                        "groen": "<span class=\"dashicons dashicons-color-picker greenbtn\"><\/span> Green",
+                                        "zwart": "<span class=\"dashicons dashicons-color-picker blackbtn\"><\/span> Black"
+                                    },
+                                    "default_value": "",
+                                    "return_format": "value",
+                                    "allow_null": 0,
+                                    "allow_in_bindings": 0,
+                                    "layout": "horizontal"
+                                },
+                                {
+                                    "key": "field_68ef558a7e647",
+                                    "label": "Blog Author Color",
+                                    "name": "blog_author_color",
+                                    "aria-label": "",
+                                    "type": "button_group",
+                                    "instructions": "",
+                                    "required": 0,
+                                    "conditional_logic": 0,
+                                    "wrapper": {
+                                        "width": "",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "choices": {
+                                        "wit": "<span class=\"dashicons dashicons-color-picker whitebtn\"><\/span> White",
+                                        "groen": "<span class=\"dashicons dashicons-color-picker greenbtn\"><\/span> Green",
+                                        "zwart": "<span class=\"dashicons dashicons-color-picker blackbtn\"><\/span> Black"
+                                    },
+                                    "default_value": "",
+                                    "return_format": "value",
+                                    "allow_null": 0,
+                                    "allow_in_bindings": 0,
+                                    "layout": "horizontal"
+                                },
+                                {
+                                    "key": "field_68ef558d7e648",
+                                    "label": "Blog Date Color",
+                                    "name": "blog_date_color",
+                                    "aria-label": "",
+                                    "type": "button_group",
+                                    "instructions": "",
+                                    "required": 0,
+                                    "conditional_logic": 0,
+                                    "wrapper": {
+                                        "width": "",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "choices": {
+                                        "wit": "<span class=\"dashicons dashicons-color-picker whitebtn\"><\/span> White",
+                                        "groen": "<span class=\"dashicons dashicons-color-picker greenbtn\"><\/span> Green",
+                                        "zwart": "<span class=\"dashicons dashicons-color-picker blackbtn\"><\/span> Black"
+                                    },
+                                    "default_value": "",
+                                    "return_format": "value",
+                                    "allow_null": 0,
+                                    "allow_in_bindings": 0,
+                                    "layout": "horizontal"
+                                }
+                            ],
+                            "acfe_group_modal_close": 0,
+                            "acfe_group_modal_button": "",
+                            "acfe_group_modal_size": "large"
+                        },
+                        {
+                            "key": "field_68ef55cb7e649",
+                            "label": "Blog Text Alignment",
+                            "name": "",
+                            "aria-label": "",
+                            "type": "tab",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "placement": "top",
+                            "endpoint": 0,
+                            "selected": 0
+                        },
+                        {
+                            "key": "field_68ef560c7e64c",
+                            "label": "Alignment",
+                            "name": "alignment",
+                            "aria-label": "",
+                            "type": "group",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "layout": "block",
+                            "acfe_seamless_style": 0,
+                            "acfe_group_modal": 0,
+                            "sub_fields": [
+                                {
+                                    "key": "field_68ef55eb7e64b",
+                                    "label": "Blog Hero Alignment",
+                                    "name": "alignment_hero_kopie",
+                                    "aria-label": "",
+                                    "type": "button_group",
+                                    "instructions": "",
+                                    "required": 0,
+                                    "conditional_logic": 0,
+                                    "wrapper": {
+                                        "width": "",
+                                        "class": "alignhero",
+                                        "id": ""
+                                    },
+                                    "choices": {
+                                        "leftdwwdawdadwdwawadwadaw": "<i class=\"dashicons dashicons-editor-alignleft\"><\/i>",
+                                        "centeralignhero": "<i class=\"dashicons dashicons-editor-aligncenter\"><\/i>",
+                                        "rightalignhero": "<i class=\"dashicons dashicons-editor-alignright\"><\/i>"
+                                    },
+                                    "default_value": "",
+                                    "return_format": "value",
+                                    "allow_null": 0,
+                                    "allow_in_bindings": 0,
+                                    "layout": "horizontal"
+                                }
+                            ],
+                            "acfe_group_modal_close": 0,
+                            "acfe_group_modal_button": "",
+                            "acfe_group_modal_size": "large"
                         }
                     ],
                     "min": "",
                     "max": "",
-                    "acfe_flexible_render_template": "",
+                    "acfe_flexible_render_template": "template-blokken\/block-bloghero\/bloghero.php",
                     "acfe_flexible_render_style": "",
                     "acfe_flexible_render_script": "",
                     "acfe_flexible_settings": "",
@@ -1495,7 +1707,7 @@
                     ],
                     "min": "",
                     "max": "",
-                    "acfe_flexible_render_template": "",
+                    "acfe_flexible_render_template": "template-blokken\/block-blogtext\/blogtext.php",
                     "acfe_flexible_render_style": "",
                     "acfe_flexible_render_script": "",
                     "acfe_flexible_settings": "",
@@ -1781,5 +1993,5 @@
     "acfe_form": 0,
     "acfe_meta": "",
     "acfe_note": "",
-    "modified": 1760452104
+    "modified": 1760517411
 }

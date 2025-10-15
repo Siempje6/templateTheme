@@ -20,7 +20,7 @@ $blogtekst = get_sub_field('blogtekst');
     }
 
     .blogtext-container {
-        width: 55%;
+        width: 100%;
         margin: 0 auto;
         max-width: 800px;
         display: flex;

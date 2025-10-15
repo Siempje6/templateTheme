@@ -26,10 +26,10 @@ $textrepeater = get_sub_field('textrepeater');
 }
 
 .paragraph-container {
-    width: 55%;              
-    margin: 0 auto;         
+    width: 100%;            
     max-width: 800px;
     display: flex;
+    margin: 0 auto;
     flex-direction: column;
     text-align: left;      
 }
@@ -49,8 +49,9 @@ $textrepeater = get_sub_field('textrepeater');
 
 @media screen and (max-width: 768px) {
     .paragraph-container {
-        width: 80%;          
-        padding: 20px;      
+        width: 100%;          
+        padding: 20px;
+        max-width: 600px;      
     }
 
     .paragraph-title {

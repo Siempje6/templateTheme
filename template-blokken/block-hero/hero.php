@@ -126,12 +126,12 @@ if (!$alignment_hero) $alignment_hero = 'leftalignhero';
 }
 
 /* Dynamische font-groottes */
-.hero-title-h1 { font-size: 3rem; }
-.hero-title-h2 { font-size: 2.5rem; }
-.hero-title-h3 { font-size: 2rem; }
-.hero-title-h4 { font-size: 1.75rem; }
-.hero-title-h5 { font-size: 1.5rem; }
-.hero-title-h6 { font-size: 1.25rem; }
+.hero-title-h1 { font-size: 3.5rem; }
+.hero-title-h2 { font-size: 3rem; }
+.hero-title-h3 { font-size: 2.5rem; }
+.hero-title-h4 { font-size: 2rem; }
+.hero-title-h5 { font-size: 1.75rem; }
+.hero-title-h6 { font-size: 1.5rem; }
 .hero-title-p,
 .hero-title-div { font-size: 1.1rem; }
 
@@ -196,7 +196,7 @@ if (!$alignment_hero) $alignment_hero = 'leftalignhero';
     .hero-block {
         width: 100%;
         padding: 30px 15px;
-        max-width: 700px;
+        max-width: 600px;
     }
 
     .hero-title-h1 { font-size: 2.4rem; }

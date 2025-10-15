@@ -63,10 +63,19 @@
   border-radius: 1rem;
 }
 
-.layout,
+
 .postbox,
 .postbox-header{
   border-radius: 1.05rem;
+}
+
+.layout {
+  border-radius: 1.05rem;
+}
+
+.layout > .acfe-fc-placeholder.acfe-fc-preview > .acfe-flexible-placeholder{
+  border-bottom-left-radius: 1.05rem;
+  border-bottom-right-radius: 1.05rem;
 }
 
 #major-publishing-actions{
