@@ -25,6 +25,7 @@
             <?php while (have_rows('kolommen')): the_row(); ?>
                 <?php $layout = get_row_layout(); ?>
 
+                <!-- 1 KOLOM -->
                 <?php if ($layout === 'row_1_col'): ?>
                     <div class="row row-1-col centered-columns">
                         <?php if (have_rows('column')): ?>
@@ -41,6 +42,7 @@
                         <?php endif; ?>
                     </div>
 
+                <!-- 2 KOLOMMEN -->
                 <?php elseif ($layout === 'row_2_col'): ?>
                     <div class="row row-2-col centered-columns">
                         <div class="column linker">
@@ -57,6 +59,55 @@
                                 <?php endwhile; ?>
                             <?php endif; ?>
                         </div>
+                        <div class="column rechter">
+                            <?php if (have_rows('rechter_kolom')): ?>
+                                <?php while (have_rows('rechter_kolom')): the_row(); ?>
+                                    <?php
+                                    if (have_rows('flex_fields')):
+                                        while (have_rows('flex_fields')): the_row();
+                                            $sub_layout = get_row_layout();
+                                            get_template_part('template-blokken/block-' . $sub_layout . '/' . $sub_layout);
+                                        endwhile;
+                                    endif;
+                                    ?>
+                                <?php endwhile; ?>
+                            <?php endif; ?>
+                        </div>
+                    </div>
+
+                <!-- 3 KOLOMMEN -->
+                <?php elseif ($layout === 'row_3_col'): ?>
+                    <div class="row row-3-col centered-columns">
+                        <div class="column linker">
+                            <?php if (have_rows('linker_kolom')): ?>
+                                <?php while (have_rows('linker_kolom')): the_row(); ?>
+                                    <?php
+                                    if (have_rows('flex_fields')):
+                                        while (have_rows('flex_fields')): the_row();
+                                            $sub_layout = get_row_layout();
+                                            get_template_part('template-blokken/block-' . $sub_layout . '/' . $sub_layout);
+                                        endwhile;
+                                    endif;
+                                    ?>
+                                <?php endwhile; ?>
+                            <?php endif; ?>
+                        </div>
+
+                        <div class="column midden">
+                            <?php if (have_rows('midden_kolom')): ?>
+                                <?php while (have_rows('midden_kolom')): the_row(); ?>
+                                    <?php
+                                    if (have_rows('flex_fields')):
+                                        while (have_rows('flex_fields')): the_row();
+                                            $sub_layout = get_row_layout();
+                                            get_template_part('template-blokken/block-' . $sub_layout . '/' . $sub_layout);
+                                        endwhile;
+                                    endif;
+                                    ?>
+                                <?php endwhile; ?>
+                            <?php endif; ?>
+                        </div>
+
                         <div class="column rechter">
                             <?php if (have_rows('rechter_kolom')): ?>
                                 <?php while (have_rows('rechter_kolom')): the_row(); ?>
@@ -144,27 +195,49 @@
             }
         }
 
-        /* KOLUMNEN */
         .centered-columns {
-            max-width: 60%;
+            max-width: 70%;
             margin: 0 auto;
         }
 
         .row-2-col.centered-columns {
             display: flex;
             gap: 20px;
+            align-items: stretch; 
         }
 
         .row-2-col.centered-columns .column {
             flex: 1;
-            padding: 0 10px;
+            width: 100%;
+            padding: 10px;
+            box-sizing: border-box;
+        }
+
+        .row-3-col.centered-columns {
+            display: flex;
+            gap: 20px;
+            align-items: stretch;
+        }
+
+        .row-3-col.centered-columns .column {
+            flex: 1;
+            width: 100%;
+            padding: 10px;
             box-sizing: border-box;
         }
 
         .row-1-col.centered-columns .column {
             width: 100%;
-            padding: 0 10px;
+            padding: 10px;
             box-sizing: border-box;
+        }
+
+        .row-2-col.centered-columns .column img,
+        .row-3-col.centered-columns .column img {
+            width: 100%;
+            height: auto;
+            object-fit: cover;
+            display: block;
         }
     </style>
 

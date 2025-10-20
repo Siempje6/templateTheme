@@ -1,0 +1,253 @@
+=========================
+KOLUMNEN BOUWER – VOLLEDIGE RIJINSTELLINGEN
+=========================
+
+📦 VELDGROEP: Kolommen (Flexible Content)
+-----------------------------------------
+Naam: kolommen
+Type: Flexible Content
+Layouts:
+    - row_1_col (1 kolom)
+    - row_2_col (2 kolommen)
+    - row_3_col (3 kolommen)
+
+=========================
+ALGEMENE INSTELLINGEN (voor elke layout)
+=========================
+
+Group: Rij instellingen
+-----------------------------------------
+1️⃣ Breedte van de rij
+- Naam: rij_breedte
+- Type: Select
+- Opties:
+  - 50%
+  - 60%
+  - 70%
+  - 80%
+  - 90%
+  - 100%
+- Default: 70%
+
+2️⃣ Max Breedte (px)
+- Naam: max_breedte
+- Type: Number
+- Placeholder: 1200
+- Opmerking: Overschrijft breedte als ingevuld
+
+3️⃣ Padding Boven (px)
+- Naam: padding_boven
+- Type: Number
+- Default: 60
+
+4️⃣ Padding Onder (px)
+- Naam: padding_onder
+- Type: Number
+- Default: 60
+
+5️⃣ Margin Boven (px)
+- Naam: margin_boven
+- Type: Number
+- Default: 0
+
+6️⃣ Margin Onder (px)
+- Naam: margin_onder
+- Type: Number
+- Default: 0
+
+7️⃣ Achtergrondkleur
+- Naam: achtergrondkleur
+- Type: Color Picker
+- Default: #ffffff
+
+8️⃣ Achtergrondafbeelding
+- Naam: achtergrondafbeelding
+- Type: Image
+- Return format: URL
+- Opmerking: Wordt gebruikt als background-image
+
+9️⃣ Achtergrondherhaling
+- Naam: achtergrond_herhaling
+- Type: Select
+- Opties:
+  - no-repeat
+  - repeat
+  - repeat-x
+  - repeat-y
+- Default: no-repeat
+
+🔟 Achtergrondpositie
+- Naam: achtergrond_positie
+- Type: Select
+- Opties:
+  - center center
+  - top center
+  - bottom center
+  - left center
+  - right center
+- Default: center center
+
+1️⃣1️⃣ Achtergrondgrootte
+- Naam: achtergrond_grootte
+- Type: Select
+- Opties:
+  - cover
+  - contain
+  - auto
+- Default: cover
+
+=========================
+LAYOUT & STRUCTUUR
+=========================
+
+1️⃣2️⃣ Rij Uitlijning Horizontaal
+- Naam: horizontal_alignment
+- Type: Select
+- Opties:
+  - left
+  - center
+  - right
+  - space-between
+  - space-around
+- Default: center
+
+1️⃣3️⃣ Rij Uitlijning Verticaal
+- Naam: vertical_alignment
+- Type: Select
+- Opties:
+  - top
+  - center
+  - bottom
+  - stretch
+- Default: top
+
+1️⃣4️⃣ Gap tussen kolommen (px)
+- Naam: kolom_gap
+- Type: Number
+- Default: 20
+
+1️⃣5️⃣ Kolombreedte verhouding (alleen 2/3 kolommen)
+- Naam: kolom_verhouding
+- Type: Select
+- Opties:
+  - 50 / 50
+  - 40 / 60
+  - 60 / 40
+  - 30 / 70
+  - 70 / 30
+  - 33 / 33 / 33
+  - 25 / 50 / 25
+  - 20 / 60 / 20
+- Default: afhankelijk van layout
+
+1️⃣6️⃣ Kolom volgorde op mobiel
+- Naam: mobiel_volgorde
+- Type: Select
+- Opties:
+  - standaard
+  - omgedraaid
+  - stack onder elkaar
+- Default: stack onder elkaar
+
+1️⃣7️⃣ Responsief gedrag
+- Naam: responsive_stack
+- Type: True/False
+- Label: "Kolommen stapelen op mobiel"
+- Default: true
+
+1️⃣8️⃣ Even hoogte kolommen
+- Naam: even_hoogte
+- Type: True/False
+- Default: false
+
+=========================
+VISUELE STYLING
+=========================
+
+1️⃣9️⃣ Tekstkleur
+- Naam: tekstkleur
+- Type: Color Picker
+- Default: #000000
+
+2️⃣0️⃣ Linkkleur
+- Naam: linkkleur
+- Type: Color Picker
+- Default: #0073aa
+
+2️⃣1️⃣ Achtergrond overlay kleur
+- Naam: overlay_kleur
+- Type: Color Picker
+- Default: none
+
+2️⃣2️⃣ Achtergrond overlay transparantie
+- Naam: overlay_opacity
+- Type: Range
+- Min: 0
+- Max: 1
+- Step: 0.05
+- Default: 0.4
+
+2️⃣3️⃣ Randkleur
+- Naam: border_color
+- Type: Color Picker
+- Default: none
+
+2️⃣4️⃣ Randdikte (px)
+- Naam: border_width
+- Type: Number
+- Default: 0
+
+2️⃣5️⃣ Border-radius (px)
+- Naam: border_radius
+- Type: Number
+- Default: 0
+
+2️⃣6️⃣ Box-shadow
+- Naam: box_shadow
+- Type: True/False
+- Default: false
+
+=========================
+EXTRA
+=========================
+
+2️⃣7️⃣ Custom CSS Class
+- Naam: custom_class
+- Type: Text
+- Placeholder: "mijn-extra-klas"
+
+2️⃣8️⃣ Custom ID
+- Naam: custom_id
+- Type: Text
+- Placeholder: "anker-id"
+
+2️⃣9️⃣ Animatie bij laden
+- Naam: animatie
+- Type: Select
+- Opties:
+  - Geen
+  - Fade in
+  - Slide up
+  - Slide left
+  - Zoom in
+- Default: Geen
+
+3️⃣0️⃣ Hero gedrag (alleen als hero block aanwezig)
+- Naam: hero_responsive_gedrag
+- Type: Select
+- Opties:
+  - Volledige hoogte behouden
+  - Meeschalen met kolom
+  - Auto hoogte
+- Default: Meeschalen met kolom
+
+=========================
+KOLUMNEN INHOUD
+=========================
+Voor elk layout-type:
+- row_1_col → veld: column (flex fields)
+- row_2_col → velden: linker_kolom, rechter_kolom (flex fields)
+- row_3_col → velden: linker_kolom, midden_kolom, rechter_kolom (flex fields)
+
+Alle kolommen bevatten:
+  - flexible content veld `flex_fields` (clone van je basisgroep)
