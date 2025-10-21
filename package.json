@@ -4,7 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build:sass": "sass assets/scss/style.scss assets/css/style.min.css --style=compressed --no-source-map",
+    "watch:sass": "sass --watch assets/scss/style.scss assets/css/style.css --style=expanded"
   },
   "repository": {
     "type": "git",
@@ -17,5 +19,8 @@
   "bugs": {
     "url": "https://github.com/Siempje6/templateTheme/issues"
   },
-  "homepage": "https://github.com/Siempje6/templateTheme#readme"
+  "homepage": "https://github.com/Siempje6/templateTheme#readme",
+  "devDependencies": {
+    "sass": "^1.93.2"
+  }
 }

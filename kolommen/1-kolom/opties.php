@@ -237,3 +237,31 @@ if ($animatie_bij_laden) {
             break;
     }
 }
+
+?>
+<style>
+.kolom-1-<?php echo $custom_id_style; ?> {
+    <?php echo $breedte_rij_style; ?>
+    <?php echo $uitlijning_horizontaal; ?>
+    <?php echo $uitlijning_verticaal; ?>
+    <?php echo $volgorde_mobiel; ?>
+    <?php echo $responsive_gedrag; ?>
+    <?php echo $even_hoogte_kolommen; ?>
+    <?php echo $rand; ?>
+    <?php echo $box_schaduw_style; ?>
+    <?php echo $max_breedte_style; ?>
+    <?php echo $padding_boven_style; ?>
+    <?php echo $padding_onder_style; ?>
+    <?php echo $margin_boven_style; ?>
+    <?php echo $margin_onder_style; ?>
+    <?php echo $achtergrond_kleur_style; ?>
+    <?php echo $gat_kolommen_style; ?>
+    <?php echo $tekst_kleur_style; ?>
+    <?php echo $link_kleur_style; ?>
+    <?php echo $rand_radius_style; ?>
+    <?php echo $rand_dikte_style; ?>
+    <?php echo $randkleur_style; ?>
+}
+
+
+</style>
