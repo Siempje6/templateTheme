@@ -8,11 +8,12 @@
 // ===============================
 function thema_enqueue_assets() {
     // ---------- CSS ----------
+    // In plaats van losse block CSS-bestanden, gebruiken we één gecompileerde SCSS-output (main.css)
     wp_enqueue_style(
         'theme-main',
         get_template_directory_uri() . '/assets/css/main.css',
         array(),
-        null
+        filemtime(get_template_directory() . '/assets/css/main.css')
     );
 
     // ---------- JS ----------
@@ -25,7 +26,7 @@ function thema_enqueue_assets() {
         true
     );
 
-    // ScrollTrigger plugin (optioneel, kan in de toekomst)
+    // ScrollTrigger plugin
     wp_enqueue_script(
         'gsap-scrolltrigger',
         'https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/ScrollTrigger.min.js',
@@ -34,12 +35,12 @@ function thema_enqueue_assets() {
         true
     );
 
-    // Jouw eigen app.js
+    // Jouw eigen JS
     wp_enqueue_script(
         'theme-app-js',
-        get_template_directory_uri() . '/js/app.js',
+        get_template_directory_uri() . '/assets/js/script.js',
         array('gsap-core', 'gsap-scrolltrigger'),
-        null,
+        filemtime(get_template_directory() . '/assets/js/script.js'),
         true
     );
 }
@@ -85,9 +86,10 @@ add_filter('acf/settings/load_json', function ($paths) {
 });
 
 // ===============================
-// 5. Block CSS automatisch inladen
+// 5. Block CSS automatisch inladen (UITGESCHAKELD - nu via SCSS)
 // ===============================
 
+/*
 function enqueue_all_block_assets() {
     $blocks_dir = get_template_directory() . '/template-blokken';
     $blocks_uri = get_template_directory_uri() . '/template-blokken';
@@ -112,7 +114,7 @@ function enqueue_all_block_assets() {
             wp_enqueue_script(
                 $folder_name . '-block-script',
                 $blocks_uri . '/' . $folder_name . '/script.js',
-                array('jquery'), // pas dependencies aan
+                array('jquery'),
                 filemtime($js_file),
                 true
             );
@@ -120,9 +122,7 @@ function enqueue_all_block_assets() {
     }
 }
 add_action('wp_enqueue_scripts', 'enqueue_all_block_assets');
-
-
-
+*/
 
 // ===============================
 // 6. Blossom Carousel inladen
@@ -131,12 +131,11 @@ function thema_enqueue_blossom_carousel() {
     $js_uri  = get_template_directory_uri() . '/assets/js/vendor/blossom-carousel.js';
     $css_uri = get_template_directory_uri() . '/assets/css/vendor/blossom-carousel.css';
 
-    // JS
     wp_enqueue_script(
         'blossom-carousel',
         $js_uri,
-        array(), 
-        null,
+        array(),
+        filemtime(get_template_directory() . '/assets/js/vendor/blossom-carousel.js'),
         true
     );
 
@@ -144,13 +143,14 @@ function thema_enqueue_blossom_carousel() {
         'blossom-carousel-style',
         $css_uri,
         array(),
-        null
+        filemtime(get_template_directory() . '/assets/css/vendor/blossom-carousel.css')
     );
 }
 add_action('wp_enqueue_scripts', 'thema_enqueue_blossom_carousel');
 
-
-
+// ===============================
+// 7. Admin styling (ACF backend)
+// ===============================
 function my_acf_admin_enqueue_styles() {
     wp_enqueue_style(
         'acf-admin-custom',
@@ -160,3 +160,36 @@ function my_acf_admin_enqueue_styles() {
     );
 }
 add_action('admin_enqueue_scripts', 'my_acf_admin_enqueue_styles');
+
+// ===============================
+// 8. SCSS compiler via npm (documentatie)
+// ===============================
+/**
+ * 💡 Belangrijk:
+ * 
+ * De SCSS-structuur compileert via npm scripts, niet in PHP.
+ * 
+ * In je project-root:
+ *  - assets/scss/style.scss (hoofd bestand)
+ *  - assets/scss/blocks/ (alle block scss files)
+ * 
+ * In style.scss importeer je alle blocks:
+ * 
+ * @import "variables";
+ * @import "mixins";
+ * @import "blocks/hero";
+ * @import "blocks/image";
+ * @import "blocks/slider";
+ * 
+ * Gebruik vervolgens:
+ * 
+ * ```bash
+ * npm run build
+ * ```
+ * of (voor live compilatie)
+ * ```bash
+ * npm run watch
+ * ```
+ * 
+ * Dit genereert automatisch `/assets/css/main.css`.
+ */
