@@ -1,12 +1,10 @@
 
+// niet veel aan te passen blokken 
 // blog blocks
 @use 'blocks/blog-blocks/blogheadtext.scss';
 @use 'blocks/blog-blocks/bloghero.scss';
 @use 'blocks/blog-blocks/bloglink.scss';
 @use 'blocks/blog-blocks/blogtext.scss';
-
-
-
 // other blocks
 @use 'blocks/hero.scss';
 @use 'blocks/image.scss';
@@ -16,10 +14,8 @@
 @use 'blocks/paragraph.scss';
 @use 'blocks/slider.scss';
 
-
 @use 'blocks/messagesummary.scss';
 @use 'blocks/summary.scss';
-
 
 @use 'blocks/dottedlist.scss';
 
