@@ -12,18 +12,5 @@ if ($button):
 <?php endif; ?>
 
 <style>
-.btn {
-    display: inline-block;
-    padding: 10px 20px;
-    background-color: #1a5427;
-    color: white;
-    text-decoration: none;
-    border-radius: 2rem;
-    margin-left: 2rem;
-    font-weight: bold;
-}
 
-.btn:hover {
-    background-color: #005177;
-}
 </style>

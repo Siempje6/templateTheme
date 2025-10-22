@@ -1,0 +1,58 @@
+.title {
+    margin-left: 2rem;
+    text-align: left;
+    margin-bottom: 0px;
+
+    // Font families
+    &.font-arial { font-family: Arial, sans-serif; }
+    &.font-verdana { font-family: Verdana, sans-serif; }
+    &.font-helvetica { font-family: Helvetica, sans-serif; }
+    &.font-times-new-roman { font-family: 'Times New Roman', Times, serif; }
+    &.font-georgia { font-family: Georgia, serif; }
+    &.font-courier-new { font-family: 'Courier New', Courier, monospace; }
+    &.font-trebuchet-ms { font-family: 'Trebuchet MS', sans-serif; }
+    &.font-palatino-linotype { font-family: 'Palatino Linotype', 'Book Antiqua', Palatino, serif; }
+    &.font-comic-sans-ms { font-family: 'Comic Sans MS', cursive, sans-serif; }
+    &.font-impact { font-family: Impact, Charcoal, sans-serif; }
+
+    // Font weight
+    &.weight-100 { font-weight: 100; }
+    &.weight-200 { font-weight: 200; }
+    &.weight-300 { font-weight: 300; }
+    &.weight-400 { font-weight: 400; }
+    &.weight-500 { font-weight: 500; }
+    &.weight-600 { font-weight: 600; }
+    &.weight-700 { font-weight: 700; }
+    &.weight-800 { font-weight: 800; }
+    &.weight-900 { font-weight: 900; }
+
+    // Colors
+    &.color-black { color: #000; }
+    &.color-white { color: #fff; }
+    &.color-green { color: #1a5427; }
+
+    // Decoration
+    &.decoration-none { text-decoration: none; }
+    &.decoration-underline { text-decoration: underline; }
+    &.decoration-overline { text-decoration: overline; }
+    &.decoration-line-through { text-decoration: line-through; }
+
+    // Style
+    &.style-normal { font-style: normal; }
+    &.style-italic { font-style: italic; }
+    &.style-oblique { font-style: oblique; }
+
+    // Transform
+    &.transform-normal { text-transform: none; }
+    &.transform-capitalize { text-transform: capitalize; }
+    &.transform-uppercase { text-transform: uppercase; }
+    &.transform-lowercase { text-transform: lowercase; }
+
+    // Font sizes
+    &.title-h1 { font-size: 4rem; }
+    &.title-h2 { font-size: 3.5rem; }
+    &.title-h3 { font-size: 3rem; }
+    &.title-h4 { font-size: 2.5rem; }
+    &.title-h5 { font-size: 2rem; }
+    &.title-h6 { font-size: 1.5rem; }
+}

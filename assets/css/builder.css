@@ -9,6 +9,7 @@
   border: 1px solid red;
   padding: 10px;
   border-radius: 4px;
+  margin-bottom: 10px;
 }
 
 .column-item h1,
@@ -21,6 +22,151 @@
   .columns-grid {
     grid-template-columns: 1fr !important;
   }
+}
+.btn {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #1a5427;
+  color: white;
+  text-decoration: none;
+  border-radius: 2rem;
+  margin-left: 2rem;
+  font-weight: bold;
+}
+.btn:hover {
+  background-color: #005177;
+}
+
+.title {
+  margin-left: 2rem;
+  text-align: left;
+  margin-bottom: 0px;
+}
+.title.font-arial {
+  font-family: Arial, sans-serif;
+}
+.title.font-verdana {
+  font-family: Verdana, sans-serif;
+}
+.title.font-helvetica {
+  font-family: Helvetica, sans-serif;
+}
+.title.font-times-new-roman {
+  font-family: "Times New Roman", Times, serif;
+}
+.title.font-georgia {
+  font-family: Georgia, serif;
+}
+.title.font-courier-new {
+  font-family: "Courier New", Courier, monospace;
+}
+.title.font-trebuchet-ms {
+  font-family: "Trebuchet MS", sans-serif;
+}
+.title.font-palatino-linotype {
+  font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
+}
+.title.font-comic-sans-ms {
+  font-family: "Comic Sans MS", cursive, sans-serif;
+}
+.title.font-impact {
+  font-family: Impact, Charcoal, sans-serif;
+}
+.title.weight-100 {
+  font-weight: 100;
+}
+.title.weight-200 {
+  font-weight: 200;
+}
+.title.weight-300 {
+  font-weight: 300;
+}
+.title.weight-400 {
+  font-weight: 400;
+}
+.title.weight-500 {
+  font-weight: 500;
+}
+.title.weight-600 {
+  font-weight: 600;
+}
+.title.weight-700 {
+  font-weight: 700;
+}
+.title.weight-800 {
+  font-weight: 800;
+}
+.title.weight-900 {
+  font-weight: 900;
+}
+.title.color-black {
+  color: #000;
+}
+.title.color-white {
+  color: #fff;
+}
+.title.color-green {
+  color: #1a5427;
+}
+.title.decoration-none {
+  text-decoration: none;
+}
+.title.decoration-underline {
+  text-decoration: underline;
+}
+.title.decoration-overline {
+  text-decoration: overline;
+}
+.title.decoration-line-through {
+  text-decoration: line-through;
+}
+.title.style-normal {
+  font-style: normal;
+}
+.title.style-italic {
+  font-style: italic;
+}
+.title.style-oblique {
+  font-style: oblique;
+}
+.title.transform-normal {
+  text-transform: none;
+}
+.title.transform-capitalize {
+  text-transform: capitalize;
+}
+.title.transform-uppercase {
+  text-transform: uppercase;
+}
+.title.transform-lowercase {
+  text-transform: lowercase;
+}
+.title.title-h1 {
+  font-size: 4rem;
+}
+.title.title-h2 {
+  font-size: 3.5rem;
+}
+.title.title-h3 {
+  font-size: 3rem;
+}
+.title.title-h4 {
+  font-size: 2.5rem;
+}
+.title.title-h5 {
+  font-size: 2rem;
+}
+.title.title-h6 {
+  font-size: 1.5rem;
+}
+
+.text-block {
+  margin: 2rem 0;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  font-size: 1rem;
+  line-height: 1.6;
+  margin-left: 2rem;
+  margin-right: 2rem;
 }
 
 /*# sourceMappingURL=builder.css.map */

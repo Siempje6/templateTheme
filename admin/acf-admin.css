@@ -209,22 +209,27 @@
   background-color: #ccd0d4 !important;
   border: #ccd0d4 solid 1px;
   border-radius: 2rem !important;
-  padding: 10px 10px !important;
   margin: 2px !important;
+  padding: 10px !important;
 }
 .acf-button-group label {
   background-color: #ccd0d4 !important;
   border: #ccd0d4 solid 1px !important;
   border-radius: 2rem !important;
-  padding: 10px 10px !important;
   margin: 2px !important;
+  padding: 10px !important;
 }
 .acf-button-group label:first-child {
   background-color: #ccd0d4 !important;
   border: #ccd0d4 solid 1px;
   border-radius: 2rem !important;
-  padding: 10px 10px !important;
   margin: 2px !important;
+  padding: 10px !important;
+}
+
+.acf-button-group label.selected {
+  border: #1a5427 solid 2px !important;
+  color: black !important;
 }
 
 .whitebtn{
