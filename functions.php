@@ -193,3 +193,20 @@ add_action('admin_enqueue_scripts', 'my_acf_admin_enqueue_styles');
  * 
  * Dit genereert automatisch `/assets/css/main.css`.
  */
+
+
+add_filter('template_include', function($template) {
+    if (!function_exists('set_query_var')) return $template;
+    return $template;
+});
+
+
+function mytheme_enqueue_column_rows_css() {
+    wp_enqueue_style(
+        'column-rows-style',
+        get_template_directory_uri() . '/assets/css/builder.css',
+        array(),
+        filemtime(get_template_directory() . '/assets/css/builder.css')
+    );
+}
+add_action('wp_enqueue_scripts', 'mytheme_enqueue_column_rows_css');

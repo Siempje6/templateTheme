@@ -1,0 +1,26 @@
+.columns-grid {
+  display: grid;
+  gap: 10px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.column-item {
+  border: 1px solid red;
+  padding: 10px;
+  border-radius: 4px;
+}
+
+.column-item h1,
+.column-item h2,
+.column-item h3 {
+  margin-top: 0;
+}
+
+@media (max-width: 768px) {
+  .columns-grid {
+    grid-template-columns: 1fr !important;
+  }
+}
+
+/*# sourceMappingURL=builder.css.map */

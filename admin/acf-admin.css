@@ -240,3 +240,10 @@
 .acf-fields.-left > .acf-field::before {
   border-bottom-left-radius: 1rem;
 }
+
+.acf-flexible-content .layout .acf-fc-layout-handle {
+  background-color: #1a5427;
+}
+.acfe-layout-title span {
+  color: #fff;
+}
