@@ -11,6 +11,3 @@ if ($button):
     </a>
 <?php endif; ?>
 
-<style>
-
-</style>

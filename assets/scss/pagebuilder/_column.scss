@@ -1,15 +1,8 @@
 .column-item h1,
 .column-item h2,
 .column-item h3 {
-    margin-top: 0;
+  margin-top: 0;
 }
-
-@media screen and (max-width: 768px) {
-    .columns-grid {
-        grid-template-columns: 1fr !important;
-    }
-}
-
 
 .columns-grid {
   display: grid;
@@ -23,11 +16,11 @@
 }
 
 .columns-grid.layout-full {
-  margin: 0;           
-  max-width: none;     
-  width: 100%;     
+  margin: 0;
+  max-width: none;
+  width: 100%;
   box-sizing: border-box;
-  padding-left: 0;     
+  padding-left: 0;
   padding-right: 0;
 }
 
@@ -36,4 +29,16 @@
   padding: 10px;
   border-radius: 4px;
   margin-bottom: 10px;
+  min-height: 1px;
+}
+
+/* Only hide empty columns on small screens */
+@media screen and (max-width: 768px) {
+  .columns-grid {
+    grid-template-columns: 1fr !important;
+  }
+
+  .columns-grid .column-item.is-empty {
+    display: none !important;
+  }
 }

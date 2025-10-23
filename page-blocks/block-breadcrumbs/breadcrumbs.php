@@ -25,24 +25,3 @@ if (function_exists('yoast_breadcrumb')) {
     echo '</nav>';
 }
 ?>
-
-<style>
-    .breadcrumbs {
-        font-size: 15px;
-        color: #666;
-
-        a {
-            color: #1a5427;
-            font-weight: bold;
-            text-decoration: none;
-
-            &:hover {
-                text-decoration: underline;
-            }
-        }
-
-        #breadcrumbs {
-            margin: 0;
-        }
-    }
-</style>
