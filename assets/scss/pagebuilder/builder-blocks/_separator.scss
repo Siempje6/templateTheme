@@ -1,0 +1,56 @@
+.separator {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.separator-none {
+    margin: 0;
+}
+.separator-s {
+    margin: 0.5rem 0;
+}
+.separator-m {
+    margin: 1rem 0;
+}
+.separator-l {
+    margin: 2rem 0;
+}
+.separator-xl {
+    margin: 3rem 0;
+}
+
+.separator.has-line .separator-line {
+    width: var(--line-width, 100%);
+    height: var(--line-thickness, 1px);
+    background-color: var(--line-color, black);
+    border: none;
+    display: block;
+    transition: all 0.3s ease;
+}
+
+.separator.line-color-black .separator-line {
+    --line-color: #000;
+}
+
+.separator.line-color-green .separator-line {
+    --line-color: #1a5427;
+}
+
+.separator.line-color-white .separator-line {
+    --line-color: #fff;
+}
+
+.line-align-left {
+    display: flex;
+    justify-content: start;
+}
+.line-align-center {
+    display: flex;
+    justify-content: center;
+}
+.line-align-right {
+    display: flex;
+    justify-content: end;
+}

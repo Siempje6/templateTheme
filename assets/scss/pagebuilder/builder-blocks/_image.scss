@@ -1,0 +1,19 @@
+.block-image-field {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+
+    .image-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+    }
+
+    .image-content {
+        display: block;
+        object-fit: cover; /* overschrijft ratio, exact width/height */
+        transition: all 0.3s ease;
+    }
+}

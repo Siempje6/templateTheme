@@ -108,11 +108,11 @@
                                         "acfe_flexible_modal_edit_size": "large"
                                     },
                                     "acfe_flexible_modal": {
-                                        "acfe_flexible_modal_enabled": "0",
-                                        "acfe_flexible_modal_title": false,
+                                        "acfe_flexible_modal_enabled": "1",
+                                        "acfe_flexible_modal_title": "",
                                         "acfe_flexible_modal_size": "full",
                                         "acfe_flexible_modal_col": "4",
-                                        "acfe_flexible_modal_categories": false
+                                        "acfe_flexible_modal_categories": "0"
                                     },
                                     "layouts": {
                                         "layout_68f8c62633836": {
@@ -544,6 +544,514 @@
                                             "acfe_flexible_thumbnail": "",
                                             "acfe_flexible_modal_edit_size": false,
                                             "acfe_flexible_category": false
+                                        },
+                                        "layout_68f9cf41a2a16": {
+                                            "key": "layout_68f9cf41a2a16",
+                                            "name": "separator_field",
+                                            "label": "Separator Field",
+                                            "display": "block",
+                                            "sub_fields": [
+                                                {
+                                                    "key": "field_68f9d036a2a18",
+                                                    "label": "Separator",
+                                                    "name": "separator",
+                                                    "aria-label": "",
+                                                    "type": "button_group",
+                                                    "instructions": "",
+                                                    "required": 0,
+                                                    "conditional_logic": 0,
+                                                    "wrapper": {
+                                                        "width": "",
+                                                        "class": "",
+                                                        "id": ""
+                                                    },
+                                                    "choices": {
+                                                        "none": "None",
+                                                        "s": "S",
+                                                        "m": "M",
+                                                        "l": "L",
+                                                        "xl": "XL"
+                                                    },
+                                                    "default_value": "m",
+                                                    "return_format": "value",
+                                                    "allow_null": 0,
+                                                    "allow_in_bindings": 0,
+                                                    "layout": "horizontal"
+                                                },
+                                                {
+                                                    "key": "field_68f9d0b5a2a19",
+                                                    "label": "Separator Options",
+                                                    "name": "",
+                                                    "aria-label": "",
+                                                    "type": "tab",
+                                                    "instructions": "",
+                                                    "required": 0,
+                                                    "conditional_logic": 0,
+                                                    "wrapper": {
+                                                        "width": "",
+                                                        "class": "",
+                                                        "id": ""
+                                                    },
+                                                    "placement": "top",
+                                                    "endpoint": 0,
+                                                    "selected": 0
+                                                },
+                                                {
+                                                    "key": "field_68f9d0caa2a1a",
+                                                    "label": "Options",
+                                                    "name": "options",
+                                                    "aria-label": "",
+                                                    "type": "group",
+                                                    "instructions": "",
+                                                    "required": 0,
+                                                    "conditional_logic": 0,
+                                                    "wrapper": {
+                                                        "width": "",
+                                                        "class": "",
+                                                        "id": ""
+                                                    },
+                                                    "layout": "block",
+                                                    "acfe_seamless_style": 0,
+                                                    "acfe_group_modal": 0,
+                                                    "sub_fields": [
+                                                        {
+                                                            "key": "field_68f9d0dca2a1b",
+                                                            "label": "Lijn",
+                                                            "name": "lijn",
+                                                            "aria-label": "",
+                                                            "type": "true_false",
+                                                            "instructions": "",
+                                                            "required": 0,
+                                                            "conditional_logic": 0,
+                                                            "wrapper": {
+                                                                "width": "",
+                                                                "class": "",
+                                                                "id": ""
+                                                            },
+                                                            "message": "Show a line in the separator",
+                                                            "default_value": 0,
+                                                            "allow_in_bindings": 0,
+                                                            "ui_on_text": "True",
+                                                            "ui_off_text": "False",
+                                                            "ui": 1
+                                                        },
+                                                        {
+                                                            "key": "field_68f9d120a2a1c",
+                                                            "label": "Line Thickness",
+                                                            "name": "line_thickness",
+                                                            "aria-label": "",
+                                                            "type": "text",
+                                                            "instructions": "",
+                                                            "required": 0,
+                                                            "conditional_logic": [
+                                                                [
+                                                                    {
+                                                                        "field": "field_68f9d0dca2a1b",
+                                                                        "operator": "==",
+                                                                        "value": "1"
+                                                                    }
+                                                                ]
+                                                            ],
+                                                            "wrapper": {
+                                                                "width": "",
+                                                                "class": "",
+                                                                "id": ""
+                                                            },
+                                                            "default_value": "1px",
+                                                            "maxlength": "",
+                                                            "allow_in_bindings": 0,
+                                                            "placeholder": "",
+                                                            "prepend": "Fill in the size of the line",
+                                                            "append": ""
+                                                        },
+                                                        {
+                                                            "key": "field_68f9d1f4a2a1f",
+                                                            "label": "Width",
+                                                            "name": "width",
+                                                            "aria-label": "",
+                                                            "type": "text",
+                                                            "instructions": "",
+                                                            "required": 0,
+                                                            "conditional_logic": [
+                                                                [
+                                                                    {
+                                                                        "field": "field_68f9d0dca2a1b",
+                                                                        "operator": "==",
+                                                                        "value": "1"
+                                                                    }
+                                                                ]
+                                                            ],
+                                                            "wrapper": {
+                                                                "width": "",
+                                                                "class": "",
+                                                                "id": ""
+                                                            },
+                                                            "default_value": "100%",
+                                                            "maxlength": "",
+                                                            "allow_in_bindings": 0,
+                                                            "placeholder": "",
+                                                            "prepend": "Fill in the line width",
+                                                            "append": ""
+                                                        },
+                                                        {
+                                                            "key": "field_68f9d1b7a2a1e",
+                                                            "label": "Line Color",
+                                                            "name": "line_color",
+                                                            "aria-label": "",
+                                                            "type": "button_group",
+                                                            "instructions": "",
+                                                            "required": 0,
+                                                            "conditional_logic": [
+                                                                [
+                                                                    {
+                                                                        "field": "field_68f9d0dca2a1b",
+                                                                        "operator": "==",
+                                                                        "value": "1"
+                                                                    }
+                                                                ]
+                                                            ],
+                                                            "wrapper": {
+                                                                "width": "",
+                                                                "class": "",
+                                                                "id": ""
+                                                            },
+                                                            "choices": {
+                                                                "white": "White <p style=\" color: #fff;\">&#9632;<\/p>",
+                                                                "green": "Green <p style=\" color: #1a5427;\">&#9632;<\/p>",
+                                                                "black": "Black <p style=\" color: #000;\">&#9632;<\/p>"
+                                                            },
+                                                            "default_value": "black",
+                                                            "return_format": "value",
+                                                            "allow_null": 0,
+                                                            "allow_in_bindings": 0,
+                                                            "layout": "horizontal"
+                                                        },
+                                                        {
+                                                            "key": "field_68f9d760de2f1",
+                                                            "label": "Alignment Line",
+                                                            "name": "alignment_line",
+                                                            "aria-label": "",
+                                                            "type": "select",
+                                                            "instructions": "",
+                                                            "required": 0,
+                                                            "conditional_logic": [
+                                                                [
+                                                                    {
+                                                                        "field": "field_68f9d0dca2a1b",
+                                                                        "operator": "==",
+                                                                        "value": "1"
+                                                                    }
+                                                                ]
+                                                            ],
+                                                            "wrapper": {
+                                                                "width": "",
+                                                                "class": "",
+                                                                "id": ""
+                                                            },
+                                                            "choices": {
+                                                                "left": "Left",
+                                                                "center": "Center",
+                                                                "right": "Right"
+                                                            },
+                                                            "default_value": "left",
+                                                            "return_format": "value",
+                                                            "multiple": 0,
+                                                            "allow_null": 0,
+                                                            "allow_in_bindings": 0,
+                                                            "ui": 0,
+                                                            "ajax": 0,
+                                                            "placeholder": "",
+                                                            "create_options": 0,
+                                                            "save_options": 0,
+                                                            "allow_custom": 0,
+                                                            "search_placeholder": ""
+                                                        }
+                                                    ],
+                                                    "acfe_group_modal_close": 0,
+                                                    "acfe_group_modal_button": "",
+                                                    "acfe_group_modal_size": "large"
+                                                }
+                                            ],
+                                            "min": "",
+                                            "max": "",
+                                            "acfe_flexible_render_template": "page-blocks\/block-separator_field\/separator_field.php",
+                                            "acfe_flexible_render_style": "assets\/css\/builder.css",
+                                            "acfe_flexible_render_script": "",
+                                            "acfe_flexible_settings": "",
+                                            "acfe_flexible_settings_size": "medium",
+                                            "acfe_flexible_thumbnail": "",
+                                            "acfe_flexible_modal_edit_size": false,
+                                            "acfe_flexible_category": false
+                                        },
+                                        "layout_68f9e40ca8057": {
+                                            "key": "layout_68f9e40ca8057",
+                                            "name": "image_field",
+                                            "label": "Image Field",
+                                            "display": "block",
+                                            "sub_fields": [
+                                                {
+                                                    "key": "field_68f9e443a8059",
+                                                    "label": "Image",
+                                                    "name": "image",
+                                                    "aria-label": "",
+                                                    "type": "image",
+                                                    "instructions": "",
+                                                    "required": 0,
+                                                    "conditional_logic": 0,
+                                                    "wrapper": {
+                                                        "width": "",
+                                                        "class": "",
+                                                        "id": ""
+                                                    },
+                                                    "uploader": "",
+                                                    "return_format": "array",
+                                                    "library": "all",
+                                                    "acfe_thumbnail": 0,
+                                                    "min_width": "",
+                                                    "min_height": "",
+                                                    "min_size": "",
+                                                    "max_width": "",
+                                                    "max_height": "",
+                                                    "max_size": "",
+                                                    "mime_types": "",
+                                                    "allow_in_bindings": 0,
+                                                    "preview_size": "medium"
+                                                },
+                                                {
+                                                    "key": "field_68f9e469a805a",
+                                                    "label": "Image Styling",
+                                                    "name": "",
+                                                    "aria-label": "",
+                                                    "type": "tab",
+                                                    "instructions": "",
+                                                    "required": 0,
+                                                    "conditional_logic": [
+                                                        [
+                                                            {
+                                                                "field": "field_68f9e443a8059",
+                                                                "operator": "!=empty"
+                                                            }
+                                                        ]
+                                                    ],
+                                                    "wrapper": {
+                                                        "width": "",
+                                                        "class": "",
+                                                        "id": ""
+                                                    },
+                                                    "placement": "top",
+                                                    "endpoint": 0,
+                                                    "selected": 0
+                                                },
+                                                {
+                                                    "key": "field_68f9e478a805b",
+                                                    "label": "Styling",
+                                                    "name": "styling",
+                                                    "aria-label": "",
+                                                    "type": "group",
+                                                    "instructions": "",
+                                                    "required": 0,
+                                                    "conditional_logic": [
+                                                        [
+                                                            {
+                                                                "field": "field_68f9e443a8059",
+                                                                "operator": "!=empty"
+                                                            }
+                                                        ]
+                                                    ],
+                                                    "wrapper": {
+                                                        "width": "",
+                                                        "class": "",
+                                                        "id": ""
+                                                    },
+                                                    "layout": "block",
+                                                    "acfe_seamless_style": 0,
+                                                    "acfe_group_modal": 0,
+                                                    "sub_fields": [
+                                                        {
+                                                            "key": "field_68f9e4f59d191",
+                                                            "label": "Corners",
+                                                            "name": "corners",
+                                                            "aria-label": "",
+                                                            "type": "text",
+                                                            "instructions": "",
+                                                            "required": 0,
+                                                            "conditional_logic": 0,
+                                                            "wrapper": {
+                                                                "width": "",
+                                                                "class": "",
+                                                                "id": ""
+                                                            },
+                                                            "default_value": "12px",
+                                                            "maxlength": "",
+                                                            "allow_in_bindings": 0,
+                                                            "placeholder": "",
+                                                            "prepend": "Fill in the border radius of the image",
+                                                            "append": ""
+                                                        },
+                                                        {
+                                                            "key": "field_68f9e51b9d192",
+                                                            "label": "Custom height or width",
+                                                            "name": "custom_height_or_width",
+                                                            "aria-label": "",
+                                                            "type": "select",
+                                                            "instructions": "",
+                                                            "required": 0,
+                                                            "conditional_logic": 0,
+                                                            "wrapper": {
+                                                                "width": "",
+                                                                "class": "",
+                                                                "id": ""
+                                                            },
+                                                            "choices": {
+                                                                "custom": "Custom",
+                                                                "custom width": "Custom Width",
+                                                                "custom height": "Custom Height"
+                                                            },
+                                                            "default_value": "custom width",
+                                                            "return_format": "value",
+                                                            "multiple": 0,
+                                                            "allow_null": 0,
+                                                            "allow_in_bindings": 0,
+                                                            "ui": 0,
+                                                            "ajax": 0,
+                                                            "placeholder": "",
+                                                            "create_options": 0,
+                                                            "save_options": 0,
+                                                            "allow_custom": 0,
+                                                            "search_placeholder": ""
+                                                        },
+                                                        {
+                                                            "key": "field_68f9e5d69d193",
+                                                            "label": "Custom Width and Heigth",
+                                                            "name": "custom_width_and_heigth",
+                                                            "aria-label": "",
+                                                            "type": "text",
+                                                            "instructions": "",
+                                                            "required": 0,
+                                                            "conditional_logic": [
+                                                                [
+                                                                    {
+                                                                        "field": "field_68f9e51b9d192",
+                                                                        "operator": "==",
+                                                                        "value": "custom"
+                                                                    }
+                                                                ]
+                                                            ],
+                                                            "wrapper": {
+                                                                "width": "",
+                                                                "class": "",
+                                                                "id": ""
+                                                            },
+                                                            "default_value": "100%",
+                                                            "maxlength": "",
+                                                            "allow_in_bindings": 0,
+                                                            "placeholder": "",
+                                                            "prepend": "",
+                                                            "append": ""
+                                                        },
+                                                        {
+                                                            "key": "field_68f9e6299d194",
+                                                            "label": "Custom Height and Width",
+                                                            "name": "custom_height_and_width",
+                                                            "aria-label": "",
+                                                            "type": "text",
+                                                            "instructions": "",
+                                                            "required": 0,
+                                                            "conditional_logic": [
+                                                                [
+                                                                    {
+                                                                        "field": "field_68f9e51b9d192",
+                                                                        "operator": "==",
+                                                                        "value": "custom"
+                                                                    }
+                                                                ]
+                                                            ],
+                                                            "wrapper": {
+                                                                "width": "",
+                                                                "class": "",
+                                                                "id": ""
+                                                            },
+                                                            "default_value": "100%",
+                                                            "maxlength": "",
+                                                            "allow_in_bindings": 0,
+                                                            "placeholder": "",
+                                                            "prepend": "",
+                                                            "append": ""
+                                                        },
+                                                        {
+                                                            "key": "field_68f9e6679d195",
+                                                            "label": "Image Width",
+                                                            "name": "image_width",
+                                                            "aria-label": "",
+                                                            "type": "text",
+                                                            "instructions": "",
+                                                            "required": 0,
+                                                            "conditional_logic": [
+                                                                [
+                                                                    {
+                                                                        "field": "field_68f9e51b9d192",
+                                                                        "operator": "==",
+                                                                        "value": "custom width"
+                                                                    }
+                                                                ]
+                                                            ],
+                                                            "wrapper": {
+                                                                "width": "",
+                                                                "class": "",
+                                                                "id": ""
+                                                            },
+                                                            "default_value": "100%",
+                                                            "maxlength": "",
+                                                            "allow_in_bindings": 0,
+                                                            "placeholder": "",
+                                                            "prepend": "",
+                                                            "append": ""
+                                                        },
+                                                        {
+                                                            "key": "field_68f9e6a49d196",
+                                                            "label": "Image Height",
+                                                            "name": "image_height",
+                                                            "aria-label": "",
+                                                            "type": "text",
+                                                            "instructions": "",
+                                                            "required": 0,
+                                                            "conditional_logic": [
+                                                                [
+                                                                    {
+                                                                        "field": "field_68f9e51b9d192",
+                                                                        "operator": "==",
+                                                                        "value": "custom height"
+                                                                    }
+                                                                ]
+                                                            ],
+                                                            "wrapper": {
+                                                                "width": "",
+                                                                "class": "",
+                                                                "id": ""
+                                                            },
+                                                            "default_value": "100%",
+                                                            "maxlength": "",
+                                                            "allow_in_bindings": 0,
+                                                            "placeholder": "",
+                                                            "prepend": "",
+                                                            "append": ""
+                                                        }
+                                                    ],
+                                                    "acfe_group_modal_close": 0,
+                                                    "acfe_group_modal_button": "",
+                                                    "acfe_group_modal_size": "large"
+                                                }
+                                            ],
+                                            "min": "",
+                                            "max": "",
+                                            "acfe_flexible_render_template": "page-blocks\/block-image_field\/image_field.php",
+                                            "acfe_flexible_render_style": "assets\/css\/builder.css",
+                                            "acfe_flexible_render_script": "",
+                                            "acfe_flexible_settings": "",
+                                            "acfe_flexible_settings_size": "medium",
+                                            "acfe_flexible_thumbnail": "",
+                                            "acfe_flexible_modal_edit_size": false,
+                                            "acfe_flexible_category": false
                                         }
                                     },
                                     "min": "",
@@ -619,6 +1127,107 @@
                                     "parent_repeater": "field_68f87d5756e45"
                                 }
                             ]
+                        },
+                        {
+                            "key": "field_68f9ddc175c89",
+                            "label": "Layout Settings",
+                            "name": "",
+                            "aria-label": "",
+                            "type": "tab",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "placement": "top",
+                            "endpoint": 0,
+                            "selected": 0
+                        },
+                        {
+                            "key": "field_68f9ddde75c8a",
+                            "label": "Layout",
+                            "name": "layout",
+                            "aria-label": "",
+                            "type": "group",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "layout": "block",
+                            "acfe_seamless_style": 0,
+                            "acfe_group_modal": 0,
+                            "sub_fields": [
+                                {
+                                    "key": "field_68f9de1375c8c",
+                                    "label": "Width Options",
+                                    "name": "width_options",
+                                    "aria-label": "",
+                                    "type": "select",
+                                    "instructions": "",
+                                    "required": 0,
+                                    "conditional_logic": 0,
+                                    "wrapper": {
+                                        "width": "",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "choices": {
+                                        "full width": "Full Width",
+                                        "fixed": "Fixed"
+                                    },
+                                    "default_value": "fixed",
+                                    "return_format": "value",
+                                    "multiple": 0,
+                                    "allow_null": 0,
+                                    "allow_in_bindings": 0,
+                                    "ui": 0,
+                                    "ajax": 0,
+                                    "placeholder": "",
+                                    "create_options": 0,
+                                    "save_options": 0,
+                                    "allow_custom": 0,
+                                    "search_placeholder": ""
+                                },
+                                {
+                                    "key": "field_68f9ddf075c8b",
+                                    "label": "Width",
+                                    "name": "width",
+                                    "aria-label": "",
+                                    "type": "text",
+                                    "instructions": "",
+                                    "required": 0,
+                                    "conditional_logic": [
+                                        [
+                                            {
+                                                "field": "field_68f9de1375c8c",
+                                                "operator": "==",
+                                                "value": "fixed"
+                                            }
+                                        ]
+                                    ],
+                                    "wrapper": {
+                                        "width": "",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "default_value": "1200px",
+                                    "maxlength": "",
+                                    "allow_in_bindings": 0,
+                                    "placeholder": "",
+                                    "prepend": "Fill in the width off the page",
+                                    "append": ""
+                                }
+                            ],
+                            "acfe_group_modal_close": 0,
+                            "acfe_group_modal_button": "",
+                            "acfe_group_modal_size": "large"
                         }
                     ],
                     "min": "",
@@ -677,5 +1286,5 @@
     "acfe_form": 0,
     "acfe_meta": "",
     "acfe_note": "",
-    "modified": 1761144633
+    "modified": 1761207989
 }

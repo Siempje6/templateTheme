@@ -1,9 +1,9 @@
 .title {
     margin-left: 2rem;
+    margin-right: 2rem;
     text-align: left;
     margin-bottom: 0px;
 
-    // Font families
     &.font-arial { font-family: Arial, sans-serif; }
     &.font-verdana { font-family: Verdana, sans-serif; }
     &.font-helvetica { font-family: Helvetica, sans-serif; }
@@ -15,7 +15,6 @@
     &.font-comic-sans-ms { font-family: 'Comic Sans MS', cursive, sans-serif; }
     &.font-impact { font-family: Impact, Charcoal, sans-serif; }
 
-    // Font weight
     &.weight-100 { font-weight: 100; }
     &.weight-200 { font-weight: 200; }
     &.weight-300 { font-weight: 300; }
@@ -26,29 +25,24 @@
     &.weight-800 { font-weight: 800; }
     &.weight-900 { font-weight: 900; }
 
-    // Colors
     &.color-black { color: #000; }
     &.color-white { color: #fff; }
     &.color-green { color: #1a5427; }
 
-    // Decoration
     &.decoration-none { text-decoration: none; }
     &.decoration-underline { text-decoration: underline; }
     &.decoration-overline { text-decoration: overline; }
     &.decoration-line-through { text-decoration: line-through; }
 
-    // Style
     &.style-normal { font-style: normal; }
     &.style-italic { font-style: italic; }
     &.style-oblique { font-style: oblique; }
 
-    // Transform
     &.transform-normal { text-transform: none; }
     &.transform-capitalize { text-transform: capitalize; }
     &.transform-uppercase { text-transform: uppercase; }
     &.transform-lowercase { text-transform: lowercase; }
 
-    // Font sizes
     &.title-h1 { font-size: 4rem; }
     &.title-h2 { font-size: 3.5rem; }
     &.title-h3 { font-size: 3rem; }
