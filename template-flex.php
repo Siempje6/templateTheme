@@ -93,12 +93,6 @@ endif;
 
 
 
-
-
-
-
-
-
 <footer class="site-footer">
 <?php if (have_rows('footerbuilder', 'option')): ?>
     <div class="footer-grid">

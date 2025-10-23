@@ -4,7 +4,7 @@
     margin-top: 0;
 }
 
-@media (max-width: 768px) {
+@media screen and (max-width: 768px) {
     .columns-grid {
         grid-template-columns: 1fr !important;
     }

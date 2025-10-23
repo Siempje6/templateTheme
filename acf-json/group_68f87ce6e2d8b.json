@@ -1052,6 +1052,624 @@
                                             "acfe_flexible_thumbnail": "",
                                             "acfe_flexible_modal_edit_size": false,
                                             "acfe_flexible_category": false
+                                        },
+                                        "layout_68fa0e9610135": {
+                                            "key": "layout_68fa0e9610135",
+                                            "name": "accordion_field",
+                                            "label": "Accordion Field",
+                                            "display": "block",
+                                            "sub_fields": [
+                                                {
+                                                    "key": "field_68fa0ebd10137",
+                                                    "label": "Accordion Items",
+                                                    "name": "accordion_items",
+                                                    "aria-label": "",
+                                                    "type": "repeater",
+                                                    "instructions": "",
+                                                    "required": 0,
+                                                    "conditional_logic": 0,
+                                                    "wrapper": {
+                                                        "width": "",
+                                                        "class": "",
+                                                        "id": ""
+                                                    },
+                                                    "acfe_repeater_stylised_button": 0,
+                                                    "layout": "table",
+                                                    "min": 0,
+                                                    "max": 0,
+                                                    "collapsed": "",
+                                                    "button_label": "Nieuwe rij",
+                                                    "rows_per_page": 20,
+                                                    "sub_fields": [
+                                                        {
+                                                            "key": "field_68fa0ee010138",
+                                                            "label": "Accordion Title",
+                                                            "name": "accordion_title",
+                                                            "aria-label": "",
+                                                            "type": "text",
+                                                            "instructions": "",
+                                                            "required": 0,
+                                                            "conditional_logic": 0,
+                                                            "wrapper": {
+                                                                "width": "",
+                                                                "class": "",
+                                                                "id": ""
+                                                            },
+                                                            "default_value": "",
+                                                            "maxlength": "",
+                                                            "allow_in_bindings": 0,
+                                                            "placeholder": "",
+                                                            "prepend": "",
+                                                            "append": "",
+                                                            "parent_repeater": "field_68fa0ebd10137"
+                                                        },
+                                                        {
+                                                            "key": "field_68fa0f0310139",
+                                                            "label": "Accordion Text",
+                                                            "name": "accordion_text",
+                                                            "aria-label": "",
+                                                            "type": "wysiwyg",
+                                                            "instructions": "",
+                                                            "required": 0,
+                                                            "conditional_logic": 0,
+                                                            "wrapper": {
+                                                                "width": "",
+                                                                "class": "",
+                                                                "id": ""
+                                                            },
+                                                            "default_value": "",
+                                                            "allow_in_bindings": 0,
+                                                            "tabs": "all",
+                                                            "toolbar": "full",
+                                                            "media_upload": 1,
+                                                            "delay": 0,
+                                                            "parent_repeater": "field_68fa0ebd10137"
+                                                        }
+                                                    ]
+                                                },
+                                                {
+                                                    "key": "field_68fa10301013b",
+                                                    "label": "Styling Accordion",
+                                                    "name": "",
+                                                    "aria-label": "",
+                                                    "type": "tab",
+                                                    "instructions": "",
+                                                    "required": 0,
+                                                    "conditional_logic": 0,
+                                                    "wrapper": {
+                                                        "width": "",
+                                                        "class": "",
+                                                        "id": ""
+                                                    },
+                                                    "placement": "top",
+                                                    "endpoint": 0,
+                                                    "selected": 0
+                                                },
+                                                {
+                                                    "key": "field_68fa10431013c",
+                                                    "label": "Styling",
+                                                    "name": "styling",
+                                                    "aria-label": "",
+                                                    "type": "group",
+                                                    "instructions": "",
+                                                    "required": 0,
+                                                    "conditional_logic": 0,
+                                                    "wrapper": {
+                                                        "width": "",
+                                                        "class": "",
+                                                        "id": ""
+                                                    },
+                                                    "layout": "block",
+                                                    "acfe_seamless_style": 0,
+                                                    "acfe_group_modal": 0,
+                                                    "sub_fields": [
+                                                        {
+                                                            "key": "field_68fa10501013d",
+                                                            "label": "Title Font Weight",
+                                                            "name": "title_font_weight",
+                                                            "aria-label": "",
+                                                            "type": "select",
+                                                            "instructions": "",
+                                                            "required": 0,
+                                                            "conditional_logic": 0,
+                                                            "wrapper": {
+                                                                "width": "",
+                                                                "class": "",
+                                                                "id": ""
+                                                            },
+                                                            "choices": {
+                                                                "100": "100",
+                                                                "200": "200",
+                                                                "300": "300",
+                                                                "400": "400",
+                                                                "500": "500",
+                                                                "600": "600",
+                                                                "700": "700",
+                                                                "800": "800",
+                                                                "900": "900"
+                                                            },
+                                                            "default_value": false,
+                                                            "return_format": "value",
+                                                            "multiple": 0,
+                                                            "allow_null": 0,
+                                                            "allow_in_bindings": 0,
+                                                            "ui": 0,
+                                                            "ajax": 0,
+                                                            "placeholder": "",
+                                                            "create_options": 0,
+                                                            "save_options": 0,
+                                                            "allow_custom": 0,
+                                                            "search_placeholder": ""
+                                                        },
+                                                        {
+                                                            "key": "field_68fa112f1013e",
+                                                            "label": "Title Font Size",
+                                                            "name": "title_font_size",
+                                                            "aria-label": "",
+                                                            "type": "text",
+                                                            "instructions": "",
+                                                            "required": 0,
+                                                            "conditional_logic": 0,
+                                                            "wrapper": {
+                                                                "width": "",
+                                                                "class": "",
+                                                                "id": ""
+                                                            },
+                                                            "default_value": "18px",
+                                                            "maxlength": "",
+                                                            "allow_in_bindings": 0,
+                                                            "placeholder": "",
+                                                            "prepend": "",
+                                                            "append": ""
+                                                        },
+                                                        {
+                                                            "key": "field_68fa118e1013f",
+                                                            "label": "Accordion Dropdown Icon",
+                                                            "name": "accordion_dropdown_icon",
+                                                            "aria-label": "",
+                                                            "type": "button_group",
+                                                            "instructions": "",
+                                                            "required": 0,
+                                                            "conditional_logic": 0,
+                                                            "wrapper": {
+                                                                "width": "",
+                                                                "class": "",
+                                                                "id": ""
+                                                            },
+                                                            "choices": {
+                                                                "arrow": "Arrow <i class=\"icon-arrow\" style=\"color:#000;\"><\/i>",
+                                                                "plus": "Plus <i class=\"icon-plus\" style=\"color:#000;\"><\/i>",
+                                                                "minus": "Minus <i class=\"icon-minus\" style=\"color:#000;\"><\/i>",
+                                                                "chevron": "Chevron <i class=\"icon-chevron\" style=\"color:#000;\"><\/i>"
+                                                            },
+                                                            "default_value": "plus",
+                                                            "return_format": "value",
+                                                            "allow_null": 0,
+                                                            "allow_in_bindings": 0,
+                                                            "layout": "horizontal"
+                                                        },
+                                                        {
+                                                            "key": "field_68fa147f10140",
+                                                            "label": "Title Color",
+                                                            "name": "title_color",
+                                                            "aria-label": "",
+                                                            "type": "button_group",
+                                                            "instructions": "",
+                                                            "required": 0,
+                                                            "conditional_logic": 0,
+                                                            "wrapper": {
+                                                                "width": "",
+                                                                "class": "",
+                                                                "id": ""
+                                                            },
+                                                            "choices": {
+                                                                "white": "White <p style=\" color: #fff;\">&#9632;<\/p>",
+                                                                "green": "Green <p style=\" color: #1a5427;\">&#9632;<\/p>",
+                                                                "black": "Black <p style=\" color: #000;\">&#9632;<\/p>"
+                                                            },
+                                                            "default_value": "black",
+                                                            "return_format": "value",
+                                                            "allow_null": 0,
+                                                            "allow_in_bindings": 0,
+                                                            "layout": "horizontal"
+                                                        }
+                                                    ],
+                                                    "acfe_group_modal_close": 0,
+                                                    "acfe_group_modal_button": "",
+                                                    "acfe_group_modal_size": "large"
+                                                }
+                                            ],
+                                            "min": "",
+                                            "max": "",
+                                            "acfe_flexible_render_template": "page-blocks\/block-accordion_field\/accordion_field.php",
+                                            "acfe_flexible_render_style": "assets\/css\/builder.css",
+                                            "acfe_flexible_render_script": "",
+                                            "acfe_flexible_settings": "",
+                                            "acfe_flexible_settings_size": "medium",
+                                            "acfe_flexible_thumbnail": "",
+                                            "acfe_flexible_modal_edit_size": false,
+                                            "acfe_flexible_category": false
+                                        },
+                                        "layout_68fa1d89e3f08": {
+                                            "key": "layout_68fa1d89e3f08",
+                                            "name": "breadcrumbs",
+                                            "label": "Breadcrumbs",
+                                            "display": "block",
+                                            "sub_fields": [],
+                                            "min": "",
+                                            "max": "",
+                                            "acfe_flexible_render_template": "page-blocks\/block-breadcrumbs\/breadcrumbs.php",
+                                            "acfe_flexible_render_style": "assets\/css\/builder.css",
+                                            "acfe_flexible_render_script": "",
+                                            "acfe_flexible_settings": "",
+                                            "acfe_flexible_settings_size": "medium",
+                                            "acfe_flexible_thumbnail": "",
+                                            "acfe_flexible_modal_edit_size": false,
+                                            "acfe_flexible_category": false
+                                        },
+                                        "layout_68f9f3b173fc7": {
+                                            "key": "layout_68f9f3b173fc7",
+                                            "name": "card_field",
+                                            "label": "Card Field",
+                                            "display": "block",
+                                            "sub_fields": [
+                                                {
+                                                    "key": "field_68f9fa1245d32",
+                                                    "label": "Items in Card",
+                                                    "name": "items_in_card",
+                                                    "aria-label": "",
+                                                    "type": "checkbox",
+                                                    "instructions": "",
+                                                    "required": 0,
+                                                    "conditional_logic": 0,
+                                                    "wrapper": {
+                                                        "width": "",
+                                                        "class": "",
+                                                        "id": ""
+                                                    },
+                                                    "choices": {
+                                                        "title": "Title",
+                                                        "text": "Text",
+                                                        "image": "Image",
+                                                        "button": "Button"
+                                                    },
+                                                    "default_value": [],
+                                                    "return_format": "value",
+                                                    "allow_custom": 0,
+                                                    "allow_in_bindings": 0,
+                                                    "layout": "vertical",
+                                                    "toggle": 0,
+                                                    "save_custom": 0,
+                                                    "custom_choice_button_text": "Nieuwe keuze toevoegen"
+                                                },
+                                                {
+                                                    "key": "field_68f9f8f4a514a",
+                                                    "label": "Card",
+                                                    "name": "card",
+                                                    "aria-label": "",
+                                                    "type": "flexible_content",
+                                                    "instructions": "",
+                                                    "required": 0,
+                                                    "conditional_logic": 0,
+                                                    "wrapper": {
+                                                        "width": "",
+                                                        "class": "",
+                                                        "id": ""
+                                                    },
+                                                    "acfe_flexible_advanced": 1,
+                                                    "acfe_flexible_stylised_button": 1,
+                                                    "acfe_flexible_layouts_templates": 1,
+                                                    "acfe_flexible_layouts_previews": 1,
+                                                    "acfe_flexible_layouts_thumbnails": 1,
+                                                    "acfe_flexible_layouts_settings": 1,
+                                                    "acfe_flexible_async": [],
+                                                    "acfe_flexible_add_actions": [
+                                                        "copy"
+                                                    ],
+                                                    "acfe_flexible_remove_button": [],
+                                                    "acfe_flexible_layouts_state": "user",
+                                                    "acfe_flexible_modal_edit": {
+                                                        "acfe_flexible_modal_edit_enabled": "0",
+                                                        "acfe_flexible_modal_edit_size": "large"
+                                                    },
+                                                    "acfe_flexible_modal": {
+                                                        "acfe_flexible_modal_enabled": "0",
+                                                        "acfe_flexible_modal_title": false,
+                                                        "acfe_flexible_modal_size": "full",
+                                                        "acfe_flexible_modal_col": "4",
+                                                        "acfe_flexible_modal_categories": false
+                                                    },
+                                                    "layouts": {
+                                                        "layout_68f9f92c42686": {
+                                                            "key": "layout_68f9f92c42686",
+                                                            "name": "card_layout",
+                                                            "label": "Card Layout",
+                                                            "display": "block",
+                                                            "sub_fields": [
+                                                                {
+                                                                    "key": "field_68f9f46f73fca",
+                                                                    "label": "Title Card",
+                                                                    "name": "title_card",
+                                                                    "aria-label": "",
+                                                                    "type": "text",
+                                                                    "instructions": "",
+                                                                    "required": 0,
+                                                                    "conditional_logic": [
+                                                                        [
+                                                                            {
+                                                                                "field": "field_68f9fa1245d32",
+                                                                                "operator": "==",
+                                                                                "value": "title"
+                                                                            }
+                                                                        ]
+                                                                    ],
+                                                                    "wrapper": {
+                                                                        "width": "",
+                                                                        "class": "",
+                                                                        "id": ""
+                                                                    },
+                                                                    "default_value": "",
+                                                                    "maxlength": "",
+                                                                    "allow_in_bindings": 0,
+                                                                    "placeholder": "",
+                                                                    "prepend": "",
+                                                                    "append": ""
+                                                                },
+                                                                {
+                                                                    "key": "field_68f9f8a8a5147",
+                                                                    "label": "Text Card",
+                                                                    "name": "text_card",
+                                                                    "aria-label": "",
+                                                                    "type": "wysiwyg",
+                                                                    "instructions": "",
+                                                                    "required": 0,
+                                                                    "conditional_logic": [
+                                                                        [
+                                                                            {
+                                                                                "field": "field_68f9fa1245d32",
+                                                                                "operator": "==",
+                                                                                "value": "text"
+                                                                            }
+                                                                        ]
+                                                                    ],
+                                                                    "wrapper": {
+                                                                        "width": "",
+                                                                        "class": "",
+                                                                        "id": ""
+                                                                    },
+                                                                    "default_value": "",
+                                                                    "allow_in_bindings": 0,
+                                                                    "tabs": "all",
+                                                                    "toolbar": "full",
+                                                                    "media_upload": 1,
+                                                                    "delay": 0
+                                                                },
+                                                                {
+                                                                    "key": "field_68f9f8bea5148",
+                                                                    "label": "Image Card",
+                                                                    "name": "image_card",
+                                                                    "aria-label": "",
+                                                                    "type": "image",
+                                                                    "instructions": "",
+                                                                    "required": 0,
+                                                                    "conditional_logic": [
+                                                                        [
+                                                                            {
+                                                                                "field": "field_68f9fa1245d32",
+                                                                                "operator": "==",
+                                                                                "value": "image"
+                                                                            }
+                                                                        ]
+                                                                    ],
+                                                                    "wrapper": {
+                                                                        "width": "",
+                                                                        "class": "",
+                                                                        "id": ""
+                                                                    },
+                                                                    "uploader": "",
+                                                                    "return_format": "array",
+                                                                    "library": "all",
+                                                                    "acfe_thumbnail": 0,
+                                                                    "min_width": "",
+                                                                    "min_height": "",
+                                                                    "min_size": "",
+                                                                    "max_width": "",
+                                                                    "max_height": "",
+                                                                    "max_size": "",
+                                                                    "mime_types": "",
+                                                                    "allow_in_bindings": 0,
+                                                                    "preview_size": "medium"
+                                                                },
+                                                                {
+                                                                    "key": "field_68f9f8d7a5149",
+                                                                    "label": "Button Card",
+                                                                    "name": "button_card",
+                                                                    "aria-label": "",
+                                                                    "type": "link",
+                                                                    "instructions": "",
+                                                                    "required": 0,
+                                                                    "conditional_logic": [
+                                                                        [
+                                                                            {
+                                                                                "field": "field_68f9fa1245d32",
+                                                                                "operator": "==",
+                                                                                "value": "button"
+                                                                            }
+                                                                        ]
+                                                                    ],
+                                                                    "wrapper": {
+                                                                        "width": "",
+                                                                        "class": "",
+                                                                        "id": ""
+                                                                    },
+                                                                    "return_format": "array",
+                                                                    "allow_in_bindings": 0
+                                                                }
+                                                            ],
+                                                            "min": "",
+                                                            "max": "",
+                                                            "acfe_flexible_render_template": "",
+                                                            "acfe_flexible_render_style": "",
+                                                            "acfe_flexible_render_script": "",
+                                                            "acfe_flexible_settings": "",
+                                                            "acfe_flexible_settings_size": "medium",
+                                                            "acfe_flexible_thumbnail": "",
+                                                            "acfe_flexible_modal_edit_size": false,
+                                                            "acfe_flexible_category": false
+                                                        }
+                                                    },
+                                                    "min": "",
+                                                    "max": "",
+                                                    "button_label": "Nieuwe rij",
+                                                    "acfe_flexible_hide_empty_message": false,
+                                                    "acfe_flexible_empty_message": "",
+                                                    "acfe_flexible_layouts_placeholder": false
+                                                },
+                                                {
+                                                    "key": "field_68f9fb002d3b0",
+                                                    "label": "Background",
+                                                    "name": "",
+                                                    "aria-label": "",
+                                                    "type": "tab",
+                                                    "instructions": "",
+                                                    "required": 0,
+                                                    "conditional_logic": 0,
+                                                    "wrapper": {
+                                                        "width": "",
+                                                        "class": "",
+                                                        "id": ""
+                                                    },
+                                                    "placement": "top",
+                                                    "endpoint": 0,
+                                                    "selected": 0
+                                                },
+                                                {
+                                                    "key": "field_68f9fb2f2d3b1",
+                                                    "label": "Settings Background",
+                                                    "name": "settings_background",
+                                                    "aria-label": "",
+                                                    "type": "group",
+                                                    "instructions": "",
+                                                    "required": 0,
+                                                    "conditional_logic": 0,
+                                                    "wrapper": {
+                                                        "width": "",
+                                                        "class": "",
+                                                        "id": ""
+                                                    },
+                                                    "layout": "block",
+                                                    "acfe_seamless_style": 0,
+                                                    "acfe_group_modal": 0,
+                                                    "sub_fields": [
+                                                        {
+                                                            "key": "field_68f9fb452d3b2",
+                                                            "label": "Achtergrond Option",
+                                                            "name": "achtergrond_option",
+                                                            "aria-label": "",
+                                                            "type": "radio",
+                                                            "instructions": "",
+                                                            "required": 0,
+                                                            "conditional_logic": 0,
+                                                            "wrapper": {
+                                                                "width": "",
+                                                                "class": "",
+                                                                "id": ""
+                                                            },
+                                                            "choices": {
+                                                                "background color": "Background Color",
+                                                                "background image": "Background Image"
+                                                            },
+                                                            "default_value": "",
+                                                            "return_format": "value",
+                                                            "allow_null": 0,
+                                                            "other_choice": 0,
+                                                            "allow_in_bindings": 0,
+                                                            "layout": "vertical",
+                                                            "save_other_choice": 0
+                                                        },
+                                                        {
+                                                            "key": "field_68f9fb8c2d3b3",
+                                                            "label": "Background Color",
+                                                            "name": "background_color",
+                                                            "aria-label": "",
+                                                            "type": "color_picker",
+                                                            "instructions": "",
+                                                            "required": 0,
+                                                            "conditional_logic": [
+                                                                [
+                                                                    {
+                                                                        "field": "field_68f9fb452d3b2",
+                                                                        "operator": "==",
+                                                                        "value": "background color"
+                                                                    }
+                                                                ]
+                                                            ],
+                                                            "wrapper": {
+                                                                "width": "",
+                                                                "class": "",
+                                                                "id": ""
+                                                            },
+                                                            "default_value": "",
+                                                            "enable_opacity": 0,
+                                                            "return_format": "string",
+                                                            "allow_in_bindings": 0,
+                                                            "show_custom_palette": 0,
+                                                            "show_color_wheel": 1,
+                                                            "custom_palette_source": "",
+                                                            "palette_colors": ""
+                                                        },
+                                                        {
+                                                            "key": "field_68f9fbb12d3b4",
+                                                            "label": "Background Image",
+                                                            "name": "background_image",
+                                                            "aria-label": "",
+                                                            "type": "image",
+                                                            "instructions": "",
+                                                            "required": 0,
+                                                            "conditional_logic": [
+                                                                [
+                                                                    {
+                                                                        "field": "field_68f9fb452d3b2",
+                                                                        "operator": "==",
+                                                                        "value": "background image"
+                                                                    }
+                                                                ]
+                                                            ],
+                                                            "wrapper": {
+                                                                "width": "",
+                                                                "class": "",
+                                                                "id": ""
+                                                            },
+                                                            "uploader": "",
+                                                            "return_format": "array",
+                                                            "library": "all",
+                                                            "acfe_thumbnail": 0,
+                                                            "min_width": "",
+                                                            "min_height": "",
+                                                            "min_size": "",
+                                                            "max_width": "",
+                                                            "max_height": "",
+                                                            "max_size": "",
+                                                            "mime_types": "",
+                                                            "allow_in_bindings": 0,
+                                                            "preview_size": "medium"
+                                                        }
+                                                    ],
+                                                    "acfe_group_modal_close": 0,
+                                                    "acfe_group_modal_button": "",
+                                                    "acfe_group_modal_size": "large"
+                                                }
+                                            ],
+                                            "min": "",
+                                            "max": "",
+                                            "acfe_flexible_render_template": "page-blocks\/block-card_field\/card_field.php",
+                                            "acfe_flexible_render_style": "assets\/css\/builder.css",
+                                            "acfe_flexible_render_script": "",
+                                            "acfe_flexible_settings": "",
+                                            "acfe_flexible_settings_size": "medium",
+                                            "acfe_flexible_thumbnail": "",
+                                            "acfe_flexible_modal_edit_size": false,
+                                            "acfe_flexible_category": false
                                         }
                                     },
                                     "min": "",
@@ -1286,5 +1904,5 @@
     "acfe_form": 0,
     "acfe_meta": "",
     "acfe_note": "",
-    "modified": 1761207989
+    "modified": 1761222274
 }
