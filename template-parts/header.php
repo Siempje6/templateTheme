@@ -1,171 +1,58 @@
 <?php
+$header_rows = get_field('header_builder', 'option');
 
-/**
- * Standaard site header
- * Haalt content uit ACF Options Page "Header"
- */
-?>
-<!DOCTYPE html>
-<html <?php language_attributes(); ?>>
-
-<head>
-    <meta charset="<?php bloginfo('charset'); ?>">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <?php wp_head(); ?>
-</head>
-
-<body <?php body_class(); ?>>
-    <?php wp_body_open(); ?>
-
+if ($header_rows): ?>
+    <header class="site-header" style="max-width:1200px; width:100%; margin:0 auto;">
     <?php
-    $title = get_field('title', 'option');
-    $logo  = get_field('logo', 'option');
-    $menu  = get_field('menu', 'option');
-    ?>
+    foreach ($header_rows as $row):
+        if ($row['acf_fc_layout'] === 'header_columns' && !empty($row['content'])):
 
-    <header id="site-header" class="site-header">
-        <div class="header-inner">
-            <div class="header-logo">
-                <?php if ($logo): ?>
-                    <img src="<?php echo esc_url($logo['url']); ?>" alt="<?php echo esc_attr($logo['alt']); ?>">
-                <?php endif; ?>
+            $header_grid_template = [];
+            $header_columns_content = [];
+
+            foreach ($row['content'] as $col):
+
+                // Bepaal breedte per kolom
+                $width = $col['layout_header']['width_in_fr'] ?? '1fr';
+                if (is_numeric($width)) $width .= 'fr';
+                $header_grid_template[] = $width;
+
+                $layout = $col['acf_fc_layout'] ?? '';
+                $block_file = get_template_directory() . '/header-builder/block-' . $layout . '/' . $layout . '.php';
+
+                $block = $col;
+
+                // Debug commentaar: laat bestand en code zien in broncode
+                $block_code = file_exists($block_file) ? htmlspecialchars(file_get_contents($block_file)) : '';
+                $debug_comment = '<!-- DEBUG BLOCK:
+                                  Layout: ' . esc_html($layout) . '
+                                  Bestand gezocht: ' . esc_html($block_file) . '
+                                  ' . (file_exists($block_file) ? "Bestand gevonden, wordt geladen..." : "Bestand NIET gevonden!") . '
+                                  Code uit bestand:
+                                  ' . $block_code . '
+                                  -->';
+
+                $column_content = $debug_comment;
+
+                // Laad het blokbestand
+                if (file_exists($block_file)):
+                    ob_start();
+                    include $block_file;
+                    $column_content .= ob_get_clean();
+                endif;
+
+                $header_columns_content[] = $column_content;
+
+            endforeach;
+            ?>
+            <div class="header-grid" style="display:grid; grid-template-columns: <?php echo esc_attr(implode(' ', $header_grid_template)); ?>; gap:10px; padding:10px 0; box-sizing:border-box;">
+                <?php foreach ($header_columns_content as $content): ?>
+                    <div class="header-column"><?php echo $content; ?></div>
+                <?php endforeach; ?>
             </div>
+            <?php
 
-            <?php if ($title): ?>
-                <h1 class="header-title"><?php echo esc_html($title); ?></h1>
-            <?php endif; ?>
-
-            <?php if ($menu): ?>
-                <nav class="header-nav">
-                    <ul>
-                        <?php foreach ($menu as $menuItem): ?>
-                            <li>
-                                <a href="<?php echo esc_url($menuItem['items'][0]['link']['url']); ?>">
-                                    <?php echo esc_html($menuItem['titel']); ?>
-                                </a>
-                            </li>
-                        <?php endforeach; ?>
-                    </ul>
-                </nav>
-            <?php endif; ?>
-        </div>
+        endif;
+    endforeach; ?>
     </header>
-
-    <style>
-        /* ===== BASIS STYLING ===== */
-        body, html {
-            margin: 0;
-            padding: 0;
-        }
-
-        .site-header {
-            width: 100%;
-            background-color: #f8f6f2;
-            font-family: Arial, sans-serif;
-        }
-
-        .header-inner {
-            display: grid;
-            grid-template-columns: 1fr 2fr 1fr;
-            align-items: center;
-            padding: 20px 40px;
-            max-width: 1200px;
-            margin: 0 auto;
-        }
-
-        .header-logo {
-            justify-self: start;
-        }
-
-        .header-logo img {
-            max-height: 60px;
-        }
-
-        .header-title {
-            justify-self: center;
-            text-align: center;
-            font-size: 1.8rem;
-        }
-
-        .header-nav {
-            
-            justify-self: center;
-        }
-
-        .header-nav ul {
-            list-style: none;
-            padding: 0;
-            margin: 0;
-            display: flex;
-            gap: 20px;
-            justify-content: center;
-        }
-
-        .header-nav a {
-            text-decoration: none;
-            color: #333;
-            transition: opacity 0.3s ease;
-        }
-
-        .header-nav ul:hover li a {
-            opacity: 0.2;
-            filter: blur(1px);
-        }
-
-        .header-nav ul li:hover a {
-            opacity: 1;
-            filter: blur(0);
-        }
-
-        /* ===== RESPONSIVE @MAX 1300px ===== */
-        @media screen and (max-width: 1300px) {
-            .header-inner {
-                grid-template-columns: 1fr 2fr 1fr;
-                max-width: 1000px;
-                padding: 20px 20px;
-            }
-
-            .header-logo img {
-                max-height: 50px;
-            }
-
-            .header-title {
-                font-size: 1.5rem;
-            }
-        }
-
-        /* ===== RESPONSIVE @MAX 1178px ===== */
-        @media screen and (max-width: 1178px) {
-            .header-inner {
-                grid-template-rows: 1fr 1fr 1fr ;
-                text-align: center;
-                justify-items: center;
-                max-width: 550px;
-            }
-
-            .header-logo {
-                grid-row: 1 / 2;
-                grid-column: 2 / 3;
-            }
-
-            .header-logo img {
-                max-height: 40px;
-            }
-
-            .header-title {
-                font-size: 1.3rem;
-                margin: 0;
-                grid-row: 2 / 3;
-                grid-column: 2 / 3;
-            }
-
-            .header-nav ul {
-                flex-direction: row;
-            }
-
-            .header-nav {
-                grid-row: 3 / 4;
-                grid-column: 2 / 3;
-            }
-        }
-    </style>
+<?php endif; ?>

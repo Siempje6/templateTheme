@@ -127,6 +127,68 @@
                                             "placement": "top",
                                             "endpoint": 0,
                                             "selected": 0
+                                        },
+                                        {
+                                            "key": "field_68fa40336d15f",
+                                            "label": "Layout",
+                                            "name": "",
+                                            "aria-label": "",
+                                            "type": "tab",
+                                            "instructions": "",
+                                            "required": 0,
+                                            "conditional_logic": 0,
+                                            "wrapper": {
+                                                "width": "",
+                                                "class": "",
+                                                "id": ""
+                                            },
+                                            "placement": "top",
+                                            "endpoint": 0,
+                                            "selected": 0
+                                        },
+                                        {
+                                            "key": "field_68fa403f6d160",
+                                            "label": "Layout Header",
+                                            "name": "layout_header",
+                                            "aria-label": "",
+                                            "type": "group",
+                                            "instructions": "",
+                                            "required": 0,
+                                            "conditional_logic": 0,
+                                            "wrapper": {
+                                                "width": "",
+                                                "class": "",
+                                                "id": ""
+                                            },
+                                            "layout": "block",
+                                            "acfe_seamless_style": 0,
+                                            "acfe_group_modal": 0,
+                                            "sub_fields": [
+                                                {
+                                                    "key": "field_68fa40566d161",
+                                                    "label": "Width in FR",
+                                                    "name": "width_in_fr",
+                                                    "aria-label": "",
+                                                    "type": "text",
+                                                    "instructions": "",
+                                                    "required": 0,
+                                                    "conditional_logic": 0,
+                                                    "wrapper": {
+                                                        "width": "",
+                                                        "class": "",
+                                                        "id": ""
+                                                    },
+                                                    "default_value": "1fr",
+                                                    "maxlength": "",
+                                                    "allow_in_bindings": 0,
+                                                    "placeholder": "",
+                                                    "prepend": "",
+                                                    "append": ""
+                                                }
+                                            ],
+                                            "acfe_group_modal_close": 0,
+                                            "acfe_group_modal_button": "",
+                                            "acfe_group_modal_size": "large"
                                         }
                                     ],
                                     "min": "",
@@ -148,10 +210,10 @@
                                     "sub_fields": [
                                         {
                                             "key": "field_68fa3fe6f7c6e",
-                                            "label": "Link",
-                                            "name": "link",
+                                            "label": "Menu Items",
+                                            "name": "menu_items",
                                             "aria-label": "",
-                                            "type": "link",
+                                            "type": "repeater",
                                             "instructions": "",
                                             "required": 0,
                                             "conditional_logic": 0,
@@ -160,8 +222,33 @@
                                                 "class": "",
                                                 "id": ""
                                             },
-                                            "return_format": "array",
-                                            "allow_in_bindings": 0
+                                            "acfe_repeater_stylised_button": 0,
+                                            "layout": "table",
+                                            "min": 0,
+                                            "max": 0,
+                                            "collapsed": "",
+                                            "button_label": "Nieuwe rij",
+                                            "rows_per_page": 20,
+                                            "sub_fields": [
+                                                {
+                                                    "key": "field_68fb7879b84a9",
+                                                    "label": "Link",
+                                                    "name": "link",
+                                                    "aria-label": "",
+                                                    "type": "link",
+                                                    "instructions": "",
+                                                    "required": 0,
+                                                    "conditional_logic": 0,
+                                                    "wrapper": {
+                                                        "width": "",
+                                                        "class": "",
+                                                        "id": ""
+                                                    },
+                                                    "return_format": "array",
+                                                    "allow_in_bindings": 0,
+                                                    "parent_repeater": "field_68fa3fe6f7c6e"
+                                                }
+                                            ]
                                         },
                                         {
                                             "key": "field_68fa3ff8f7c6f",
@@ -180,6 +267,68 @@
                                             "placement": "top",
                                             "endpoint": 0,
                                             "selected": 0
+                                        },
+                                        {
+                                            "key": "field_68fb3ffbde6a7",
+                                            "label": "Layout",
+                                            "name": "",
+                                            "aria-label": "",
+                                            "type": "tab",
+                                            "instructions": "",
+                                            "required": 0,
+                                            "conditional_logic": 0,
+                                            "wrapper": {
+                                                "width": "",
+                                                "class": "",
+                                                "id": ""
+                                            },
+                                            "placement": "top",
+                                            "endpoint": 0,
+                                            "selected": 0
+                                        },
+                                        {
+                                            "key": "field_68fb400dde6a8",
+                                            "label": "Layout Header",
+                                            "name": "layout_header",
+                                            "aria-label": "",
+                                            "type": "group",
+                                            "instructions": "",
+                                            "required": 0,
+                                            "conditional_logic": 0,
+                                            "wrapper": {
+                                                "width": "",
+                                                "class": "",
+                                                "id": ""
+                                            },
+                                            "layout": "block",
+                                            "acfe_seamless_style": 0,
+                                            "acfe_group_modal": 0,
+                                            "sub_fields": [
+                                                {
+                                                    "key": "field_68fb400dde6a9",
+                                                    "label": "Width in FR",
+                                                    "name": "width_in_fr",
+                                                    "aria-label": "",
+                                                    "type": "text",
+                                                    "instructions": "",
+                                                    "required": 0,
+                                                    "conditional_logic": 0,
+                                                    "wrapper": {
+                                                        "width": "",
+                                                        "class": "",
+                                                        "id": ""
+                                                    },
+                                                    "default_value": "1fr",
+                                                    "maxlength": "",
+                                                    "allow_in_bindings": 0,
+                                                    "placeholder": "",
+                                                    "prepend": "",
+                                                    "append": ""
+                                                }
+                                            ],
+                                            "acfe_group_modal_close": 0,
+                                            "acfe_group_modal_button": "",
+                                            "acfe_group_modal_size": "large"
                                         }
                                     ],
                                     "min": "",
@@ -226,6 +375,86 @@
                                             "mime_types": "",
                                             "allow_in_bindings": 0,
                                             "preview_size": "medium"
+                                        },
+                                        {
+                                            "key": "field_68fb4022de6ab",
+                                            "label": "Styling",
+                                            "name": "",
+                                            "aria-label": "",
+                                            "type": "tab",
+                                            "instructions": "",
+                                            "required": 0,
+                                            "conditional_logic": 0,
+                                            "wrapper": {
+                                                "width": "",
+                                                "class": "",
+                                                "id": ""
+                                            },
+                                            "placement": "top",
+                                            "endpoint": 0,
+                                            "selected": 0
+                                        },
+                                        {
+                                            "key": "field_68fb4020de6aa",
+                                            "label": "Layout",
+                                            "name": "",
+                                            "aria-label": "",
+                                            "type": "tab",
+                                            "instructions": "",
+                                            "required": 0,
+                                            "conditional_logic": 0,
+                                            "wrapper": {
+                                                "width": "",
+                                                "class": "",
+                                                "id": ""
+                                            },
+                                            "placement": "top",
+                                            "endpoint": 0,
+                                            "selected": 0
+                                        },
+                                        {
+                                            "key": "field_68fb407dde6ac",
+                                            "label": "Layout Header",
+                                            "name": "layout_header",
+                                            "aria-label": "",
+                                            "type": "group",
+                                            "instructions": "",
+                                            "required": 0,
+                                            "conditional_logic": 0,
+                                            "wrapper": {
+                                                "width": "",
+                                                "class": "",
+                                                "id": ""
+                                            },
+                                            "layout": "block",
+                                            "acfe_seamless_style": 0,
+                                            "acfe_group_modal": 0,
+                                            "sub_fields": [
+                                                {
+                                                    "key": "field_68fb407dde6ad",
+                                                    "label": "Width in FR",
+                                                    "name": "width_in_fr",
+                                                    "aria-label": "",
+                                                    "type": "text",
+                                                    "instructions": "",
+                                                    "required": 0,
+                                                    "conditional_logic": 0,
+                                                    "wrapper": {
+                                                        "width": "",
+                                                        "class": "",
+                                                        "id": ""
+                                                    },
+                                                    "default_value": "1fr",
+                                                    "maxlength": "",
+                                                    "allow_in_bindings": 0,
+                                                    "placeholder": "",
+                                                    "prepend": "",
+                                                    "append": ""
+                                                }
+                                            ],
+                                            "acfe_group_modal_close": 0,
+                                            "acfe_group_modal_button": "",
+                                            "acfe_group_modal_size": "large"
                                         }
                                     ],
                                     "min": "",
@@ -246,68 +475,6 @@
                             "acfe_flexible_hide_empty_message": false,
                             "acfe_flexible_empty_message": "",
                             "acfe_flexible_layouts_placeholder": false
-                        },
-                        {
-                            "key": "field_68fa40336d15f",
-                            "label": "Layout",
-                            "name": "",
-                            "aria-label": "",
-                            "type": "tab",
-                            "instructions": "",
-                            "required": 0,
-                            "conditional_logic": 0,
-                            "wrapper": {
-                                "width": "",
-                                "class": "",
-                                "id": ""
-                            },
-                            "placement": "top",
-                            "endpoint": 0,
-                            "selected": 0
-                        },
-                        {
-                            "key": "field_68fa403f6d160",
-                            "label": "Layout Header",
-                            "name": "layout_header",
-                            "aria-label": "",
-                            "type": "group",
-                            "instructions": "",
-                            "required": 0,
-                            "conditional_logic": 0,
-                            "wrapper": {
-                                "width": "",
-                                "class": "",
-                                "id": ""
-                            },
-                            "layout": "block",
-                            "acfe_seamless_style": 0,
-                            "acfe_group_modal": 0,
-                            "sub_fields": [
-                                {
-                                    "key": "field_68fa40566d161",
-                                    "label": "Width in FR",
-                                    "name": "width_in_fr",
-                                    "aria-label": "",
-                                    "type": "text",
-                                    "instructions": "",
-                                    "required": 0,
-                                    "conditional_logic": 0,
-                                    "wrapper": {
-                                        "width": "",
-                                        "class": "",
-                                        "id": ""
-                                    },
-                                    "default_value": "1fr",
-                                    "maxlength": "",
-                                    "allow_in_bindings": 0,
-                                    "placeholder": "",
-                                    "prepend": "",
-                                    "append": ""
-                                }
-                            ],
-                            "acfe_group_modal_close": 0,
-                            "acfe_group_modal_button": "",
-                            "acfe_group_modal_size": "large"
                         }
                     ],
                     "min": "",
@@ -356,5 +523,5 @@
     "acfe_form": 0,
     "acfe_meta": "",
     "acfe_note": "",
-    "modified": 1761230961
+    "modified": 1761310868
 }
