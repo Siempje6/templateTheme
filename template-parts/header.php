@@ -12,7 +12,6 @@ if ($header_rows): ?>
 
             foreach ($row['content'] as $col):
 
-                // Bepaal breedte per kolom
                 $width = $col['layout_header']['width_in_fr'] ?? '1fr';
                 if (is_numeric($width)) $width .= 'fr';
                 $header_grid_template[] = $width;
@@ -22,7 +21,6 @@ if ($header_rows): ?>
 
                 $block = $col;
 
-                // Debug commentaar: laat bestand en code zien in broncode
                 $block_code = file_exists($block_file) ? htmlspecialchars(file_get_contents($block_file)) : '';
                 $debug_comment = '<!-- DEBUG BLOCK:
                                   Layout: ' . esc_html($layout) . '
@@ -34,7 +32,6 @@ if ($header_rows): ?>
 
                 $column_content = $debug_comment;
 
-                // Laad het blokbestand
                 if (file_exists($block_file)):
                     ob_start();
                     include $block_file;

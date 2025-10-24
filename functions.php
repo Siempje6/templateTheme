@@ -210,3 +210,37 @@ function mytheme_enqueue_column_rows_css() {
     );
 }
 add_action('wp_enqueue_scripts', 'mytheme_enqueue_column_rows_css');
+
+
+
+
+
+
+
+
+// AJAX handler voor pagina zoekfunctie
+add_action('wp_ajax_search_pages', 'search_pages_autocomplete');
+add_action('wp_ajax_nopriv_search_pages', 'search_pages_autocomplete');
+
+function search_pages_autocomplete() {
+    $term = sanitize_text_field($_GET['term'] ?? '');
+    if (!$term) {
+        wp_send_json([]);
+    }
+
+    $pages = get_posts([
+        'post_type' => 'page',
+        's' => $term,
+        'posts_per_page' => 5
+    ]);
+
+    $results = [];
+    foreach ($pages as $page) {
+        $results[] = [
+            'title' => get_the_title($page),
+            'url' => get_permalink($page)
+        ];
+    }
+
+    wp_send_json($results);
+}
