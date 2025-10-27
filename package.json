@@ -10,7 +10,9 @@
     "build:blockssass": "sass assets/scss/blocks.scss assets/css/blocks.css --style=compressed",
     "watch:blockssass": "sass --watch assets/scss/blocks.scss assets/css/blocks.css --style=expanded",
     "build:builderblockssass": "sass assets/scss/builder.scss assets/css/builder.css --style=compressed",
-    "watch:builderblockssass": "sass --watch assets/scss/builder.scss assets/css/builder.css --style=expanded"
+    "watch:builderblockssass": "sass --watch assets/scss/builder.scss assets/css/builder.css --style=expanded",
+    "build:previewsass": "sass assets/scss/live-preview/preview.scss assets/css/preview.css --style=compressed",
+    "watch:previewsass": "sass --watch assets/scss/live-preview/preview.scss assets/css/preview.css --style=expanded"
   },
   "repository": {
     "type": "git",

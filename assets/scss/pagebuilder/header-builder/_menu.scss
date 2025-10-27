@@ -14,6 +14,11 @@
     position: relative;
 }
 
+.menu li a:hover {
+    font-weight: 900;
+    color: #1a5427;
+}
+
 .menu li > a {
     text-decoration: none;
     color: #000;
@@ -28,7 +33,6 @@
     left: 0;
     background: #f8f6f2;
     padding: 5px 0;
-    min-width: auto;
     border-radius: 5px;
     box-shadow: 0 2px 8px rgba(0,0,0,0.15);
     z-index: 999;

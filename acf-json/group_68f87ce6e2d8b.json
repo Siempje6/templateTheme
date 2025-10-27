@@ -1767,7 +1767,7 @@
                                             ],
                                             "min": "",
                                             "max": "",
-                                            "acfe_flexible_render_template": "page-blocks\/block-card_item_field.php",
+                                            "acfe_flexible_render_template": "page-blocks\/block-card_item_field\/card_item_field.php",
                                             "acfe_flexible_render_style": "assets\/css\/builder.css",
                                             "acfe_flexible_render_script": "",
                                             "acfe_flexible_settings": "",
@@ -2009,5 +2009,5 @@
     "acfe_form": 0,
     "acfe_meta": "",
     "acfe_note": "",
-    "modified": 1761555834
+    "modified": 1761574771
 }

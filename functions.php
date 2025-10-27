@@ -244,3 +244,10 @@ function search_pages_autocomplete() {
 
     wp_send_json($results);
 }
+
+
+
+
+
+
+// live preview settings 

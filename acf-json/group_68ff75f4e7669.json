@@ -1,13 +1,13 @@
 {
-    "key": "group_68e5266e6f5b7",
-    "title": "Newsletter",
+    "key": "group_68ff75f4e7669",
+    "title": "Website Settings",
     "fields": [
         {
-            "key": "field_68e5266ec5715",
-            "label": "Email",
-            "name": "email",
+            "key": "field_68ff75f5a0f26",
+            "label": "",
+            "name": "",
             "aria-label": "",
-            "type": "email",
+            "type": "text",
             "instructions": "",
             "required": 0,
             "conditional_logic": 0,
@@ -17,6 +17,7 @@
                 "id": ""
             },
             "default_value": "",
+            "maxlength": "",
             "allow_in_bindings": 0,
             "placeholder": "",
             "prepend": "",
@@ -41,6 +42,7 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
+    "display_title": "",
     "acfe_display_title": "",
     "acfe_autosync": [
         "json"
@@ -48,5 +50,5 @@
     "acfe_form": 0,
     "acfe_meta": "",
     "acfe_note": "",
-    "modified": 1759848119
+    "modified": 1761572442
 }
