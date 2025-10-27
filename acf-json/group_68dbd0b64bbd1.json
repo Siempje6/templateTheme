@@ -700,6 +700,42 @@
                                     "acfe_flexible_thumbnail": "",
                                     "acfe_flexible_modal_edit_size": false,
                                     "acfe_flexible_category": false
+                                },
+                                "layout_68ff3f0b8d3ae": {
+                                    "key": "layout_68ff3f0b8d3ae",
+                                    "name": "menu",
+                                    "label": "Menu",
+                                    "display": "block",
+                                    "sub_fields": [
+                                        {
+                                            "key": "field_68ff3f118d3b0",
+                                            "label": "Menu",
+                                            "name": "menu",
+                                            "aria-label": "",
+                                            "type": "menu",
+                                            "instructions": "",
+                                            "required": 0,
+                                            "conditional_logic": 0,
+                                            "wrapper": {
+                                                "width": "",
+                                                "class": "",
+                                                "id": ""
+                                            },
+                                            "return_format": "html",
+                                            "allow_null": 0,
+                                            "allow_in_bindings": 0
+                                        }
+                                    ],
+                                    "min": "",
+                                    "max": "",
+                                    "acfe_flexible_render_template": "",
+                                    "acfe_flexible_render_style": "",
+                                    "acfe_flexible_render_script": "",
+                                    "acfe_flexible_settings": "",
+                                    "acfe_flexible_settings_size": "medium",
+                                    "acfe_flexible_thumbnail": "",
+                                    "acfe_flexible_modal_edit_size": false,
+                                    "acfe_flexible_category": false
                                 }
                             },
                             "min": "",
@@ -756,5 +792,5 @@
     "acfe_form": 0,
     "acfe_meta": "",
     "acfe_note": "",
-    "modified": 1761314496
+    "modified": 1761558419
 }

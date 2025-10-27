@@ -8,3 +8,7 @@
 @use 'pagebuilder/builder-blocks/card';
 @use 'pagebuilder/builder-blocks/accordion';
 @use 'pagebuilder/builder-blocks/breadcrumbs';
+
+// blokken uit de header builder 
+
+@use 'pagebuilder/header-builder/menu';
