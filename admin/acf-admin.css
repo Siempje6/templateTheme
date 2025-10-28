@@ -252,3 +252,7 @@
 .acfe-layout-title span {
   color: #fff;
 }
+
+.acf-fields > .acf-tab-wrap {
+   border-radius: 1rem;
+}

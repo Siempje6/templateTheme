@@ -1,12 +1,48 @@
-| #  | Optie                    | Type                              | Tab/Locatie                  | Opmerking                                   |
-| -- | ------------------------ | --------------------------------- | ---------------------------- | ------------------------------------------- |
-| 1  | **Line Height**          | text/number                       | Styling                      | Verticale spacing tussen regels             |
-| 2  | **Letter Spacing**       | text/number                       | Styling                      | Ruimte tussen letters                       |
-| 3  | **Text Shadow**          | text                              | Styling                      | Bijvoorbeeld: `1px 1px 2px rgba(0,0,0,0.2)` |
-| 4  | **Word Spacing**         | text/number                       | Styling                      | Ruimte tussen woorden                       |
-| 5  | **Font Variant**         | select                            | Styling                      | Opties: `normal`, `small-caps`              |
-| 6  | **Text Gradient**        | color picker / repeater           | Colors (nieuw tab: Gradient) | Gradient in plaats van 1 kleur              |
-| 7  | **Hover Color**          | color picker                      | Colors                       | Kleur bij hover (optioneel)                 |
-| 8  | **Responsive Font Size** | group (desktop / tablet / mobiel) | Styling                      | Voor verschillende schermen                 |
-| 9  | **Text Overflow**        | select                            | Styling                      | Opties: `clip`, `ellipsis`, `visible`       |
-| 10 | **Word Wrap / Break**    | select                            | Styling                      | Opties: `normal`, `break-word`, `keep-all`  |
+| **Tabje**          | **Optie**               | **Type**    | **Beschrijving / Default**               |
+| ------------------ | ----------------------- | ----------- | ---------------------------------------- |
+| **Styling**        | Font Size               | Text        | Grootte van de tekst in px (bv. 16)      |
+|                    | Font Weight             | Select      | 100–900, standaard 400                   |
+|                    | Font Family             | Select      | Arial, Helvetica, sans-serif etc.        |
+|                    | Font Variant            | Select      | normal, small-caps, etc.                 |
+|                    | Text Transform          | Select      | uppercase, lowercase, capitalize, none   |
+|                    | Line Height             | Text        | Regelhoogte van de tekst, bv. 1.2        |
+|                    | Letter Spacing          | Text        | Ruimte tussen letters in px, bv. 0       |
+|                    | Word Spacing            | Text        | Ruimte tussen woorden in px, bv. 0       |
+|                    | Text Overflow           | Select      | clip, ellipsis, etc.                     |
+|                    | White-space / Word Wrap | Select      | normal, nowrap, break-word               |
+|                    | Padding Vertical        | Text        | Verticale padding, bv. 10px              |
+|                    | Padding Horizontal      | Text        | Horizontale padding, bv. 20px            |
+|                    | Border                  | Text/Color  | bv. 1px solid #000                       |
+|                    | Border Radius           | Text        | Ronding van hoeken, bv. 6px              |
+|                    | Box Shadow              | Text        | bv. 2px 2px 5px rgba(0,0,0,0.2)          |
+|                    | Cursor                  | Select      | pointer, default, auto                   |
+| **Colors**         | Text Color              | Color       | Kleur van de tekst, bv. #fff             |
+|                    | Background Color        | Color       | Achtergrondkleur, bv. #1a73e8            |
+|                    | Text Gradient           | Text        | lineair of radial gradient               |
+|                    | Background Gradient     | Text        | lineair of radial gradient               |
+|                    | Border Color            | Color       | Kleur van de border, bv. #000            |
+|                    | Hover Text Color        | Color       | Tekstkleur bij hover                     |
+|                    | Hover Background Color  | Color       | Achtergrondkleur bij hover               |
+|                    | Hover Border Color      | Color       | Borderkleur bij hover                    |
+|                    | Active Text Color       | Color       | Tekstkleur bij klik / active state       |
+|                    | Active Background Color | Color       | Achtergrondkleur bij klik / active state |
+| **Effects**        | Hover Shadow            | Text        | bv. 2px 2px 5px rgba(0,0,0,0.4)          |
+|                    | Transition              | Text        | bv. all 0.3s ease                        |
+|                    | Animation               | Select      | fade, bounce, scale, none                |
+| **Icon / Content** | Icon Left               | Image / SVG | Optioneel icoon links van tekst          |
+|                    | Icon Right              | Image / SVG | Optioneel icoon rechts van tekst         |
+|                    | Icon Spacing            | Text        | Ruimte tussen icoon en tekst             |
+| **Layout**         | Display                 | Select      | inline-block, block, flex                |
+|                    | Width                   | Text        | px, %, auto                              |
+|                    | Max Width               | Text        | px of %                                  |
+|                    | Min Width               | Text        | px of %                                  |
+|                    | Height                  | Text        | px of auto                               |
+|                    | Text Align              | Select      | left, center, right                      |
+| **Responsive**     | Mobile Font Size        | Text        | Font size voor mobiel                    |
+|                    | Tablet Font Size        | Text        | Font size voor tablet                    |
+|                    | Mobile Padding          | Text        | Padding voor mobiel                      |
+|                    | Tablet Padding          | Text        | Padding voor tablet                      |
+| **Advanced**       | Custom Class            | Text        | Extra CSS class voor custom styling      |
+|                    | ID                      | Text        | Custom ID voor specifieke targeting      |
+|                    | ARIA Label              | Text        | Accessibility label                      |
+|                    | Data Attributes         | Text        | Voor JS hooks, bv. `data-button="cta"`   |
