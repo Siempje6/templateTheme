@@ -1,0 +1,29 @@
+// Typography styles
+h1 {
+    font-size: var(--h1-font-size, 32px);
+    font-weight: var(--h1-font-weight, 400);
+    font-family: var(--h1-font-family, Arial, sans-serif);
+    line-height: var(--h1-line-height, normal);
+    letter-spacing: var(--h1-letter-spacing, 0);
+    text-shadow: var(--h1-text-shadow, 1px 1px 2px rgba(0,0,0,0.2));
+    word-spacing: var(--h1-word-spacing, 0);
+    font-variant: var(--h1-font-variant, normal);
+    text-overflow: var(--h1-text-overflow, clip);
+    word-wrap: var(--h1-word-wrap, normal);
+    text-decoration: var(--h1-decoration, none);
+}
+
+// CSS Custom Properties (variables)
+:root {
+    --h1-font-size: 32px;
+    --h1-font-weight: 400;
+    --h1-font-family: Arial, sans-serif;
+    --h1-line-height: normal;
+    --h1-letter-spacing: 0;
+    --h1-text-shadow: 1px 1px 2px rgba(0,0,0,0.2);
+    --h1-word-spacing: 0;
+    --h1-font-variant: normal;
+    --h1-text-overflow: clip;
+    --h1-word-wrap: normal;
+    --h1-decoration: none;
+}

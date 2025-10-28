@@ -3,6 +3,9 @@
  * Thema functies en scripts
  */
 
+// Include typography functions
+require_once get_template_directory() . '/lib/typography.php';
+
 // ===============================
 // 1. Scripts & Styles inladen
 // ===============================

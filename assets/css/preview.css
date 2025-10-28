@@ -1,3 +1,24 @@
+.h1-preview {
+  margin-left: 20px;
+  transition: color 0.3s ease;
+  font-size: var(--h1-font-size, 32px);
+  font-weight: var(--h1-font-weight, 400);
+  font-family: var(--h1-font-family, Arial, sans-serif);
+  text-decoration: var(--h1-decoration, none);
+  font-style: var(--h1-style, normal);
+  text-transform: var(--h1-transform, none);
+  color: var(--h1-color, #000);
+  line-height: var(--h1-line-height, 1.2);
+  letter-spacing: var(--h1-letter-spacing, 0px);
+  text-shadow: var(--h1-text-shadow, none);
+  word-spacing: var(--h1-word-spacing, 0px);
+  font-variant: var(--h1-font-variant, normal);
+  text-overflow: var(--h1-text-overflow, clip);
+  overflow: hidden;
+}
 
+.h1-preview:hover {
+  color: var(--h1-hover-color, var(--h1-color, #000));
+}
 
 /*# sourceMappingURL=preview.css.map */
