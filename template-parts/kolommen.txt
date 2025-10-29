@@ -7,8 +7,7 @@
 |                    | Text Transform          | Select      | uppercase, lowercase, capitalize, none   |
 |                    | Line Height             | Text        | Regelhoogte van de tekst, bv. 1.2        |
 |                    | Letter Spacing          | Text        | Ruimte tussen letters in px, bv. 0       |
-|                    | Word Spacing            | Text        | Ruimte tussen woorden in px, bv. 0       |
-|                    | Text Overflow           | Select      | clip, ellipsis, etc.                     |
+|                    | Word Spacing            | Text        | Ruimte tussen woorden in px, bv. 0       |                  |
 |                    | White-space / Word Wrap | Select      | normal, nowrap, break-word               |
 |                    | Padding Vertical        | Text        | Verticale padding, bv. 10px              |
 |                    | Padding Horizontal      | Text        | Horizontale padding, bv. 20px            |
