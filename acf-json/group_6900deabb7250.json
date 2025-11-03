@@ -88,7 +88,7 @@
                                     "required": 0,
                                     "conditional_logic": 0,
                                     "wrapper": {
-                                        "width": "",
+                                        "width": "50",
                                         "class": "",
                                         "id": ""
                                     },
@@ -106,7 +106,7 @@
                                     "required": 0,
                                     "conditional_logic": 0,
                                     "wrapper": {
-                                        "width": "",
+                                        "width": "50",
                                         "class": "",
                                         "id": ""
                                     },
@@ -129,7 +129,7 @@
                                     "required": 0,
                                     "conditional_logic": 0,
                                     "wrapper": {
-                                        "width": "",
+                                        "width": "50",
                                         "class": "",
                                         "id": ""
                                     },
@@ -147,7 +147,7 @@
                                     "required": 0,
                                     "conditional_logic": 0,
                                     "wrapper": {
-                                        "width": "",
+                                        "width": "50",
                                         "class": "",
                                         "id": ""
                                     },
@@ -165,15 +165,15 @@
                                     "default_value": 400,
                                     "return_format": "value",
                                     "multiple": 0,
-                                    "allow_custom": 0,
-                                    "placeholder": "",
-                                    "search_placeholder": "",
                                     "allow_null": 0,
                                     "allow_in_bindings": 0,
                                     "ui": 0,
                                     "ajax": 0,
+                                    "placeholder": "",
                                     "create_options": 0,
-                                    "save_options": 0
+                                    "save_options": 0,
+                                    "allow_custom": 0,
+                                    "search_placeholder": ""
                                 },
                                 {
                                     "key": "field_6901cdf2f94f8",
@@ -185,7 +185,7 @@
                                     "required": 0,
                                     "conditional_logic": 0,
                                     "wrapper": {
-                                        "width": "",
+                                        "width": "50",
                                         "class": "",
                                         "id": ""
                                     },
@@ -203,7 +203,7 @@
                                     "required": 0,
                                     "conditional_logic": 0,
                                     "wrapper": {
-                                        "width": "",
+                                        "width": "50",
                                         "class": "",
                                         "id": ""
                                     },
@@ -458,24 +458,6 @@
                                     "step": "",
                                     "prepend": "",
                                     "append": ""
-                                },
-                                {
-                                    "key": "field_6901ce68f9502",
-                                    "label": "Font Variant Message (kopie8)",
-                                    "name": "",
-                                    "aria-label": "",
-                                    "type": "message",
-                                    "instructions": "",
-                                    "required": 0,
-                                    "conditional_logic": 0,
-                                    "wrapper": {
-                                        "width": "",
-                                        "class": "",
-                                        "id": ""
-                                    },
-                                    "message": "e.g. 2px 2px 5px rgba(0,0,0,0.4)",
-                                    "new_lines": "wpautop",
-                                    "esc_html": 0
                                 },
                                 {
                                     "key": "field_6901cc67f94f3",
@@ -1070,5 +1052,5 @@
     "acfe_form": 0,
     "acfe_meta": "",
     "acfe_note": "",
-    "modified": 1761752947
+    "modified": 1761753421
 }

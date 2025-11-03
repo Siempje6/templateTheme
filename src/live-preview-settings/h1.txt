@@ -2,7 +2,7 @@
 
 $styling_h1    = get_sub_field('styling_h1');
 $decoration_h1 = get_sub_field('decoration_h1');
-$color_h1      = get_sub_field('colors_h1');
+$color_h1      = get_sub_field('colors_h1'); 
 $responsive_h1 = get_sub_field('responsive_h1');
 
 $font_size   = !empty($styling_h1['font_size_h1']) ? $styling_h1['font_size_h1'] : '32';
@@ -27,9 +27,7 @@ $hover_color = !empty($color_h1['hover_color']) ? $color_h1['hover_color'] : '';
 ?>
 
 <h1 style="
-    margin-left: 2rem;
-    margin-right: 2rem;
-    margin-bottom: 0rem;
+    margin-left: 20px;
     font-size: <?php echo esc_attr($font_size); ?>px;
     font-weight: <?php echo esc_attr($font_weight); ?>;
     font-family: <?php echo esc_attr($font_family); ?>;
@@ -55,6 +53,6 @@ $hover_color = !empty($color_h1['hover_color']) ? $color_h1['hover_color'] : '';
 
 <style>
     h1:hover {
-        color: <?php echo esc_attr($hover_color) ?>;
+       color: <?php echo esc_attr($hover_color) ?>;
     }
 </style>
