@@ -2,7 +2,7 @@
 $header_rows = get_field('header_builder', 'option');
 
 if ($header_rows): ?>
-    <header class="site-header" style="max-width:1200px; width:100%; margin:0 auto;">
+    <header class="site-header" style="max-width:1500px; width:100%; margin:0 auto;">
         <?php
         foreach ($header_rows as $row):
 
@@ -18,7 +18,7 @@ if ($header_rows): ?>
                     $header_grid_template[] = $width;
 
                     $layout = $col['acf_fc_layout'] ?? '';
-                    $block_file = get_template_directory() . '/header-builder/block-' . $layout . '/' . $layout . '.php';
+                    $block_file = get_template_directory() . '/src/header-builder/block-' . $layout . '/' . $layout . '.php';
 
                     $block = $col;
 

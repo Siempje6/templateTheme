@@ -2,7 +2,7 @@
 $footer_rows = get_field('footer_builder', 'option');
 
 if ($footer_rows): ?>
-    <footer class="site-footer" style="max-width:1200px; width:100%; margin:0 auto;">
+    <footer class="site-footer" style="max-width:1500px; width:100%; margin:0 auto;">
     <?php
     foreach ($footer_rows as $row):
         if ($row['acf_fc_layout'] === 'footer_columns' && !empty($row['content'])):
@@ -17,7 +17,7 @@ if ($footer_rows): ?>
                 $footer_grid_template[] = $width;
 
                 $layout = $col['acf_fc_layout'] ?? '';
-                $block_file = get_template_directory() . '/footer-builder/block-' . $layout . '/' . $layout . '.php';
+                $block_file = get_template_directory() . '/src/footer-builder/block-' . $layout . '/' . $layout . '.php';
 
                 $block = $col;
 

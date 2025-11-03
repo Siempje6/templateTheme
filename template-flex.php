@@ -18,12 +18,12 @@ Template Name: Flexibele Pagina
     <div class="site-wrapper">
 
         <!-- ===== HEADER ===== -->
-        <header class="site-header" style="max-width:1200px; width:100%; margin:0 auto;">
+        <header class="site-header" style="max-width:1900px; width:100%; margin:0 auto;">
             <?php get_template_part('template-parts/header'); ?>
         </header>
 
         <!-- ===== MAIN ===== -->
-        <main class="site-main" style="max-width:1200px; width:100%; margin:0 auto;">
+        <main class="site-main" style="max-width:1900px; width:100%; margin:0 auto;">
             <?php
             if (have_rows('rows')):
                 while (have_rows('rows')): the_row();
@@ -41,7 +41,7 @@ Template Name: Flexibele Pagina
         </main>
 
         <!-- ===== FOOTER ===== -->
-        <footer class="site-footer" style="max-width:1200px; width:100%; margin:0 auto;">
+        <footer class="site-footer" style="max-width:1900px; width:100%; margin:0 auto;">
             <?php get_template_part('template-parts/footer'); ?>
         </footer>
 
@@ -60,7 +60,7 @@ Template Name: Flexibele Pagina
 
         .header-grid {
             display: grid;
-            max-width: 1200px;
+            max-width: 1600px;
             width: 100%;
             margin: 0 auto;
             gap: 10px;
@@ -76,7 +76,7 @@ Template Name: Flexibele Pagina
 
         .footer-grid {
             display: grid;
-            max-width: 1200px;
+            max-width: 1600px;
             width: 100%;
             margin: 0 auto;
             gap: 10px;

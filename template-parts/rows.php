@@ -18,7 +18,7 @@ if (have_rows('columns')):
         if (have_rows('column_content')):
             while (have_rows('column_content')): the_row();
                 $layout = get_row_layout();
-                $file = get_template_directory() . '/page-blocks/block-' . $layout . '/' . $layout . '.php';
+                $file = get_template_directory() . '/src/page-blocks/block-' . $layout . '/' . $layout . '.php';
                 if (file_exists($file)) {
                     include $file;
                 }
