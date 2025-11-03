@@ -124,7 +124,6 @@ switch($font_size) {
         render_heading('h6', $preview, $title);
         break;
     default:
-        // fallback
         ?>
         <<?php echo esc_html($font_size); ?> class="<?php echo esc_attr($classes_str); ?>">
             <?php echo esc_html($title); ?>
