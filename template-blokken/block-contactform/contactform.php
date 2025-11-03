@@ -1,6 +1,6 @@
 <?php
 
-$shortcode = get_sub_field('shortcode_form');
+$shortcode = get_sub_field('form_shortcode');
 
 if ($shortcode):
 ?>
