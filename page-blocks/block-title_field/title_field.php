@@ -27,84 +27,107 @@ $classes = [
 ];
 $classes_str = implode(' ', $classes);
 
-if ($font_size === 'h1') :
 
-    $has_preview = have_rows('preview_h1');
-    $styling_h1 = $decoration_h1 = $color_h1 = $responsive_h1 = [];
+function render_heading($level, $preview_field, $title) {
+    $styling = [];
+    $colors = [];
+    $decoration = [];
 
-    if ($has_preview) {
-        while (have_rows('preview_h1')) : the_row();
-            $styling_h1    = get_sub_field('styling_h1');
-            $decoration_h1 = get_sub_field('decoration_h1');
-            $color_h1      = get_sub_field('colors_h1');
-            $responsive_h1 = get_sub_field('responsive_h1');
-        endwhile;
+    if ($preview_field && is_array($preview_field) && isset($preview_field[0])) {
+        $layout = $preview_field[0];
+        if (isset($layout['styling_' . $level]))    $styling    = $layout['styling_' . $level];
+        if (isset($layout['colors_' . $level]))     $colors     = $layout['colors_' . $level];
+        if (isset($layout['decoration_' . $level])) $decoration = $layout['decoration_' . $level];
     }
 
-    $font_size_px = !empty($styling_h1['font_size_h1']) ? $styling_h1['font_size_h1'] : '42';
-    $font_weight  = !empty($styling_h1['font_weight']) ? $styling_h1['font_weight'] : '400';
-    $font_family  = !empty($styling_h1['font_family']) ? $styling_h1['font_family'] : 'Arial, sans-serif';
+    $font_size_px   = !empty($styling['font_size_' . $level]) ? $styling['font_size_' . $level] : '20';
+    $font_weight    = !empty($styling['font_weight']) ? $styling['font_weight'] : '400';
+    $font_family    = !empty($styling['font_family']) ? $styling['font_family'] : 'Arial, sans-serif';
+    $line_height    = !empty($styling['line_height']) ? $styling['line_height'] : '';
+    $letter_spacing = !empty($styling['letter_spacing']) ? $styling['letter_spacing'] : '0';
+    $text_shadow    = !empty($styling['text_shadow_option']) ? $styling['text_shadow_option'] : '';
+    $word_spacing   = !empty($styling['word_spacing']) ? $styling['word_spacing'] : '0';
+    $font_variant   = !empty($styling['font_variant']) ? $styling['font_variant'] : 'normal';
+    $text_overflow  = !empty($styling['text_overflow']) ? $styling['text_overflow'] : 'clip';
+    $word_wrap      = !empty($styling['word_wrap_break']) ? $styling['word_wrap_break'] : 'normal';
 
-    $line_height = !empty($styling_h1['line_height']) ? $styling_h1['line_height'] : '';
-    $letter_spacing = !empty($styling_h1['letter_spacing']) ? $styling_h1['letter_spacing'] : '0';
-    $text_shadow = !empty($styling_h1['text_shadow_option']) ? $styling_h1['text_shadow_option'] : '1px 1px 2px rgba(0,0,0,0.2)';
-    $word_spacing = !empty($styling_h1['word_spacing']) ? $styling_h1['word_spacing'] : '0';
-    $font_variant = !empty($styling_h1['font_variant']) ? $styling_h1['font_variant'] : 'normal';
-    $text_overflow = !empty($styling_h1['text_overflow']) ? $styling_h1['text_overflow'] : 'clip';
-    $word_wrap = !empty($styling_h1['word_wrap_break']) ? $styling_h1['word_wrap_break'] : 'normal';
+    $decoration_val = !empty($decoration['decoration']) ? $decoration['decoration'] : 'none';
+    $style_val      = !empty($decoration['style']) ? $decoration['style'] : 'normal';
+    $transform_val  = !empty($decoration['transform']) ? $decoration['transform'] : 'none';
 
-    $decoration = !empty($decoration_h1['decoration']) ? $decoration_h1['decoration'] : 'none';
-    $style      = !empty($decoration_h1['style']) ? $decoration_h1['style'] : 'normal';
-    $transform  = !empty($decoration_h1['transform']) ? $decoration_h1['transform'] : 'none';
+    $color = !empty($colors['color']) ? $colors['color'] : '#000';
+    $hover_color = !empty($colors['hover_color']) ? $colors['hover_color'] : '';
+    $text_gradient = !empty($colors['text_gradient']) ? $colors['text_gradient'] : '';
 
-    $color        = !empty($color_h1['color']) ? $color_h1['color'] : '#000';
-    $text_gradient = !empty($color_h1['text_gradient']) ? $color_h1['text_gradient'] : '';
-    $hover_color  = !empty($color_h1['hover_color']) ? $color_h1['hover_color'] : '';
-
-    $desktop_size = !empty($responsive_h1['desktop']['font_size_desktop']) ? $responsive_h1['desktop']['font_size_desktop'] : '';
-    $laptop_size  = !empty($responsive_h1['laptop']['font_size_laptop']) ? $responsive_h1['laptop']['font_size_laptop'] : '';
-    $tablet_size  = !empty($responsive_h1['tablet']['font_size_tablet']) ? $responsive_h1['tablet']['font_size_tablet'] : '';
-    $phone_size   = !empty($responsive_h1['phone']['font_size_phone']) ? $responsive_h1['phone']['font_size_phone'] : '';
     ?>
-
-    <h1 class="acf-h1-dynamic" style="
+    <<?php echo esc_html($level); ?> style="
         margin-left: 2rem;
         margin-right: 2rem;
         margin-bottom: 0rem;
+
         font-size: <?php echo esc_attr($font_size_px); ?>px;
         font-weight: <?php echo esc_attr($font_weight); ?>;
         font-family: <?php echo esc_attr($font_family); ?>;
-        <?php if ($line_height): ?>line-height: <?php echo esc_attr($line_height); ?>px;<?php endif; ?>
+
+        line-height: <?php echo esc_attr($line_height); ?>px;
         letter-spacing: <?php echo esc_attr($letter_spacing); ?>px;
         text-shadow: <?php echo esc_attr($text_shadow); ?>;
         word-spacing: <?php echo esc_attr($word_spacing); ?>px;
         font-variant: <?php echo esc_attr($font_variant); ?>;
         text-overflow: <?php echo esc_attr($text_overflow); ?>;
         word-wrap: <?php echo esc_attr($word_wrap); ?>;
-        text-decoration: <?php echo esc_attr($decoration); ?>;
-        font-style: <?php echo esc_attr($style); ?>;
-        text-transform: <?php echo esc_attr($transform); ?>;
+
+        text-decoration: <?php echo esc_attr($decoration_val); ?>;
+        font-style: <?php echo esc_attr($style_val); ?>;
+        text-transform: <?php echo esc_attr($transform_val); ?>;
+
         color: <?php echo esc_attr($color); ?>;
-        <?php if ($text_gradient): ?>
-            background: <?php echo esc_attr($text_gradient); ?>;
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-        <?php endif; ?>
+        <?php if(!empty($text_gradient)) echo "background: $text_gradient; -webkit-background-clip: text; -webkit-text-fill-color: transparent;"; ?>
     ">
         <?php echo esc_html($title); ?>
-    </h1>
+    </<?php echo esc_html($level); ?>>
 
-    <style>
-        .acf-h1-dynamic:hover {
-            color: <?php echo esc_attr($hover_color ?: $color); ?>;
-        }
-    </style>
-
+    <?php if (!empty($hover_color)) : ?>
+        <style>
+            <?php echo esc_html($level); ?>:hover {
+                color: <?php echo esc_attr($hover_color); ?>;
+            }
+        </style>
+    <?php endif; ?>
 <?php
-else :
-    // fallback: alle andere heading types
-    ?>
-    <<?php echo esc_html($font_size); ?> class="<?php echo esc_attr($classes_str); ?>">
-        <?php echo esc_html($title); ?>
-    </<?php echo esc_html($font_size); ?>>
-<?php endif; ?>
+}
+
+
+switch($font_size) {
+    case 'h1':
+        $preview = get_field('preview_h1', 'option');
+        render_heading('h1', $preview, $title);
+        break;
+    case 'h2':
+        $preview = get_field('preview_h2', 'option');
+        render_heading('h2', $preview, $title);
+        break;
+    case 'h3':
+        $preview = get_field('preview_h3', 'option');
+        render_heading('h3', $preview, $title);
+        break;
+    case 'h4':
+        $preview = get_field('preview_h4', 'option');
+        render_heading('h4', $preview, $title);
+        break;
+    case 'h5':
+        $preview = get_field('preview_h5', 'option');
+        render_heading('h5', $preview, $title);
+        break;
+    case 'h6':
+        $preview = get_field('preview_h6', 'option');
+        render_heading('h6', $preview, $title);
+        break;
+    default:
+        // fallback
+        ?>
+        <<?php echo esc_html($font_size); ?> class="<?php echo esc_attr($classes_str); ?>">
+            <?php echo esc_html($title); ?>
+        </<?php echo esc_html($font_size); ?>>
+        <?php
+}
