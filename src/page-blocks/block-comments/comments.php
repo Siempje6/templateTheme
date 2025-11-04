@@ -17,7 +17,6 @@ $show_comments    = get_sub_field('show_comments');
             <button id="show-form-btn" class="acf-btn" style="display:none;"><?php _e('Nieuwe reactie schrijven', 'textdomain'); ?></button>
         </div>
 
-        <!-- ✅ Reactieformulier -->
         <div id="acf-comment-form">
             <?php
             if (comments_open()) {
@@ -41,11 +40,9 @@ $show_comments    = get_sub_field('show_comments');
             ?>
         </div>
 
-        <!-- ✅ Reacties tonen -->
         <div id="acf-comment-list" style="display:none;">
             <?php
             if ($show_comments) {
-                // Dit laadt automatisch alle bestaande reacties inclusief moderatie, threading, enz.
                 comments_template();
             }
             ?>
