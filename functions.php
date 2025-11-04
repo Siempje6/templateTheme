@@ -270,3 +270,12 @@ add_filter('acf/load_field/key=field_6909bb0fc3ab5', function($field){
 
     return $field;
 });
+
+
+
+
+
+add_filter('theme_page_templates', function($templates, $theme, $post) {
+    $templates['flexibele-pagina.php'] = 'Flexibele Pagina';
+    return $templates;
+}, 10, 3);

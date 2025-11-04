@@ -35,8 +35,16 @@ Template Name: Flexibele Pagina
                         <div class="default-page-content">
                             <?php the_content(); ?>
                         </div>
-                    <?php endwhile;
+            <?php endwhile;
+
+                    wp_reset_postdata();
+
+                    if (comments_open() || get_comments_number()):
+                        comments_template();
+                    endif;
                 endif;
+
+
             endif;
             ?>
         </main>
@@ -46,9 +54,10 @@ Template Name: Flexibele Pagina
             <?php get_template_part('template-parts/footer'); ?>
         </footer>
 
-    </div>
+    </div><!-- .site-wrapper -->
 
     <style>
+        /* ===== Algemene layout ===== */
         .site-wrapper {
             display: flex;
             flex-direction: column;
@@ -59,7 +68,9 @@ Template Name: Flexibele Pagina
             flex: 1;
         }
 
-        .header-grid, .footer-grid {
+        /* ===== Header/Footer grids ===== */
+        .header-grid,
+        .footer-grid {
             display: grid;
             max-width: 1600px;
             width: 100%;
@@ -74,6 +85,7 @@ Template Name: Flexibele Pagina
             padding: 5px;
             border-radius: 4px;
         }
+
         .footer-column {
             border: 1px solid green;
             display: flex;
@@ -82,20 +94,74 @@ Template Name: Flexibele Pagina
             border-radius: 4px;
         }
 
+        /* ===== Pagina content ===== */
         .default-page-content {
             max-width: 800px;
             margin: 40px auto;
             padding: 20px;
         }
 
+        /* ===== Comment styling ===== */
+        .comments-area {
+            margin-top: 40px;
+        }
+
+        .comments-title {
+            font-size: 1.2rem;
+            font-weight: 600;
+            margin-bottom: 20px;
+        }
+
+        .comment-list {
+            list-style: none;
+            padding: 0;
+            margin: 0 0 30px 0;
+        }
+
+        .comment-list li {
+            border-bottom: 1px solid #ccc;
+            padding: 10px 0;
+        }
+
+        .comment-list li p {
+            margin: 0.3rem 0;
+        }
+
+        .comment-form {
+            margin-top: 30px;
+        }
+
+        .comment-form a {
+            color: #1a5428;
+        }
+
+        .comment-form input,
+        .comment-form textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            font-size: 0.95rem;
+        }
+
+        .comment-form input[type="submit"]:hover {
+            background-color: #555;
+        }
+
+        /* ===== Responsive ===== */
         @media screen and (max-width: 1024px) {
-            .header-grid, .footer-grid {
+
+            .header-grid,
+            .footer-grid {
                 grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
             }
         }
 
         @media screen and (max-width: 768px) {
-            .header-grid, .footer-grid {
+
+            .header-grid,
+            .footer-grid {
                 grid-template-columns: 1fr;
             }
 
@@ -108,4 +174,5 @@ Template Name: Flexibele Pagina
 
     <?php wp_footer(); ?>
 </body>
+
 </html>
