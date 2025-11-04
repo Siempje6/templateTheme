@@ -1740,6 +1740,27 @@
                                                     "save_options": 0,
                                                     "allow_custom": 0,
                                                     "search_placeholder": ""
+                                                },
+                                                {
+                                                    "key": "field_6909d5a0271cb",
+                                                    "label": "Page Navigation Bottom",
+                                                    "name": "page_navigation_bottom",
+                                                    "aria-label": "",
+                                                    "type": "true_false",
+                                                    "instructions": "",
+                                                    "required": 0,
+                                                    "conditional_logic": 0,
+                                                    "wrapper": {
+                                                        "width": "",
+                                                        "class": "",
+                                                        "id": ""
+                                                    },
+                                                    "message": "Wilt u onder aan de grid naar de rest van de posts kunnen gaan",
+                                                    "default_value": 1,
+                                                    "allow_in_bindings": 0,
+                                                    "ui_on_text": "True",
+                                                    "ui_off_text": "False",
+                                                    "ui": 1
                                                 }
                                             ],
                                             "min": "",
@@ -2455,5 +2476,5 @@
     "acfe_form": 0,
     "acfe_meta": "",
     "acfe_note": "",
-    "modified": 1762247514
+    "modified": 1762252283
 }

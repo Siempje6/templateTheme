@@ -18,12 +18,12 @@ Template Name: Flexibele Pagina
     <div class="site-wrapper">
 
         <!-- ===== HEADER ===== -->
-        <header class="site-header" style="max-width:1900px; width:100%; margin:0 auto;">
+        <header class="site-header">
             <?php get_template_part('template-parts/header'); ?>
         </header>
 
         <!-- ===== MAIN ===== -->
-        <main class="site-main" style="max-width:1900px; width:100%; margin:0 auto;">
+        <main class="site-main">
             <?php
             if (have_rows('rows')):
                 while (have_rows('rows')): the_row();
@@ -31,21 +31,22 @@ Template Name: Flexibele Pagina
                 endwhile;
             else:
                 if (have_posts()):
-                    while (have_posts()): the_post();
-                        echo '<div class="default-page-content">';
-                        echo '</div>';
-                    endwhile;
+                    while (have_posts()): the_post(); ?>
+                        <div class="default-page-content">
+                            <?php the_content(); ?>
+                        </div>
+                    <?php endwhile;
                 endif;
             endif;
             ?>
         </main>
 
         <!-- ===== FOOTER ===== -->
-        <footer class="site-footer" style="max-width:1900px; width:100%; margin:0 auto;">
+        <footer class="site-footer">
             <?php get_template_part('template-parts/footer'); ?>
         </footer>
 
-    </div><!-- .site-wrapper -->
+    </div>
 
     <style>
         .site-wrapper {
@@ -58,7 +59,7 @@ Template Name: Flexibele Pagina
             flex: 1;
         }
 
-        .header-grid {
+        .header-grid, .footer-grid {
             display: grid;
             max-width: 1600px;
             width: 100%;
@@ -67,52 +68,41 @@ Template Name: Flexibele Pagina
         }
 
         .header-column {
-            display: flex;
-            flex-direction: column;
-            padding: 10px;
             border: 1px solid blue;
+            display: flex;
+            flex-direction: column;
+            padding: 5px;
             border-radius: 4px;
         }
-
-        .footer-grid {
-            display: grid;
-            max-width: 1600px;
-            width: 100%;
-            margin: 0 auto;
-            gap: 10px;
-        }
-
         .footer-column {
+            border: 1px solid green;
             display: flex;
             flex-direction: column;
             padding: 10px;
-            border: 1px solid green;
             border-radius: 4px;
-        }
-
-        /* Responsive fix */
-        @media screen and (max-width: 768px) {
-            .header-grid {
-                grid-template-columns: 1fr !important;
-            }
-
-            .header-grid .header-item.is-empty {
-                display: none !important;
-            }
-
-            .footer-grid {
-                grid-template-columns: 1fr !important;
-            }
-
-            .footer-grid .header-item.is-empty {
-                display: none !important;
-            }
         }
 
         .default-page-content {
             max-width: 800px;
             margin: 40px auto;
             padding: 20px;
+        }
+
+        @media screen and (max-width: 1024px) {
+            .header-grid, .footer-grid {
+                grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            }
+        }
+
+        @media screen and (max-width: 768px) {
+            .header-grid, .footer-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .default-page-content {
+                margin: 20px;
+                padding: 15px;
+            }
         }
     </style>
 
