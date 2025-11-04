@@ -44,4 +44,17 @@ function wp_get_referer() { return ''; }
 function wp_kses_post($data) { return $data; }
 function do_shortcode($shortcode) { return $shortcode; }
 function locate_template($template_names, $load = false, $require_once = true) { return false; }
+
+function home_url($path = '') { return 'http://example.com/' . ltrim($path, '/'); }
+function is_category() { return false; }
+function is_single() { return false; }
+function is_page() { return false; }
+function get_the_category() { return []; } 
+function get_category($category_id) { return (object)['term_id' => $category_id, 'name' => 'Category ' . $category_id]; }
+function get_category_link($category) { return home_url('category/' . $category->term_id); }
+function get_ancestors($object_id, $object_type) { return []; } 
+function get_the_title($post_id = null) { return $post_id ? 'Page ' . $post_id : 'Current Page'; }
+function get_queried_object() { return (object)['term_id' => 1, 'name' => 'Example Category']; }
+function get_post_ancestors($post) { return []; }
+function get_permalink($post_id) { return home_url('page/' . $post_id); }
 ?>

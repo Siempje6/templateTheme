@@ -250,7 +250,23 @@ function search_pages_autocomplete() {
 
 
 
+add_filter('acf/load_field/key=field_6909bb0fc3ab5', function($field){
+    $pt_args = [
+        'public' => true,
+    ];
+    $post_types = get_post_types($pt_args, 'objects');
 
+    $choices = [];
 
+    foreach ($post_types as $name => $obj) {
+        $label = $obj->labels->singular_name ?? $obj->label ?? $name;
+        $choices[$name] = $label;
+    }
 
-// live preview settings 
+    asort($choices);
+
+    $field['choices'] = $choices;
+    $field['return_format'] = 'value';
+
+    return $field;
+});
