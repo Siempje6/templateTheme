@@ -42,7 +42,7 @@ if ($footer_rows): ?>
 
             endforeach;
             ?>
-            <div class="footer-grid" style="display:grid; grid-template-columns: <?php echo esc_attr(implode(' ', $footer_grid_template)); ?>; gap:10px; padding:10px 0; box-sizing:border-box;">
+            <div class="footer-grid" style="display:grid; grid-template-columns: <?php echo esc_attr(implode(' ', $footer_grid_template)); ?>; gap:10px; padding:5px 0; box-sizing:border-box;">
                 <?php foreach ($footer_columns_content as $content): ?>
                     <div class="footer-column"><?php echo $content; ?></div>
                 <?php endforeach; ?>
