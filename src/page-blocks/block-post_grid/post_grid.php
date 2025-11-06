@@ -14,11 +14,10 @@ $paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
 
 $args = [
     'post_type'      => $post_type,
-    'posts_per_page' => $post_count,
+    'posts_per_page' => -1,
     'order'          => strtoupper($order) === 'ASC' ? 'ASC' : 'DESC',
     'orderby'        => in_array($order_by, ['date', 'title', 'menu_order', 'rand'], true) ? $order_by : 'date',
     'post_status'    => 'publish',
-    'paged'          => $paged,
 ];
 
 $query = new WP_Query($args);
@@ -27,12 +26,38 @@ if (!$query->have_posts()) {
     return;
 }
 
+$today = new DateTime();
+$visible_posts = [];
+
+while ($query->have_posts()) {
+    $query->the_post();
+
+    $months_visible = get_field('weergeven_tot', get_the_ID());
+    $months_visible = is_numeric($months_visible) ? intval($months_visible) : 0;
+
+    if ($months_visible > 0) {
+        $post_date  = new DateTime(get_the_date('Y-m-d'));
+        $limit_date = clone $post_date;
+        $limit_date->modify('+' . $months_visible . ' months');
+
+        if ($limit_date < $today) {
+            continue;
+        }
+    }
+
+    $visible_posts[] = get_post();
+}
+
+$total_posts = count($visible_posts);
+$start_index = ($paged - 1) * $post_count;
+$visible_page_posts = array_slice($visible_posts, $start_index, $post_count);
+
 $columns = in_array($columns, ['2', '3', '4'], true) ? $columns : '3';
 $wrapper_class = 'acf-post-grid-wrapper columns-' . esc_attr($columns);
 ?>
 
 <div class="<?php echo esc_attr($wrapper_class); ?>">
-    <?php while ($query->have_posts()) : $query->the_post(); ?>
+    <?php foreach ($visible_page_posts as $post) : setup_postdata($post); ?>
         <?php
         $excerpt = get_the_excerpt();
         if (!$excerpt) {
@@ -48,26 +73,24 @@ $wrapper_class = 'acf-post-grid-wrapper columns-' . esc_attr($columns);
                         <div class="acf-post-grid-placeholder" aria-hidden="true"></div>
                     <?php endif; ?>
                 </div>
-
                 <div class="acf-post-grid-content">
                     <h3 class="acf-post-grid-title"><?php the_title(); ?></h3>
                     <p class="acf-post-grid-text"><?php echo esc_html($excerpt); ?></p>
                 </div>
             </a>
         </article>
-    <?php endwhile; ?>
+    <?php endforeach; wp_reset_postdata(); ?>
 </div>
 
 <?php
-
-
-if ($show_nav) {
-    $big = 999999999; 
+if ($show_nav && $total_posts > $post_count) {
+    $total_pages = ceil($total_posts / $post_count);
+    $big = 999999999;
     $pagination_links = paginate_links([
         'base'      => str_replace($big, '%#%', esc_url(get_pagenum_link($big))),
         'format'    => '?paged=%#%',
         'current'   => max(1, $paged),
-        'total'     => $query->max_num_pages,
+        'total'     => $total_pages,
         'type'      => 'array',
         'prev_text' => '<',
         'next_text' => '>',
@@ -80,23 +103,15 @@ if ($show_nav) {
         foreach ($pagination_links as $link) {
             echo '<li>' . $link . '</li>';
         }
-        echo '<li class="last-page"><a href="' . esc_url(get_pagenum_link($query->max_num_pages)) . '">>></a></li>';
+        echo '<li class="last-page"><a href="' . esc_url(get_pagenum_link($total_pages)) . '">>></a></li>';
         echo '</ul>';
         echo '</nav>';
     endif;
 }
 
-wp_reset_postdata();
-?>
-
-
-
-<?php
-// styling 
 $colors = get_sub_field('colors');
 $fonts  = get_sub_field('fonts');
 $posts  = get_sub_field('posts');
-
 
 $hover_pagitation      = !empty($colors['hover_pagitation']) ? $colors['hover_pagitation'] : '#1a5428';
 $pagitation_background = !empty($colors['pagitation_background']) ? $colors['pagitation_background'] : '#f0f0f0';
@@ -111,10 +126,9 @@ $post_3 = !empty($posts['width_post_3']) ? $posts['width_post_3'] : '320';
 $post_4 = !empty($posts['width_post_4']) ? $posts['width_post_4'] : '260';
 $post_3responsive = !empty($posts['width_post_3responsive']) ? $posts['width_post_3responsive'] : '280';
 $post_4responsive = !empty($posts['width_post_4responsive']) ? $posts['width_post_4responsive'] : '260';
-
 ?>
 
-    <?php echo '<!-- Font family: ' . esc_html($font_family) . ' -->'; ?>
+<?php echo '<!-- Font family: ' . esc_html($font_family) . ' -->'; ?>
 <style>
 .acf-post-grid-wrapper { display: grid; gap: 1.75rem; margin: 2.5rem auto; padding: 0 1rem; align-items: start; }
 .acf-post-grid-item { border-radius: 10px; overflow: hidden; transition: transform .25s ease, box-shadow .25s ease; }
@@ -127,11 +141,9 @@ $post_4responsive = !empty($posts['width_post_4responsive']) ? $posts['width_pos
 .acf-post-grid-text { margin: 0; color: #666; font-size: .95rem; line-height: 1.4; }
 .acf-post-grid-pagination { text-align: center; margin: 2rem 0; }
 .acf-post-grid-pagination ul { display: inline-flex; list-style: none; padding: 0; gap: 0.5rem; }
-.acf-post-grid-pagination li a { display: block; padding: 0.5rem 0.75rem; border-radius: 5px; color: #333; 
-                                 text-decoration: none; transition: background-color 0.3s ease; }
+.acf-post-grid-pagination li a { display: block; padding: 0.5rem 0.75rem; border-radius: 5px; color: #333; text-decoration: none; transition: background-color 0.3s ease; }
 .acf-post-grid-pagination li a:hover,
-.acf-post-grid-pagination li .current { display: block; padding: 0.5rem 0.75rem; border-radius: 5px; color: #fff;
-                                        text-decoration: none; }
+.acf-post-grid-pagination li .current { display: block; padding: 0.5rem 0.75rem; border-radius: 5px; color: #fff; text-decoration: none; }
 .acf-post-grid-pagination .first-page a,
 .acf-post-grid-pagination .last-page a { font-weight: bold; }
 
@@ -155,6 +167,4 @@ $post_4responsive = !empty($posts['width_post_4responsive']) ? $posts['width_pos
 .acf-post-grid-wrapper.columns-2 { grid-template-columns: repeat(auto-fit, minmax( <?php echo esc_attr($post_2) ?>px, 1fr)); }
 .acf-post-grid-wrapper.columns-3 { grid-template-columns: repeat(auto-fit, minmax( <?php echo esc_attr($post_3) ?>px, 1fr)); }
 .acf-post-grid-wrapper.columns-4 { grid-template-columns: repeat(auto-fit, minmax( <?php echo esc_attr($post_4) ?>px, 1fr)); }
-
-
 </style>

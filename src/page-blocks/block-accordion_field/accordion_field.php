@@ -6,23 +6,28 @@ $title_size = $styling['title_font_size'] ?? '18px';
 $title_color = $styling['title_color'] ?? 'black';
 $dropdown_icon = $styling['accordion_dropdown_icon'] ?? 'plus';
 
-function get_icon_html($icon) {
-    switch ($icon) {
-        case 'arrow':
-            return '<i class="icon-arrow"></i>';
-        case 'plus':
-            return '<i class="icon-plus"></i>';
-        case 'minus':
-            return '<i class="icon-minus"></i>';
-        case 'chevron':
-            return '<i class="icon-chevron"></i>';
-        default:
-            return '<i class="icon-plus"></i>';
+if (!function_exists('get_icon_html')) {
+    function get_icon_html($icon) {
+        switch ($icon) {
+            case 'arrow':
+                return '<i class="icon-arrow"></i>';
+            case 'plus':
+                return '<i class="icon-plus"></i>';
+            case 'minus':
+                return '<i class="icon-minus"></i>';
+            case 'chevron':
+                return '<i class="icon-chevron"></i>';
+            default:
+                return '<i class="icon-plus"></i>';
+        }
     }
 }
+
+// Unieke ID per accordion
+$accordion_id = 'accordion-' . uniqid();
 ?>
 
-<div class="accordion-wrapper">
+<div id="<?= esc_attr($accordion_id); ?>" class="accordion-wrapper">
     <?php if ($accordion_items): ?>
         <?php foreach ($accordion_items as $index => $item): ?>
             <div class="accordion-item">
@@ -38,25 +43,21 @@ function get_icon_html($icon) {
     <?php endif; ?>
 </div>
 
-<style>
-
-</style>
-
 <script>
-document.querySelectorAll('.accordion-title').forEach(title => {
-    title.addEventListener('click', () => {
-        const parent = title.parentElement;
-        const wrapper = parent.closest('.accordion-wrapper');
-        const allItems = wrapper.querySelectorAll('.accordion-item');
+(function() {
+    const wrapper = document.getElementById('<?= $accordion_id; ?>');
+    if (!wrapper) return;
 
-        allItems.forEach(item => {
-            if (item !== parent) {
-                item.classList.remove('active');
-            }
+    const items = wrapper.querySelectorAll('.accordion-item');
+
+    items.forEach(item => {
+        const title = item.querySelector('.accordion-title');
+        title.addEventListener('click', () => {
+            items.forEach(i => {
+                if (i !== item) i.classList.remove('active');
+            });
+            item.classList.toggle('active');
         });
-
-        parent.classList.toggle('active');
     });
-});
+})();
 </script>
-

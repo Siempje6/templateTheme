@@ -1689,6 +1689,29 @@
                                                     "search_placeholder": ""
                                                 },
                                                 {
+                                                    "key": "field_690b667f930ca",
+                                                    "label": "Weergeven tot",
+                                                    "name": "weergeven_tot",
+                                                    "aria-label": "",
+                                                    "type": "number",
+                                                    "instructions": "Vul in hoeveel maanden deze post zichtbaar moet blijven.",
+                                                    "required": 0,
+                                                    "conditional_logic": 0,
+                                                    "wrapper": {
+                                                        "width": "",
+                                                        "class": "",
+                                                        "id": ""
+                                                    },
+                                                    "default_value": "",
+                                                    "min": "",
+                                                    "max": 24,
+                                                    "allow_in_bindings": 0,
+                                                    "placeholder": "",
+                                                    "step": 1,
+                                                    "prepend": "",
+                                                    "append": ""
+                                                },
+                                                {
                                                     "key": "field_6909bbf5c3ab9",
                                                     "label": "Tekst onder Titel",
                                                     "name": "custom_title",
@@ -3010,5 +3033,5 @@
     "acfe_form": 0,
     "acfe_meta": "",
     "acfe_note": "",
-    "modified": 1762347232
+    "modified": 1762355255
 }
