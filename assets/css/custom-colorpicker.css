@@ -1,0 +1,13 @@
+/* Iris palette blokjes aanpassen */
+.iris-palette-container .iris-palette {
+    width: 20px !important;
+    height: 20px !important;
+    margin-left: 4px !important;
+    border-radius: 3px;
+    border: 1px solid #ccc;
+    transition: transform 0.2s ease;
+}
+
+.iris-palette-container .iris-palette:hover {
+    transform: scale(1.2);
+}

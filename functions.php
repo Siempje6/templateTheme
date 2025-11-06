@@ -271,3 +271,50 @@ add_filter('acf/load_field/key=field_6909bb0fc3ab5', function($field){
     return $field;
 });
 
+
+
+add_filter('acf/load_field/key=field_690c612ebdf84', function($field) {
+    $terms = get_terms([
+        'taxonomy'   => 'categorie', 
+        'hide_empty' => true,       
+    ]);
+
+    if (!is_wp_error($terms) && !empty($terms)) {
+        $field['choices'] = [];
+        foreach ($terms as $term) {
+            $field['choices'][$term->term_id] = $term->name;
+        }
+    }
+
+    return $field;
+});
+
+
+
+
+
+// functions.php
+
+add_filter('acf/fields/color_picker/wp_color_picker_args', function($args, $field){
+    // Zet je eigen paletten
+    $args['palettes'] = [
+        '#000000', // zwart
+        '#ffffff', // wit
+        '#dd3333', // rood
+        '#dd9933', // oranje
+        '#eeee22', // geel
+        '#81d742', // groen
+        '#1e73be', // blauw
+        '#8224e3', // paars
+    ];
+    return $args;
+}, 10, 2);
+
+add_action('acf/input/admin_enqueue_scripts', function() {
+    wp_enqueue_style(
+        'custom-acf-colorpicker-css', 
+        get_stylesheet_directory_uri() . 'assets/css/custom-colorpicker.css',
+        [],
+        null
+    );
+});

@@ -1602,6 +1602,33 @@
                                                     "search_placeholder": ""
                                                 },
                                                 {
+                                                    "key": "field_690c612ebdf84",
+                                                    "label": "Categorien weergeven",
+                                                    "name": "categorien_weergeven",
+                                                    "aria-label": "",
+                                                    "type": "checkbox",
+                                                    "instructions": "",
+                                                    "required": 1,
+                                                    "conditional_logic": 0,
+                                                    "wrapper": {
+                                                        "width": "",
+                                                        "class": "",
+                                                        "id": ""
+                                                    },
+                                                    "choices": {
+                                                        "5": "Application",
+                                                        "6": "Post"
+                                                    },
+                                                    "default_value": [],
+                                                    "return_format": "value",
+                                                    "allow_custom": 0,
+                                                    "allow_in_bindings": 0,
+                                                    "layout": "vertical",
+                                                    "toggle": 0,
+                                                    "save_custom": 0,
+                                                    "custom_choice_button_text": "Nieuwe keuze toevoegen"
+                                                },
+                                                {
                                                     "key": "field_6909bb3ac3ab6",
                                                     "label": "Aantal berichten",
                                                     "name": "post_count",
@@ -1872,6 +1899,52 @@
                                                             "key": "field_690b33d68630b",
                                                             "label": "Text block Background",
                                                             "name": "text_block_background",
+                                                            "aria-label": "",
+                                                            "type": "color_picker",
+                                                            "instructions": "",
+                                                            "required": 0,
+                                                            "conditional_logic": 0,
+                                                            "wrapper": {
+                                                                "width": "",
+                                                                "class": "",
+                                                                "id": ""
+                                                            },
+                                                            "default_value": "",
+                                                            "enable_opacity": 0,
+                                                            "return_format": "string",
+                                                            "allow_in_bindings": 0,
+                                                            "show_custom_palette": 0,
+                                                            "show_color_wheel": 1,
+                                                            "custom_palette_source": "",
+                                                            "palette_colors": ""
+                                                        },
+                                                        {
+                                                            "key": "field_690c6c33b7dbf",
+                                                            "label": "Font Color",
+                                                            "name": "font_color",
+                                                            "aria-label": "",
+                                                            "type": "color_picker",
+                                                            "instructions": "",
+                                                            "required": 0,
+                                                            "conditional_logic": 0,
+                                                            "wrapper": {
+                                                                "width": "",
+                                                                "class": "",
+                                                                "id": ""
+                                                            },
+                                                            "default_value": "",
+                                                            "enable_opacity": 0,
+                                                            "return_format": "string",
+                                                            "allow_in_bindings": 0,
+                                                            "show_custom_palette": 0,
+                                                            "show_color_wheel": 1,
+                                                            "custom_palette_source": "",
+                                                            "palette_colors": ""
+                                                        },
+                                                        {
+                                                            "key": "field_690c6c48b7dc0",
+                                                            "label": "Title Color",
+                                                            "name": "title_color",
                                                             "aria-label": "",
                                                             "type": "color_picker",
                                                             "instructions": "",
@@ -3033,5 +3106,5 @@
     "acfe_form": 0,
     "acfe_meta": "",
     "acfe_note": "",
-    "modified": 1762355255
+    "modified": 1762421918
 }
