@@ -318,3 +318,28 @@ add_action('acf/input/admin_enqueue_scripts', function() {
         null
     );
 });
+
+
+
+add_action('wp_ajax_search_pages', 'search_pages_callback');
+add_action('wp_ajax_nopriv_search_pages', 'search_pages_callback');
+
+function search_pages_callback() {
+    $term = sanitize_text_field($_GET['term'] ?? '');
+    $results = [];
+
+    $pages = get_posts([
+        'post_type' => 'page',
+        's' => $term,
+        'posts_per_page' => 10,
+    ]);
+
+    foreach ($pages as $page) {
+        $results[] = [
+            'title' => $page->post_title,
+            'url' => get_permalink($page->ID),
+        ];
+    }
+
+    wp_send_json($results);
+}

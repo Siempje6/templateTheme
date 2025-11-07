@@ -1543,6 +1543,490 @@
                                             "acfe_flexible_modal_edit_size": false,
                                             "acfe_flexible_category": false
                                         },
+                                        "layout_690c7f7b09226": {
+                                            "key": "layout_690c7f7b09226",
+                                            "name": "services",
+                                            "label": "Services",
+                                            "display": "block",
+                                            "sub_fields": [
+                                                {
+                                                    "key": "field_690c7f9409228",
+                                                    "label": "Keuze Soort Service",
+                                                    "name": "keuze_soort",
+                                                    "aria-label": "",
+                                                    "type": "select",
+                                                    "instructions": "",
+                                                    "required": 0,
+                                                    "conditional_logic": 0,
+                                                    "wrapper": {
+                                                        "width": "",
+                                                        "class": "",
+                                                        "id": ""
+                                                    },
+                                                    "choices": {
+                                                        "normaal": "Standaard"
+                                                    },
+                                                    "default_value": "normaal",
+                                                    "return_format": "value",
+                                                    "multiple": 0,
+                                                    "allow_null": 0,
+                                                    "allow_in_bindings": 0,
+                                                    "ui": 0,
+                                                    "ajax": 0,
+                                                    "placeholder": "",
+                                                    "create_options": 0,
+                                                    "save_options": 0,
+                                                    "allow_custom": 0,
+                                                    "search_placeholder": ""
+                                                },
+                                                {
+                                                    "key": "field_690cba7a4e87f",
+                                                    "label": "Standaard Service",
+                                                    "name": "standaard_service",
+                                                    "aria-label": "",
+                                                    "type": "repeater",
+                                                    "instructions": "",
+                                                    "required": 0,
+                                                    "conditional_logic": [
+                                                        [
+                                                            {
+                                                                "field": "field_690c7f9409228",
+                                                                "operator": "==",
+                                                                "value": "normaal"
+                                                            }
+                                                        ]
+                                                    ],
+                                                    "wrapper": {
+                                                        "width": "",
+                                                        "class": "",
+                                                        "id": ""
+                                                    },
+                                                    "acfe_repeater_stylised_button": 0,
+                                                    "layout": "block",
+                                                    "min": 0,
+                                                    "max": 0,
+                                                    "collapsed": "",
+                                                    "button_label": "Nieuwe rij",
+                                                    "rows_per_page": 20,
+                                                    "sub_fields": [
+                                                        {
+                                                            "key": "field_690cb5ee0922a",
+                                                            "label": "Head",
+                                                            "name": "head",
+                                                            "aria-label": "",
+                                                            "type": "group",
+                                                            "instructions": "",
+                                                            "required": 0,
+                                                            "conditional_logic": 0,
+                                                            "wrapper": {
+                                                                "width": "",
+                                                                "class": "",
+                                                                "id": ""
+                                                            },
+                                                            "layout": "block",
+                                                            "acfe_seamless_style": 0,
+                                                            "acfe_group_modal": 0,
+                                                            "sub_fields": [
+                                                                {
+                                                                    "key": "field_690cb6160922c",
+                                                                    "label": "Title",
+                                                                    "name": "title",
+                                                                    "aria-label": "",
+                                                                    "type": "text",
+                                                                    "instructions": "",
+                                                                    "required": 0,
+                                                                    "conditional_logic": 0,
+                                                                    "wrapper": {
+                                                                        "width": "",
+                                                                        "class": "",
+                                                                        "id": ""
+                                                                    },
+                                                                    "default_value": "",
+                                                                    "maxlength": "",
+                                                                    "allow_in_bindings": 0,
+                                                                    "placeholder": "",
+                                                                    "prepend": "",
+                                                                    "append": ""
+                                                                },
+                                                                {
+                                                                    "key": "field_690cb6230922d",
+                                                                    "label": "Currency",
+                                                                    "name": "currency",
+                                                                    "aria-label": "",
+                                                                    "type": "select",
+                                                                    "instructions": "",
+                                                                    "required": 0,
+                                                                    "conditional_logic": 0,
+                                                                    "wrapper": {
+                                                                        "width": "",
+                                                                        "class": "",
+                                                                        "id": ""
+                                                                    },
+                                                                    "choices": {
+                                                                        "$": "$",
+                                                                        "€": "€"
+                                                                    },
+                                                                    "default_value": "€",
+                                                                    "return_format": "value",
+                                                                    "multiple": 0,
+                                                                    "allow_null": 0,
+                                                                    "allow_in_bindings": 0,
+                                                                    "ui": 0,
+                                                                    "ajax": 0,
+                                                                    "placeholder": "",
+                                                                    "create_options": 0,
+                                                                    "save_options": 0,
+                                                                    "allow_custom": 0,
+                                                                    "search_placeholder": ""
+                                                                },
+                                                                {
+                                                                    "key": "field_690cb6560922e",
+                                                                    "label": "Amount",
+                                                                    "name": "amount",
+                                                                    "aria-label": "",
+                                                                    "type": "number",
+                                                                    "instructions": "",
+                                                                    "required": 0,
+                                                                    "conditional_logic": 0,
+                                                                    "wrapper": {
+                                                                        "width": "",
+                                                                        "class": "",
+                                                                        "id": ""
+                                                                    },
+                                                                    "default_value": 0,
+                                                                    "min": "",
+                                                                    "max": "",
+                                                                    "allow_in_bindings": 0,
+                                                                    "placeholder": "",
+                                                                    "step": "",
+                                                                    "prepend": "",
+                                                                    "append": ""
+                                                                },
+                                                                {
+                                                                    "key": "field_690cb6690922f",
+                                                                    "label": "Per Month \/ Year",
+                                                                    "name": "per",
+                                                                    "aria-label": "",
+                                                                    "type": "select",
+                                                                    "instructions": "",
+                                                                    "required": 0,
+                                                                    "conditional_logic": 0,
+                                                                    "wrapper": {
+                                                                        "width": "",
+                                                                        "class": "",
+                                                                        "id": ""
+                                                                    },
+                                                                    "choices": {
+                                                                        "Per Month": "Per Month",
+                                                                        "Per Year": "Per Year"
+                                                                    },
+                                                                    "default_value": "Per Month",
+                                                                    "return_format": "value",
+                                                                    "multiple": 0,
+                                                                    "allow_null": 0,
+                                                                    "allow_in_bindings": 0,
+                                                                    "ui": 0,
+                                                                    "ajax": 0,
+                                                                    "placeholder": "",
+                                                                    "create_options": 0,
+                                                                    "save_options": 0,
+                                                                    "allow_custom": 0,
+                                                                    "search_placeholder": ""
+                                                                },
+                                                                {
+                                                                    "key": "field_690cb69009230",
+                                                                    "label": "Button Content",
+                                                                    "name": "button",
+                                                                    "aria-label": "",
+                                                                    "type": "link",
+                                                                    "instructions": "",
+                                                                    "required": 0,
+                                                                    "conditional_logic": 0,
+                                                                    "wrapper": {
+                                                                        "width": "",
+                                                                        "class": "",
+                                                                        "id": ""
+                                                                    },
+                                                                    "return_format": "array",
+                                                                    "allow_in_bindings": 0
+                                                                }
+                                                            ],
+                                                            "acfe_group_modal_close": 0,
+                                                            "acfe_group_modal_button": "",
+                                                            "acfe_group_modal_size": "large",
+                                                            "parent_repeater": "field_690cba7a4e87f"
+                                                        },
+                                                        {
+                                                            "key": "field_690cb6010922b",
+                                                            "label": "Content",
+                                                            "name": "content",
+                                                            "aria-label": "",
+                                                            "type": "group",
+                                                            "instructions": "",
+                                                            "required": 0,
+                                                            "conditional_logic": 0,
+                                                            "wrapper": {
+                                                                "width": "",
+                                                                "class": "",
+                                                                "id": ""
+                                                            },
+                                                            "layout": "block",
+                                                            "acfe_seamless_style": 0,
+                                                            "acfe_group_modal": 0,
+                                                            "sub_fields": [
+                                                                {
+                                                                    "key": "field_690cb6ac09231",
+                                                                    "label": "Title",
+                                                                    "name": "title",
+                                                                    "aria-label": "",
+                                                                    "type": "text",
+                                                                    "instructions": "",
+                                                                    "required": 0,
+                                                                    "conditional_logic": 0,
+                                                                    "wrapper": {
+                                                                        "width": "",
+                                                                        "class": "",
+                                                                        "id": ""
+                                                                    },
+                                                                    "default_value": "",
+                                                                    "maxlength": "",
+                                                                    "allow_in_bindings": 0,
+                                                                    "placeholder": "",
+                                                                    "prepend": "",
+                                                                    "append": ""
+                                                                },
+                                                                {
+                                                                    "key": "field_690cb6ba09232",
+                                                                    "label": "List Items",
+                                                                    "name": "list_items",
+                                                                    "aria-label": "",
+                                                                    "type": "repeater",
+                                                                    "instructions": "",
+                                                                    "required": 0,
+                                                                    "conditional_logic": 0,
+                                                                    "wrapper": {
+                                                                        "width": "",
+                                                                        "class": "",
+                                                                        "id": ""
+                                                                    },
+                                                                    "acfe_repeater_stylised_button": 0,
+                                                                    "layout": "table",
+                                                                    "pagination": 0,
+                                                                    "min": 0,
+                                                                    "max": 0,
+                                                                    "collapsed": "",
+                                                                    "button_label": "Nieuwe rij",
+                                                                    "rows_per_page": 20,
+                                                                    "sub_fields": [
+                                                                        {
+                                                                            "key": "field_690cb6cb09233",
+                                                                            "label": "Svg",
+                                                                            "name": "svg",
+                                                                            "aria-label": "",
+                                                                            "type": "select",
+                                                                            "instructions": "",
+                                                                            "required": 0,
+                                                                            "conditional_logic": 0,
+                                                                            "wrapper": {
+                                                                                "width": "",
+                                                                                "class": "",
+                                                                                "id": ""
+                                                                            },
+                                                                            "choices": {
+                                                                                "check": "Check",
+                                                                                "plus": "Plus"
+                                                                            },
+                                                                            "default_value": false,
+                                                                            "return_format": "value",
+                                                                            "multiple": 0,
+                                                                            "allow_null": 0,
+                                                                            "allow_in_bindings": 0,
+                                                                            "ui": 0,
+                                                                            "ajax": 0,
+                                                                            "placeholder": "",
+                                                                            "create_options": 0,
+                                                                            "save_options": 0,
+                                                                            "allow_custom": 0,
+                                                                            "search_placeholder": "",
+                                                                            "parent_repeater": "field_690cb6ba09232"
+                                                                        },
+                                                                        {
+                                                                            "key": "field_690cb6f909234",
+                                                                            "label": "List item Text",
+                                                                            "name": "list_item_text",
+                                                                            "aria-label": "",
+                                                                            "type": "text",
+                                                                            "instructions": "",
+                                                                            "required": 0,
+                                                                            "conditional_logic": 0,
+                                                                            "wrapper": {
+                                                                                "width": "",
+                                                                                "class": "",
+                                                                                "id": ""
+                                                                            },
+                                                                            "default_value": "",
+                                                                            "maxlength": "",
+                                                                            "allow_in_bindings": 0,
+                                                                            "placeholder": "",
+                                                                            "prepend": "",
+                                                                            "append": "",
+                                                                            "parent_repeater": "field_690cb6ba09232"
+                                                                        }
+                                                                    ]
+                                                                }
+                                                            ],
+                                                            "acfe_group_modal_close": 0,
+                                                            "acfe_group_modal_button": "",
+                                                            "acfe_group_modal_size": "large",
+                                                            "parent_repeater": "field_690cba7a4e87f"
+                                                        },
+                                                        {
+                                                            "key": "field_690cbf9f0f9a4",
+                                                            "label": "Standard Styling",
+                                                            "name": "",
+                                                            "aria-label": "",
+                                                            "type": "tab",
+                                                            "instructions": "",
+                                                            "required": 0,
+                                                            "conditional_logic": 0,
+                                                            "wrapper": {
+                                                                "width": "",
+                                                                "class": "",
+                                                                "id": ""
+                                                            },
+                                                            "placement": "top",
+                                                            "endpoint": 0,
+                                                            "selected": 0,
+                                                            "parent_repeater": "field_690cba7a4e87f"
+                                                        },
+                                                        {
+                                                            "key": "field_690cbfae0f9a5",
+                                                            "label": "Standard",
+                                                            "name": "standard",
+                                                            "aria-label": "",
+                                                            "type": "group",
+                                                            "instructions": "",
+                                                            "required": 0,
+                                                            "conditional_logic": 0,
+                                                            "wrapper": {
+                                                                "width": "",
+                                                                "class": "",
+                                                                "id": ""
+                                                            },
+                                                            "layout": "block",
+                                                            "acfe_seamless_style": 0,
+                                                            "acfe_group_modal": 0,
+                                                            "sub_fields": [
+                                                                {
+                                                                    "key": "field_690cbfcd0f9a6",
+                                                                    "label": "Max-width (Px)",
+                                                                    "name": "max-width",
+                                                                    "aria-label": "",
+                                                                    "type": "number",
+                                                                    "instructions": "",
+                                                                    "required": 0,
+                                                                    "conditional_logic": 0,
+                                                                    "wrapper": {
+                                                                        "width": "",
+                                                                        "class": "",
+                                                                        "id": ""
+                                                                    },
+                                                                    "default_value": 340,
+                                                                    "min": "",
+                                                                    "max": "",
+                                                                    "allow_in_bindings": 0,
+                                                                    "placeholder": "",
+                                                                    "step": "",
+                                                                    "prepend": "",
+                                                                    "append": ""
+                                                                },
+                                                                {
+                                                                    "key": "field_690cbff20f9a7",
+                                                                    "label": "Gap (Px)",
+                                                                    "name": "gap",
+                                                                    "aria-label": "",
+                                                                    "type": "number",
+                                                                    "instructions": "",
+                                                                    "required": 0,
+                                                                    "conditional_logic": 0,
+                                                                    "wrapper": {
+                                                                        "width": "",
+                                                                        "class": "",
+                                                                        "id": ""
+                                                                    },
+                                                                    "default_value": 10,
+                                                                    "min": "",
+                                                                    "max": "",
+                                                                    "allow_in_bindings": 0,
+                                                                    "placeholder": "",
+                                                                    "step": "",
+                                                                    "prepend": "",
+                                                                    "append": ""
+                                                                },
+                                                                {
+                                                                    "key": "field_690cc0130f9a8",
+                                                                    "label": "Background-Color",
+                                                                    "name": "background-color",
+                                                                    "aria-label": "",
+                                                                    "type": "color_picker",
+                                                                    "instructions": "",
+                                                                    "required": 0,
+                                                                    "conditional_logic": 0,
+                                                                    "wrapper": {
+                                                                        "width": "",
+                                                                        "class": "",
+                                                                        "id": ""
+                                                                    },
+                                                                    "default_value": "",
+                                                                    "enable_opacity": 0,
+                                                                    "return_format": "string",
+                                                                    "allow_in_bindings": 0,
+                                                                    "show_custom_palette": 0,
+                                                                    "show_color_wheel": 1,
+                                                                    "custom_palette_source": "",
+                                                                    "palette_colors": ""
+                                                                },
+                                                                {
+                                                                    "key": "field_690cc0300f9a9",
+                                                                    "label": "Min-Height (Px)",
+                                                                    "name": "min-height",
+                                                                    "aria-label": "",
+                                                                    "type": "text",
+                                                                    "instructions": "",
+                                                                    "required": 0,
+                                                                    "conditional_logic": 0,
+                                                                    "wrapper": {
+                                                                        "width": "",
+                                                                        "class": "",
+                                                                        "id": ""
+                                                                    },
+                                                                    "default_value": 550,
+                                                                    "maxlength": "",
+                                                                    "allow_in_bindings": 0,
+                                                                    "placeholder": "",
+                                                                    "prepend": "",
+                                                                    "append": ""
+                                                                }
+                                                            ],
+                                                            "acfe_group_modal_close": 0,
+                                                            "acfe_group_modal_button": "",
+                                                            "acfe_group_modal_size": "large",
+                                                            "parent_repeater": "field_690cba7a4e87f"
+                                                        }
+                                                    ]
+                                                }
+                                            ],
+                                            "min": "",
+                                            "max": "",
+                                            "acfe_flexible_render_template": "src\/page-blocks\/block-services\/services.php",
+                                            "acfe_flexible_render_style": "",
+                                            "acfe_flexible_render_script": "",
+                                            "acfe_flexible_settings": "",
+                                            "acfe_flexible_settings_size": "medium",
+                                            "acfe_flexible_thumbnail": "",
+                                            "acfe_flexible_modal_edit_size": false,
+                                            "acfe_flexible_category": false
+                                        },
                                         "layout_6909b61031c6f": {
                                             "key": "layout_6909b61031c6f",
                                             "name": "post_grid",
@@ -3106,5 +3590,5 @@
     "acfe_form": 0,
     "acfe_meta": "",
     "acfe_note": "",
-    "modified": 1762421918
+    "modified": 1762501588
 }

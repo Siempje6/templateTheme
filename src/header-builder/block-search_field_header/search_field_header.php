@@ -8,7 +8,13 @@ $method = $settings['method'] ?? 'get';
 $action_url = $settings['action_url'] ?? '';
 ?>
 
-<form class="search-header-form" action="<?php echo esc_url($action_url ?: home_url('/')); ?>" method="<?php echo esc_attr($method); ?>" style="position:relative; max-width:400px; display:flex; gap:0;">
+<div style="
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+">
+    <form class="search-header-form" action="<?php echo esc_url($action_url ?: home_url('/')); ?>" method="<?php echo esc_attr($method); ?>" style="position:relative; max-width:400px; display:flex; gap:0;">
     <input 
         type="text" 
         id="header-search-input" 
@@ -75,6 +81,7 @@ $action_url = $settings['action_url'] ?? '';
     border-color: #1a5427;
     box-shadow: 0 0 4px rgba(0, 115, 230, 0.4);
 }
+
 </style>
 
 <script>
@@ -83,25 +90,55 @@ document.addEventListener('DOMContentLoaded', function() {
     const suggestions = document.getElementById('search-suggestions');
     let activeIndex = -1;
 
+    input.closest('form').addEventListener('submit', function(e) {
+    const query = input.value.trim();
+
+    const items = suggestions.querySelectorAll('li');
+    if (activeIndex > -1 && items[activeIndex]) {
+        window.location.href = items[activeIndex].dataset.url;
+        return;
+    }
+
+    fetch('<?php echo admin_url("admin-ajax.php"); ?>?action=search_pages&term=' + encodeURIComponent(query))
+        .then(response => response.json())
+        .then(data => {
+            if (data.length) {
+                const exactMatch = data.find(item => item.title.toLowerCase() === query.toLowerCase());
+                if (exactMatch) {
+                    window.location.href = exactMatch.url;
+                    return;
+                }
+
+                window.location.href = data[0].url;
+            } else {
+                window.location.href = '<?php echo home_url("/?s="); ?>' + encodeURIComponent(query);
+            }
+        });
+});
+
+
+    input.addEventListener('keydown', function(e) {
+        const items = suggestions.querySelectorAll('li');
+        if (e.key === 'Enter' && activeIndex === -1) {
+            return;
+        }
+    });
+
     input.addEventListener('keyup', function(e) {
         const query = this.value;
 
-        // Pijltjestoetsen navigatie
         const items = suggestions.querySelectorAll('li');
         if (items.length) {
             if (e.key === 'ArrowDown') {
+                e.preventDefault();
                 activeIndex = (activeIndex + 1) % items.length;
                 setActive(items);
                 return;
             } else if (e.key === 'ArrowUp') {
+                e.preventDefault();
                 activeIndex = (activeIndex - 1 + items.length) % items.length;
                 setActive(items);
                 return;
-            } else if (e.key === 'Enter') {
-                if (activeIndex > -1 && items[activeIndex]) {
-                    window.location.href = items[activeIndex].dataset.url;
-                    return;
-                }
             }
         }
 
@@ -149,3 +186,4 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 });
 </script>
+</div>
