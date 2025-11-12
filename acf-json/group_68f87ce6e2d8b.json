@@ -628,6 +628,184 @@
                                             "acfe_flexible_modal_edit_size": false,
                                             "acfe_flexible_category": false
                                         },
+                                        "layout_6911bc9024679": {
+                                            "key": "layout_6911bc9024679",
+                                            "name": "table",
+                                            "label": "Table",
+                                            "display": "block",
+                                            "sub_fields": [
+                                                {
+                                                    "key": "field_6911bcbc2467b",
+                                                    "label": "Table Title",
+                                                    "name": "table_title",
+                                                    "aria-label": "",
+                                                    "type": "text",
+                                                    "instructions": "",
+                                                    "required": 0,
+                                                    "conditional_logic": 0,
+                                                    "wrapper": {
+                                                        "width": "",
+                                                        "class": "",
+                                                        "id": ""
+                                                    },
+                                                    "default_value": "",
+                                                    "maxlength": "",
+                                                    "allow_in_bindings": 0,
+                                                    "placeholder": "",
+                                                    "prepend": "",
+                                                    "append": ""
+                                                },
+                                                {
+                                                    "key": "field_6911bd382467c",
+                                                    "label": "Table Head Text",
+                                                    "name": "table_head_text",
+                                                    "aria-label": "",
+                                                    "type": "wysiwyg",
+                                                    "instructions": "",
+                                                    "required": 0,
+                                                    "conditional_logic": 0,
+                                                    "wrapper": {
+                                                        "width": "",
+                                                        "class": "",
+                                                        "id": ""
+                                                    },
+                                                    "default_value": "",
+                                                    "allow_in_bindings": 0,
+                                                    "tabs": "all",
+                                                    "toolbar": "full",
+                                                    "media_upload": 1,
+                                                    "delay": 0
+                                                },
+                                                {
+                                                    "key": "field_6911bd5a2467d",
+                                                    "label": "Table Head Columns",
+                                                    "name": "table_head_columns",
+                                                    "aria-label": "",
+                                                    "type": "repeater",
+                                                    "instructions": "",
+                                                    "required": 0,
+                                                    "conditional_logic": 0,
+                                                    "wrapper": {
+                                                        "width": "",
+                                                        "class": "",
+                                                        "id": ""
+                                                    },
+                                                    "acfe_repeater_stylised_button": 0,
+                                                    "layout": "table",
+                                                    "min": 0,
+                                                    "max": 0,
+                                                    "collapsed": "",
+                                                    "button_label": "Nieuwe rij",
+                                                    "rows_per_page": 20,
+                                                    "sub_fields": [
+                                                        {
+                                                            "key": "field_6911bd962467e",
+                                                            "label": "Column Label",
+                                                            "name": "column_label",
+                                                            "aria-label": "",
+                                                            "type": "text",
+                                                            "instructions": "",
+                                                            "required": 0,
+                                                            "conditional_logic": 0,
+                                                            "wrapper": {
+                                                                "width": "",
+                                                                "class": "",
+                                                                "id": ""
+                                                            },
+                                                            "default_value": "",
+                                                            "maxlength": "",
+                                                            "allow_in_bindings": 0,
+                                                            "placeholder": "",
+                                                            "prepend": "",
+                                                            "append": "",
+                                                            "parent_repeater": "field_6911bd5a2467d"
+                                                        }
+                                                    ]
+                                                },
+                                                {
+                                                    "key": "field_6911bda42467f",
+                                                    "label": "Table Rows",
+                                                    "name": "table_rows",
+                                                    "aria-label": "",
+                                                    "type": "repeater",
+                                                    "instructions": "",
+                                                    "required": 0,
+                                                    "conditional_logic": 0,
+                                                    "wrapper": {
+                                                        "width": "",
+                                                        "class": "",
+                                                        "id": ""
+                                                    },
+                                                    "acfe_repeater_stylised_button": 0,
+                                                    "layout": "table",
+                                                    "min": 0,
+                                                    "max": 0,
+                                                    "collapsed": "",
+                                                    "button_label": "Nieuwe rij",
+                                                    "rows_per_page": 20,
+                                                    "sub_fields": [
+                                                        {
+                                                            "key": "field_6911bf3ebbcd3",
+                                                            "label": "Cells Repeater",
+                                                            "name": "cells_repeater",
+                                                            "aria-label": "",
+                                                            "type": "repeater",
+                                                            "instructions": "",
+                                                            "required": 0,
+                                                            "conditional_logic": 0,
+                                                            "wrapper": {
+                                                                "width": "",
+                                                                "class": "",
+                                                                "id": ""
+                                                            },
+                                                            "acfe_repeater_stylised_button": 0,
+                                                            "layout": "table",
+                                                            "pagination": 0,
+                                                            "min": 0,
+                                                            "max": 0,
+                                                            "collapsed": "",
+                                                            "button_label": "Nieuwe rij",
+                                                            "rows_per_page": 20,
+                                                            "sub_fields": [
+                                                                {
+                                                                    "key": "field_6911bdd524680",
+                                                                    "label": "Cell Content",
+                                                                    "name": "cell_content",
+                                                                    "aria-label": "",
+                                                                    "type": "text",
+                                                                    "instructions": "",
+                                                                    "required": 0,
+                                                                    "conditional_logic": 0,
+                                                                    "wrapper": {
+                                                                        "width": "",
+                                                                        "class": "",
+                                                                        "id": ""
+                                                                    },
+                                                                    "default_value": "",
+                                                                    "maxlength": "",
+                                                                    "allow_in_bindings": 0,
+                                                                    "placeholder": "",
+                                                                    "prepend": "",
+                                                                    "append": "",
+                                                                    "parent_repeater": "field_6911bf3ebbcd3"
+                                                                }
+                                                            ],
+                                                            "parent_repeater": "field_6911bda42467f"
+                                                        }
+                                                    ]
+                                                }
+                                            ],
+                                            "min": "",
+                                            "max": "",
+                                            "acfe_flexible_render_template": "src\/page-blocks\/block-table\/table.php",
+                                            "acfe_flexible_render_style": "",
+                                            "acfe_flexible_render_script": "",
+                                            "acfe_flexible_settings": "",
+                                            "acfe_flexible_settings_size": "medium",
+                                            "acfe_flexible_thumbnail": "",
+                                            "acfe_flexible_modal_edit_size": false,
+                                            "acfe_flexible_category": false
+                                        },
                                         "layout_68f9cf41a2a16": {
                                             "key": "layout_68f9cf41a2a16",
                                             "name": "separator_field",
@@ -2259,11 +2437,12 @@
                                                         "id": ""
                                                     },
                                                     "choices": {
+                                                        "auto": "Auto",
                                                         "2": "2",
                                                         "3": "3",
                                                         "4": "4"
                                                     },
-                                                    "default_value": false,
+                                                    "default_value": "auto",
                                                     "return_format": "value",
                                                     "multiple": 0,
                                                     "allow_null": 0,
@@ -3590,5 +3769,5 @@
     "acfe_form": 0,
     "acfe_meta": "",
     "acfe_note": "",
-    "modified": 1762501588
+    "modified": 1762770784
 }

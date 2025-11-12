@@ -99,7 +99,7 @@ $total_posts = count($visible_posts);
 $start_index = ($paged - 1) * $post_count;
 $visible_page_posts = array_slice($visible_posts, $start_index, $post_count);
 
-$columns = in_array($columns, ['2', '3', '4'], true) ? $columns : '3';
+$columns = in_array($columns, ['auto','2', '3', '4'], true) ? $columns : '3';
 $wrapper_class = 'acf-post-grid-wrapper columns-' . esc_attr($columns);
 $item_class = 'acf-post-grid-item columns-' .esc_attr($columns);
 ?>
@@ -223,7 +223,7 @@ $post_4responsive = !empty($posts['width_post_4responsive']) ? $posts['width_pos
 ?>
 <style>
 .acf-post-grid-wrapper { display: grid; gap: 1.75rem; margin: 2.5rem auto; padding: 0 1rem; align-items: start; }
-.acf-post-grid-item { border-radius: 10px; overflow: hidden; transition: transform .25s ease, box-shadow .25s ease; flex: 1 1 380px; }
+.acf-post-grid-item { border-radius: 10px; overflow: hidden; transition: transform .25s ease, box-shadow .25s ease; flex: 1 1 340px; }
 .acf-post-grid-item:hover { transform: translateY(-1px); }
 .acf-post-grid-link { display: block; text-decoration: none; color: inherit; }
 .acf-post-grid-image img { width: 100%; height: 220px; object-fit: cover; display: block; border-radius: 10px; }
@@ -256,7 +256,8 @@ $post_4responsive = !empty($posts['width_post_4responsive']) ? $posts['width_pos
 .acf-post-grid-pagination li a { background-color: <?php echo esc_attr($pagitation_background) ?>; }
 .acf-post-grid-pagination li a:hover,
 .acf-post-grid-pagination li .current { background-color: <?php echo esc_attr($hover_pagitation) ?>; }
-.acf-post-grid-wrapper.columns-2 { display: flex; flex-wrap: wrap; gap: 20px; }
+.acf-post-grid-wrapper.columns-auto { display: flex; flex-wrap: wrap; gap: 20px; }
+.acf-post-grid-wrapper.columns-2 { grid-template-columns: repeat(auto-fit, minmax(<?php echo esc_attr($post_2) ?>px, 1fr)); }
 .acf-post-grid-wrapper.columns-3 { grid-template-columns: repeat(auto-fit, minmax(<?php echo esc_attr($post_3) ?>px, 1fr)); }
 .acf-post-grid-wrapper.columns-4 { grid-template-columns: repeat(auto-fit, minmax(<?php echo esc_attr($post_4) ?>px, 1fr)); }
 </style>
