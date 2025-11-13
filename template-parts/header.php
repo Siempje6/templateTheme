@@ -18,7 +18,7 @@ if ($header_rows): ?>
                     $header_grid_template[] = $width;
 
                     $layout = $col['acf_fc_layout'] ?? '';
-                    $block_file = get_template_directory() . '/src/header-builder/block-' . $layout . '/' . $layout . '.php';
+                    $block_file = get_template_directory() . '/src/options/header-builder/block-' . $layout . '/' . $layout . '.php';
 
                     $block = $col;
 

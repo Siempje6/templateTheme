@@ -17,7 +17,7 @@ if ($footer_rows): ?>
                 $footer_grid_template[] = $width;
 
                 $layout = $col['acf_fc_layout'] ?? '';
-                $block_file = get_template_directory() . '/src/footer-builder/block-' . $layout . '/' . $layout . '.php';
+                $block_file = get_template_directory() . '/src/options/footer-builder/block-' . $layout . '/' . $layout . '.php';
 
                 $block = $col;
 
