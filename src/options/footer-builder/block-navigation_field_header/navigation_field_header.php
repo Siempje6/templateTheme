@@ -56,6 +56,7 @@ if ($menu_items):
 }
 
 .navbar a {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     text-decoration: none;
     color: #000;
     font-weight: 500;

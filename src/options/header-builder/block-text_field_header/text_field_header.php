@@ -17,7 +17,8 @@ if ($text):
     }
 
     .textcolumn p {
-        font-weight: 900;
-        font-size: 20px;
+
+        font-weight: 300;
+        font-size: 40px;
     }
 </style>

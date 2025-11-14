@@ -111,4 +111,42 @@ echo '</div>';
         justify-content: center;
         align-items: center;
     }
+
+    @media screen and (max-width: 780px) {
+        .cta-preview-wrapper {
+            flex-direction: column;
+            max-width: 780px;
+            box-sizing: border-box;
+        }
+
+        .cta-preview-column img {
+            width: 100%;
+            object-fit: cover;
+            border-radius: 12px;
+        }
+
+
+        .cta-preview-column {
+            width: 100%;
+            flex: none;
+            box-sizing: border-box;
+        }
+
+        .cta-preview-column:last-child {
+            margin-bottom: 0;
+        }
+
+        .cta-preview-column:last-child {
+            margin-bottom: 0;
+            border-bottom-left-radius: 12px;
+            border-bottom-right-radius: 12px;
+            border-top-right-radius: 0px;
+        }
+
+        .cta-preview-column:first-child {
+            border-bottom-left-radius: 0px;
+            border-top-left-radius: 12px;
+            border-top-right-radius: 12px;
+        }
+    }
 </style>
