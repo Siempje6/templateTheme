@@ -64,7 +64,7 @@
                     "sub_fields": [
                         {
                             "key": "field_6915a2c597268",
-                            "label": "",
+                            "label": "Message",
                             "name": "",
                             "aria-label": "",
                             "type": "message",
@@ -102,9 +102,55 @@
                             "append": ""
                         },
                         {
-                            "key": "field_6915af1ac794d",
-                            "label": "CTA Options",
-                            "name": "cta_options",
+                            "key": "field_6915dd7d43d48",
+                            "label": "Background Color",
+                            "name": "background_color",
+                            "aria-label": "",
+                            "type": "color_picker",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "enable_opacity": 0,
+                            "return_format": "string",
+                            "allow_in_bindings": 0,
+                            "show_custom_palette": 0,
+                            "show_color_wheel": 1,
+                            "custom_palette_source": "",
+                            "palette_colors": ""
+                        },
+                        {
+                            "key": "field_6916e193f398f",
+                            "label": "Width (Px)",
+                            "name": "width",
+                            "aria-label": "",
+                            "type": "number",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "min": 600,
+                            "max": "",
+                            "allow_in_bindings": 0,
+                            "placeholder": "",
+                            "step": "",
+                            "prepend": "",
+                            "append": ""
+                        },
+                        {
+                            "key": "field_6915d53fe0996",
+                            "label": "Columns",
+                            "name": "columns",
                             "aria-label": "",
                             "type": "flexible_content",
                             "instructions": "",
@@ -115,34 +161,239 @@
                                 "class": "",
                                 "id": ""
                             },
-                            "acfe_flexible_advanced": 1,
-                            "acfe_flexible_stylised_button": 1,
-                            "acfe_flexible_layouts_templates": 1,
-                            "acfe_flexible_layouts_previews": 1,
-                            "acfe_flexible_layouts_thumbnails": 1,
-                            "acfe_flexible_layouts_settings": 1,
-                            "acfe_flexible_async": [],
-                            "acfe_flexible_add_actions": [],
-                            "acfe_flexible_remove_button": [],
-                            "acfe_flexible_layouts_state": "user",
-                            "acfe_flexible_modal_edit": {
-                                "acfe_flexible_modal_edit_enabled": "0",
-                                "acfe_flexible_modal_edit_size": "large"
-                            },
-                            "acfe_flexible_modal": {
-                                "acfe_flexible_modal_enabled": "0",
-                                "acfe_flexible_modal_title": false,
-                                "acfe_flexible_modal_size": "full",
-                                "acfe_flexible_modal_col": "4",
-                                "acfe_flexible_modal_categories": false
-                            },
+                            "acfe_flexible_advanced": 0,
                             "layouts": {
-                                "layout_6915af2274d2f": {
-                                    "key": "layout_6915af2274d2f",
-                                    "name": "",
-                                    "label": "",
+                                "layout_6915dc98c5083": {
+                                    "key": "layout_6915dc98c5083",
+                                    "name": "columns",
+                                    "label": "Columns",
                                     "display": "block",
-                                    "sub_fields": [],
+                                    "sub_fields": [
+                                        {
+                                            "key": "field_6915af1ac794d",
+                                            "label": "CTA Options",
+                                            "name": "cta_options",
+                                            "aria-label": "",
+                                            "type": "flexible_content",
+                                            "instructions": "",
+                                            "required": 0,
+                                            "conditional_logic": 0,
+                                            "wrapper": {
+                                                "width": "",
+                                                "class": "",
+                                                "id": ""
+                                            },
+                                            "acfe_flexible_advanced": 1,
+                                            "acfe_flexible_stylised_button": 1,
+                                            "acfe_flexible_layouts_templates": 1,
+                                            "acfe_flexible_layouts_previews": 1,
+                                            "acfe_flexible_layouts_thumbnails": 1,
+                                            "acfe_flexible_layouts_settings": 1,
+                                            "acfe_flexible_async": [],
+                                            "acfe_flexible_add_actions": [],
+                                            "acfe_flexible_remove_button": [],
+                                            "acfe_flexible_layouts_state": "user",
+                                            "acfe_flexible_modal_edit": {
+                                                "acfe_flexible_modal_edit_enabled": "0",
+                                                "acfe_flexible_modal_edit_size": "large"
+                                            },
+                                            "acfe_flexible_modal": {
+                                                "acfe_flexible_modal_enabled": "0",
+                                                "acfe_flexible_modal_title": false,
+                                                "acfe_flexible_modal_size": "full",
+                                                "acfe_flexible_modal_col": "4",
+                                                "acfe_flexible_modal_categories": false
+                                            },
+                                            "layouts": {
+                                                "layout_6915af2274d2f": {
+                                                    "key": "layout_6915af2274d2f",
+                                                    "name": "title",
+                                                    "label": "Title",
+                                                    "display": "block",
+                                                    "sub_fields": [
+                                                        {
+                                                            "key": "field_6915b44acccaa",
+                                                            "label": "Title",
+                                                            "name": "title",
+                                                            "aria-label": "",
+                                                            "type": "text",
+                                                            "instructions": "",
+                                                            "required": 0,
+                                                            "conditional_logic": 0,
+                                                            "wrapper": {
+                                                                "width": "",
+                                                                "class": "",
+                                                                "id": ""
+                                                            },
+                                                            "default_value": "",
+                                                            "maxlength": "",
+                                                            "allow_in_bindings": 0,
+                                                            "placeholder": "",
+                                                            "prepend": "",
+                                                            "append": ""
+                                                        }
+                                                    ],
+                                                    "min": "",
+                                                    "max": "",
+                                                    "acfe_flexible_render_template": "lib\/cta-preview\/partials\/title.php",
+                                                    "acfe_flexible_render_style": "",
+                                                    "acfe_flexible_render_script": "",
+                                                    "acfe_flexible_settings": "",
+                                                    "acfe_flexible_settings_size": "medium",
+                                                    "acfe_flexible_thumbnail": "",
+                                                    "acfe_flexible_modal_edit_size": false,
+                                                    "acfe_flexible_category": false
+                                                },
+                                                "layout_6915b5261ec6c": {
+                                                    "key": "layout_6915b5261ec6c",
+                                                    "name": "text",
+                                                    "label": "Text",
+                                                    "display": "block",
+                                                    "sub_fields": [
+                                                        {
+                                                            "key": "field_6915b5371ec6e",
+                                                            "label": "Text",
+                                                            "name": "text",
+                                                            "aria-label": "",
+                                                            "type": "wysiwyg",
+                                                            "instructions": "",
+                                                            "required": 0,
+                                                            "conditional_logic": 0,
+                                                            "wrapper": {
+                                                                "width": "",
+                                                                "class": "",
+                                                                "id": ""
+                                                            },
+                                                            "default_value": "",
+                                                            "allow_in_bindings": 0,
+                                                            "tabs": "all",
+                                                            "toolbar": "full",
+                                                            "media_upload": 1,
+                                                            "delay": 0
+                                                        }
+                                                    ],
+                                                    "min": "",
+                                                    "max": "",
+                                                    "acfe_flexible_render_template": "lib\/cta-preview\/partials\/text.php",
+                                                    "acfe_flexible_render_style": "",
+                                                    "acfe_flexible_render_script": "",
+                                                    "acfe_flexible_settings": "",
+                                                    "acfe_flexible_settings_size": "medium",
+                                                    "acfe_flexible_thumbnail": "",
+                                                    "acfe_flexible_modal_edit_size": false,
+                                                    "acfe_flexible_category": false
+                                                },
+                                                "layout_6915bae4fbe8c": {
+                                                    "key": "layout_6915bae4fbe8c",
+                                                    "name": "button",
+                                                    "label": "Button",
+                                                    "display": "block",
+                                                    "sub_fields": [
+                                                        {
+                                                            "key": "field_6915bafbfbe8e",
+                                                            "label": "Button",
+                                                            "name": "button",
+                                                            "aria-label": "",
+                                                            "type": "link",
+                                                            "instructions": "",
+                                                            "required": 0,
+                                                            "conditional_logic": 0,
+                                                            "wrapper": {
+                                                                "width": "",
+                                                                "class": "",
+                                                                "id": ""
+                                                            },
+                                                            "return_format": "array",
+                                                            "allow_in_bindings": 0
+                                                        }
+                                                    ],
+                                                    "min": "",
+                                                    "max": "",
+                                                    "acfe_flexible_render_template": "lib\/cta-preview\/partials\/button.php",
+                                                    "acfe_flexible_render_style": "",
+                                                    "acfe_flexible_render_script": "",
+                                                    "acfe_flexible_settings": "",
+                                                    "acfe_flexible_settings_size": "medium",
+                                                    "acfe_flexible_thumbnail": "",
+                                                    "acfe_flexible_modal_edit_size": false,
+                                                    "acfe_flexible_category": false
+                                                },
+                                                "layout_6915c0c846100": {
+                                                    "key": "layout_6915c0c846100",
+                                                    "name": "image",
+                                                    "label": "Image",
+                                                    "display": "block",
+                                                    "sub_fields": [
+                                                        {
+                                                            "key": "field_6915c0d046102",
+                                                            "label": "Image",
+                                                            "name": "image",
+                                                            "aria-label": "",
+                                                            "type": "image",
+                                                            "instructions": "",
+                                                            "required": 0,
+                                                            "conditional_logic": 0,
+                                                            "wrapper": {
+                                                                "width": "",
+                                                                "class": "",
+                                                                "id": ""
+                                                            },
+                                                            "uploader": "",
+                                                            "return_format": "array",
+                                                            "library": "all",
+                                                            "acfe_thumbnail": 0,
+                                                            "min_width": "",
+                                                            "min_height": "",
+                                                            "min_size": "",
+                                                            "max_width": "",
+                                                            "max_height": "",
+                                                            "max_size": "",
+                                                            "mime_types": "",
+                                                            "allow_in_bindings": 0,
+                                                            "preview_size": "medium"
+                                                        },
+                                                        {
+                                                            "key": "field_6915c0dc46103",
+                                                            "label": "Text under Image",
+                                                            "name": "text_under_image",
+                                                            "aria-label": "",
+                                                            "type": "wysiwyg",
+                                                            "instructions": "",
+                                                            "required": 0,
+                                                            "conditional_logic": 0,
+                                                            "wrapper": {
+                                                                "width": "",
+                                                                "class": "",
+                                                                "id": ""
+                                                            },
+                                                            "default_value": "",
+                                                            "allow_in_bindings": 0,
+                                                            "tabs": "all",
+                                                            "toolbar": "full",
+                                                            "media_upload": 1,
+                                                            "delay": 0
+                                                        }
+                                                    ],
+                                                    "min": "",
+                                                    "max": "",
+                                                    "acfe_flexible_render_template": "lib\/cta-preview\/partials\/image.php",
+                                                    "acfe_flexible_render_style": "",
+                                                    "acfe_flexible_render_script": "",
+                                                    "acfe_flexible_settings": "",
+                                                    "acfe_flexible_settings_size": "medium",
+                                                    "acfe_flexible_thumbnail": "",
+                                                    "acfe_flexible_modal_edit_size": false,
+                                                    "acfe_flexible_category": false
+                                                }
+                                            },
+                                            "min": "",
+                                            "max": "",
+                                            "button_label": "Nieuwe rij",
+                                            "acfe_flexible_hide_empty_message": false,
+                                            "acfe_flexible_empty_message": "",
+                                            "acfe_flexible_layouts_placeholder": false
+                                        }
+                                    ],
                                     "min": "",
                                     "max": "",
                                     "acfe_flexible_render_template": false,
@@ -158,19 +409,39 @@
                             "min": "",
                             "max": "",
                             "button_label": "Nieuwe rij",
+                            "acfe_flexible_stylised_button": false,
                             "acfe_flexible_hide_empty_message": false,
                             "acfe_flexible_empty_message": "",
-                            "acfe_flexible_layouts_placeholder": false
+                            "acfe_flexible_layouts_templates": false,
+                            "acfe_flexible_layouts_previews": false,
+                            "acfe_flexible_layouts_placeholder": false,
+                            "acfe_flexible_layouts_thumbnails": false,
+                            "acfe_flexible_layouts_settings": false,
+                            "acfe_flexible_async": [],
+                            "acfe_flexible_add_actions": [],
+                            "acfe_flexible_remove_button": [],
+                            "acfe_flexible_layouts_state": false,
+                            "acfe_flexible_modal_edit": {
+                                "acfe_flexible_modal_edit_enabled": false,
+                                "acfe_flexible_modal_edit_size": "large"
+                            },
+                            "acfe_flexible_modal": {
+                                "acfe_flexible_modal_enabled": false,
+                                "acfe_flexible_modal_title": false,
+                                "acfe_flexible_modal_size": "full",
+                                "acfe_flexible_modal_col": "4",
+                                "acfe_flexible_modal_categories": false
+                            }
                         }
                     ],
                     "min": "",
                     "max": "",
-                    "acfe_flexible_render_template": false,
-                    "acfe_flexible_render_style": false,
-                    "acfe_flexible_render_script": false,
-                    "acfe_flexible_thumbnail": false,
-                    "acfe_flexible_settings": false,
+                    "acfe_flexible_render_template": "src\/options\/cta-builder\/cta.php",
+                    "acfe_flexible_render_style": "",
+                    "acfe_flexible_render_script": "",
+                    "acfe_flexible_settings": "",
                     "acfe_flexible_settings_size": "medium",
+                    "acfe_flexible_thumbnail": "",
                     "acfe_flexible_modal_edit_size": false,
                     "acfe_flexible_category": false
                 }
@@ -209,5 +480,5 @@
     "acfe_form": 0,
     "acfe_meta": "",
     "acfe_note": "",
-    "modified": 1763028794
+    "modified": 1763108907
 }
