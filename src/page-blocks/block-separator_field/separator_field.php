@@ -27,7 +27,8 @@ $classes_str = implode(' ', $classes);
         class="<?php echo esc_attr($classes_str); ?>"
         <?php if ($show_line): ?>
             style="--line-width: <?php echo esc_attr($line_width); ?>;
-                   --line-thickness: <?php echo esc_attr($line_thickness); ?>;"
+                   --line-thickness: <?php echo esc_attr($line_thickness); ?>;
+                   margin-left: 2rem;"
         <?php endif; ?>
     >
         <?php if ($show_line): ?>

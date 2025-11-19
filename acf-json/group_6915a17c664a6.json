@@ -16,7 +16,7 @@
                 "class": "",
                 "id": ""
             },
-            "message": "Met de Call to Action Builder maak je snel opvallende CTA-secties die perfect passen bij je website.",
+            "message": "<?php include get_template_directory() . '\/lib\/cta-preview\/cta-admin-preview.php'; ?>",
             "new_lines": "wpautop",
             "esc_html": 0
         },
@@ -76,7 +76,7 @@
                                 "class": "",
                                 "id": ""
                             },
-                            "message": "Hieronder vul je je class naam in voor je call to action dit is verplicht",
+                            "message": "<?php include get_template_directory() . '\/lib\/cta-preview\/cta-admin-preview.php'; ?>",
                             "new_lines": "wpautop",
                             "esc_html": 0
                         },
@@ -480,5 +480,5 @@
     "acfe_form": 0,
     "acfe_meta": "",
     "acfe_note": "",
-    "modified": 1763108907
+    "modified": 1763463893
 }

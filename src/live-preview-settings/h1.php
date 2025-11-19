@@ -21,7 +21,7 @@ $decoration = !empty($decoration_h1['decoration']) ? $decoration_h1['decoration'
 $style      = !empty($decoration_h1['style']) ? $decoration_h1['style'] : 'normal';
 $transform  = !empty($decoration_h1['transform']) ? $decoration_h1['transform'] : 'none';
 
-$color = !empty($color_h1['color']) ? $color_h1['color'] : '#000';
+$color = !empty($color_h1['color']) ? $color_h1['color'] : '#1a5428';
 $text_gradient = !empty($color_h1['text_gradient']) ? $color_h1['text_gradient'] : '';
 $hover_color = !empty($color_h1['hover_color']) ? $color_h1['hover_color'] : '';
 ?>

@@ -368,6 +368,26 @@ function render_cta_preview_page()
     }
 }
 
+function render_fonts_preview_page()
+{
+    $file = get_template_directory() . '/lib/theme-settings/render.php';
+    if (file_exists($file)) {
+        include $file;
+    } else {
+        echo '<div class="notice notice-error"><p>Settings page bestand niet gevonden in lib/theme-settings/!</p></div>';
+    }
+}
+
+function render_settings_page()
+{
+    $file = get_template_directory() . '/lib/settings/render.php';
+    if (file_exists($file)) {
+        include $file;
+    } else {
+        echo '<div class="notice notice-error"><p>Settings page bestand niet gevonden in lib/settings/!</p></div>';
+    }
+}
+
 add_action('admin_menu', 'mytheme_register_theme_settings');
 
 function mytheme_register_theme_settings()
@@ -378,18 +398,27 @@ function mytheme_register_theme_settings()
         __('Theme Settings', 'mytheme'),
         'manage_options',
         'mytheme-settings',
-        'mytheme_render_main_page',
+        'render_settings_page',
         'dashicons-admin-customizer',
         60
     );
 
-    add_submenu_page(
+    /*add_submenu_page(
         'mytheme-settings',
         __('CTA Preview', 'mytheme'),
         __('CTA Preview', 'mytheme'),
         'manage_options',
         'cta-preview',
         'render_cta_preview_page'
+    );*/
+
+    add_submenu_page(
+        'mytheme-settings',
+        __('Fonts Preview', 'mytheme'),
+        __('Fonts Preview', 'mytheme'),
+        'manage_options',
+        'fonts-preview',
+        'render_fonts_preview_page'
     );
 
     add_submenu_page(
@@ -400,12 +429,6 @@ function mytheme_register_theme_settings()
         'mytheme-required-plugins',
         'mytheme_render_plugins_page'
     );
-}
-
-function mytheme_render_main_page()
-{
-    echo '<div class="wrap"><h1>' . __('Theme Settings', 'mytheme') . '</h1>';
-    echo '<p>Welkom bij de Theme Settings van je thema.</p></div>';
 }
 
 function mytheme_render_plugins_page()
@@ -488,3 +511,39 @@ add_filter('acf/load_field/key=field_6916e99707106', function($field) {
 
     return $field;
 });
+
+
+
+
+
+
+
+add_action('acf/render_field', function($field){
+
+    $screen = get_current_screen();
+    if (!$screen || $screen->id !== 'settings_page_cta') return;
+
+    if ($field['type'] !== 'message') return;
+
+    $ctas = get_field('call_to_action', 'option');
+    if (!$ctas) return;
+
+    echo '<div class="cta-options-preview" style="margin-bottom:30px; padding:20px; background:#f6f7f7; border-radius:8px; max-width:1200px; margin-left:auto; margin-right:auto;">';
+    echo '<h2 style="margin-bottom:15px;">CTA Preview</h2>';
+
+    $cta = $ctas[0];
+    echo '<div class="cta-preview-wrapper" style="margin-bottom:20px;">';
+
+    $cta_rows = [$cta];
+    $file = get_template_directory() . '/lib/cta-preview/render.php';
+    if (file_exists($file)) {
+        include $file;
+    } else {
+        echo '<p style="color:red;">CTA render bestand niet gevonden!</p>';
+    }
+
+    echo '</div>';
+    echo '</div>';
+
+}, 10, 1);
+

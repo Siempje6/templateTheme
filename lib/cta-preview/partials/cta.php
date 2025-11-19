@@ -82,7 +82,7 @@ echo '</div>';
     .title-cta {
         font-family: 'Times New Roman', Times, serif;
         font-weight: 700;
-        font-size: 30px;
+        font-size: 35px;
         margin-top: 0px;
         line-height: 1.2;
         color: #1a5428;

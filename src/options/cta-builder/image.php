@@ -14,9 +14,7 @@ $image = get_sub_field('image');
             src="<?php echo esc_url($image['url']); ?>"
             alt="<?php echo esc_attr($image['alt']); ?>"
             class="image-cta"
-            style="
-
-            "
+            style=""
         >
     </div>
 </section>
