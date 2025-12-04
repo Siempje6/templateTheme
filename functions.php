@@ -547,3 +547,33 @@ add_action('acf/render_field', function($field){
 
 }, 10, 1);
 
+
+
+
+
+
+
+
+
+
+
+// JS
+function enqueue_custom_colorpicker() {
+    wp_enqueue_script(
+        'acf-colorpicker-new',
+        get_stylesheet_directory_uri() . '/js/acf-colorpicker-new.js',
+        ['acf-input','jquery'],
+        '1.0',
+        true
+    );
+}
+add_action('acf/input/admin_enqueue_scripts', 'enqueue_custom_colorpicker');
+
+// CSS
+function enqueue_custom_colorpicker_css() {
+    wp_enqueue_style(
+        'acf-colorpicker-new-css',
+        get_stylesheet_directory_uri() . '/css/admin-colorpicker-new.css'
+    );
+}
+add_action('acf/input/admin_enqueue_scripts', 'enqueue_custom_colorpicker_css');

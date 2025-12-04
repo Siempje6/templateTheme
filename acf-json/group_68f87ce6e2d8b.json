@@ -21,7 +21,6 @@
             "acfe_flexible_layouts_templates": 1,
             "acfe_flexible_layouts_previews": 1,
             "acfe_flexible_layouts_thumbnails": 1,
-            "acfe_flexible_layouts_settings": 1,
             "acfe_flexible_async": [],
             "acfe_flexible_add_actions": [
                 "title",
@@ -96,7 +95,6 @@
                                     "acfe_flexible_layouts_templates": 1,
                                     "acfe_flexible_layouts_previews": 1,
                                     "acfe_flexible_layouts_thumbnails": 1,
-                                    "acfe_flexible_layouts_settings": 1,
                                     "acfe_flexible_async": [],
                                     "acfe_flexible_add_actions": [
                                         "copy"
@@ -549,6 +547,116 @@
                                                     "toolbar": "full",
                                                     "media_upload": 1,
                                                     "delay": 0
+                                                },
+                                                {
+                                                    "key": "field_693153363e2e2",
+                                                    "label": "Styling",
+                                                    "name": "",
+                                                    "aria-label": "",
+                                                    "type": "tab",
+                                                    "instructions": "",
+                                                    "required": 0,
+                                                    "conditional_logic": 0,
+                                                    "wrapper": {
+                                                        "width": "",
+                                                        "class": "",
+                                                        "id": ""
+                                                    },
+                                                    "placement": "top",
+                                                    "endpoint": 0,
+                                                    "selected": 0
+                                                },
+                                                {
+                                                    "key": "field_693153723e2e3",
+                                                    "label": "Styling Opties",
+                                                    "name": "styling_opties",
+                                                    "aria-label": "",
+                                                    "type": "group",
+                                                    "instructions": "",
+                                                    "required": 0,
+                                                    "conditional_logic": 0,
+                                                    "wrapper": {
+                                                        "width": "",
+                                                        "class": "",
+                                                        "id": ""
+                                                    },
+                                                    "layout": "block",
+                                                    "acfe_seamless_style": 0,
+                                                    "acfe_group_modal": 0,
+                                                    "sub_fields": [
+                                                        {
+                                                            "key": "field_6931558f3e2e4",
+                                                            "label": "Font Size (Px)",
+                                                            "name": "font_size",
+                                                            "aria-label": "",
+                                                            "type": "number",
+                                                            "instructions": "",
+                                                            "required": 0,
+                                                            "conditional_logic": 0,
+                                                            "wrapper": {
+                                                                "width": "",
+                                                                "class": "",
+                                                                "id": ""
+                                                            },
+                                                            "default_value": 16,
+                                                            "min": "",
+                                                            "max": "",
+                                                            "allow_in_bindings": 0,
+                                                            "placeholder": "",
+                                                            "step": "",
+                                                            "prepend": "",
+                                                            "append": ""
+                                                        },
+                                                        {
+                                                            "key": "field_693165678153c",
+                                                            "label": "Line Height",
+                                                            "name": "line_height",
+                                                            "aria-label": "",
+                                                            "type": "number",
+                                                            "instructions": "",
+                                                            "required": 0,
+                                                            "conditional_logic": 0,
+                                                            "wrapper": {
+                                                                "width": "",
+                                                                "class": "",
+                                                                "id": ""
+                                                            },
+                                                            "default_value": 1,
+                                                            "min": "",
+                                                            "max": "",
+                                                            "allow_in_bindings": 0,
+                                                            "placeholder": "",
+                                                            "step": "0.1",
+                                                            "prepend": "",
+                                                            "append": ""
+                                                        },
+                                                        {
+                                                            "key": "field_69316dd94a39a",
+                                                            "label": "Text Kleur",
+                                                            "name": "text_kleur",
+                                                            "aria-label": "",
+                                                            "type": "color_picker",
+                                                            "instructions": "",
+                                                            "required": 0,
+                                                            "conditional_logic": 0,
+                                                            "wrapper": {
+                                                                "width": "",
+                                                                "class": "",
+                                                                "id": ""
+                                                            },
+                                                            "default_value": "",
+                                                            "enable_opacity": 0,
+                                                            "return_format": "string",
+                                                            "allow_in_bindings": 0,
+                                                            "show_custom_palette": 0,
+                                                            "show_color_wheel": 1,
+                                                            "custom_palette_source": "",
+                                                            "palette_colors": ""
+                                                        }
+                                                    ],
+                                                    "acfe_group_modal_close": 0,
+                                                    "acfe_group_modal_button": "",
+                                                    "acfe_group_modal_size": "large"
                                                 }
                                             ],
                                             "min": "",
@@ -3037,7 +3145,6 @@
                                                     "acfe_flexible_layouts_templates": 1,
                                                     "acfe_flexible_layouts_previews": 1,
                                                     "acfe_flexible_layouts_thumbnails": 1,
-                                                    "acfe_flexible_layouts_settings": 1,
                                                     "acfe_flexible_async": [],
                                                     "acfe_flexible_add_actions": [
                                                         "copy"
@@ -3199,7 +3306,15 @@
                                                     "button_label": "Nieuwe rij",
                                                     "acfe_flexible_hide_empty_message": false,
                                                     "acfe_flexible_empty_message": "",
-                                                    "acfe_flexible_layouts_placeholder": false
+                                                    "acfe_flexible_layouts_placeholder": false,
+                                                    "acfe_flexible_modal_settings": {
+                                                        "acfe_flexible_modal_settings_enabled": 1,
+                                                        "acfe_flexible_modal_settings_size": "large",
+                                                        "acfe_flexible_modal_settings_close": true,
+                                                        "acfe_flexible_modal_settings_close_label": ""
+                                                    },
+                                                    "acfe_flexible_close_button_label": "",
+                                                    "acfe_flexible_remove_top_actions": []
                                                 },
                                                 {
                                                     "key": "field_68f9fb002d3b0",
@@ -3555,7 +3670,10 @@
                                                         "class": "",
                                                         "id": ""
                                                     },
-                                                    "choices": [],
+                                                    "choices": {
+                                                        "standaard": "standaard",
+                                                        "cta 1": "cta 1"
+                                                    },
                                                     "default_value": false,
                                                     "return_format": "value",
                                                     "multiple": 0,
@@ -3588,6 +3706,14 @@
                                     "acfe_flexible_hide_empty_message": false,
                                     "acfe_flexible_empty_message": "",
                                     "acfe_flexible_layouts_placeholder": false,
+                                    "acfe_flexible_modal_settings": {
+                                        "acfe_flexible_modal_settings_enabled": 1,
+                                        "acfe_flexible_modal_settings_size": "large",
+                                        "acfe_flexible_modal_settings_close": true,
+                                        "acfe_flexible_modal_settings_close_label": ""
+                                    },
+                                    "acfe_flexible_close_button_label": "",
+                                    "acfe_flexible_remove_top_actions": [],
                                     "parent_repeater": "field_68f87d5756e45"
                                 },
                                 {
@@ -3775,7 +3901,15 @@
             "button_label": "Nieuwe rij",
             "acfe_flexible_hide_empty_message": false,
             "acfe_flexible_empty_message": "",
-            "acfe_flexible_layouts_placeholder": false
+            "acfe_flexible_layouts_placeholder": false,
+            "acfe_flexible_modal_settings": {
+                "acfe_flexible_modal_settings_enabled": 1,
+                "acfe_flexible_modal_settings_size": "large",
+                "acfe_flexible_modal_settings_close": true,
+                "acfe_flexible_modal_settings_close_label": ""
+            },
+            "acfe_flexible_close_button_label": "",
+            "acfe_flexible_remove_top_actions": []
         }
     ],
     "location": [
@@ -3807,12 +3941,11 @@
     "description": "",
     "show_in_rest": 0,
     "display_title": "",
-    "acfe_display_title": "",
     "acfe_autosync": [
         "json"
     ],
     "acfe_form": 0,
     "acfe_meta": "",
     "acfe_note": "",
-    "modified": 1763109292
+    "modified": 1764856869
 }

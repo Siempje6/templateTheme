@@ -1,4 +1,4 @@
-
+/*
 .acf-input-wrap input[type="text"] {
   font-family: Arial, sans-serif;
   width: 100%;
@@ -254,5 +254,10 @@
 }
 
 .acf-fields > .acf-tab-wrap {
-   border-radius: 1rem;
+   border-radius: 0rem;
 }
+.acf-flexible-content .layout.-collapsed .acf-fc-layout-actions-wrap {
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+}
+*/

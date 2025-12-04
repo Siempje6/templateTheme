@@ -5,7 +5,6 @@ function set_global_typography_styles() {
     $color_h1      = get_field('colors_h1', 'option');
     $responsive_h1 = get_field('responsive_h1', 'option');
 
-    // Create CSS variables
     $styles = '<style>
         :root {
             --h1-font-size: ' . (!empty($styling_h1['font_size_h1']) ? $styling_h1['font_size_h1'] . 'px' : '32px') . ';

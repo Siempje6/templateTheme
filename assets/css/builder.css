@@ -489,6 +489,9 @@
   text-decoration: none;
 }
 
+/* ---------------------- */
+/* HAMBURGER BUTTON */
+/* ---------------------- */
 .hamburger {
   display: none;
   flex-direction: column;
@@ -509,7 +512,7 @@
   width: 100%;
   background: #333;
   border-radius: 2px;
-  transition: all 0.3s ease;
+  transition: all 0.25s ease;
 }
 
 .hamburger.active span:nth-child(1) {
@@ -524,95 +527,162 @@
   transform: rotate(-45deg) translate(6px, -8px);
 }
 
+/* ---------------------- */
+/* ALGEMENE MENU STRUCTUUR */
+/* ---------------------- */
 .main-menu,
 .main-menu ul {
   list-style: none;
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
 
-.main-menu a {
-  display: block;
-  padding: 10px;
-  text-decoration: none;
-  color: #000;
+/* Forceer horizontaal menu op desktop en centreer het */
+.main-menu {
+  width: 100%;
 }
 
-.main-menu li {
+.main-menu ul.menu {
+  display: flex !important;
+  flex-direction: row !important;
+  gap: 30px;
+  align-items: center;
+  justify-content: center; /* <-- CENTRERING */
+  padding: 0;
+  margin: 0;
+}
+
+.main-menu ul.menu > li {
+  display: flex;
+  align-items: center;
   position: relative;
 }
 
-.main-menu li ul.sub-menu {
-  display: none;
-  position: absolute;
-  top: 100%;
-  left: 0;
-  background: #f8f6f2;
-  padding: 5px 0;
-  border-radius: 5px;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
-  z-index: 999;
-}
-
-.main-menu li ul.sub-menu li a {
-  padding: 5px 15px;
-  white-space: nowrap;
+/* Link styling */
+.main-menu a {
+  padding: 10px 8px;
+  text-decoration: none;
   color: #000;
+  white-space: nowrap;
 }
 
-.main-menu li:hover > ul.sub-menu {
+/* ---------------------- */
+/* SUBMENU: SMOOTH, STABIEL HOVER (DESKTOP) */
+/* ---------------------- */
+/* basis styling van het submenu */
+/* Let op: top:100% (geen gap) + visibility/opacity/pointer-events */
+.main-menu li ul.sub-menu {
+  position: absolute;
+  top: 100%; /* <-- direct onder parent, geen gap */
+  left: 0;
+  min-width: 180px; /* voorkomt verschuivingen */
+  white-space: nowrap;
+  background: #f8f6f2;
+  border-radius: 6px;
+  padding: 8px 0;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.12);
+  z-index: 2000;
+  /* Gebruik visibility + opacity + pointer-events om flicker te voorkomen */
+  visibility: hidden;
+  opacity: 0;
+  transition: opacity 180ms ease;
+  pointer-events: none; /* niet klikbaar totdat zichtbaar */
+}
+
+/* zichtbaar maken op hover van ouder LI → alleen voor desktop */
+@media (min-width: 769px) {
+  .main-menu li:hover > ul.sub-menu,
+  .main-menu li:focus-within > ul.sub-menu {
+    visibility: visible;
+    opacity: 1;
+    pointer-events: auto;
+  }
+}
+/* submenu items */
+.main-menu li ul.sub-menu li {
   display: block;
 }
 
+.main-menu li ul.sub-menu li a {
+  padding: 8px 16px;
+  display: block;
+}
+
+/* hover styling binnen submenu */
 .main-menu li ul.sub-menu li a:hover {
-  background: #f0f0f0;
+  background: #eee;
 }
 
+/* dropdown-knop alleen op mobiel */
 .dropdown-btn {
-  position: absolute;
-  right: 10px;
-  top: 50%;
-  transform: translateY(-50%);
-  cursor: pointer;
-  font-weight: bold;
+  display: none;
 }
 
+/* ---------------------- */
+/* MOBIEL (max-width: 768px) */
+/* ---------------------- */
 @media (max-width: 768px) {
   .hamburger {
     display: flex;
   }
+  /* MENU VERBORGEN TOT KLIK */
   .main-menu {
-    display: flex;
-    flex-direction: row;
-    background: #fff;
-    border: 1px solid #ddd;
-    border-radius: 6px;
-    padding: 10px 20px;
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    z-index: 1000;
-  }
-  .main-menu.open {
+    display: none;
     position: absolute;
     top: 50px;
-    left: 0px;
-    right: 0px;
+    left: 0;
+    right: 0;
+    background: #fff;
+    padding: 15px 20px;
+    z-index: 1000;
+    border-bottom: 1px solid #ddd;
+  }
+  /* MENU OPEN */
+  .main-menu.open {
+    display: flex;
+  }
+  /* HORIZONTAAL OP MOBIEL, WRAP ZO NODIG */
+  .main-menu ul.menu {
+    display: flex !important;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: flex-start;
   }
   .main-menu li ul.sub-menu {
     position: static;
+    top: auto;
+    left: auto;
+    min-width: auto;
+    transform: none;
+    visibility: visible;
+    opacity: 1;
+    pointer-events: auto;
     display: none;
-    flex-direction: column;
-    padding-left: 20px;
-    margin-top: 5px;
-    background: none;
+    background: #f0f0f0;
+    padding: 8px 12px;
+    border-radius: 6px;
     box-shadow: none;
+    margin-top: 6px;
   }
-  .main-menu li ul.sub-menu li a {
-    padding: 5px 0;
-    color: #000;
+  .sub-menu.open {
+    display: flex !important;
+    flex-direction: column;
   }
+  .dropdown-btn {
+    display: inline-block;
+    margin-left: 8px;
+    font-weight: bold;
+    cursor: pointer;
+  }
+  .main-menu li:hover > ul.sub-menu {
+    display: none !important;
+  }
+}
+.main-menu a:focus {
+  outline: 2px solid rgba(0, 0, 0, 0.1);
+  outline-offset: 2px;
 }
 
 /*# sourceMappingURL=builder.css.map */

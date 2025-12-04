@@ -17,12 +17,10 @@ Template Name: Flexibele Pagina
 
     <div class="site-wrapper">
 
-        <!-- ===== HEADER ===== -->
         <header class="site-header">
             <?php get_template_part('template-parts/header'); ?>
         </header>
 
-        <!-- ===== MAIN ===== -->
         <main class="site-main">
             <?php
             if (have_rows('rows')):
@@ -49,15 +47,13 @@ Template Name: Flexibele Pagina
             ?>
         </main>
 
-        <!-- ===== FOOTER ===== -->
         <footer class="site-footer">
             <?php get_template_part('template-parts/footer'); ?>
         </footer>
 
-    </div><!-- .site-wrapper -->
+    </div>
 
     <style>
-        /* ===== Algemene layout ===== */
         .site-wrapper {
             display: flex;
             flex-direction: column;
@@ -68,7 +64,6 @@ Template Name: Flexibele Pagina
             flex: 1;
         }
 
-        /* ===== Header/Footer grids ===== */
         .header-grid,
         .footer-grid {
             display: grid;
@@ -94,14 +89,12 @@ Template Name: Flexibele Pagina
             border-radius: 4px;
         }
 
-        /* ===== Pagina content ===== */
         .default-page-content {
             max-width: 800px;
             margin: 40px auto;
             padding: 20px;
         }
 
-        /* ===== Comment styling ===== */
         .comments-area {
             margin-top: 40px;
         }
@@ -149,7 +142,6 @@ Template Name: Flexibele Pagina
             background-color: #555;
         }
 
-        /* ===== Responsive ===== */
         @media screen and (max-width: 1024px) {
 
             .header-grid,
