@@ -1,18 +1,15 @@
 <?php
-// Haal de CTA flexible content op
-$cta_rows = get_sub_field('call_to_action'); // of get_field('call_to_action') als het op options page staat
+$cta_rows = get_sub_field('call_to_action'); 
 
 if( $cta_rows ):
     foreach( $cta_rows as $row ):
 
-        // Alleen 'cta' layout renderen
         if( $row['acf_fc_layout'] === 'cta' ):
 
             $cta_class   = isset($row['class']) ? $row['class'] : '';
             $cta_bg      = isset($row['background_color']) ? $row['background_color'] : '';
             $cta_width   = isset($row['width']) ? intval($row['width']) : '';
 
-            // CTA container met styling
             $style = '';
             if($cta_bg) $style .= "background: $cta_bg; ";
             if($cta_width) $style .= "max-width: {$cta_width}px; ";
@@ -20,7 +17,6 @@ if( $cta_rows ):
 
             echo '<div class="'.esc_attr($cta_class).'" style="'.esc_attr($style).'">';
 
-            // Nested Columns
             if( isset($row['columns']) && is_array($row['columns']) ):
                 foreach($row['columns'] as $column):
                     
@@ -70,7 +66,7 @@ if( $cta_rows ):
                 endforeach;
             endif;
 
-            echo '</div>'; // einde CTA container
+            echo '</div>'; 
 
         endif;
 

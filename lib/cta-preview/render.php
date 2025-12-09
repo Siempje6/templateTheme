@@ -1,17 +1,17 @@
 <?php
 
 echo '<div class="wrap cta-preview-admin">';
-echo '<h1 style="margin-bottom: 1.5rem;">CTA Preview</h1>';
+echo '<h1 style="margin-bottom: 1.5rem;">Herbruikbaar blok</h1>';
 
 $ctas = get_field('call_to_action', 'option');
 
 if (!$ctas) {
-    echo '<div class="notice notice-warning"><p>Geen CTA\'s gevonden in de instellingen.</p></div>';
+    echo '<div class="notice notice-warning"><p>Geen blokken gevonden in de instellingen.</p></div>';
     echo '</div>';
     return;
 }
 
-echo '<label for="cta_class">Selecteer een CTA:</label> ';
+echo '<label for="cta_class">Selecteer een Herbruikbaar blok:</label> ';
 echo '<select name="cta_class" id="cta_class" class="regular-text">';
 foreach ($ctas as $cta) {
     $class = $cta['class'] ?? '';
@@ -61,7 +61,7 @@ echo '</div>';
 
             const cta = ctas.find(c => c.class === selectedClass);
             if (!cta) {
-                container.innerHTML = '<p style="color:#a00;">Geen CTA gevonden voor deze selectie.</p>';
+                container.innerHTML = '<p style="color:#a00;">Geen Herbruikaar blok gevonden voor deze selectie.</p>';
                 return;
             }
 

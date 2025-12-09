@@ -1,33 +1,42 @@
 <?php
-$image = get_sub_field('image');
-$styling = get_sub_field('styling') ?: [];
+// Haal velden op
+$image       = get_sub_field('image');
+$styling     = get_sub_field('styling') ?: [];
 
-$corners = $styling['corners'] ?? '12px';
-$custom_type = $styling['custom_height_or_width'] ?? 'custom width';
-$custom_width = $styling['image_width'] ?? '100%';
-$custom_height = $styling['image_height'] ?? 'auto';
-$custom_both_w = $styling['custom_width_and_heigth'] ?? '100%';
-$custom_both_h = $styling['custom_height_and_width'] ?? 'auto';
+// Basis styling
+$corners     = $styling['corners'] ?? '12px';
+$customType  = $styling['custom_height_or_width'] ?? 'custom width';
 
-switch ($custom_type) {
+// Afmetingen ophalen
+$widthSingle = $styling['image_width'] ?? '100%';
+$heightSingle= $styling['image_height'] ?? 'auto';
+$widthBoth   = $styling['custom_width_and_heigth'] ?? '100%';
+$heightBoth  = $styling['custom_height_and_width'] ?? 'auto';
+
+// Bepaal afmetingen op basis van type
+switch ($customType) {
     case 'custom width':
-        $width = $custom_width;
+        $width  = $widthSingle;
         $height = 'auto';
         break;
+
     case 'custom height':
-        $width = 'auto';
-        $height = $custom_height;
+        $width  = 'auto';
+        $height = $heightSingle;
         break;
+
     case 'custom':
-        $width = $custom_both_w;
-        $height = $custom_both_h;
+        $width  = $widthBoth;
+        $height = $heightBoth;
         break;
+
     default:
-        $width = '100%';
+        $width  = '100%';
         $height = 'auto';
         break;
 }
 
+// Voeg px toe als waarde numeriek is
 if (is_numeric($width))  $width  .= 'px';
 if (is_numeric($height)) $height .= 'px';
 ?>
@@ -41,7 +50,7 @@ if (is_numeric($height)) $height .= 'px';
             class="image-content"
             style="
                 border-radius: <?php echo esc_attr($corners); ?>;
-                width: <?php echo esc_attr($width); ?>;
+                max-width: 1200px;
                 height: <?php echo esc_attr($height); ?>;
             "
         >

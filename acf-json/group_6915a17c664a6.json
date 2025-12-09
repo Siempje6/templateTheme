@@ -22,7 +22,7 @@
         },
         {
             "key": "field_6915a2819eb1e",
-            "label": "Call To Action",
+            "label": "Herbruikbare Blokken",
             "name": "call_to_action",
             "aria-label": "",
             "type": "flexible_content",
@@ -39,10 +39,10 @@
             "acfe_flexible_layouts_templates": 1,
             "acfe_flexible_layouts_previews": 1,
             "acfe_flexible_layouts_thumbnails": 1,
-            "acfe_flexible_layouts_settings": 1,
             "acfe_flexible_async": [],
             "acfe_flexible_add_actions": [],
             "acfe_flexible_remove_button": [],
+            "acfe_flexible_remove_top_actions": [],
             "acfe_flexible_layouts_state": "user",
             "acfe_flexible_modal_edit": {
                 "acfe_flexible_modal_edit_enabled": "0",
@@ -51,15 +51,21 @@
             "acfe_flexible_modal": {
                 "acfe_flexible_modal_enabled": "0",
                 "acfe_flexible_modal_title": false,
-                "acfe_flexible_modal_size": "full",
+                "acfe_flexible_modal_size": "xlarge",
                 "acfe_flexible_modal_col": "4",
                 "acfe_flexible_modal_categories": false
+            },
+            "acfe_flexible_modal_settings": {
+                "acfe_flexible_modal_settings_enabled": "1",
+                "acfe_flexible_modal_settings_size": "large",
+                "acfe_flexible_modal_settings_close": "1",
+                "acfe_flexible_modal_settings_close_label": ""
             },
             "layouts": {
                 "layout_6915a28a3eef8": {
                     "key": "layout_6915a28a3eef8",
                     "name": "cta",
-                    "label": "CTA",
+                    "label": "Block",
                     "display": "block",
                     "sub_fields": [
                         {
@@ -316,7 +322,6 @@
                                             "acfe_flexible_layouts_templates": 1,
                                             "acfe_flexible_layouts_previews": 1,
                                             "acfe_flexible_layouts_thumbnails": 1,
-                                            "acfe_flexible_layouts_settings": 1,
                                             "acfe_flexible_async": [],
                                             "acfe_flexible_add_actions": [],
                                             "acfe_flexible_remove_button": [],
@@ -542,7 +547,7 @@
                                                             "rows_per_page": 20,
                                                             "sub_fields": [
                                                                 {
-                                                                    "key": "field_691ed0d00155c",
+                                                                    "key": "field_6932ab2a8f396",
                                                                     "label": "Icons",
                                                                     "name": "icons",
                                                                     "aria-label": "",
@@ -615,7 +620,15 @@
                                             "button_label": "Nieuwe rij",
                                             "acfe_flexible_hide_empty_message": false,
                                             "acfe_flexible_empty_message": "",
-                                            "acfe_flexible_layouts_placeholder": false
+                                            "acfe_flexible_layouts_placeholder": false,
+                                            "acfe_flexible_modal_settings": {
+                                                "acfe_flexible_modal_settings_enabled": 1,
+                                                "acfe_flexible_modal_settings_size": "large",
+                                                "acfe_flexible_modal_settings_close": true,
+                                                "acfe_flexible_modal_settings_close_label": ""
+                                            },
+                                            "acfe_flexible_close_button_label": "",
+                                            "acfe_flexible_remove_top_actions": []
                                         }
                                     ],
                                     "min": "",
@@ -640,7 +653,6 @@
                             "acfe_flexible_layouts_previews": false,
                             "acfe_flexible_layouts_placeholder": false,
                             "acfe_flexible_layouts_thumbnails": false,
-                            "acfe_flexible_layouts_settings": false,
                             "acfe_flexible_async": [],
                             "acfe_flexible_add_actions": [],
                             "acfe_flexible_remove_button": [],
@@ -655,7 +667,15 @@
                                 "acfe_flexible_modal_size": "full",
                                 "acfe_flexible_modal_col": "4",
                                 "acfe_flexible_modal_categories": false
-                            }
+                            },
+                            "acfe_flexible_modal_settings": {
+                                "acfe_flexible_modal_settings_enabled": false,
+                                "acfe_flexible_modal_settings_size": "large",
+                                "acfe_flexible_modal_settings_close": true,
+                                "acfe_flexible_modal_settings_close_label": ""
+                            },
+                            "acfe_flexible_close_button_label": "",
+                            "acfe_flexible_remove_top_actions": []
                         },
                         {
                             "key": "field_691ec7fb08d3c",
@@ -693,7 +713,8 @@
             "button_label": "Nieuwe rij",
             "acfe_flexible_hide_empty_message": false,
             "acfe_flexible_empty_message": "",
-            "acfe_flexible_layouts_placeholder": false
+            "acfe_flexible_layouts_placeholder": false,
+            "acfe_flexible_close_button_label": ""
         }
     ],
     "location": [
@@ -715,12 +736,11 @@
     "description": "",
     "show_in_rest": 0,
     "display_title": "",
-    "acfe_display_title": "",
     "acfe_autosync": [
         "json"
     ],
     "acfe_form": 0,
     "acfe_meta": "",
     "acfe_note": "",
-    "modified": 1763627669
+    "modified": 1764928460
 }

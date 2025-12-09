@@ -529,7 +529,7 @@ add_action('acf/render_field', function($field){
     if (!$ctas) return;
 
     echo '<div class="cta-options-preview" style="margin-bottom:30px; padding:20px; background:#f6f7f7; border-radius:8px; max-width:1200px; margin-left:auto; margin-right:auto;">';
-    echo '<h2 style="margin-bottom:15px;">CTA Preview</h2>';
+    echo '<h2 style="margin-bottom:15px;">Herbruikbaar blok Preview</h2>';
 
     $cta = $ctas[0];
     echo '<div class="cta-preview-wrapper" style="margin-bottom:20px;">';
@@ -539,7 +539,7 @@ add_action('acf/render_field', function($field){
     if (file_exists($file)) {
         include $file;
     } else {
-        echo '<p style="color:red;">CTA render bestand niet gevonden!</p>';
+        echo '<p style="color:red;">Herbruikbaar blok render bestand niet gevonden!</p>';
     }
 
     echo '</div>';
@@ -558,6 +558,7 @@ add_action('acf/render_field', function($field){
 
 
 // JS
+/*
 function enqueue_custom_colorpicker() {
     wp_enqueue_script(
         'acf-colorpicker-new',
@@ -577,3 +578,4 @@ function enqueue_custom_colorpicker_css() {
     );
 }
 add_action('acf/input/admin_enqueue_scripts', 'enqueue_custom_colorpicker_css');
+*/

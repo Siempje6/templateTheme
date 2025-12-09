@@ -1,4 +1,4 @@
-(function($){
+/*(function($){
 
     acf.add_action('ready_field/type=color_picker', function($field){
 
@@ -113,3 +113,4 @@
 
     });
 })(jQuery);
+*/
