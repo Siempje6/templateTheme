@@ -1,40 +1,44 @@
 .accordion-wrapper {
-
-  .accordion-item {
-    background: var(--acc-bg-color);
-    border: var(--acc-border);
-    border-radius: var(--acc-radius);
-    padding: var(--acc-padding);
-    margin: var(--acc-margin);
-  }
-
-  .accordion-title {
-    font-weight: var(--acc-title-weight);
-    font-size: var(--acc-title-size);
-    color: var(--acc-title-color);
-    text-transform: var(--acc-title-transform);
-    font-family: var(--acc-title-font-family);
-    cursor: pointer;
-
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-
-    .accordion-icon i {
-        color: var(--acc-icon-color);
-        font-size: var(--acc-icon-size);
-        line-height: 1;
-        display: inline-block;
+    
+    .accordion-item {
+        background: var(--acc-bg-color);
+        border: var(--acc-border);
+        border-radius: var(--acc-radius);
+        border-top-left-radius: var(--acc-radius-top-left, var(--acc-radius));
+        border-top-right-radius: var(--acc-radius-top-right, var(--acc-radius));
+        border-bottom-left-radius: var(--acc-radius-bottom-left, var(--acc-radius));
+        border-bottom-right-radius: var(--acc-radius-bottom-right, var(--acc-radius));
+        padding: var(--acc-padding);
+        margin: var(--acc-margin);
     }
-  }
 
-  .accordion-content {
-    max-height: 0;
-    overflow: hidden;
-    transition: max-height var(--acc-transition-speed) ease;
-  }
+    .accordion-title {
+        font-weight: var(--acc-title-weight);
+        font-size: var(--acc-title-size);
+        color: var(--acc-title-color);
+        text-transform: var(--acc-title-transform);
+        font-family: var(--acc-title-font-family);
+        cursor: pointer;
 
-  .accordion-item.active .accordion-content {
-    max-height: 500px;
-  }
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        .accordion-icon i {
+            color: var(--acc-icon-color);
+            font-size: var(--acc-icon-size);
+            line-height: 1;
+            display: inline-block;
+        }
+    }
+
+    .accordion-content {
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height var(--acc-transition-speed) ease;
+    }
+
+    .accordion-item.active .accordion-content {
+        max-height: 500px;
+    }
 }

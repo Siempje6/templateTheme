@@ -1,5 +1,4 @@
 .accordion-wrapper {
-
     .accordion-content {
         opacity: 0;
         overflow: hidden;
@@ -16,6 +15,10 @@
         transition:
             background-color var(--acc-anim-duration, 0.3s) var(--acc-anim-timing, ease),
             color var(--acc-anim-duration, 0.3s) var(--acc-anim-timing, ease);
+        border-top-left-radius: var(--acc-radius-top-left, var(--acc-radius));
+        border-top-right-radius: var(--acc-radius-top-right, var(--acc-radius));
+        border-bottom-left-radius: var(--acc-radius-bottom-left, var(--acc-radius));
+        border-bottom-right-radius: var(--acc-radius-bottom-right, var(--acc-radius));
     }
 
     .accordion-item.active .accordion-icon i,

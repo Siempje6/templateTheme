@@ -22,6 +22,18 @@ $bg_color       = $wrapper_item['background_color'] ?? 'transparent';
 $border_value   = $wrapper_item['border'] ?? '0';
 $border_unit    = $wrapper_item['border_size'] ?? 'px';
 $border_color   = $wrapper_item['border_color'] ?? 'transparent';
+$border_top_left     = isset($wrapper_item['border_top_left_radius']) ? $wrapper_item['border_top_left_radius'] : null;
+$border_top_right    = isset($wrapper_item['border_top_right_radius']) ? $wrapper_item['border_top_right_radius'] : null;
+$border_bottom_left  = isset($wrapper_item['border_bottom_left_radius']) ? $wrapper_item['border_bottom_left_radius'] : null;
+$border_bottom_right = isset($wrapper_item['border_bottom_right_radius']) ? $wrapper_item['border_bottom_right_radius'] : null;
+
+$radius = isset($wrapper_item['border_radius']) ? $wrapper_item['border_radius'] : 0;
+
+$radius_top_left     = $border_top_left !== null ? $border_top_left . 'px' : $radius . 'px';
+$radius_top_right    = $border_top_right !== null ? $border_top_right . 'px' : $radius . 'px';
+$radius_bottom_left  = $border_bottom_left !== null ? $border_bottom_left . 'px' : $radius . 'px';
+$radius_bottom_right = $border_bottom_right !== null ? $border_bottom_right . 'px' : $radius . 'px';
+
 $border_full    = $border_value . $border_unit . ' solid ' . $border_color;
 $radius         = $wrapper_item['border_radius'] ?? 0;
 $padding_unit   = $wrapper_item['padding_size'] ?? 'px';
@@ -72,6 +84,10 @@ if (!function_exists('get_icon_html')) {
 
         --acc-bg-color: <?= esc_attr($bg_color); ?>;
         --acc-border: <?= esc_attr($border_full); ?>;
+        --acc-radius-top-left: <?= esc_attr($radius_top_left); ?>;
+        --acc-radius-top-right: <?= esc_attr($radius_top_right); ?>;
+        --acc-radius-bottom-left: <?= esc_attr($radius_bottom_left); ?>;
+        --acc-radius-bottom-right: <?= esc_attr($radius_bottom_right); ?>;
         --acc-radius: <?= esc_attr($radius); ?>px;
         --acc-padding: <?= esc_attr($padding_full); ?>;
         --acc-margin: <?= esc_attr($margin_full); ?>;
@@ -86,6 +102,7 @@ if (!function_exists('get_icon_html')) {
 
         --acc-anim-duration: <?= esc_attr($anim_duration); ?>s;
         --acc-anim-timing: <?= esc_attr($anim_timing); ?>;
+        
      ">
 
     <?php

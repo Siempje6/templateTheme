@@ -1,10 +1,12 @@
 .accordion-wrapper {
-
     .accordion-item.active {
-
         .accordion-title {
             background-color: var(--acc-active-bg, inherit);
             color: var(--acc-active-title-color, var(--acc-title-color));
+            border-top-left-radius: var(--acc-radius-top-left, var(--acc-radius));
+            border-top-right-radius: var(--acc-radius-top-right, var(--acc-radius));
+            border-bottom-left-radius: var(--acc-radius-bottom-left, var(--acc-radius));
+            border-bottom-right-radius: var(--acc-radius-bottom-right, var(--acc-radius));
         }
 
         .accordion-content {
