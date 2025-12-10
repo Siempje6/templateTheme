@@ -100,6 +100,7 @@
                                         "copy"
                                     ],
                                     "acfe_flexible_remove_button": [],
+                                    "acfe_flexible_remove_top_actions": [],
                                     "acfe_flexible_layouts_state": "user",
                                     "acfe_flexible_modal_edit": {
                                         "acfe_flexible_modal_edit_enabled": "0",
@@ -110,7 +111,13 @@
                                         "acfe_flexible_modal_title": "",
                                         "acfe_flexible_modal_size": "full",
                                         "acfe_flexible_modal_col": "4",
-                                        "acfe_flexible_modal_categories": "0"
+                                        "acfe_flexible_modal_categories": ""
+                                    },
+                                    "acfe_flexible_modal_settings": {
+                                        "acfe_flexible_modal_settings_enabled": "1",
+                                        "acfe_flexible_modal_settings_size": "large",
+                                        "acfe_flexible_modal_settings_close": "1",
+                                        "acfe_flexible_modal_settings_close_label": ""
                                     },
                                     "layouts": {
                                         "layout_68f8c62633836": {
@@ -1651,7 +1658,7 @@
                                                 },
                                                 {
                                                     "key": "field_68fa10301013b",
-                                                    "label": "Styling Accordion",
+                                                    "label": "Title",
                                                     "name": "",
                                                     "aria-label": "",
                                                     "type": "tab",
@@ -1669,8 +1676,8 @@
                                                 },
                                                 {
                                                     "key": "field_68fa10431013c",
-                                                    "label": "Styling",
-                                                    "name": "styling",
+                                                    "label": "Title",
+                                                    "name": "title",
                                                     "aria-label": "",
                                                     "type": "group",
                                                     "instructions": "",
@@ -1724,9 +1731,970 @@
                                                             "search_placeholder": ""
                                                         },
                                                         {
+                                                            "key": "field_69392ac30494a",
+                                                            "label": "Font Size Options",
+                                                            "name": "font_size_options",
+                                                            "aria-label": "",
+                                                            "type": "select",
+                                                            "instructions": "",
+                                                            "required": 0,
+                                                            "conditional_logic": 0,
+                                                            "wrapper": {
+                                                                "width": "25",
+                                                                "class": "",
+                                                                "id": ""
+                                                            },
+                                                            "choices": {
+                                                                "px": "Px",
+                                                                "rem": "Rem",
+                                                                "em": "Em",
+                                                                "%": "%"
+                                                            },
+                                                            "default_value": "px",
+                                                            "return_format": "value",
+                                                            "multiple": 0,
+                                                            "allow_null": 0,
+                                                            "allow_in_bindings": 0,
+                                                            "ui": 0,
+                                                            "ajax": 0,
+                                                            "placeholder": "",
+                                                            "create_options": 0,
+                                                            "save_options": 0,
+                                                            "allow_custom": 0,
+                                                            "search_placeholder": ""
+                                                        },
+                                                        {
                                                             "key": "field_68fa112f1013e",
                                                             "label": "Title Font Size",
                                                             "name": "title_font_size",
+                                                            "aria-label": "",
+                                                            "type": "number",
+                                                            "instructions": "",
+                                                            "required": 0,
+                                                            "conditional_logic": 0,
+                                                            "wrapper": {
+                                                                "width": "75",
+                                                                "class": "",
+                                                                "id": ""
+                                                            },
+                                                            "default_value": "",
+                                                            "min": "",
+                                                            "max": "",
+                                                            "allow_in_bindings": 0,
+                                                            "placeholder": "",
+                                                            "step": "",
+                                                            "prepend": "",
+                                                            "append": ""
+                                                        },
+                                                        {
+                                                            "key": "field_69392b3f0494b",
+                                                            "label": "Title Color",
+                                                            "name": "title_color",
+                                                            "aria-label": "",
+                                                            "type": "color_picker",
+                                                            "instructions": "",
+                                                            "required": 0,
+                                                            "conditional_logic": 0,
+                                                            "wrapper": {
+                                                                "width": "",
+                                                                "class": "",
+                                                                "id": ""
+                                                            },
+                                                            "default_value": "",
+                                                            "enable_opacity": 0,
+                                                            "return_format": "string",
+                                                            "allow_in_bindings": 0,
+                                                            "show_custom_palette": 0,
+                                                            "show_color_wheel": 1,
+                                                            "custom_palette_source": "",
+                                                            "palette_colors": ""
+                                                        },
+                                                        {
+                                                            "key": "field_69392b6a0494c",
+                                                            "label": "Title Transform",
+                                                            "name": "title_transform",
+                                                            "aria-label": "",
+                                                            "type": "select",
+                                                            "instructions": "",
+                                                            "required": 0,
+                                                            "conditional_logic": 0,
+                                                            "wrapper": {
+                                                                "width": "",
+                                                                "class": "",
+                                                                "id": ""
+                                                            },
+                                                            "choices": {
+                                                                "uppercase": "Uppercase",
+                                                                "lowercase": "Lowercase",
+                                                                "capitalize": "Capitalize",
+                                                                "none": "None"
+                                                            },
+                                                            "default_value": "none",
+                                                            "return_format": "value",
+                                                            "multiple": 0,
+                                                            "allow_null": 0,
+                                                            "allow_in_bindings": 0,
+                                                            "ui": 0,
+                                                            "ajax": 0,
+                                                            "placeholder": "",
+                                                            "create_options": 0,
+                                                            "save_options": 0,
+                                                            "allow_custom": 0,
+                                                            "search_placeholder": ""
+                                                        },
+                                                        {
+                                                            "key": "field_69392be00494d",
+                                                            "label": "Font Family",
+                                                            "name": "font_family",
+                                                            "aria-label": "",
+                                                            "type": "select",
+                                                            "instructions": "",
+                                                            "required": 0,
+                                                            "conditional_logic": 0,
+                                                            "wrapper": {
+                                                                "width": "",
+                                                                "class": "",
+                                                                "id": ""
+                                                            },
+                                                            "choices": {
+                                                                "Arial, sans-serif": "Arial",
+                                                                "'Helvetica Neue' , Helvetica, Arial, sans-serif": "Helvetica Neue",
+                                                                "'Times New Roman' , Times, serif": "Times New Roman",
+                                                                "Georgia, serif": "Georgia",
+                                                                "Tahoma, Geneva, sans-serif": "Tahoma",
+                                                                "'Trebuchet MS', sans-serif": "Trebuchet MS",
+                                                                "'Courier New', Courier, monospace": "Courier New",
+                                                                "'Verdana', Geneva, sans-serif": "Verdana",
+                                                                "'Impact', Charcoal, sans-serif": "Impact",
+                                                                "'Comic Sans MS', cursive, sans-serif": "Comic Sans MS"
+                                                            },
+                                                            "default_value": "'Times New Roman' , Times, serif",
+                                                            "return_format": "value",
+                                                            "multiple": 0,
+                                                            "allow_null": 0,
+                                                            "allow_in_bindings": 0,
+                                                            "ui": 0,
+                                                            "ajax": 0,
+                                                            "placeholder": "",
+                                                            "create_options": 0,
+                                                            "save_options": 0,
+                                                            "allow_custom": 0,
+                                                            "search_placeholder": ""
+                                                        }
+                                                    ],
+                                                    "acfe_group_modal_close": 0,
+                                                    "acfe_group_modal_button": "",
+                                                    "acfe_group_modal_size": "large"
+                                                },
+                                                {
+                                                    "key": "field_6937f031068cf",
+                                                    "label": "Icon",
+                                                    "name": "",
+                                                    "aria-label": "",
+                                                    "type": "tab",
+                                                    "instructions": "",
+                                                    "required": 0,
+                                                    "conditional_logic": 0,
+                                                    "wrapper": {
+                                                        "width": "",
+                                                        "class": "",
+                                                        "id": ""
+                                                    },
+                                                    "placement": "top",
+                                                    "endpoint": 0,
+                                                    "selected": 0
+                                                },
+                                                {
+                                                    "key": "field_6937f11c068d6",
+                                                    "label": "Icon",
+                                                    "name": "icon",
+                                                    "aria-label": "",
+                                                    "type": "group",
+                                                    "instructions": "",
+                                                    "required": 0,
+                                                    "conditional_logic": 0,
+                                                    "wrapper": {
+                                                        "width": "",
+                                                        "class": "",
+                                                        "id": ""
+                                                    },
+                                                    "layout": "block",
+                                                    "acfe_seamless_style": 0,
+                                                    "acfe_group_modal": 0,
+                                                    "sub_fields": [
+                                                        {
+                                                            "key": "field_6937f139068d7",
+                                                            "label": "Dropdown Icon",
+                                                            "name": "dropdown_icon",
+                                                            "aria-label": "",
+                                                            "type": "select",
+                                                            "instructions": "",
+                                                            "required": 0,
+                                                            "conditional_logic": 0,
+                                                            "wrapper": {
+                                                                "width": "",
+                                                                "class": "",
+                                                                "id": ""
+                                                            },
+                                                            "choices": {
+                                                                "arrow": "arrow",
+                                                                "plus": "plus",
+                                                                "minus": "minus",
+                                                                "chevron": "chevron"
+                                                            },
+                                                            "default_value": false,
+                                                            "return_format": "value",
+                                                            "multiple": 0,
+                                                            "allow_null": 0,
+                                                            "allow_in_bindings": 0,
+                                                            "ui": 0,
+                                                            "ajax": 0,
+                                                            "placeholder": "",
+                                                            "create_options": 0,
+                                                            "save_options": 0,
+                                                            "allow_custom": 0,
+                                                            "search_placeholder": ""
+                                                        },
+                                                        {
+                                                            "key": "field_6937f157068d8",
+                                                            "label": "Icon Color",
+                                                            "name": "icon_color",
+                                                            "aria-label": "",
+                                                            "type": "color_picker",
+                                                            "instructions": "",
+                                                            "required": 0,
+                                                            "conditional_logic": 0,
+                                                            "wrapper": {
+                                                                "width": "",
+                                                                "class": "",
+                                                                "id": ""
+                                                            },
+                                                            "default_value": "",
+                                                            "enable_opacity": 0,
+                                                            "return_format": "string",
+                                                            "allow_in_bindings": 0,
+                                                            "show_custom_palette": 0,
+                                                            "show_color_wheel": 1,
+                                                            "custom_palette_source": "",
+                                                            "palette_colors": ""
+                                                        },
+                                                        {
+                                                            "key": "field_6937f15f068d9",
+                                                            "label": "Icon Size (Px)",
+                                                            "name": "icon_size",
+                                                            "aria-label": "",
+                                                            "type": "number",
+                                                            "instructions": "",
+                                                            "required": 0,
+                                                            "conditional_logic": 0,
+                                                            "wrapper": {
+                                                                "width": "",
+                                                                "class": "",
+                                                                "id": ""
+                                                            },
+                                                            "default_value": "",
+                                                            "min": "",
+                                                            "max": "",
+                                                            "allow_in_bindings": 0,
+                                                            "placeholder": "",
+                                                            "step": "",
+                                                            "prepend": "",
+                                                            "append": ""
+                                                        }
+                                                    ],
+                                                    "acfe_group_modal_close": 0,
+                                                    "acfe_group_modal_button": "",
+                                                    "acfe_group_modal_size": "large"
+                                                },
+                                                {
+                                                    "key": "field_6937f038068d0",
+                                                    "label": "Wrapper \/ Item",
+                                                    "name": "",
+                                                    "aria-label": "",
+                                                    "type": "tab",
+                                                    "instructions": "",
+                                                    "required": 0,
+                                                    "conditional_logic": 0,
+                                                    "wrapper": {
+                                                        "width": "",
+                                                        "class": "",
+                                                        "id": ""
+                                                    },
+                                                    "placement": "top",
+                                                    "endpoint": 0,
+                                                    "selected": 0
+                                                },
+                                                {
+                                                    "key": "field_693805b789198",
+                                                    "label": "Wrapper Item",
+                                                    "name": "wrapper_item",
+                                                    "aria-label": "",
+                                                    "type": "group",
+                                                    "instructions": "",
+                                                    "required": 0,
+                                                    "conditional_logic": 0,
+                                                    "wrapper": {
+                                                        "width": "",
+                                                        "class": "",
+                                                        "id": ""
+                                                    },
+                                                    "layout": "block",
+                                                    "acfe_seamless_style": 0,
+                                                    "acfe_group_modal": 0,
+                                                    "sub_fields": [
+                                                        {
+                                                            "key": "field_693805c989199",
+                                                            "label": "Background Color",
+                                                            "name": "background_color",
+                                                            "aria-label": "",
+                                                            "type": "color_picker",
+                                                            "instructions": "",
+                                                            "required": 0,
+                                                            "conditional_logic": 0,
+                                                            "wrapper": {
+                                                                "width": "",
+                                                                "class": "",
+                                                                "id": ""
+                                                            },
+                                                            "default_value": "",
+                                                            "enable_opacity": 0,
+                                                            "return_format": "string",
+                                                            "allow_in_bindings": 0,
+                                                            "show_custom_palette": 0,
+                                                            "show_color_wheel": 1,
+                                                            "custom_palette_source": "",
+                                                            "palette_colors": ""
+                                                        },
+                                                        {
+                                                            "key": "field_6938069b8919f",
+                                                            "label": "Border Size",
+                                                            "name": "border_size",
+                                                            "aria-label": "",
+                                                            "type": "select",
+                                                            "instructions": "",
+                                                            "required": 0,
+                                                            "conditional_logic": 0,
+                                                            "wrapper": {
+                                                                "width": "25",
+                                                                "class": "",
+                                                                "id": ""
+                                                            },
+                                                            "choices": {
+                                                                "px": "Px",
+                                                                "rem": "Rem",
+                                                                "em": "Em",
+                                                                "%": "%"
+                                                            },
+                                                            "default_value": "Px",
+                                                            "return_format": "value",
+                                                            "multiple": 0,
+                                                            "allow_null": 0,
+                                                            "allow_in_bindings": 0,
+                                                            "ui": 0,
+                                                            "ajax": 0,
+                                                            "placeholder": "",
+                                                            "create_options": 0,
+                                                            "save_options": 0,
+                                                            "allow_custom": 0,
+                                                            "search_placeholder": ""
+                                                        },
+                                                        {
+                                                            "key": "field_693805d88919a",
+                                                            "label": "Border",
+                                                            "name": "border",
+                                                            "aria-label": "",
+                                                            "type": "number",
+                                                            "instructions": "",
+                                                            "required": 0,
+                                                            "conditional_logic": 0,
+                                                            "wrapper": {
+                                                                "width": "75",
+                                                                "class": "",
+                                                                "id": ""
+                                                            },
+                                                            "default_value": "",
+                                                            "min": "",
+                                                            "max": "",
+                                                            "allow_in_bindings": 0,
+                                                            "placeholder": "",
+                                                            "step": "",
+                                                            "prepend": "",
+                                                            "append": ""
+                                                        },
+                                                        {
+                                                            "key": "field_693806458919e",
+                                                            "label": "Border Color",
+                                                            "name": "border_color",
+                                                            "aria-label": "",
+                                                            "type": "color_picker",
+                                                            "instructions": "",
+                                                            "required": 0,
+                                                            "conditional_logic": 0,
+                                                            "wrapper": {
+                                                                "width": "",
+                                                                "class": "",
+                                                                "id": ""
+                                                            },
+                                                            "default_value": "",
+                                                            "enable_opacity": 0,
+                                                            "return_format": "string",
+                                                            "allow_in_bindings": 0,
+                                                            "show_custom_palette": 0,
+                                                            "show_color_wheel": 1,
+                                                            "custom_palette_source": "",
+                                                            "palette_colors": ""
+                                                        },
+                                                        {
+                                                            "key": "field_693805e58919b",
+                                                            "label": "Border Radius",
+                                                            "name": "border_radius",
+                                                            "aria-label": "",
+                                                            "type": "number",
+                                                            "instructions": "",
+                                                            "required": 0,
+                                                            "conditional_logic": 0,
+                                                            "wrapper": {
+                                                                "width": "",
+                                                                "class": "",
+                                                                "id": ""
+                                                            },
+                                                            "default_value": "",
+                                                            "min": "",
+                                                            "max": "",
+                                                            "allow_in_bindings": 0,
+                                                            "placeholder": "",
+                                                            "step": "",
+                                                            "prepend": "",
+                                                            "append": ""
+                                                        },
+                                                        {
+                                                            "key": "field_6938083874add",
+                                                            "label": "Padding Size",
+                                                            "name": "padding_size",
+                                                            "aria-label": "",
+                                                            "type": "select",
+                                                            "instructions": "",
+                                                            "required": 0,
+                                                            "conditional_logic": 0,
+                                                            "wrapper": {
+                                                                "width": "25",
+                                                                "class": "",
+                                                                "id": ""
+                                                            },
+                                                            "choices": {
+                                                                "px": "Px",
+                                                                "rem": "Rem",
+                                                                "em": "Em",
+                                                                "%": "%"
+                                                            },
+                                                            "default_value": "Px",
+                                                            "return_format": "value",
+                                                            "multiple": 0,
+                                                            "allow_null": 0,
+                                                            "allow_in_bindings": 0,
+                                                            "ui": 0,
+                                                            "ajax": 0,
+                                                            "placeholder": "",
+                                                            "create_options": 0,
+                                                            "save_options": 0,
+                                                            "allow_custom": 0,
+                                                            "search_placeholder": ""
+                                                        },
+                                                        {
+                                                            "key": "field_693805f98919c",
+                                                            "label": "Padding",
+                                                            "name": "padding",
+                                                            "aria-label": "",
+                                                            "type": "text",
+                                                            "instructions": "",
+                                                            "required": 0,
+                                                            "conditional_logic": 0,
+                                                            "wrapper": {
+                                                                "width": "75",
+                                                                "class": "",
+                                                                "id": ""
+                                                            },
+                                                            "default_value": "",
+                                                            "maxlength": "",
+                                                            "allow_in_bindings": 0,
+                                                            "placeholder": "",
+                                                            "prepend": "",
+                                                            "append": ""
+                                                        },
+                                                        {
+                                                            "key": "field_6938083574adc",
+                                                            "label": "Margin Size",
+                                                            "name": "margin_size",
+                                                            "aria-label": "",
+                                                            "type": "select",
+                                                            "instructions": "",
+                                                            "required": 0,
+                                                            "conditional_logic": 0,
+                                                            "wrapper": {
+                                                                "width": "25",
+                                                                "class": "",
+                                                                "id": ""
+                                                            },
+                                                            "choices": {
+                                                                "px": "Px",
+                                                                "rem": "Rem",
+                                                                "em": "Em",
+                                                                "%": "%"
+                                                            },
+                                                            "default_value": "Px",
+                                                            "return_format": "value",
+                                                            "multiple": 0,
+                                                            "allow_null": 0,
+                                                            "allow_in_bindings": 0,
+                                                            "ui": 0,
+                                                            "ajax": 0,
+                                                            "placeholder": "",
+                                                            "create_options": 0,
+                                                            "save_options": 0,
+                                                            "allow_custom": 0,
+                                                            "search_placeholder": ""
+                                                        },
+                                                        {
+                                                            "key": "field_693806018919d",
+                                                            "label": "Margin",
+                                                            "name": "margin",
+                                                            "aria-label": "",
+                                                            "type": "text",
+                                                            "instructions": "",
+                                                            "required": 0,
+                                                            "conditional_logic": 0,
+                                                            "wrapper": {
+                                                                "width": "75",
+                                                                "class": "",
+                                                                "id": ""
+                                                            },
+                                                            "default_value": "",
+                                                            "maxlength": "",
+                                                            "allow_in_bindings": 0,
+                                                            "placeholder": "",
+                                                            "prepend": "",
+                                                            "append": ""
+                                                        }
+                                                    ],
+                                                    "acfe_group_modal_close": 0,
+                                                    "acfe_group_modal_button": "",
+                                                    "acfe_group_modal_size": "large"
+                                                },
+                                                {
+                                                    "key": "field_6937f03b068d1",
+                                                    "label": "Active State",
+                                                    "name": "",
+                                                    "aria-label": "",
+                                                    "type": "tab",
+                                                    "instructions": "",
+                                                    "required": 0,
+                                                    "conditional_logic": 0,
+                                                    "wrapper": {
+                                                        "width": "",
+                                                        "class": "",
+                                                        "id": ""
+                                                    },
+                                                    "placement": "top",
+                                                    "endpoint": 0,
+                                                    "selected": 0
+                                                },
+                                                {
+                                                    "key": "field_693927e6a5601",
+                                                    "label": "Active State",
+                                                    "name": "active_state",
+                                                    "aria-label": "",
+                                                    "type": "group",
+                                                    "instructions": "",
+                                                    "required": 0,
+                                                    "conditional_logic": 0,
+                                                    "wrapper": {
+                                                        "width": "",
+                                                        "class": "",
+                                                        "id": ""
+                                                    },
+                                                    "layout": "block",
+                                                    "acfe_seamless_style": 0,
+                                                    "acfe_group_modal": 0,
+                                                    "sub_fields": [
+                                                        {
+                                                            "key": "field_69392870a5605",
+                                                            "label": "Background Color",
+                                                            "name": "background_color",
+                                                            "aria-label": "",
+                                                            "type": "color_picker",
+                                                            "instructions": "",
+                                                            "required": 0,
+                                                            "conditional_logic": 0,
+                                                            "wrapper": {
+                                                                "width": "",
+                                                                "class": "",
+                                                                "id": ""
+                                                            },
+                                                            "default_value": "",
+                                                            "enable_opacity": 0,
+                                                            "return_format": "string",
+                                                            "allow_in_bindings": 0,
+                                                            "show_custom_palette": 0,
+                                                            "show_color_wheel": 1,
+                                                            "custom_palette_source": "",
+                                                            "palette_colors": ""
+                                                        },
+                                                        {
+                                                            "key": "field_69398dde08e67",
+                                                            "label": "Background Content Color",
+                                                            "name": "background_content_color",
+                                                            "aria-label": "",
+                                                            "type": "color_picker",
+                                                            "instructions": "",
+                                                            "required": 0,
+                                                            "conditional_logic": 0,
+                                                            "wrapper": {
+                                                                "width": "",
+                                                                "class": "",
+                                                                "id": ""
+                                                            },
+                                                            "default_value": "",
+                                                            "enable_opacity": 0,
+                                                            "return_format": "string",
+                                                            "allow_in_bindings": 0,
+                                                            "show_custom_palette": 0,
+                                                            "show_color_wheel": 1,
+                                                            "custom_palette_source": "",
+                                                            "palette_colors": ""
+                                                        },
+                                                        {
+                                                            "key": "field_69392881a5606",
+                                                            "label": "Title Color",
+                                                            "name": "title_color",
+                                                            "aria-label": "",
+                                                            "type": "color_picker",
+                                                            "instructions": "",
+                                                            "required": 0,
+                                                            "conditional_logic": 0,
+                                                            "wrapper": {
+                                                                "width": "",
+                                                                "class": "",
+                                                                "id": ""
+                                                            },
+                                                            "default_value": "",
+                                                            "enable_opacity": 0,
+                                                            "return_format": "string",
+                                                            "allow_in_bindings": 0,
+                                                            "show_custom_palette": 0,
+                                                            "show_color_wheel": 1,
+                                                            "custom_palette_source": "",
+                                                            "palette_colors": ""
+                                                        },
+                                                        {
+                                                            "key": "field_693928b7a5608",
+                                                            "label": "Icon Deg",
+                                                            "name": "",
+                                                            "aria-label": "",
+                                                            "type": "message",
+                                                            "instructions": "",
+                                                            "required": 0,
+                                                            "conditional_logic": 0,
+                                                            "wrapper": {
+                                                                "width": "",
+                                                                "class": "",
+                                                                "id": ""
+                                                            },
+                                                            "message": "de rotation is in graden dus bijv. 180 is 180 graden draaien",
+                                                            "new_lines": "wpautop",
+                                                            "esc_html": 0
+                                                        },
+                                                        {
+                                                            "key": "field_69392893a5607",
+                                                            "label": "Icon Rotation",
+                                                            "name": "icon_rotation",
+                                                            "aria-label": "",
+                                                            "type": "number",
+                                                            "instructions": "",
+                                                            "required": 0,
+                                                            "conditional_logic": 0,
+                                                            "wrapper": {
+                                                                "width": "",
+                                                                "class": "",
+                                                                "id": ""
+                                                            },
+                                                            "default_value": 180,
+                                                            "min": "",
+                                                            "max": "",
+                                                            "allow_in_bindings": 0,
+                                                            "placeholder": "",
+                                                            "step": "",
+                                                            "prepend": "",
+                                                            "append": ""
+                                                        }
+                                                    ],
+                                                    "acfe_group_modal_close": 0,
+                                                    "acfe_group_modal_button": "",
+                                                    "acfe_group_modal_size": "large"
+                                                },
+                                                {
+                                                    "key": "field_6937f04d068d2",
+                                                    "label": "Hover State",
+                                                    "name": "",
+                                                    "aria-label": "",
+                                                    "type": "tab",
+                                                    "instructions": "",
+                                                    "required": 0,
+                                                    "conditional_logic": 0,
+                                                    "wrapper": {
+                                                        "width": "",
+                                                        "class": "",
+                                                        "id": ""
+                                                    },
+                                                    "placement": "top",
+                                                    "endpoint": 0,
+                                                    "selected": 0
+                                                },
+                                                {
+                                                    "key": "field_69392802a5602",
+                                                    "label": "Hover State",
+                                                    "name": "hover_state",
+                                                    "aria-label": "",
+                                                    "type": "group",
+                                                    "instructions": "",
+                                                    "required": 0,
+                                                    "conditional_logic": 0,
+                                                    "wrapper": {
+                                                        "width": "",
+                                                        "class": "",
+                                                        "id": ""
+                                                    },
+                                                    "layout": "block",
+                                                    "acfe_seamless_style": 0,
+                                                    "acfe_group_modal": 0,
+                                                    "sub_fields": [
+                                                        {
+                                                            "key": "field_69392904a5609",
+                                                            "label": "Title Color",
+                                                            "name": "title_color",
+                                                            "aria-label": "",
+                                                            "type": "color_picker",
+                                                            "instructions": "",
+                                                            "required": 0,
+                                                            "conditional_logic": 0,
+                                                            "wrapper": {
+                                                                "width": "",
+                                                                "class": "",
+                                                                "id": ""
+                                                            },
+                                                            "default_value": "",
+                                                            "enable_opacity": 0,
+                                                            "return_format": "string",
+                                                            "allow_in_bindings": 0,
+                                                            "show_custom_palette": 0,
+                                                            "show_color_wheel": 1,
+                                                            "custom_palette_source": "",
+                                                            "palette_colors": ""
+                                                        },
+                                                        {
+                                                            "key": "field_69392918a560a",
+                                                            "label": "Background Color",
+                                                            "name": "background_color",
+                                                            "aria-label": "",
+                                                            "type": "color_picker",
+                                                            "instructions": "",
+                                                            "required": 0,
+                                                            "conditional_logic": 0,
+                                                            "wrapper": {
+                                                                "width": "",
+                                                                "class": "",
+                                                                "id": ""
+                                                            },
+                                                            "default_value": "",
+                                                            "enable_opacity": 0,
+                                                            "return_format": "string",
+                                                            "allow_in_bindings": 0,
+                                                            "show_custom_palette": 0,
+                                                            "show_color_wheel": 1,
+                                                            "custom_palette_source": "",
+                                                            "palette_colors": ""
+                                                        }
+                                                    ],
+                                                    "acfe_group_modal_close": 0,
+                                                    "acfe_group_modal_button": "",
+                                                    "acfe_group_modal_size": "large"
+                                                },
+                                                {
+                                                    "key": "field_6937f057068d4",
+                                                    "label": "Animation \/ Transition",
+                                                    "name": "",
+                                                    "aria-label": "",
+                                                    "type": "tab",
+                                                    "instructions": "",
+                                                    "required": 0,
+                                                    "conditional_logic": 0,
+                                                    "wrapper": {
+                                                        "width": "",
+                                                        "class": "",
+                                                        "id": ""
+                                                    },
+                                                    "placement": "top",
+                                                    "endpoint": 0,
+                                                    "selected": 0
+                                                },
+                                                {
+                                                    "key": "field_6939281da5603",
+                                                    "label": "Animation Transition",
+                                                    "name": "animation_transition",
+                                                    "aria-label": "",
+                                                    "type": "group",
+                                                    "instructions": "",
+                                                    "required": 0,
+                                                    "conditional_logic": 0,
+                                                    "wrapper": {
+                                                        "width": "",
+                                                        "class": "",
+                                                        "id": ""
+                                                    },
+                                                    "layout": "block",
+                                                    "acfe_seamless_style": 0,
+                                                    "acfe_group_modal": 0,
+                                                    "sub_fields": [
+                                                        {
+                                                            "key": "field_6939293ba560b",
+                                                            "label": "Animation Duration",
+                                                            "name": "animation_duration",
+                                                            "aria-label": "",
+                                                            "type": "number",
+                                                            "instructions": "",
+                                                            "required": 0,
+                                                            "conditional_logic": 0,
+                                                            "wrapper": {
+                                                                "width": "",
+                                                                "class": "",
+                                                                "id": ""
+                                                            },
+                                                            "default_value": "",
+                                                            "min": "",
+                                                            "max": "",
+                                                            "allow_in_bindings": 0,
+                                                            "placeholder": "",
+                                                            "step": "0.1",
+                                                            "prepend": "",
+                                                            "append": ""
+                                                        },
+                                                        {
+                                                            "key": "field_69392960a560c",
+                                                            "label": "Timing Function",
+                                                            "name": "timing_function",
+                                                            "aria-label": "",
+                                                            "type": "select",
+                                                            "instructions": "",
+                                                            "required": 0,
+                                                            "conditional_logic": 0,
+                                                            "wrapper": {
+                                                                "width": "",
+                                                                "class": "",
+                                                                "id": ""
+                                                            },
+                                                            "choices": {
+                                                                "ease": "ease",
+                                                                "ease-in": "ease-in",
+                                                                "ease-in-out": "ease-in-out"
+                                                            },
+                                                            "default_value": "ease",
+                                                            "return_format": "value",
+                                                            "multiple": 0,
+                                                            "allow_null": 0,
+                                                            "allow_in_bindings": 0,
+                                                            "ui": 0,
+                                                            "ajax": 0,
+                                                            "placeholder": "",
+                                                            "create_options": 0,
+                                                            "save_options": 0,
+                                                            "allow_custom": 0,
+                                                            "search_placeholder": ""
+                                                        }
+                                                    ],
+                                                    "acfe_group_modal_close": 0,
+                                                    "acfe_group_modal_button": "",
+                                                    "acfe_group_modal_size": "large"
+                                                },
+                                                {
+                                                    "key": "field_6937f0ff068d5",
+                                                    "label": "Responsive",
+                                                    "name": "",
+                                                    "aria-label": "",
+                                                    "type": "tab",
+                                                    "instructions": "",
+                                                    "required": 0,
+                                                    "conditional_logic": 0,
+                                                    "wrapper": {
+                                                        "width": "",
+                                                        "class": "",
+                                                        "id": ""
+                                                    },
+                                                    "placement": "top",
+                                                    "endpoint": 0,
+                                                    "selected": 0
+                                                },
+                                                {
+                                                    "key": "field_69392838a5604",
+                                                    "label": "Responsive",
+                                                    "name": "responsive",
+                                                    "aria-label": "",
+                                                    "type": "group",
+                                                    "instructions": "",
+                                                    "required": 0,
+                                                    "conditional_logic": 0,
+                                                    "wrapper": {
+                                                        "width": "",
+                                                        "class": "",
+                                                        "id": ""
+                                                    },
+                                                    "layout": "block",
+                                                    "acfe_seamless_style": 0,
+                                                    "acfe_group_modal": 0,
+                                                    "sub_fields": [
+                                                        {
+                                                            "key": "field_693929d5a560f",
+                                                            "label": "Message Mobile",
+                                                            "name": "",
+                                                            "aria-label": "",
+                                                            "type": "message",
+                                                            "instructions": "",
+                                                            "required": 0,
+                                                            "conditional_logic": 0,
+                                                            "wrapper": {
+                                                                "width": "",
+                                                                "class": "",
+                                                                "id": ""
+                                                            },
+                                                            "message": "Deze instellingen gelden voor op mobiel",
+                                                            "new_lines": "wpautop",
+                                                            "esc_html": 0
+                                                        },
+                                                        {
+                                                            "key": "field_693929aca560d",
+                                                            "label": "Font Size",
+                                                            "name": "font_size",
+                                                            "aria-label": "",
+                                                            "type": "number",
+                                                            "instructions": "",
+                                                            "required": 0,
+                                                            "conditional_logic": 0,
+                                                            "wrapper": {
+                                                                "width": "",
+                                                                "class": "",
+                                                                "id": ""
+                                                            },
+                                                            "default_value": "",
+                                                            "min": "",
+                                                            "max": "",
+                                                            "allow_in_bindings": 0,
+                                                            "placeholder": "",
+                                                            "step": "",
+                                                            "prepend": "",
+                                                            "append": ""
+                                                        },
+                                                        {
+                                                            "key": "field_693929c0a560e",
+                                                            "label": "Margin",
+                                                            "name": "margin",
                                                             "aria-label": "",
                                                             "type": "text",
                                                             "instructions": "",
@@ -1737,63 +2705,12 @@
                                                                 "class": "",
                                                                 "id": ""
                                                             },
-                                                            "default_value": "18px",
+                                                            "default_value": "",
                                                             "maxlength": "",
                                                             "allow_in_bindings": 0,
                                                             "placeholder": "",
                                                             "prepend": "",
                                                             "append": ""
-                                                        },
-                                                        {
-                                                            "key": "field_68fa118e1013f",
-                                                            "label": "Accordion Dropdown Icon",
-                                                            "name": "accordion_dropdown_icon",
-                                                            "aria-label": "",
-                                                            "type": "button_group",
-                                                            "instructions": "",
-                                                            "required": 0,
-                                                            "conditional_logic": 0,
-                                                            "wrapper": {
-                                                                "width": "",
-                                                                "class": "",
-                                                                "id": ""
-                                                            },
-                                                            "choices": {
-                                                                "arrow": "Arrow <i class=\"icon-arrow\" style=\"color:#000;\"><\/i>",
-                                                                "plus": "Plus <i class=\"icon-plus\" style=\"color:#000;\"><\/i>",
-                                                                "minus": "Minus <i class=\"icon-minus\" style=\"color:#000;\"><\/i>",
-                                                                "chevron": "Chevron <i class=\"icon-chevron\" style=\"color:#000;\"><\/i>"
-                                                            },
-                                                            "default_value": "plus",
-                                                            "return_format": "value",
-                                                            "allow_null": 0,
-                                                            "allow_in_bindings": 0,
-                                                            "layout": "horizontal"
-                                                        },
-                                                        {
-                                                            "key": "field_68fa147f10140",
-                                                            "label": "Title Color",
-                                                            "name": "title_color",
-                                                            "aria-label": "",
-                                                            "type": "button_group",
-                                                            "instructions": "",
-                                                            "required": 0,
-                                                            "conditional_logic": 0,
-                                                            "wrapper": {
-                                                                "width": "",
-                                                                "class": "",
-                                                                "id": ""
-                                                            },
-                                                            "choices": {
-                                                                "white": "White <p style=\" color: #fff;\">&#9632;<\/p>",
-                                                                "green": "Green <p style=\" color: #1a5427;\">&#9632;<\/p>",
-                                                                "black": "Black <p style=\" color: #000;\">&#9632;<\/p>"
-                                                            },
-                                                            "default_value": "black",
-                                                            "return_format": "value",
-                                                            "allow_null": 0,
-                                                            "allow_in_bindings": 0,
-                                                            "layout": "horizontal"
                                                         }
                                                     ],
                                                     "acfe_group_modal_close": 0,
@@ -3706,14 +4623,7 @@
                                     "acfe_flexible_hide_empty_message": false,
                                     "acfe_flexible_empty_message": "",
                                     "acfe_flexible_layouts_placeholder": false,
-                                    "acfe_flexible_modal_settings": {
-                                        "acfe_flexible_modal_settings_enabled": 1,
-                                        "acfe_flexible_modal_settings_size": "large",
-                                        "acfe_flexible_modal_settings_close": true,
-                                        "acfe_flexible_modal_settings_close_label": ""
-                                    },
                                     "acfe_flexible_close_button_label": "",
-                                    "acfe_flexible_remove_top_actions": [],
                                     "parent_repeater": "field_68f87d5756e45"
                                 },
                                 {
@@ -3947,5 +4857,5 @@
     "acfe_form": 0,
     "acfe_meta": "",
     "acfe_note": "",
-    "modified": 1764856869
+    "modified": 1765379599
 }

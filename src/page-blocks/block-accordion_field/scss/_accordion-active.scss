@@ -1,0 +1,26 @@
+.accordion-wrapper {
+
+    .accordion-item.active {
+
+        .accordion-title {
+            background-color: var(--acc-active-bg, inherit);
+            color: var(--acc-active-title-color, var(--acc-title-color));
+        }
+
+        .accordion-content {
+            background-color: var(--acc-active-content-bg, inherit);
+        }
+
+        .accordion-icon i,
+        .accordion-icon svg {
+            transform: rotate(var(--acc-active-icon-rotation, 180deg));
+            transition: transform 0.3s ease;
+        }
+    }
+
+    .accordion-item .accordion-icon i,
+    .accordion-item .accordion-icon svg {
+        transform: rotate(0deg);
+        transition: transform 0.3s ease;
+    }
+}

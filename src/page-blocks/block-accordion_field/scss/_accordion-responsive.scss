@@ -1,0 +1,7 @@
+@media (max-width: 768px) {
+  .accordion-wrapper {
+    .accordion-title {
+      font-size: calc(var(--acc-title-size) * 0.85);
+    }
+  }
+}

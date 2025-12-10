@@ -579,3 +579,13 @@ function enqueue_custom_colorpicker_css() {
 }
 add_action('acf/input/admin_enqueue_scripts', 'enqueue_custom_colorpicker_css');
 */
+
+function load_accordion_css() {
+    wp_enqueue_style(
+        'accordion-css',
+        get_template_directory_uri() . '/css/accordion/accordion.css',
+        array(),
+        filemtime(get_template_directory() . '/css/accordion/accordion.css')
+    );
+}
+add_action('wp_enqueue_scripts', 'load_accordion_css');

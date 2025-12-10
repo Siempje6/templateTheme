@@ -1,0 +1,14 @@
+.accordion-title {
+    transition: all 0.3s ease;
+
+    &:hover {
+        background-color: var(--acc-hover-bg, transparent);
+        color: var(--acc-hover-title-color, var(--acc-title-color));
+        border-radius: var(--acc-radius);
+
+        .accordion-icon i,
+        .accordion-icon svg {
+            color: var(--acc-hover-title-color, var(--acc-icon-color));
+        }
+    }
+}

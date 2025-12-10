@@ -1,0 +1,30 @@
+.accordion-wrapper {
+
+    .accordion-content {
+        opacity: 0;
+        overflow: hidden;
+        transition:
+            max-height var(--acc-anim-duration, 0.3s) var(--acc-anim-timing, ease),
+            opacity var(--acc-anim-duration, 0.3s) var(--acc-anim-timing, ease);
+    }
+
+    .accordion-item.active .accordion-content {
+        opacity: 1;
+    }
+
+    .accordion-title {
+        transition:
+            background-color var(--acc-anim-duration, 0.3s) var(--acc-anim-timing, ease),
+            color var(--acc-anim-duration, 0.3s) var(--acc-anim-timing, ease);
+    }
+
+    .accordion-item.active .accordion-icon i,
+    .accordion-item.active .accordion-icon svg {
+        transition: transform var(--acc-anim-duration, 0.3s) var(--acc-anim-timing, ease);
+    }
+
+    .accordion-title:hover {
+        background-color: var(--acc-hover-bg, inherit);
+        color: var(--acc-hover-title-color, var(--acc-title-color));
+    }
+}
