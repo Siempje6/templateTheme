@@ -587,5 +587,12 @@ function load_accordion_css() {
         array(),
         filemtime(get_template_directory() . '/css/accordion/accordion.css')
     );
+    wp_enqueue_style(
+        'breadcrumbs-css',
+        get_template_directory_uri() . '/css/breadcrumbs/breadcrumbs.css',
+        array(),
+        filemtime(get_template_directory() . '/css/breadcrumbs/breadcrumbs.css')
+    );
 }
 add_action('wp_enqueue_scripts', 'load_accordion_css');
+add_action('wp_enqueue_scripts', 'load_breadcrumbs_css');
