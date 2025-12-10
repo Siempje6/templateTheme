@@ -587,6 +587,10 @@ function load_accordion_css() {
         array(),
         filemtime(get_template_directory() . '/css/accordion/accordion.css')
     );
+}
+add_action('wp_enqueue_scripts', 'load_accordion_css');
+
+function load_breadcrumbs_css() {
     wp_enqueue_style(
         'breadcrumbs-css',
         get_template_directory_uri() . '/css/breadcrumbs/breadcrumbs.css',
@@ -594,5 +598,4 @@ function load_accordion_css() {
         filemtime(get_template_directory() . '/css/breadcrumbs/breadcrumbs.css')
     );
 }
-add_action('wp_enqueue_scripts', 'load_accordion_css');
 add_action('wp_enqueue_scripts', 'load_breadcrumbs_css');
