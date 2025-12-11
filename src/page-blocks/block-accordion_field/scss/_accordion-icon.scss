@@ -1,0 +1,13 @@
+.accordion-title {
+    .accordion-icon {
+        background-color: var(--acc-icon-bg-color);
+        padding: var(--acc-icon-bg-padding);
+
+        border-radius: var(--acc-icon-radius);
+
+        border-top-left-radius: var(--acc-icon-radius-top-left, var(--acc-icon-radius));
+        border-top-right-radius: var(--acc-icon-radius-top-right, var(--acc-icon-radius));
+        border-bottom-left-radius: var(--acc-icon-radius-bottom-left, var(--acc-icon-radius));
+        border-bottom-right-radius: var(--acc-icon-radius-bottom-right, var(--acc-icon-radius));
+    }
+}

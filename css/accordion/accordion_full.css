@@ -35,6 +35,16 @@
   max-height: 500px;
 }
 
+.accordion-title .accordion-icon {
+  background-color: var(--acc-icon-bg-color);
+  padding: var(--acc-icon-bg-padding);
+  border-radius: var(--acc-icon-radius);
+  border-top-left-radius: var(--acc-icon-radius-top-left, var(--acc-icon-radius));
+  border-top-right-radius: var(--acc-icon-radius-top-right, var(--acc-icon-radius));
+  border-bottom-left-radius: var(--acc-icon-radius-bottom-left, var(--acc-icon-radius));
+  border-bottom-right-radius: var(--acc-icon-radius-bottom-right, var(--acc-icon-radius));
+}
+
 .accordion-wrapper {
   background: var(--acc-bg, transparent);
   border-radius: var(--acc-radius, 0px);
@@ -61,6 +71,15 @@
   transform: rotate(var(--acc-active-icon-rotation, 180deg));
   transition: transform 0.3s ease;
 }
+.accordion-wrapper .accordion-item.active .accordion-icon {
+  padding: var(--acc-icon-bg-padding);
+  background-color: rgb(38, 37, 37);
+  border-radius: var(--acc-icon-radius);
+  border-top-left-radius: var(--acc-icon-radius-top-left, var(--acc-icon-radius));
+  border-top-right-radius: var(--acc-icon-radius-top-right, var(--acc-icon-radius));
+  border-bottom-left-radius: var(--acc-icon-radius-bottom-left, var(--acc-icon-radius));
+  border-bottom-right-radius: var(--acc-icon-radius-bottom-right, var(--acc-icon-radius));
+}
 .accordion-wrapper .accordion-item .accordion-icon i,
 .accordion-wrapper .accordion-item .accordion-icon svg {
   transform: rotate(0deg);
@@ -82,6 +101,15 @@
 .accordion-title:hover .accordion-icon i,
 .accordion-title:hover .accordion-icon svg {
   color: var(--acc-hover-title-color, var(--acc-icon-color));
+}
+.accordion-title:hover .accordion-icon {
+  padding: var(--acc-icon-bg-padding);
+  background-color: rgb(38, 37, 37);
+  border-radius: var(--acc-icon-radius);
+  border-top-left-radius: var(--acc-icon-radius-top-left, var(--acc-icon-radius));
+  border-top-right-radius: var(--acc-icon-radius-top-right, var(--acc-icon-radius));
+  border-bottom-left-radius: var(--acc-icon-radius-bottom-left, var(--acc-icon-radius));
+  border-bottom-right-radius: var(--acc-icon-radius-bottom-right, var(--acc-icon-radius));
 }
 
 .accordion-wrapper .accordion-content {

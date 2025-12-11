@@ -2000,6 +2000,185 @@
                                                             "step": "",
                                                             "prepend": "",
                                                             "append": ""
+                                                        },
+                                                        {
+                                                            "key": "field_693a7a1070c18",
+                                                            "label": "Icon Background Color",
+                                                            "name": "icon_background_color",
+                                                            "aria-label": "",
+                                                            "type": "color_picker",
+                                                            "instructions": "",
+                                                            "required": 0,
+                                                            "conditional_logic": 0,
+                                                            "wrapper": {
+                                                                "width": "",
+                                                                "class": "",
+                                                                "id": ""
+                                                            },
+                                                            "default_value": "",
+                                                            "enable_opacity": 0,
+                                                            "return_format": "string",
+                                                            "allow_in_bindings": 0,
+                                                            "show_custom_palette": 0,
+                                                            "show_color_wheel": 1,
+                                                            "custom_palette_source": "",
+                                                            "palette_colors": ""
+                                                        },
+                                                        {
+                                                            "key": "field_693a78c870c11",
+                                                            "label": "Icon Background Padding",
+                                                            "name": "icon_background_padding",
+                                                            "aria-label": "",
+                                                            "type": "number",
+                                                            "instructions": "",
+                                                            "required": 0,
+                                                            "conditional_logic": 0,
+                                                            "wrapper": {
+                                                                "width": "",
+                                                                "class": "",
+                                                                "id": ""
+                                                            },
+                                                            "default_value": "",
+                                                            "min": "",
+                                                            "max": "",
+                                                            "allow_in_bindings": 0,
+                                                            "placeholder": "",
+                                                            "step": "",
+                                                            "prepend": "",
+                                                            "append": ""
+                                                        },
+                                                        {
+                                                            "key": "field_693a792470c12",
+                                                            "label": "Icon Background Radius",
+                                                            "name": "icon_background_radius",
+                                                            "aria-label": "",
+                                                            "type": "number",
+                                                            "instructions": "",
+                                                            "required": 0,
+                                                            "conditional_logic": 0,
+                                                            "wrapper": {
+                                                                "width": "",
+                                                                "class": "",
+                                                                "id": ""
+                                                            },
+                                                            "default_value": "",
+                                                            "min": "",
+                                                            "max": "",
+                                                            "allow_in_bindings": 0,
+                                                            "placeholder": "",
+                                                            "step": "",
+                                                            "prepend": "",
+                                                            "append": ""
+                                                        },
+                                                        {
+                                                            "key": "field_693a79a370c17",
+                                                            "label": "Border Radius Message",
+                                                            "name": "",
+                                                            "aria-label": "",
+                                                            "type": "message",
+                                                            "instructions": "",
+                                                            "required": 0,
+                                                            "conditional_logic": 0,
+                                                            "wrapper": {
+                                                                "width": "",
+                                                                "class": "",
+                                                                "id": ""
+                                                            },
+                                                            "message": "IRTL = border radius top left\r\nIRTR = border radius top right\r\nIRBL = border radius bottom left\r\nIRBR = border radius bottom right",
+                                                            "new_lines": "wpautop",
+                                                            "esc_html": 0
+                                                        },
+                                                        {
+                                                            "key": "field_693a794970c13",
+                                                            "label": "IRTL",
+                                                            "name": "irtl",
+                                                            "aria-label": "",
+                                                            "type": "number",
+                                                            "instructions": "",
+                                                            "required": 0,
+                                                            "conditional_logic": 0,
+                                                            "wrapper": {
+                                                                "width": "25",
+                                                                "class": "",
+                                                                "id": ""
+                                                            },
+                                                            "default_value": "",
+                                                            "min": 1,
+                                                            "max": "",
+                                                            "allow_in_bindings": 0,
+                                                            "placeholder": "",
+                                                            "step": "",
+                                                            "prepend": "",
+                                                            "append": ""
+                                                        },
+                                                        {
+                                                            "key": "field_693a796d70c14",
+                                                            "label": "IRTR",
+                                                            "name": "irtr",
+                                                            "aria-label": "",
+                                                            "type": "number",
+                                                            "instructions": "",
+                                                            "required": 0,
+                                                            "conditional_logic": 0,
+                                                            "wrapper": {
+                                                                "width": "25",
+                                                                "class": "",
+                                                                "id": ""
+                                                            },
+                                                            "default_value": "",
+                                                            "min": 1,
+                                                            "max": "",
+                                                            "allow_in_bindings": 0,
+                                                            "placeholder": "",
+                                                            "step": "",
+                                                            "prepend": "",
+                                                            "append": ""
+                                                        },
+                                                        {
+                                                            "key": "field_693a796f70c15",
+                                                            "label": "IRBL",
+                                                            "name": "irbl",
+                                                            "aria-label": "",
+                                                            "type": "number",
+                                                            "instructions": "",
+                                                            "required": 0,
+                                                            "conditional_logic": 0,
+                                                            "wrapper": {
+                                                                "width": "25",
+                                                                "class": "",
+                                                                "id": ""
+                                                            },
+                                                            "default_value": "",
+                                                            "min": 1,
+                                                            "max": "",
+                                                            "allow_in_bindings": 0,
+                                                            "placeholder": "",
+                                                            "step": "",
+                                                            "prepend": "",
+                                                            "append": ""
+                                                        },
+                                                        {
+                                                            "key": "field_693a797270c16",
+                                                            "label": "IRBR",
+                                                            "name": "irbr",
+                                                            "aria-label": "",
+                                                            "type": "number",
+                                                            "instructions": "",
+                                                            "required": 0,
+                                                            "conditional_logic": 0,
+                                                            "wrapper": {
+                                                                "width": "25",
+                                                                "class": "",
+                                                                "id": ""
+                                                            },
+                                                            "default_value": "",
+                                                            "min": 1,
+                                                            "max": "",
+                                                            "allow_in_bindings": 0,
+                                                            "placeholder": "",
+                                                            "step": "",
+                                                            "prepend": "",
+                                                            "append": ""
                                                         }
                                                     ],
                                                     "acfe_group_modal_close": 0,
@@ -2535,6 +2714,29 @@
                                                             "step": "",
                                                             "prepend": "",
                                                             "append": ""
+                                                        },
+                                                        {
+                                                            "key": "field_693a787e70c0f",
+                                                            "label": "Icon Background Color",
+                                                            "name": "icon_background_color",
+                                                            "aria-label": "",
+                                                            "type": "color_picker",
+                                                            "instructions": "",
+                                                            "required": 0,
+                                                            "conditional_logic": 0,
+                                                            "wrapper": {
+                                                                "width": "",
+                                                                "class": "",
+                                                                "id": ""
+                                                            },
+                                                            "default_value": "",
+                                                            "enable_opacity": 0,
+                                                            "return_format": "string",
+                                                            "allow_in_bindings": 0,
+                                                            "show_custom_palette": 0,
+                                                            "show_color_wheel": 1,
+                                                            "custom_palette_source": "",
+                                                            "palette_colors": ""
                                                         }
                                                     ],
                                                     "acfe_group_modal_close": 0,
@@ -2604,6 +2806,29 @@
                                                             "key": "field_69392918a560a",
                                                             "label": "Background Color",
                                                             "name": "background_color",
+                                                            "aria-label": "",
+                                                            "type": "color_picker",
+                                                            "instructions": "",
+                                                            "required": 0,
+                                                            "conditional_logic": 0,
+                                                            "wrapper": {
+                                                                "width": "",
+                                                                "class": "",
+                                                                "id": ""
+                                                            },
+                                                            "default_value": "",
+                                                            "enable_opacity": 0,
+                                                            "return_format": "string",
+                                                            "allow_in_bindings": 0,
+                                                            "show_custom_palette": 0,
+                                                            "show_color_wheel": 1,
+                                                            "custom_palette_source": "",
+                                                            "palette_colors": ""
+                                                        },
+                                                        {
+                                                            "key": "field_693a78a270c10",
+                                                            "label": "Icon Background Color",
+                                                            "name": "icon_background_color",
                                                             "aria-label": "",
                                                             "type": "color_picker",
                                                             "instructions": "",
@@ -4967,5 +5192,5 @@
     "acfe_form": 0,
     "acfe_meta": "",
     "acfe_note": "",
-    "modified": 1765380849
+    "modified": 1765442922
 }

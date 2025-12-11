@@ -18,6 +18,18 @@
             transform: rotate(var(--acc-active-icon-rotation, 180deg));
             transition: transform 0.3s ease;
         }
+
+        .accordion-icon {
+            padding: var(--acc-icon-bg-padding);
+
+            background-color: rgb(38, 37, 37);
+            border-radius: var(--acc-icon-radius);
+
+            border-top-left-radius: var(--acc-icon-radius-top-left, var(--acc-icon-radius));
+            border-top-right-radius: var(--acc-icon-radius-top-right, var(--acc-icon-radius));
+            border-bottom-left-radius: var(--acc-icon-radius-bottom-left, var(--acc-icon-radius));
+            border-bottom-right-radius: var(--acc-icon-radius-bottom-right, var(--acc-icon-radius));
+        }
     }
 
     .accordion-item .accordion-icon i,

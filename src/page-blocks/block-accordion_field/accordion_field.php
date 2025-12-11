@@ -17,17 +17,43 @@ $title_full      = $title_value . $title_unit;
 $dropdown_icon = $icon['dropdown_icon'] ?? 'plus';
 $icon_color    = $icon['icon_color'] ?? '#000000';
 $icon_size     = $icon['icon_size'] ?? '16';
+$icon_bg_color = $icon['icon_background_color'] ?? 'transparent';
+$icon_padding  = $icon['icon_background_padding'] ?? 0;
+$icon_padding_full = $icon_padding . 'px';
+$icon_radius   = $icon['icon_background_radius'] ?? 0;
+
+$irtl = $icon['irtl'] ?? null;
+$irtr = $icon['irtr'] ?? null;
+$irbl = $icon['irbl'] ?? null;
+$irbr = $icon['irbr'] ?? null;
+
+$icon_css_vars = [
+    '--acc-icon-bg-color' => $icon_bg_color,
+    '--acc-icon-bg-padding' => $icon_padding_full,
+    '--acc-icon-radius' => $icon_radius . 'px',
+];
+
+if ($irtl) $icon_css_vars['--acc-icon-radius-top-left'] = $irtl . 'px';
+if ($irtr) $icon_css_vars['--acc-icon-radius-top-right'] = $irtr . 'px';
+if ($irbl) $icon_css_vars['--acc-icon-radius-bottom-left'] = $irbl . 'px';
+if ($irbr) $icon_css_vars['--acc-icon-radius-bottom-right'] = $irbr . 'px';
+
+$icon_style = '';
+foreach ($icon_css_vars as $var => $val) {
+    $icon_style .= "$var: $val; ";
+}
 
 $bg_color       = $wrapper_item['background_color'] ?? 'transparent';
 $border_value   = $wrapper_item['border'] ?? '0';
 $border_unit    = $wrapper_item['border_size'] ?? 'px';
 $border_color   = $wrapper_item['border_color'] ?? 'transparent';
-$border_top_left     = isset($wrapper_item['border_top_left_radius']) ? $wrapper_item['border_top_left_radius'] : null;
-$border_top_right    = isset($wrapper_item['border_top_right_radius']) ? $wrapper_item['border_top_right_radius'] : null;
-$border_bottom_left  = isset($wrapper_item['border_bottom_left_radius']) ? $wrapper_item['border_bottom_left_radius'] : null;
-$border_bottom_right = isset($wrapper_item['border_bottom_right_radius']) ? $wrapper_item['border_bottom_right_radius'] : null;
 
-$radius = isset($wrapper_item['border_radius']) ? $wrapper_item['border_radius'] : 0;
+$border_top_left     = $wrapper_item['border_top_left_radius'] ?? null;
+$border_top_right    = $wrapper_item['border_top_right_radius'] ?? null;
+$border_bottom_left  = $wrapper_item['border_bottom_left_radius'] ?? null;
+$border_bottom_right = $wrapper_item['border_bottom_right_radius'] ?? null;
+
+$radius = $wrapper_item['border_radius'] ?? 0;
 
 $radius_top_left     = $border_top_left !== null ? $border_top_left . 'px' : $radius . 'px';
 $radius_top_right    = $border_top_right !== null ? $border_top_right . 'px' : $radius . 'px';
@@ -35,7 +61,6 @@ $radius_bottom_left  = $border_bottom_left !== null ? $border_bottom_left . 'px'
 $radius_bottom_right = $border_bottom_right !== null ? $border_bottom_right . 'px' : $radius . 'px';
 
 $border_full    = $border_value . $border_unit . ' solid ' . $border_color;
-$radius         = $wrapper_item['border_radius'] ?? 0;
 $padding_unit   = $wrapper_item['padding_size'] ?? 'px';
 $padding_value  = $wrapper_item['padding'] ?? '0';
 $padding_full   = $padding_value . $padding_unit;
@@ -44,9 +69,9 @@ $margin_value   = $wrapper_item['margin'] ?? '0';
 $margin_full    = $margin_value . $margin_unit;
 
 $active_bg_raw       = $active['background_color'] ?? '';
-$active_bg_content      = $active['background_content_color'] ?? '';
+$active_bg_content   = $active['background_content_color'] ?? '';
 $active_title_color  = $active['title_color'] ?? '';
-$active_icon_rotation_value = isset($active['icon_rotation']) ? $active['icon_rotation'] : 180;
+$active_icon_rotation_value = $active['icon_rotation'] ?? 180;
 $active_icon_rotation = $active_icon_rotation_value . 'deg';
 
 $hover_title_color = $hover['title_color'] ?? '';
@@ -81,9 +106,11 @@ if (!function_exists('get_icon_html')) {
 
         --acc-icon-color: <?= esc_attr($icon_color); ?>;
         --acc-icon-size: <?= esc_attr($icon_size); ?>px;
+        <?= esc_attr($icon_style); ?>
 
         --acc-bg-color: <?= esc_attr($bg_color); ?>;
         --acc-border: <?= esc_attr($border_full); ?>;
+
         --acc-radius-top-left: <?= esc_attr($radius_top_left); ?>;
         --acc-radius-top-right: <?= esc_attr($radius_top_right); ?>;
         --acc-radius-bottom-left: <?= esc_attr($radius_bottom_left); ?>;
@@ -102,31 +129,29 @@ if (!function_exists('get_icon_html')) {
 
         --acc-anim-duration: <?= esc_attr($anim_duration); ?>s;
         --acc-anim-timing: <?= esc_attr($anim_timing); ?>;
-        
      ">
 
-    <?php
-    $items = get_sub_field('accordion_items');
-    if ($items):
-        foreach ($items as $item):
-    ?>
-        <div class="accordion-item">
-            <button class="accordion-title" type="button" aria-expanded="false">
-                <?= esc_html($item['accordion_title']); ?>
-                <span class="accordion-icon" aria-hidden="true">
-                    <?= get_icon_html($dropdown_icon); ?>
-                </span>
-            </button>
+<?php
+$items = get_sub_field('accordion_items');
+if ($items):
+    foreach ($items as $item):
+?>
+    <div class="accordion-item">
+        <button class="accordion-title" type="button" aria-expanded="false">
+            <?= esc_html($item['accordion_title']); ?>
+            <span class="accordion-icon" aria-hidden="true">
+                <?= get_icon_html($dropdown_icon); ?>
+            </span>
+        </button>
 
-            <div class="accordion-content">
-                <?= wp_kses_post($item['accordion_text']); ?>
-            </div>
+        <div class="accordion-content">
+            <?= wp_kses_post($item['accordion_text']); ?>
         </div>
-    <?php
-        endforeach;
-    endif;
-    ?>
-
+    </div>
+<?php
+    endforeach;
+endif;
+?>
 </div>
 
 <script>
