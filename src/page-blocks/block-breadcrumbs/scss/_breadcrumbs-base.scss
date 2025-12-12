@@ -16,5 +16,9 @@
     .breadcrumbs {
         display: flex;
         gap: 5px;
+
+        .collapsed {
+            list-style: none;
+        }
     }
 }

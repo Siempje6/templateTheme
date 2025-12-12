@@ -16,11 +16,12 @@ $margin_bottom    = $algemeen['margin_bottom'] ?? 'px';
 $border_width    = $algemeen['border_width'] ?? 'px';
 $border_color     = $algemeen['border_color'] ?? '#000';
 
-
+$collapsed_overflow = $algemeen['collapsed_styling'] ?? false; 
+$collapsed_overflow = $collapsed_overflow ? 'hidden' : 'visible';   
 
 ?>
 <div id="<?= esc_attr($accordion_id); ?>"
-     class="breadcrumbs-wrapper"
+     class="breadcrumbs-wrapper <?= esc_attr($collapsed_class);?>"
      style="
         --acc-title-weight: <?= esc_attr($title_weight); ?>;
         --acc-title-color: <?= esc_attr($title_color); ?>;
@@ -35,6 +36,8 @@ $border_color     = $algemeen['border_color'] ?? '#000';
 
         --acc-border-width: <?= esc_attr($border_width); ?>px;
         --acc-border-color: <?= esc_attr($border_color); ?>;
+
+        --acc-collapsed-overflow: <?= esc_attr($collapsed_overflow); ?>;
         
      ">
 <?php
