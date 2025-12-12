@@ -127,8 +127,8 @@ if (!function_exists('get_icon_html')) {
         --acc-hover-bg: <?= esc_attr($hover_bg_color); ?>;
         --acc-hover-title-color: <?= esc_attr($hover_title_color); ?>;
 
-        --acc-anim-duration: <?= esc_attr($anim_duration); ?>s;
-        --acc-anim-timing: <?= esc_attr($anim_timing); ?>;
+        --acc-anim-duration: <?=  esc_attr($anim_duration); ?>s;
+        --acc-anim-timing: <?=  esc_attr($anim_timing); ?>
      ">
 
 <?php

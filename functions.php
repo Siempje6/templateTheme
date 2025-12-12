@@ -4,16 +4,10 @@
  * Thema functies en scripts
  */
 
-// Include typography functions
 require_once get_template_directory() . '/lib/typography.php';
 
-// ===============================
-// 1. Scripts & Styles inladen
-// ===============================
 function thema_enqueue_assets()
 {
-    // ---------- CSS ----------
-    // In plaats van losse block CSS-bestanden, gebruiken we één gecompileerde SCSS-output (main.css)
     wp_enqueue_style(
         'theme-main',
         get_template_directory_uri() . '/assets/css/main.css',
@@ -21,8 +15,6 @@ function thema_enqueue_assets()
         filemtime(get_template_directory() . '/assets/css/main.css')
     );
 
-    // ---------- JS ----------
-    // GSAP core
     wp_enqueue_script(
         'gsap-core',
         'https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/gsap.min.js',
@@ -31,7 +23,6 @@ function thema_enqueue_assets()
         true
     );
 
-    // ScrollTrigger plugin
     wp_enqueue_script(
         'gsap-scrolltrigger',
         'https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/ScrollTrigger.min.js',
@@ -40,7 +31,6 @@ function thema_enqueue_assets()
         true
     );
 
-    // Jouw eigen JS
     wp_enqueue_script(
         'theme-app-js',
         get_template_directory_uri() . '/assets/js/script.js',
@@ -51,9 +41,6 @@ function thema_enqueue_assets()
 }
 add_action('wp_enqueue_scripts', 'thema_enqueue_assets');
 
-// ===============================
-// 2. WP standaard CSS verwijderen
-// ===============================
 function thema_remove_wp_styling()
 {
     wp_dequeue_style('wp-block-library');
@@ -66,9 +53,6 @@ function thema_remove_wp_styling()
 }
 add_action('wp_enqueue_scripts', 'thema_remove_wp_styling', 100);
 
-// ===============================
-// 3. Thema setup
-// ===============================
 function thema_setup()
 {
     add_theme_support('title-tag');
@@ -79,9 +63,6 @@ function thema_setup()
 }
 add_action('after_setup_theme', 'thema_setup');
 
-// ===============================
-// 4. ACF JSON instellingen
-// ===============================
 add_filter('acf/settings/save_json', function ($path) {
     return get_stylesheet_directory() . '/acf-json';
 });
@@ -92,48 +73,6 @@ add_filter('acf/settings/load_json', function ($paths) {
     return $paths;
 });
 
-// ===============================
-// 5. Block CSS automatisch inladen (UITGESCHAKELD - nu via SCSS)
-// ===============================
-
-/*
-function enqueue_all_block_assets() {
-    $blocks_dir = get_template_directory() . '/template-blokken';
-    $blocks_uri = get_template_directory_uri() . '/template-blokken';
-
-    $folders = glob($blocks_dir . '/*', GLOB_ONLYDIR);
-
-    foreach ($folders as $folder) {
-        $folder_name = basename($folder);
-        $css_file = $folder . '/style.css';
-        $js_file  = $folder . '/script.js';
-
-        if (file_exists($css_file)) {
-            wp_enqueue_style(
-                $folder_name . '-block-style',
-                $blocks_uri . '/' . $folder_name . '/style.css',
-                array(),
-                filemtime($css_file)
-            );
-        }
-
-        if (file_exists($js_file)) {
-            wp_enqueue_script(
-                $folder_name . '-block-script',
-                $blocks_uri . '/' . $folder_name . '/script.js',
-                array('jquery'),
-                filemtime($js_file),
-                true
-            );
-        }
-    }
-}
-add_action('wp_enqueue_scripts', 'enqueue_all_block_assets');
-*/
-
-// ===============================
-// 6. Blossom Carousel inladen
-// ===============================
 function thema_enqueue_blossom_carousel()
 {
     $js_uri  = get_template_directory_uri() . '/assets/js/vendor/blossom-carousel.js';
@@ -156,9 +95,6 @@ function thema_enqueue_blossom_carousel()
 }
 add_action('wp_enqueue_scripts', 'thema_enqueue_blossom_carousel');
 
-// ===============================
-// 7. Admin styling (ACF backend)
-// ===============================
 function my_acf_admin_enqueue_styles()
 {
     wp_enqueue_style(
@@ -169,40 +105,6 @@ function my_acf_admin_enqueue_styles()
     );
 }
 add_action('admin_enqueue_scripts', 'my_acf_admin_enqueue_styles');
-
-// ===============================
-// 8. SCSS compiler via npm (documentatie)
-// ===============================
-/**
- * 💡 Belangrijk:
- * 
- * De SCSS-structuur compileert via npm scripts, niet in PHP.
- * 
- * In je project-root:
- *  - assets/scss/style.scss (hoofd bestand)
- *  - assets/scss/blocks/ (alle block scss files)
- * 
- * In style.scss importeer je alle blocks:
- * 
- * @import "variables";
- * @import "mixins";
- * @import "blocks/hero";
- * @import "blocks/image";
- * @import "blocks/slider";
- * 
- * Gebruik vervolgens:
- * 
- * ```bash
- * npm run build
- * ```
- * of (voor live compilatie)
- * ```bash
- * npm run watch
- * ```
- * 
- * Dit genereert automatisch `/assets/css/main.css`.
- */
-
 
 add_filter('template_include', function ($template) {
     if (!function_exists('set_query_var')) return $template;
@@ -221,14 +123,6 @@ function mytheme_enqueue_column_rows_css()
 }
 add_action('wp_enqueue_scripts', 'mytheme_enqueue_column_rows_css');
 
-
-
-
-
-
-
-
-// AJAX handler voor pagina zoekfunctie
 add_action('wp_ajax_search_pages', 'search_pages_autocomplete');
 add_action('wp_ajax_nopriv_search_pages', 'search_pages_autocomplete');
 
@@ -256,8 +150,6 @@ function search_pages_autocomplete()
     wp_send_json($results);
 }
 
-
-
 add_filter('acf/load_field/key=field_6909bb0fc3ab5', function ($field) {
     $pt_args = [
         'public' => true,
@@ -279,8 +171,6 @@ add_filter('acf/load_field/key=field_6909bb0fc3ab5', function ($field) {
     return $field;
 });
 
-
-
 add_filter('acf/load_field/key=field_690c612ebdf84', function ($field) {
     $terms = get_terms([
         'taxonomy'   => 'categorie',
@@ -296,38 +186,6 @@ add_filter('acf/load_field/key=field_690c612ebdf84', function ($field) {
 
     return $field;
 });
-
-
-
-
-
-// functions.php
-
-add_filter('acf/fields/color_picker/wp_color_picker_args', function ($args, $field) {
-    // Zet je eigen paletten
-    $args['palettes'] = [
-        '#000000', // zwart
-        '#ffffff', // wit
-        '#dd3333', // rood
-        '#dd9933', // oranje
-        '#eeee22', // geel
-        '#81d742', // groen
-        '#1e73be', // blauw
-        '#8224e3', // paars
-    ];
-    return $args;
-}, 10, 2);
-
-add_action('acf/input/admin_enqueue_scripts', function () {
-    wp_enqueue_style(
-        'custom-acf-colorpicker-css',
-        get_stylesheet_directory_uri() . 'assets/css/custom-colorpicker.css',
-        [],
-        null
-    );
-});
-
-
 
 add_action('wp_ajax_search_pages', 'search_pages_callback');
 add_action('wp_ajax_nopriv_search_pages', 'search_pages_callback');
@@ -352,11 +210,6 @@ function search_pages_callback()
 
     wp_send_json($results);
 }
-
-
-
-
-
 
 function render_cta_preview_page()
 {
@@ -402,15 +255,6 @@ function mytheme_register_theme_settings()
         'dashicons-admin-customizer',
         60
     );
-
-    /*add_submenu_page(
-        'mytheme-settings',
-        __('CTA Preview', 'mytheme'),
-        __('CTA Preview', 'mytheme'),
-        'manage_options',
-        'cta-preview',
-        'render_cta_preview_page'
-    );*/
 
     add_submenu_page(
         'mytheme-settings',
@@ -512,12 +356,6 @@ add_filter('acf/load_field/key=field_6916e99707106', function($field) {
     return $field;
 });
 
-
-
-
-
-
-
 add_action('acf/render_field', function($field){
 
     $screen = get_current_screen();
@@ -546,39 +384,6 @@ add_action('acf/render_field', function($field){
     echo '</div>';
 
 }, 10, 1);
-
-
-
-
-
-
-
-
-
-
-
-// JS
-/*
-function enqueue_custom_colorpicker() {
-    wp_enqueue_script(
-        'acf-colorpicker-new',
-        get_stylesheet_directory_uri() . '/js/acf-colorpicker-new.js',
-        ['acf-input','jquery'],
-        '1.0',
-        true
-    );
-}
-add_action('acf/input/admin_enqueue_scripts', 'enqueue_custom_colorpicker');
-
-// CSS
-function enqueue_custom_colorpicker_css() {
-    wp_enqueue_style(
-        'acf-colorpicker-new-css',
-        get_stylesheet_directory_uri() . '/css/admin-colorpicker-new.css'
-    );
-}
-add_action('acf/input/admin_enqueue_scripts', 'enqueue_custom_colorpicker_css');
-*/
 
 function load_accordion_css() {
     wp_enqueue_style(

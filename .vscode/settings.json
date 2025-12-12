@@ -1,0 +1,12 @@
+{
+  "intelephense.stubs": [
+    "wordpress",
+    "*"
+  ],
+  "intelephense.environment.includePaths": [
+    "/Users/gebruiker/Local Sites/themplate/app/public/wp-content/themes/templateTheme/vendor/php-stubs/wordpress-stubs"
+  ],
+  "intelephense.files.associations": [
+    "*.php"
+  ]
+}
