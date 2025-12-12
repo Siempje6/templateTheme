@@ -1,0 +1,20 @@
+.breadcrumbs-wrapper {
+    background-color: var(--acc-background-color);
+    margin-left: 0px;
+    padding-top: var(--acc-padding);
+    padding-bottom: var(--acc-padding);
+    padding-left: var(--acc-padding-sides);
+    padding-right: var(--acc-padding-sides);
+
+    margin-left: var(--acc-margin-left);
+    margin-right: var(--acc-margin-right);
+    margin-top: var(--acc-margin-top);
+    margin-bottom: var(--acc-margin-bottom);
+
+    border: var(--acc-border-width) solid var(--acc-border-color);
+
+    .breadcrumbs {
+        display: flex;
+        gap: 5px;
+    }
+}

@@ -425,22 +425,6 @@
   transform: rotate(90deg);
 }
 
-.breadcrumbs {
-  margin: 0 2rem;
-  font-size: 15px;
-  color: #666;
-}
-.breadcrumbs a {
-  color: #1a5427;
-  font-weight: bold;
-  text-decoration: none;
-}
-.breadcrumbs a:hover {
-  text-decoration: underline;
-}
-.breadcrumbs #breadcrumbs {
-  margin: 0;
-}
 
 .card-item-field {
   max-width: 380px;
