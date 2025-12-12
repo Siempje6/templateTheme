@@ -1,8 +1,12 @@
 <?php
 $background_color = get_field('page_background_color') ?: '#000';
+
+list($r, $g, $b) = sscanf($background_color, "#%02x%02x%02x");
 ?>
 
-<body class="body" style="background-color: <?php echo esc_attr($background_color); ?>;">
+<body class="body" style="background-color: <?php echo esc_attr($background_color); ?>;
+                          --background-color: <?= "$r,$g,$b"; ?>;
+                          ">
 
     <div class="site-wrapper">
 

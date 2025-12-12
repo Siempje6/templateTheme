@@ -599,3 +599,13 @@ function load_breadcrumbs_css() {
     );
 }
 add_action('wp_enqueue_scripts', 'load_breadcrumbs_css');
+
+function load_button_css() {
+    wp_enqueue_style(
+        'button-css',
+        get_template_directory_uri() . '/css/button/button.css',
+        array(),
+        filemtime(get_template_directory() . '/css/button/button.css')
+    );
+}
+add_action('wp_enqueue_scripts', 'load_button_css');
