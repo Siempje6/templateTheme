@@ -1,0 +1,19 @@
+.button {
+  &:hover {
+    opacity: 0.9;
+  }
+  &:active {
+    transform: scale(0.98);
+  }
+  &:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+  }
+  &:focus {
+    outline: 2px solid rgba(26, 84, 39, 0.5);
+    outline-offset: 3px;
+    box-shadow:
+      0 0 0 5px rgba(26, 84, 39, 0.3),
+      0 0 0 8px rgba(26, 84, 39, 0.2);
+  }
+}

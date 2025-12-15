@@ -1,5 +1,5 @@
 <?php
-$background_color = get_field('page_background_color') ?: '#000';
+$background_color = get_field('page_background_color') ?: '#f8f6f2';
 
 list($r, $g, $b) = sscanf($background_color, "#%02x%02x%02x");
 ?>
