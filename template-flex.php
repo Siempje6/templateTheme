@@ -10,6 +10,9 @@ Template Name: Flexibele Pagina
     <meta charset="<?php bloginfo('charset'); ?>">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <?php wp_head(); ?>
+    <link rel="stylesheet" href="/node_modules/@fortawesome/fontawesome-free/css/all.min.css">
+
+
 </head>
 
 <body <?php body_class(); ?>>

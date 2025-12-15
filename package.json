@@ -28,5 +28,8 @@
   "homepage": "https://github.com/Siempje6/templateTheme#readme",
   "devDependencies": {
     "sass": "^1.93.2"
+  },
+  "dependencies": {
+    "@fortawesome/fontawesome-free": "^7.1.0"
   }
 }

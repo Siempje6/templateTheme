@@ -1,0 +1,23 @@
+@use 'variables' as *;
+
+.acf-post-grid-wrapper {
+  display: grid;
+  gap: 1.75rem;
+  margin: 2.5rem auto;
+  padding: 0 1rem;
+  align-items: start;
+
+  &.columns-2 { grid-template-columns: repeat(auto-fit, minmax($post-2, 1fr)); }
+  &.columns-3 { grid-template-columns: repeat(auto-fit, minmax($post-3, 1fr)); }
+  &.columns-4 { grid-template-columns: repeat(auto-fit, minmax($post-4, 1fr)); }
+  &.columns-auto { display: flex; flex-wrap: wrap; gap: 20px; }
+
+  @media (max-width: 1024px) {
+    &.columns-4 { grid-template-columns: repeat(auto-fit, minmax($post-4-responsive, 1fr)); }
+    &.columns-3 { grid-template-columns: repeat(auto-fit, minmax($post-3-responsive, 1fr)); }
+  }
+
+  @media (max-width: 768px) {
+    grid-template-columns: 1fr !important;
+  }
+}

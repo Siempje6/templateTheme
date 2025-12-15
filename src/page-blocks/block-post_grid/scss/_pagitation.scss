@@ -1,0 +1,39 @@
+@use 'variables' as *;
+
+.acf-post-grid-pagination {
+  text-align: center;
+  margin: 2rem 0;
+
+  ul {
+    display: inline-flex;
+    list-style: none;
+    padding: 0;
+    gap: 0.5rem;
+  }
+
+  li a {
+    display: block;
+    padding: 0.5rem 0.75rem;
+    border-radius: 5px;
+    color: #333;
+    text-decoration: none;
+    background-color: $pagination-bg;
+    transition: background-color 0.3s ease;
+
+    &:hover {
+      color: #fff;
+      background-color: $hover-pagination;
+    }
+  }
+
+  .first-page a,
+  .last-page a {
+    font-weight: bold;
+  }
+}
+.page-numbers.current {
+    padding: 0.5rem 0.75rem;
+    background-color: $hover-pagination;
+    border-radius: 5px;
+    color: #fff;
+}

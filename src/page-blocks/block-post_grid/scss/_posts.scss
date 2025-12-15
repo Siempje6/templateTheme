@@ -1,0 +1,113 @@
+@use "variables" as *;
+
+.acf-post-grid-item {
+    border-radius: 10px;
+    overflow: hidden;
+    transition:
+        transform 0.25s ease,
+        box-shadow 0.25s ease;
+    flex: 1 1 340px;
+
+    &:hover {
+        transform: translateY(-1px);
+    }
+
+    .acf-post-grid-link {
+        display: block;
+        text-decoration: none;
+        color: inherit;
+    }
+
+    .acf-post-grid-image {
+        img {
+            width: 100%;
+            height: 240px;
+            object-fit: cover;
+            display: block;
+            border-radius: 10px;
+        }
+
+        .acf-post-grid-placeholder {
+            width: 100%;
+            height: 240px;
+            background: #8c8c8c;
+            border-radius: 10px;
+        }
+    }
+
+    .acf-post-grid-content {
+        border-radius: 10px;
+        padding: 1rem;
+        margin-top: 0.6rem;
+        background-color: $text-block-bg;
+
+        .acf-post-grid-title {
+            margin: 0 0 0.4rem 0;
+            font-weight: 600;
+            font-family: $font-family;
+            font-size: $title-size;
+            color: $title-color;
+        }
+
+        .acf-post-grid-text {
+            margin: 0;
+            font-size: 14px;
+            line-height: 1.4;
+            font-family: $text-font;
+            color: $font-color;
+        }
+
+        .acf-post-grid-categories {
+            font-size: 0.9rem;
+            color: #444;
+            margin-top: 0.5rem;
+        }
+    }
+
+    @media (max-width: 768px) {
+        .acf-post-grid-image img,
+        .acf-post-grid-placeholder {
+            height: 160px;
+        }
+        .acf-post-grid-content {
+            padding: 0.8rem;
+        }
+    }
+}
+.acf-post-grid-placeholder {
+  width: 100%;
+  height: 220px;
+  background: #e0e0e0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 12px;
+
+  .placeholder-text {
+    font-size: 1rem;
+    color: #b8b8b8;
+    font-weight: 500;
+  }
+}
+
+@media (max-width: 768px) {
+  .acf-post-grid-placeholder { height: 160px; }
+}
+
+.acf-post-grid-meta {
+    margin-top: 15px;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    gap: 10px;
+
+    img {
+        border-radius: 50%;
+    }
+
+    span {
+        font-size: 14px;
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        color: #666;
+    }
+}

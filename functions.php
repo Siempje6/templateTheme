@@ -414,3 +414,13 @@ function load_button_css() {
     );
 }
 add_action('wp_enqueue_scripts', 'load_button_css');
+
+function load_posts_css() {
+    wp_enqueue_style(
+        'posts-css',
+        get_template_directory_uri() . '/css/post-grid/post-grid.css',
+        array(),
+        filemtime(get_template_directory() . '/css/post-grid/post-grid.css')
+    );
+}
+add_action('wp_enqueue_scripts', 'load_posts_css');
