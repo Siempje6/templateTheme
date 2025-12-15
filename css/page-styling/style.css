@@ -25,7 +25,7 @@
 }
 .accordion-wrapper .accordion-item .accordion-icon i,
 .accordion-wrapper .accordion-item .accordion-icon svg {
-  transform: rotate(0deg);
+  transform: rotate(1deg);
   transition: transform 0.3s ease;
 }
 
@@ -151,7 +151,7 @@
 }
 .breadcrumbs-wrapper .breadcrumbs {
   display: flex;
-  gap: 5px;
+  gap: 6px;
 }
 .breadcrumbs-wrapper .breadcrumbs .collapsed {
   list-style: none;

@@ -22,7 +22,7 @@
 }
 .breadcrumbs-wrapper .breadcrumbs {
   display: flex;
-  gap: 5px;
+  gap: 6px;
 }
 .breadcrumbs-wrapper .breadcrumbs .collapsed {
   list-style: none;
