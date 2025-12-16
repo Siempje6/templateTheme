@@ -30,7 +30,7 @@ foreach ($fields as $label => $info) {
         continue;
     }
 
-    $field_object = get_field_object($fieldname, 'option');
+    $field_object = function_exists('get_field_object') ? get_field_object($fieldname, 'option') : null;
 
     foreach ($rows as $row) {
 

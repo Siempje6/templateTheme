@@ -57,4 +57,40 @@ function get_the_title($post_id = null) { return $post_id ? 'Page ' . $post_id :
 function get_queried_object() { return (object)['term_id' => 1, 'name' => 'Example Category']; }
 function get_post_ancestors($post) { return []; }
 function get_permalink($post_id) { return home_url('page/' . $post_id); }
+
+function have_posts() { return false; }
+function the_post() {}
+function the_content() {}
+function comments_open() { return false; }
+function get_comments_number() { return 0; }
+function comments_template($file = '', $separate_comments = false) {}   
+
+function wp_reset_postdata() {}
+function get_query_var($var, $default = '') { return $default; }
+
+class WP_Query {
+    public function __construct($args = []) {}
+    public function have_posts() { return false; }
+    public function the_post() {}
+}
+function get_post() { return null; }
+function get_the_excerpt() { return ''; }
+function wp_trim_words($text, $num_words = 55, $more = null) {
+    $words = explode(' ', $text);
+    if (count($words) > $num_words) {
+        return implode(' ', array_slice($words, 0, $num_words)) . ($more !== null ? $more : '...');
+    }
+    return $text;
+}   
+function has_post_thumbnail($post_id = null) { return false; }
+function the_post_thumbnail($size = 'post-thumbnail', $attr = '') {}
+function get_the_author_meta($field, $user_id = false) { return 'Author Name'; }
+function get_avatar($id_or_email, $size = 96, $default = '', $alt = '', $args = null) { return '<img src="http://example.com/avatar.jpg" alt="Avatar" width="' . intval($size) . '" height="' . intval($size) . '">'; } 
+
+function get_field_object($field_name, $post_id = false) { return null; }
+function the_field($field_name, $post_id = false) {}
+function get_posts($args = []) { return []; }
+function setup_postdata($post) {}
+
+
 ?>

@@ -54,11 +54,11 @@ if (!function_exists('get_row_styling')) {
         if ($box_schaduw) $style[] = "box-shadow:0 4px 10px rgba(0,0,0,0.1);";
 
         // Rand
-        if ($rand === '1') $style[] = "border:1px solid {$randkleur ?: '#ccc'};";
+        if ($rand === '1') { $style[] = "border:1px solid {${ $randkleur ?: '#ccc' }};"; }
 
         // Horizontale uitlijning
         if ($horizontale_uitlijning) {
-            $map = [1
+            $map = [
                 'left' => 'flex-start',
                 'center' => 'center',
                 'right' => 'flex-end',
