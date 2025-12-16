@@ -6,7 +6,6 @@
 
 if (!function_exists('get_row_styling')) {
     function get_row_styling(): array {
-        // Lijst van ACF velden
         $fields = [
             'rij_breedte',
             'horizontale_uitlijning',
@@ -33,16 +32,13 @@ if (!function_exists('get_row_styling')) {
             'animatie_bij_laden'
         ];
 
-        // Init array met alle waarden
         $values = [];
         foreach ($fields as $field) {
             $values[$field] = get_sub_field($field) ?: '';
         }
 
-        // Init style array
         $style = [];
 
-        // Basis layout
         if ($values['rij_breedte']) $style[] = "max-width:{$values['rij_breedte']}%;margin:0 auto;";
         if ($values['max_breedte']) $style[] = "max-width:{$values['max_breedte']}px;";
         if ($values['achtergrond_kleur']) $style[] = "background-color:{$values['achtergrond_kleur']};";
@@ -57,13 +53,11 @@ if (!function_exists('get_row_styling')) {
         if ($values['rand_dikte']) $style[] = "border-width:{$values['rand_dikte']}px;";
         if ($values['box_schaduw']) $style[] = "box-shadow:0 4px 10px rgba(0,0,0,0.1);";
 
-        // Rand
         if ($values['rand'] === '1') {
             $border_color = $values['randkleur'] ?: '#ccc';
             $style[] = "border:1px solid {$border_color};";
         }
 
-        // Horizontale uitlijning
         if (!empty($values['horizontale_uitlijning'])) {
             $map = [
                 'left' => 'flex-start',
@@ -75,7 +69,6 @@ if (!function_exists('get_row_styling')) {
             $style[] = "justify-content:" . ($map[$values['horizontale_uitlijning']] ?? 'center') . ";";
         }
 
-        // Verticale uitlijning
         if (!empty($values['verticale_uitlijning'])) {
             $map = [
                 'top' => 'flex-start',
@@ -86,21 +79,17 @@ if (!function_exists('get_row_styling')) {
             $style[] = "align-items:" . ($map[$values['verticale_uitlijning']] ?? 'stretch') . ";";
         }
 
-        // Responsive gedrag
         if ($values['responsive_gedrag'] === '1') $style[] = "flex-wrap:wrap;";
         if ($values['even_hoogte_kolommen'] === '1') $style[] = "align-items:stretch;";
 
-        // Volgorde mobiel
         if ($values['volgorde_mobiel'] === 'omgedraaid') $style[] = "flex-direction:column-reverse;";
         if ($values['volgorde_mobiel'] === 'stack onder elkaar') $style[] = "flex-direction:column;";
 
-        // Animatie
         $animatie = '';
         if (!empty($values['animatie_bij_laden']) && $values['animatie_bij_laden'] !== 'geen') {
             $animatie = 'animate__animated animate__' . str_replace(' ', '', $values['animatie_bij_laden']);
         }
 
-        // Return array
         return [
             'id' => $values['custom_id'] ?: '',
             'class' => trim(($values['custom_css_class'] ?: '') . ' ' . $animatie),

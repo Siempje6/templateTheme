@@ -1,16 +1,16 @@
 {
     "require-dev": {
-        "php-stubs/wordpress-stubs": "^6.9",
-        "php-stubs/acf-pro-stubs": "^6.5",
-        "php-stubs/woocommerce-stubs": "^10.4",
-        "php-stubs/wordpress-globals": "^0.2.0",
-        "php-stubs/wordpress-tests-stubs": "^6.8",
-        "php-stubs/wp-cli-stubs": "^2.12",
-        "php-stubs/woocommerce-subscriptions-stubs": "^8.1",
-        "php-stubs/gravity-forms-stubs": "^2.9",
-        "php-stubs/wordpress-seo-stubs": "^20.5",
-        "php-stubs/facetwp-stubs": "^4.4",
-        "php-stubs/genesis-stubs": "^3.5",
-        "wildwolf/wordpress-test-library-stubs": "^6.8"
+        "php-stubs/wordpress-stubs": "6.9.0",
+        "php-stubs/acf-pro-stubs": "6.1.5",
+        "php-stubs/woocommerce-stubs": "10.4.0",
+        "php-stubs/wordpress-globals": "0.2.0",
+        "php-stubs/wordpress-tests-stubs": "6.8.0",
+        "php-stubs/wp-cli-stubs": "2.12.0",
+        "php-stubs/woocommerce-subscriptions-stubs": "8.1.0",
+        "php-stubs/gravity-forms-stubs": "2.9.0",
+        "php-stubs/wordpress-seo-stubs": "20.5.1",
+        "php-stubs/facetwp-stubs": "4.4.1",
+        "php-stubs/genesis-stubs": "3.5.0",
+        "wildwolf/wordpress-test-library-stubs": "6.8.0"
     }
 }
