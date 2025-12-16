@@ -16,6 +16,9 @@ sass --watch src/page-blocks/block-button_field/button.scss:css/button/button_fu
 sass --watch src/page-blocks/block-post_grid/post-grid.scss:css/post-grid/post-grid.css --style=compressed &
 sass --watch src/page-blocks/block-post_grid/post-grid.scss:css/post-grid/post-grid_full.css --style=expanded &
 
+sass --watch src/page-blocks/block-image_field/image.scss:css/image/image.css --style=compressed &
+sass --watch src/page-blocks/block-image_field/image.scss:css/image/image_full.css --style=expanded &
+
 wait
 
 # chmod +x sass_compile.sh

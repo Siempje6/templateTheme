@@ -1,44 +1,7 @@
 <?php
-// Haal velden op
-$image       = get_sub_field('image');
-$styling     = get_sub_field('styling') ?: [];
-
-// Basis styling
-$corners     = $styling['corners'] ?? '12px';
-$customType  = $styling['custom_height_or_width'] ?? 'custom width';
-
-// Afmetingen ophalen
-$widthSingle = $styling['image_width'] ?? '100%';
-$heightSingle= $styling['image_height'] ?? 'auto';
-$widthBoth   = $styling['custom_width_and_heigth'] ?? '100%';
-$heightBoth  = $styling['custom_height_and_width'] ?? 'auto';
-
-// Bepaal afmetingen op basis van type
-switch ($customType) {
-    case 'custom width':
-        $width  = $widthSingle;
-        $height = 'auto';
-        break;
-
-    case 'custom height':
-        $width  = 'auto';
-        $height = $heightSingle;
-        break;
-
-    case 'custom':
-        $width  = $widthBoth;
-        $height = $heightBoth;
-        break;
-
-    default:
-        $width  = '100%';
-        $height = 'auto';
-        break;
-}
-
-// Voeg px toe als waarde numeriek is
-if (is_numeric($width))  $width  .= 'px';
-if (is_numeric($height)) $height .= 'px';
+$image = get_sub_field('image'); // of get_field('image') als het geen repeater/subfield is
+$styling = get_sub_field('styling') ?: [];
+$corners = $styling['corners'] ?? '12px';
 ?>
 
 <?php if ($image): ?>
@@ -48,11 +11,8 @@ if (is_numeric($height)) $height .= 'px';
             src="<?php echo esc_url($image['url']); ?>"
             alt="<?php echo esc_attr($image['alt']); ?>"
             class="image-content"
-            style="
-                border-radius: <?php echo esc_attr($corners); ?>;
-                max-width: 1200px;
-                height: <?php echo esc_attr($height); ?>;
-            "
+            style="border-radius: <?php echo esc_attr($corners); ?>;"
+            loading="lazy"
         >
     </div>
 </section>

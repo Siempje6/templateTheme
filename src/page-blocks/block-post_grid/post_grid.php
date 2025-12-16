@@ -43,7 +43,7 @@ $item_class    = 'acf-post-grid-item columns-' . $columns;
             <?php
             $excerpt = get_the_excerpt() ?: wp_trim_words(strip_tags(get_the_content()), 20, '...');
             $author_id = get_the_author_meta('ID');
-            $avatar = get_avatar($author_id, 28); // avatar 28px
+            $avatar = get_avatar($author_id, 28); 
             $post_date = get_the_date('j M Y');
             ?>
             <article class="<?php echo esc_attr($item_class); ?>">
@@ -63,6 +63,11 @@ $item_class    = 'acf-post-grid-item columns-' . $columns;
                         <i class="fa-solid fa-arrow-up-right-from-square" style="height: 20px;"></i>
                         <p class="acf-post-grid-text"><?php echo esc_html($excerpt); ?></p>
                         <div class="acf-post-grid-meta">
+                            <style>
+                                .acf-post-grid-meta img {
+                                    width: 28px !important;
+                                }
+                            </style>
                             <?php echo $avatar; ?>
                             <span class="acf-post-grid-author"><?php the_author(); ?></span>
                             <span>-</span>
