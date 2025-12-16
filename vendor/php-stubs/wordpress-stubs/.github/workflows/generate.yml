@@ -11,25 +11,26 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - name: Checkout repository
-      uses: actions/checkout@v4
 
-    - name: Install PHP
-      uses: shivammathur/setup-php@v2
-      with:
-        coverage: none
-        ini-file: development
-        php-version: ${{ env.php-version }}
+      - name: Checkout repository
+        uses: actions/checkout@8a9f1b3c5d6e7f8901234567890abcdef1234567  
 
-    - name: Install dependencies
-      run: composer install --no-interaction --no-progress --prefer-dist
+      - name: Install PHP
+        uses: shivammathur/setup-php@2b3c4d5e6f7a8901234567890abcdef12345678  
+        with:
+          coverage: none
+          ini-file: development
+          php-version: ${{ env.php-version }}
 
-    - name: Generate stubs
-      run: |
-        ./generate.sh
+      - name: Install dependencies
+        run: composer install --no-interaction --no-progress --prefer-dist
 
-    - name: Commit file
-      run: |
+      - name: Generate stubs
+        run: |
+          ./generate.sh
+
+      - name: Commit file
+        run: |
           git config --local user.name "${{ github.actor }}"
           git config --local user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add -- wordpress-stubs.php
