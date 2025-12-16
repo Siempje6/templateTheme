@@ -5712,8 +5712,8 @@
         },
         {
             "key": "field_69413c05224aa",
-            "label": "",
-            "name": "",
+            "label": "Width",
+            "name": "row_width",
             "aria-label": "",
             "type": "text",
             "instructions": "",
@@ -5767,5 +5767,5 @@
     "acfe_form": 0,
     "acfe_meta": "",
     "acfe_note": "",
-    "modified": 1765883219
+    "modified": 1765890442
 }

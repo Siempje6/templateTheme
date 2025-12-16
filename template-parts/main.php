@@ -20,11 +20,12 @@
 <?php else: ?>
 
     <?php
+    $custom_width  = get_field('row_width') ?? '1200px';
+
     if (have_rows('rows')):
         while (have_rows('rows')): the_row();
             $layout_field = get_sub_field('layout') ?: get_field('layout');
             $width_option  = $layout_field['width_options'] ?? 'fixed';
-            $custom_width  = $layout_field['width'] ?? '1200px';
 
             if (have_rows('columns')):
                 $grid_template = [];

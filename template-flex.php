@@ -34,7 +34,7 @@ Template Name: Flexibele Pagina
         .header-grid,
         .footer-grid {
             display: grid;
-            max-width: 1600px;
+            max-width: 1980px;
             width: 100%;
             margin: 0 auto;
             gap: 10px;
