@@ -1,0 +1,31 @@
+{
+    "name": "php-stubs/woocommerce-subscriptions-stubs",
+    "description": "WooCommerce Subscriptions function and class declaration stubs for static analysis.",
+    "keywords": [
+        "woocommerce",
+        "subscription",
+        "wordpress",
+        "static analysis",
+        "phpstan"
+    ],
+    "homepage": "https://github.com/php-stubs/woocommerce-subscriptions-stubs",
+    "license": "MIT",
+    "require": {
+        "php-stubs/wordpress-stubs": "^5.3 || ^6.0",
+        "php-stubs/woocommerce-stubs": "^10.2"
+    },
+    "require-dev": {
+        "php": "~7.1 || ~8.0",
+        "php-stubs/generator": "^0.8.0"
+    },
+    "suggest": {
+        "szepeviktor/phpstan-wordpress": "WordPress extensions for PHPStan",
+        "symfony/polyfill-php73": "Symfony polyfill backporting some PHP 7.3+ features to lower PHP versions"
+    },
+    "minimum-stability": "stable",
+    "config": {
+        "allow-plugins": {
+            "php-stubs/generator": true
+        }
+    }
+}
