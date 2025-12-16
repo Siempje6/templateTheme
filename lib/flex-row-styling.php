@@ -5,7 +5,8 @@
  */
 
 if (!function_exists('get_row_styling')) {
-    function get_row_styling() {
+    function get_row_styling(): array {
+        // Lijst van ACF velden
         $fields = [
             'rij_breedte',
             'horizontale_uitlijning',
@@ -32,32 +33,38 @@ if (!function_exists('get_row_styling')) {
             'animatie_bij_laden'
         ];
 
+        // Init array met alle waarden
+        $values = [];
         foreach ($fields as $field) {
-            ${$field} = get_sub_field($field) ?: '';
+            $values[$field] = get_sub_field($field) ?: '';
         }
 
+        // Init style array
         $style = [];
 
         // Basis layout
-        if ($rij_breedte) $style[] = "max-width:{$rij_breedte}%;margin:0 auto;";
-        if ($max_breedte) $style[] = "max-width:{$max_breedte}px;";
-        if ($achtergrond_kleur) $style[] = "background-color:{$achtergrond_kleur};";
-        if ($padding_boven) $style[] = "padding-top:{$padding_boven}px;";
-        if ($padding_onder) $style[] = "padding-bottom:{$padding_onder}px;";
-        if ($margin_boven) $style[] = "margin-top:{$margin_boven}px;";
-        if ($margin_onder) $style[] = "margin-bottom:{$margin_onder}px;";
-        if ($gat_kolommen) $style[] = "gap:{$gat_kolommen}px;";
-        if ($tekst_kleur) $style[] = "color:{$tekst_kleur};";
-        if ($randkleur) $style[] = "border-color:{$randkleur};";
-        if ($rand_radius) $style[] = "border-radius:{$rand_radius}px;";
-        if ($rand_dikte) $style[] = "border-width:{$rand_dikte}px;";
-        if ($box_schaduw) $style[] = "box-shadow:0 4px 10px rgba(0,0,0,0.1);";
+        if ($values['rij_breedte']) $style[] = "max-width:{$values['rij_breedte']}%;margin:0 auto;";
+        if ($values['max_breedte']) $style[] = "max-width:{$values['max_breedte']}px;";
+        if ($values['achtergrond_kleur']) $style[] = "background-color:{$values['achtergrond_kleur']};";
+        if ($values['padding_boven']) $style[] = "padding-top:{$values['padding_boven']}px;";
+        if ($values['padding_onder']) $style[] = "padding-bottom:{$values['padding_onder']}px;";
+        if ($values['margin_boven']) $style[] = "margin-top:{$values['margin_boven']}px;";
+        if ($values['margin_onder']) $style[] = "margin-bottom:{$values['margin_onder']}px;";
+        if ($values['gat_kolommen']) $style[] = "gap:{$values['gat_kolommen']}px;";
+        if ($values['tekst_kleur']) $style[] = "color:{$values['tekst_kleur']};";
+        if ($values['randkleur']) $style[] = "border-color:{$values['randkleur']};";
+        if ($values['rand_radius']) $style[] = "border-radius:{$values['rand_radius']}px;";
+        if ($values['rand_dikte']) $style[] = "border-width:{$values['rand_dikte']}px;";
+        if ($values['box_schaduw']) $style[] = "box-shadow:0 4px 10px rgba(0,0,0,0.1);";
 
         // Rand
-        if ($rand === '1') { $style[] = "border:1px solid {${ $randkleur ?: '#ccc' }};"; }
+        if ($values['rand'] === '1') {
+            $border_color = $values['randkleur'] ?: '#ccc';
+            $style[] = "border:1px solid {$border_color};";
+        }
 
         // Horizontale uitlijning
-        if ($horizontale_uitlijning) {
+        if (!empty($values['horizontale_uitlijning'])) {
             $map = [
                 'left' => 'flex-start',
                 'center' => 'center',
@@ -65,37 +72,38 @@ if (!function_exists('get_row_styling')) {
                 'space-between' => 'space-between',
                 'space-around' => 'space-around'
             ];
-            $style[] = "justify-content:" . ($map[$horizontale_uitlijning] ?? 'center') . ";";
+            $style[] = "justify-content:" . ($map[$values['horizontale_uitlijning']] ?? 'center') . ";";
         }
 
         // Verticale uitlijning
-        if ($verticale_uitlijning) {
+        if (!empty($values['verticale_uitlijning'])) {
             $map = [
                 'top' => 'flex-start',
                 'center' => 'center',
                 'bottom' => 'flex-end',
                 'stretch' => 'stretch'
             ];
-            $style[] = "align-items:" . ($map[$verticale_uitlijning] ?? 'stretch') . ";";
+            $style[] = "align-items:" . ($map[$values['verticale_uitlijning']] ?? 'stretch') . ";";
         }
 
         // Responsive gedrag
-        if ($responsive_gedrag === '1') $style[] = "flex-wrap:wrap;";
-        if ($even_hoogte_kolommen === '1') $style[] = "align-items:stretch;";
+        if ($values['responsive_gedrag'] === '1') $style[] = "flex-wrap:wrap;";
+        if ($values['even_hoogte_kolommen'] === '1') $style[] = "align-items:stretch;";
 
         // Volgorde mobiel
-        if ($volgorde_mobiel === 'omgedraaid') $style[] = "flex-direction:column-reverse;";
-        if ($volgorde_mobiel === 'stack onder elkaar') $style[] = "flex-direction:column;";
+        if ($values['volgorde_mobiel'] === 'omgedraaid') $style[] = "flex-direction:column-reverse;";
+        if ($values['volgorde_mobiel'] === 'stack onder elkaar') $style[] = "flex-direction:column;";
 
         // Animatie
         $animatie = '';
-        if ($animatie_bij_laden && $animatie_bij_laden !== 'geen') {
-            $animatie = 'animate__animated animate__' . str_replace(' ', '', $animatie_bij_laden);
+        if (!empty($values['animatie_bij_laden']) && $values['animatie_bij_laden'] !== 'geen') {
+            $animatie = 'animate__animated animate__' . str_replace(' ', '', $values['animatie_bij_laden']);
         }
 
+        // Return array
         return [
-            'id' => $custom_id ?: '',
-            'class' => trim(($custom_css_class ?: '') . ' ' . $animatie),
+            'id' => $values['custom_id'] ?: '',
+            'class' => trim(($values['custom_css_class'] ?: '') . ' ' . $animatie),
             'style' => implode('', $style)
         ];
     }
