@@ -1,0 +1,12 @@
+.image-container {
+    transition: var(--img-transition);
+    opacity: var(--img-opacity);
+    filter: var(--img-filter);
+    mix-blend-mode: var(--img-mix-blend-mode);
+    transform: var(--img-transform);
+    transform-origin: var(--img-transform-origin);
+    clip-path: var(--img-clip-path);
+    mask-image: var(--img-mask-image);
+    will-change: var(--img-will-change);
+    box-shadow: var(--img-box-shadow);  
+}

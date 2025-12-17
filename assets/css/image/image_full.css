@@ -26,4 +26,11 @@
   display: block;
 }
 
+/*
+@use 'scss/dimensions';
+@use 'scss/container';
+@use 'scss/effects';
+@use 'scss/responsive';
+*/
+
 /*# sourceMappingURL=image_full.css.map */

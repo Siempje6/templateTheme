@@ -1,0 +1,16 @@
+.image-container {
+    background-color: var(--img-bg-color);
+    overflow: var(--img-container-overflow);
+    text-align: var(--img-text-align);
+    position: var(--img-position);
+    box-sizing: var(--img-box-sizing);
+    margin: var(--img-margin);
+    margin-top: var(--img-margin-top);
+    margin-right: var(--img-margin-right);
+    margin-bottom: var(--img-margin-bottom);
+    margin-left: var(--img-margin-left);
+    padding: var(--img-padding);
+    cursor: var(--img-cursor);
+    border: var(--img-border);
+    z-index: var(--img-z-index);
+}
