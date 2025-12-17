@@ -30,7 +30,7 @@ $hover_color = !empty($color_h1['hover_color']) ? $color_h1['hover_color'] : '';
     margin-left: 2rem;
     margin-right: 2rem;
     margin-bottom: 0rem;
-    font-size: <?php echo esc_attr($font_size); ?>px;
+    font-size: calc(<?php echo esc_attr($font_size); ?>px + 1vw) !important;
     font-weight: <?php echo esc_attr($font_weight); ?>;
     font-family: <?php echo esc_attr($font_family); ?>;
 

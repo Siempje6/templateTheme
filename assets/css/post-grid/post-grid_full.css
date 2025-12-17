@@ -131,6 +131,11 @@
   color: #666;
 }
 
+.gravatar.avatar.avatar-28.um-avatar.um-avatar-default {
+  width: 28px !important;
+  height: 28px !important;
+}
+
 .acf-post-grid-pagination {
   text-align: center;
   margin: 2rem 0;
@@ -148,11 +153,11 @@
   color: #333;
   text-decoration: none;
   background-color: #f0f0f0;
-  transition: background-color 0.3s ease;
+  transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
 }
 .acf-post-grid-pagination li a:hover {
   color: #fff;
-  background-color: #1a5428;
+  background-color: rgba(26, 84, 39, 0.8039215686);
 }
 .acf-post-grid-pagination .first-page a,
 .acf-post-grid-pagination .last-page a {
@@ -164,6 +169,8 @@
   background-color: #1a5428;
   border-radius: 5px;
   color: #fff;
+  cursor: pointer;
+  background-color: rgba(26, 84, 39, 0.8039215686);
 }
 
 /*# sourceMappingURL=post-grid_full.css.map */

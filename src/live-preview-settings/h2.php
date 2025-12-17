@@ -28,7 +28,7 @@ $hover_color = !empty($color_h2['hover_color']) ? $color_h2['hover_color'] : '';
 
 <h2 style="
     margin-left: 20px;
-    font-size: <?php echo esc_attr($font_size); ?>px;
+    font-size: calc(<?php echo esc_attr($font_size); ?>px + 1vw);
     font-weight: <?php echo esc_attr($font_weight); ?>;
     font-family: <?php echo esc_attr($font_family); ?>;
 

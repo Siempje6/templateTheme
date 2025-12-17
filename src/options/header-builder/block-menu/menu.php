@@ -1,150 +1,180 @@
-<div class="nav-wrapper">
+<?php if (!defined('ABSPATH')) exit; ?>
 
-    <button class="menu-toggle" aria-expanded="false" aria-controls="mainMenu">
-        <span></span>
-        <span></span>
-        <span></span>
-    </button>
+<div class="rs-mega-nav">
 
-    <nav class="main-menu" id="mainMenu">
-        <?php
-        $menu = $block['menu'] ?? null;
-        if (!empty($menu)) {
-            if (strpos($menu, '<ul') === false) {
-                echo '<ul class="menu">' . $menu . '</ul>';
-            } else {
-                $menu = preg_replace('/<ul(.*?)>/', '<ul$1 class="menu">', $menu, 1);
-                echo $menu;
+    <div class="rs-mega-inner">
+
+        <button class="rs-mega-toggle" aria-label="Menu openen">
+            <span></span><span></span><span></span>
+        </button>
+
+        <nav class="rs-mega-menu">
+            <?php
+            if (!empty($block['menu'])) {
+                echo $block['menu'];
             }
-        } else {
-            echo '<!-- Geen menu gevonden -->';
-        }
-        ?>
-    </nav>
+            ?>
+        </nav>
+    </div>
 
 </div>
 
 <style>
-.menu-toggle {
+.rs-mega-nav * { 
+    box-sizing: border-box;
     display: flex;
-    flex-direction: column;
-    gap: 5px;
-    background: none;
-    border: none;
-    cursor: pointer;
-    padding: 10px;
-}
-
-.menu-toggle span {
-    width: 28px;
-    height: 3px;
-    background: #000;
-    border-radius: 2px;
-    transition: all 0.3s ease;
-}
-
-.menu-toggle.active span:nth-child(1) {
-    transform: rotate(45deg) translate(5px,6px);
-}
-.menu-toggle.active span:nth-child(2) { opacity: 0; }
-.menu-toggle.active span:nth-child(3) {
-    transform: rotate(-45deg) translate(6px,-6px);
-}
-
-.main-menu {
-    display: none;
-    background: #fff;
-    border-bottom: 1px solid #ddd;
-    flex-direction: column;
-    padding: 20px;
-    z-index: 999;
-}
-
-.main-menu.open {
-    display: flex;
-}
-
-.main-menu ul.menu {
-    display: flex;
-    flex-direction: column;
-    gap: 0;
+    gap: 30px;
     list-style: none;
     margin: 0;
     padding: 0;
 }
 
-.main-menu li {
+.rs-mega-nav {
+    position: relative;
+    width: 100%;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+    z-index: 999;
+}
+.rs-mega-inner {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.rs-mega-brand a {
+    font-size: 20px;
+    font-weight: 700;
+    color: #111;
+    text-decoration: none;
+}
+
+.rs-mega-toggle {
+    display: none;
+    background: none;
+    border: 0;
+    cursor: pointer;
+    flex-direction: column;
+    gap: 5px;
+}
+.rs-mega-toggle span {
+    width: 24px;
+    height: 2px;
+    background: #111;
+}
+
+.rs-mega-menu > ul {
+    gap: 32px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+.rs-mega-menu a {
+    text-decoration: none;
+    color: #111;
+    font-weight: 500;
+    padding: 8px 0;
+    display: inline-block;
+}
+
+.rs-mega-menu li {
     position: relative;
 }
 
-.main-menu a {
-    display: block;
-    padding: 12px 16px;
-    color: #000;
-    text-decoration: none;
-    border-bottom: 1px solid #eee;
-    border-radius: 4px;
-    transition: all 0.2s ease;
+.rs-mega-menu li ul.sub-menu {
+    position: absolute;
+    top: 100%;
+    left: -20px;
+    width: auto;
+    background: #fff;
+    padding: 32px;
+    border-radius: 14px;
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 24px;
+    box-shadow: 0 30px 70px rgba(0,0,0,.12);
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(12px);
+    transition: all .25s ease;
+}
+.rs-mega-menu li:hover > ul.sub-menu {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+.rs-mega-menu ul.sub-menu li {
+    list-style: none;
+}
+.rs-mega-menu ul.sub-menu a {
+    font-size: 14px;
+    color: #374151;
+}
+.rs-mega-menu ul.sub-menu a:hover {
+    color: #6366f1;
 }
 
-.main-menu a:hover { background: #f0f0f0; }
+@media (max-width: 900) {
 
-.main-menu li ul.sub-menu {
-    display: none;
-    flex-direction: column;
-    padding-left: 15px;
-    background: #f8f8f8;
-}
+    .rs-mega-toggle {
+        display: flex;
+    }
 
-.main-menu li ul.sub-menu li a {
-    padding: 10px 16px;
-    border-bottom: 1px solid #ddd;
+    .rs-mega-menu {
+        position: absolute;
+        top: 72px;
+        left: 0;
+        width: 100%;
+        background: #fff;
+        border-top: 1px solid #e5e7eb;
+        display: none;
+    }
+    .rs-mega-menu.is-open {
+        display: block;
+    }
+    .rs-mega-menu > ul {
+        display: flex;
+        flex-direction: column;
+        padding: 16px;
+        list-style: none;
+        gap: 0;
+    }
+    .rs-mega-menu li {
+        border-bottom: 1px solid #f1f1f1;
+    }
+    .rs-mega-menu li ul.sub-menu {
+        position: static;
+        width: 100%;
+        grid-template-columns: 1fr;
+        box-shadow: none;
+        padding: 16px 0;
+        opacity: 1;
+        visibility: visible;
+        transform: none;
+        display: none;
+    }
+    .rs-mega-menu li.is-open > ul.sub-menu {
+        display: grid;
+    }
 }
- 
-.dropdown-btn {
-    display: inline-block;
-    margin-left: 8px;
-    cursor: pointer;
-    font-weight: bold;
-    background: none;
-    border: none;
-}
-
 </style>
 
 <script>
-document.addEventListener("DOMContentLoaded", () => {
+document.addEventListener('DOMContentLoaded', () => {
 
-    const hamburger = document.querySelector(".menu-toggle");
-    const menu = document.getElementById("mainMenu");
+    const toggle = document.querySelector('.rs-mega-toggle');
+    const menu   = document.querySelector('.rs-mega-menu');
 
-    hamburger.addEventListener("click", () => {
-        menu.classList.toggle("open");
-        hamburger.classList.toggle("active");
+    toggle.addEventListener('click', () => {
+        menu.classList.toggle('is-open');
     });
 
-    document.querySelectorAll("#mainMenu li").forEach(li => {
-        const submenu = li.querySelector("ul");
-        if(submenu){
-            submenu.classList.add("sub-menu");
-
-            const btn = document.createElement("button");
-            btn.classList.add("dropdown-btn");
-            btn.innerHTML = "&#9660;"; 
-            li.insertBefore(btn, li.querySelector("a").nextSibling);
-
-            btn.addEventListener("click", e => {
-                e.preventDefault();
-                submenu.classList.toggle("open");
-                btn.innerHTML = submenu.classList.contains("open") ? "&#9650;" : "&#9660;"; 
-            });
-
-            li.querySelector("a").addEventListener("click", e => {
-                if(window.innerWidth <= 768){
+    document.querySelectorAll('.rs-mega-menu li.menu-item-has-children > a')
+        .forEach(link => {
+            link.addEventListener('click', e => {
+                if (window.innerWidth <= 1024) {
+                    e.preventDefault();
+                    link.parentElement.classList.toggle('is-open');
                 }
             });
-        }
-    });
-
+        });
 });
 </script>

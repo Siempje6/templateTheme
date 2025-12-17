@@ -3324,13 +3324,28 @@
                                                             "key": "border_style",
                                                             "label": "Border Style",
                                                             "name": "border_style",
-                                                            "type": "text"
+                                                            "type": "select",
+                                                            "choices": {
+                                                                "none": "None",
+                                                                "solid": "Solid",
+                                                                "dashed": "Dashed",
+                                                                "dotted": "Dotted",
+                                                                "double": "Double",
+                                                                "groove": "Groove",
+                                                                "ridge": "Ridge",
+                                                                "inset": "Inset",
+                                                                "outset": "Outset"  
+                                                            } 
                                                         },
                                                         {
                                                             "key": "border_color",
                                                             "label": "Border Color",
                                                             "name": "border_color",
-                                                            "type": "text"
+                                                            "type": "color_picker",
+                                                            "default_value": "transparent",
+                                                            "return_format": "string",
+                                                            "enable_opacity": 0,
+                                                            "allow_in_bindings": 0
                                                         },
                                                         {
                                                             "key": "outline",

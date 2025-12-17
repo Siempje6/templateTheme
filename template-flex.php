@@ -22,6 +22,10 @@ Template Name: Flexibele Pagina
 
     <style>
         .site-wrapper {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
             display: flex;
             flex-direction: column;
             min-height: 100vh;
@@ -129,6 +133,14 @@ Template Name: Flexibele Pagina
                 padding: 15px;
             }
         }
+
+        .column-item,
+        .header-column,
+        .footer-column {
+            border: none !important;
+        }
+
+
     </style>
 
     <?php wp_footer(); ?>

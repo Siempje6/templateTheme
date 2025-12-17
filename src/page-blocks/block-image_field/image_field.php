@@ -2,19 +2,17 @@
 $image = get_sub_field('image'); 
 $styling = get_sub_field('styling') ?: [];
 
-// Helper functie om px toe te voegen
 function px($val, $default = '0px') {
     if ($val === '' || $val === null) return $default;
     return is_numeric($val) ? $val . 'px' : $val;
 }
 
-// Haal alle opties op
 $width               = $styling['width'] ?? '100%';
 $max_width           = $styling['max_width'] ?? 'none';
 $height              = $styling['height'] ?? 'auto';
 $object_fit          = $styling['object_fit'] ?? 'cover';
 $object_position     = $styling['object_position'] ?? 'center';
-$border_radius       = px($styling['border_radius'], '12px'); // Voor alles
+$border_radius       = px($styling['border_radius'], '12px');
 $border_width        = px($styling['border_width'], '0px');
 $border_style        = $styling['border_style'] ?? 'solid';
 $border_color        = $styling['border_color'] ?? 'transparent';
@@ -26,6 +24,7 @@ $margin_top          = px($styling['margin_top']);
 $margin_right        = px($styling['margin_right']);
 $margin_bottom       = px($styling['margin_bottom']);
 $margin_left         = px($styling['margin_left']);
+$custom_margin       = "$margin_top $margin_right $margin_bottom $margin_left";
 $padding             = px($styling['padding']);
 $display             = $styling['display'] ?? 'block';
 $overflow            = $styling['overflow'] ?? 'visible';

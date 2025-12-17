@@ -18,11 +18,11 @@
     color: #333;
     text-decoration: none;
     background-color: $pagination-bg;
-    transition: background-color 0.3s ease;
+    transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
 
     &:hover {
       color: #fff;
-      background-color: $hover-pagination;
+      background-color: #1a5427cd;
     }
   }
 
@@ -36,4 +36,6 @@
     background-color: $hover-pagination;
     border-radius: 5px;
     color: #fff;
+    cursor: pointer;
+    background-color: #1a5427cd;
 }
