@@ -3226,11 +3226,7 @@
                                                 {
                                                     "key": "field_68f9e469a805a",
                                                     "label": "Image Styling",
-                                                    "name": "",
-                                                    "aria-label": "",
                                                     "type": "tab",
-                                                    "instructions": "",
-                                                    "required": 0,
                                                     "conditional_logic": [
                                                         [
                                                             {
@@ -3238,24 +3234,14 @@
                                                                 "operator": "!=empty"
                                                             }
                                                         ]
-                                                    ],
-                                                    "wrapper": {
-                                                        "width": "",
-                                                        "class": "",
-                                                        "id": ""
-                                                    },
-                                                    "placement": "top",
-                                                    "endpoint": 0,
-                                                    "selected": 0
+                                                    ]
                                                 },
                                                 {
                                                     "key": "field_68f9e478a805b",
                                                     "label": "Styling",
                                                     "name": "styling",
-                                                    "aria-label": "",
                                                     "type": "group",
-                                                    "instructions": "",
-                                                    "required": 0,
+                                                    "layout": "block",
                                                     "conditional_logic": [
                                                         [
                                                             {
@@ -3264,188 +3250,298 @@
                                                             }
                                                         ]
                                                     ],
-                                                    "wrapper": {
-                                                        "width": "",
-                                                        "class": "",
-                                                        "id": ""
-                                                    },
-                                                    "layout": "block",
-                                                    "acfe_seamless_style": 0,
-                                                    "acfe_group_modal": 0,
                                                     "sub_fields": [
                                                         {
-                                                            "key": "field_68f9e4f59d191",
-                                                            "label": "Corners",
-                                                            "name": "corners",
-                                                            "aria-label": "",
-                                                            "type": "text",
-                                                            "instructions": "",
-                                                            "required": 0,
-                                                            "conditional_logic": 0,
-                                                            "wrapper": {
-                                                                "width": "",
-                                                                "class": "",
-                                                                "id": ""
-                                                            },
-                                                            "default_value": "12px",
-                                                            "maxlength": "",
-                                                            "allow_in_bindings": 0,
-                                                            "placeholder": "",
-                                                            "prepend": "Fill in the border radius of the image",
-                                                            "append": ""
+                                                            "key": "tab_dimensions",
+                                                            "label": "Dimensions",
+                                                            "type": "tab"
                                                         },
                                                         {
-                                                            "key": "field_68f9e51b9d192",
-                                                            "label": "Custom height or width",
-                                                            "name": "custom_height_or_width",
-                                                            "aria-label": "",
-                                                            "type": "select",
-                                                            "instructions": "",
-                                                            "required": 0,
-                                                            "conditional_logic": 0,
-                                                            "wrapper": {
-                                                                "width": "",
-                                                                "class": "",
-                                                                "id": ""
-                                                            },
-                                                            "choices": {
-                                                                "custom": "Custom",
-                                                                "custom width": "Custom Width",
-                                                                "custom height": "Custom Height"
-                                                            },
-                                                            "default_value": "custom width",
-                                                            "return_format": "value",
-                                                            "multiple": 0,
-                                                            "allow_null": 0,
-                                                            "allow_in_bindings": 0,
-                                                            "ui": 0,
-                                                            "ajax": 0,
-                                                            "placeholder": "",
-                                                            "create_options": 0,
-                                                            "save_options": 0,
-                                                            "allow_custom": 0,
-                                                            "search_placeholder": ""
+                                                            "key": "width",
+                                                            "label": "Width",
+                                                            "name": "width",
+                                                            "type": "text",
+                                                            "default_value": "100%"
                                                         },
                                                         {
-                                                            "key": "field_68f9e5d69d193",
-                                                            "label": "Custom Width and Heigth",
-                                                            "name": "custom_width_and_heigth",
-                                                            "aria-label": "",
-                                                            "type": "text",
-                                                            "instructions": "",
-                                                            "required": 0,
-                                                            "conditional_logic": [
-                                                                [
-                                                                    {
-                                                                        "field": "field_68f9e51b9d192",
-                                                                        "operator": "==",
-                                                                        "value": "custom"
-                                                                    }
-                                                                ]
-                                                            ],
-                                                            "wrapper": {
-                                                                "width": "",
-                                                                "class": "",
-                                                                "id": ""
-                                                            },
-                                                            "default_value": "100%",
-                                                            "maxlength": "",
-                                                            "allow_in_bindings": 0,
-                                                            "placeholder": "",
-                                                            "prepend": "",
-                                                            "append": ""
+                                                            "key": "max_width",
+                                                            "label": "Max Width",
+                                                            "name": "max_width",
+                                                            "type": "text"
                                                         },
                                                         {
-                                                            "key": "field_68f9e6299d194",
-                                                            "label": "Custom Height and Width",
-                                                            "name": "custom_height_and_width",
-                                                            "aria-label": "",
+                                                            "key": "height",
+                                                            "label": "Height",
+                                                            "name": "height",
                                                             "type": "text",
-                                                            "instructions": "",
-                                                            "required": 0,
-                                                            "conditional_logic": [
-                                                                [
-                                                                    {
-                                                                        "field": "field_68f9e51b9d192",
-                                                                        "operator": "==",
-                                                                        "value": "custom"
-                                                                    }
-                                                                ]
-                                                            ],
-                                                            "wrapper": {
-                                                                "width": "",
-                                                                "class": "",
-                                                                "id": ""
-                                                            },
-                                                            "default_value": "100%",
-                                                            "maxlength": "",
-                                                            "allow_in_bindings": 0,
-                                                            "placeholder": "",
-                                                            "prepend": "",
-                                                            "append": ""
+                                                            "default_value": "auto"
                                                         },
                                                         {
-                                                            "key": "field_68f9e6679d195",
-                                                            "label": "Image Width",
-                                                            "name": "image_width",
-                                                            "aria-label": "",
-                                                            "type": "text",
-                                                            "instructions": "",
-                                                            "required": 0,
-                                                            "conditional_logic": [
-                                                                [
-                                                                    {
-                                                                        "field": "field_68f9e51b9d192",
-                                                                        "operator": "==",
-                                                                        "value": "custom width"
-                                                                    }
-                                                                ]
-                                                            ],
-                                                            "wrapper": {
-                                                                "width": "",
-                                                                "class": "",
-                                                                "id": ""
-                                                            },
-                                                            "default_value": "100%",
-                                                            "maxlength": "",
-                                                            "allow_in_bindings": 0,
-                                                            "placeholder": "",
-                                                            "prepend": "",
-                                                            "append": ""
+                                                            "key": "aspect_ratio",
+                                                            "label": "Aspect Ratio",
+                                                            "name": "aspect_ratio",
+                                                            "type": "text"
                                                         },
                                                         {
-                                                            "key": "field_68f9e6a49d196",
-                                                            "label": "Image Height",
-                                                            "name": "image_height",
-                                                            "aria-label": "",
+                                                            "key": "object_fit",
+                                                            "label": "Object Fit",
+                                                            "name": "object_fit",
                                                             "type": "text",
-                                                            "instructions": "",
-                                                            "required": 0,
-                                                            "conditional_logic": [
-                                                                [
-                                                                    {
-                                                                        "field": "field_68f9e51b9d192",
-                                                                        "operator": "==",
-                                                                        "value": "custom height"
-                                                                    }
-                                                                ]
-                                                            ],
-                                                            "wrapper": {
-                                                                "width": "",
-                                                                "class": "",
-                                                                "id": ""
-                                                            },
-                                                            "default_value": "100%",
-                                                            "maxlength": "",
-                                                            "allow_in_bindings": 0,
-                                                            "placeholder": "",
-                                                            "prepend": "",
-                                                            "append": ""
+                                                            "default_value": "cover"
+                                                        },
+                                                        {
+                                                            "key": "object_position",
+                                                            "label": "Object Position",
+                                                            "name": "object_position",
+                                                            "type": "text",
+                                                            "default_value": "center"
+                                                        },
+                                                        {
+                                                            "key": "border_radius",
+                                                            "label": "Border Radius",
+                                                            "name": "border_radius",
+                                                            "type": "text",
+                                                            "default_value": "12px"
+                                                        },
+                                                        {
+                                                            "key": "tab_borders",
+                                                            "label": "Borders & Shadow",
+                                                            "type": "tab"
+                                                        },
+                                                        {
+                                                            "key": "border",
+                                                            "label": "Border",
+                                                            "name": "border",
+                                                            "type": "text"
+                                                        },
+                                                        {
+                                                            "key": "border_width",
+                                                            "label": "Border Width",
+                                                            "name": "border_width",
+                                                            "type": "text"
+                                                        },
+                                                        {
+                                                            "key": "border_style",
+                                                            "label": "Border Style",
+                                                            "name": "border_style",
+                                                            "type": "text"
+                                                        },
+                                                        {
+                                                            "key": "border_color",
+                                                            "label": "Border Color",
+                                                            "name": "border_color",
+                                                            "type": "text"
+                                                        },
+                                                        {
+                                                            "key": "outline",
+                                                            "label": "Outline",
+                                                            "name": "outline",
+                                                            "type": "text"
+                                                        },
+                                                        {
+                                                            "key": "box_shadow",
+                                                            "label": "Box Shadow",
+                                                            "name": "box_shadow",
+                                                            "type": "text"
+                                                        },
+                                                        {
+                                                            "key": "tab_spacing",
+                                                            "label": "Spacing & Layout",
+                                                            "type": "tab"
+                                                        },
+                                                        {
+                                                            "key": "margin",
+                                                            "label": "Margin",
+                                                            "name": "margin",
+                                                            "type": "text"
+                                                        },
+                                                        {
+                                                            "key": "margin_top",
+                                                            "label": "Margin Top",
+                                                            "name": "margin_top",
+                                                            "type": "text"
+                                                        },
+                                                        {
+                                                            "key": "margin_right",
+                                                            "label": "Margin Right",
+                                                            "name": "margin_right",
+                                                            "type": "text"
+                                                        },
+                                                        {
+                                                            "key": "margin_bottom",
+                                                            "label": "Margin Bottom",
+                                                            "name": "margin_bottom",
+                                                            "type": "text"
+                                                        },
+                                                        {
+                                                            "key": "margin_left",
+                                                            "label": "Margin Left",
+                                                            "name": "margin_left",
+                                                            "type": "text"
+                                                        },
+                                                        {
+                                                            "key": "padding",
+                                                            "label": "Padding",
+                                                            "name": "padding",
+                                                            "type": "text"
+                                                        },
+                                                        {
+                                                            "key": "display",
+                                                            "label": "Display",
+                                                            "name": "display",
+                                                            "type": "text",
+                                                            "default_value": "block"
+                                                        },
+                                                        {
+                                                            "key": "overflow",
+                                                            "label": "Overflow",
+                                                            "name": "overflow",
+                                                            "type": "text"
+                                                        },
+                                                        {
+                                                            "key": "tab_effects",
+                                                            "label": "Effects",
+                                                            "type": "tab"
+                                                        },
+                                                        {
+                                                            "key": "opacity",
+                                                            "label": "Opacity",
+                                                            "name": "opacity",
+                                                            "type": "text",
+                                                            "default_value": "1"
+                                                        },
+                                                        {
+                                                            "key": "filter",
+                                                            "label": "Filter",
+                                                            "name": "filter",
+                                                            "type": "text"
+                                                        },
+                                                        {
+                                                            "key": "mix_blend_mode",
+                                                            "label": "Mix Blend Mode",
+                                                            "name": "mix_blend_mode",
+                                                            "type": "text"
+                                                        },
+                                                        {
+                                                            "key": "tab_transform",
+                                                            "label": "Transform",
+                                                            "type": "tab"
+                                                        },
+                                                        {
+                                                            "key": "transform",
+                                                            "label": "Transform",
+                                                            "name": "transform",
+                                                            "type": "text"
+                                                        },
+                                                        {
+                                                            "key": "transform_origin",
+                                                            "label": "Transform Origin",
+                                                            "name": "transform_origin",
+                                                            "type": "text"
+                                                        },
+                                                        {
+                                                            "key": "tab_animation",
+                                                            "label": "Interaction & Animation",
+                                                            "type": "tab"
+                                                        },
+                                                        {
+                                                            "key": "transition",
+                                                            "label": "Transition",
+                                                            "name": "transition",
+                                                            "type": "text",
+                                                            "default_value": "all 0.3s ease"
+                                                        },
+                                                        {
+                                                            "key": "transition_duration",
+                                                            "label": "Transition Duration",
+                                                            "name": "transition_duration",
+                                                            "type": "text"
+                                                        },
+                                                        {
+                                                            "key": "transition_timing_function",
+                                                            "label": "Transition Timing Function",
+                                                            "name": "transition_timing_function",
+                                                            "type": "text"
+                                                        },
+                                                        {
+                                                            "key": "cursor",
+                                                            "label": "Cursor",
+                                                            "name": "cursor",
+                                                            "type": "text"
+                                                        },
+                                                        {
+                                                            "key": "tab_container",
+                                                            "label": "Container",
+                                                            "type": "tab"
+                                                        },
+                                                        {
+                                                            "key": "background_color",
+                                                            "label": "Background Color",
+                                                            "name": "background_color",
+                                                            "type": "text"
+                                                        },
+                                                        {
+                                                            "key": "container_border_radius",
+                                                            "label": "Container Border Radius",
+                                                            "name": "container_border_radius",
+                                                            "type": "text"
+                                                        },
+                                                        {
+                                                            "key": "container_overflow",
+                                                            "label": "Container Overflow",
+                                                            "name": "container_overflow",
+                                                            "type": "text",
+                                                            "default_value": "hidden"
+                                                        },
+                                                        {
+                                                            "key": "text_align",
+                                                            "label": "Text Align",
+                                                            "name": "text_align",
+                                                            "type": "text"
+                                                        },
+                                                        {
+                                                            "key": "box_sizing",
+                                                            "label": "Box Sizing",
+                                                            "name": "box_sizing",
+                                                            "type": "text",
+                                                            "default_value": "border-box"
+                                                        },
+                                                        {
+                                                            "key": "position",
+                                                            "label": "Position",
+                                                            "name": "position",
+                                                            "type": "text"
+                                                        },
+                                                        {
+                                                            "key": "tab_advanced",
+                                                            "label": "Advanced",
+                                                            "type": "tab"
+                                                        },
+                                                        {
+                                                            "key": "z_index",
+                                                            "label": "Z-Index",
+                                                            "name": "z_index",
+                                                            "type": "text"
+                                                        },
+                                                        {
+                                                            "key": "clip_path",
+                                                            "label": "Clip Path",
+                                                            "name": "clip_path",
+                                                            "type": "text"
+                                                        },
+                                                        {
+                                                            "key": "mask_image",
+                                                            "label": "Mask Image",
+                                                            "name": "mask_image",
+                                                            "type": "text"
+                                                        },
+                                                        {
+                                                            "key": "will_change",
+                                                            "label": "Will Change",
+                                                            "name": "will_change",
+                                                            "type": "text"
                                                         }
-                                                    ],
-                                                    "acfe_group_modal_close": 0,
-                                                    "acfe_group_modal_button": "",
-                                                    "acfe_group_modal_size": "large"
+                                                    ]
                                                 }
                                             ],
                                             "min": "",

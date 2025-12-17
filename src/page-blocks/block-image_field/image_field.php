@@ -1,5 +1,5 @@
 <?php
-$image = get_sub_field('image'); // of get_field('image') als het geen repeater/subfield is
+$image = get_sub_field('image'); 
 $styling = get_sub_field('styling') ?: [];
 $corners = $styling['corners'] ?? '12px';
 ?>
