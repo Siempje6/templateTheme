@@ -9,10 +9,6 @@
             border-bottom-right-radius: var(--acc-radius-bottom-right, var(--acc-radius));
         }
 
-        .accordion-content {
-            background-color: var(--acc-active-content-bg, inherit);
-        }
-
         .accordion-icon i,
         .accordion-icon svg {
             transform: rotate(var(--acc-active-icon-rotation, 180deg));

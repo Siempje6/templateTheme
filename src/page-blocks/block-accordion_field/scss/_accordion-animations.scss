@@ -7,19 +7,9 @@
             opacity var(--acc-anim-duration, 0.3s) var(--acc-anim-timing, ease);
     }
 
-    .accordion-title {
-        transition:
-            background-color var(--acc-anim-duration, 0.3s) var(--acc-anim-timing, ease),
-            color var(--acc-anim-duration, 0.3s) var(--acc-anim-timing, ease);
-        border-top-left-radius: var(--acc-radius-top-left, var(--acc-radius));
-        border-top-right-radius: var(--acc-radius-top-right, var(--acc-radius));
-        border-bottom-left-radius: var(--acc-radius-bottom-left, var(--acc-radius));
-        border-bottom-right-radius: var(--acc-radius-bottom-right, var(--acc-radius));
-    }
-
     .accordion-item.active .accordion-icon i,
     .accordion-item.active .accordion-icon svg {
-        transition: transform var(--acc-anim-duration, 0.3s) var(--acc-anim-timing, ease);
+        transition: transform var(--acc-anim-duration, 0.3s) var(--acc-anim-timing, ease-in-out);
     }
 
     .accordion-title:hover {

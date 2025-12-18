@@ -19,6 +19,11 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  transition: background-color var(--acc-anim-duration, 0.3s) var(--acc-anim-timing, ease), color var(--acc-anim-duration, 0.3s) var(--acc-anim-timing, ease);
+  border-top-left-radius: var(--acc-radius-top-left, var(--acc-radius));
+  border-top-right-radius: var(--acc-radius-top-right, var(--acc-radius));
+  border-bottom-left-radius: var(--acc-radius-bottom-left, var(--acc-radius));
+  border-bottom-right-radius: var(--acc-radius-bottom-right, var(--acc-radius));
 }
 .accordion-wrapper .accordion-title .accordion-icon i {
   color: var(--acc-icon-color);
@@ -27,6 +32,7 @@
   display: inline-block;
 }
 .accordion-wrapper .accordion-content {
+  background-color: var(--acc-active-content-bg, inherit);
   max-height: 0;
   overflow: hidden;
   transition: max-height var(--acc-transition-speed) ease;
@@ -63,9 +69,6 @@
   border-top-right-radius: var(--acc-radius-top-right, var(--acc-radius));
   border-bottom-left-radius: var(--acc-radius-bottom-left, var(--acc-radius));
   border-bottom-right-radius: var(--acc-radius-bottom-right, var(--acc-radius));
-}
-.accordion-wrapper .accordion-item.active .accordion-content {
-  background-color: var(--acc-active-content-bg, inherit);
 }
 .accordion-wrapper .accordion-item.active .accordion-icon i,
 .accordion-wrapper .accordion-item.active .accordion-icon svg {
@@ -118,16 +121,9 @@
   overflow: hidden;
   transition: max-height var(--acc-anim-duration, 0.3s) var(--acc-anim-timing, ease), opacity var(--acc-anim-duration, 0.3s) var(--acc-anim-timing, ease);
 }
-.accordion-wrapper .accordion-title {
-  transition: background-color var(--acc-anim-duration, 0.3s) var(--acc-anim-timing, ease), color var(--acc-anim-duration, 0.3s) var(--acc-anim-timing, ease);
-  border-top-left-radius: var(--acc-radius-top-left, var(--acc-radius));
-  border-top-right-radius: var(--acc-radius-top-right, var(--acc-radius));
-  border-bottom-left-radius: var(--acc-radius-bottom-left, var(--acc-radius));
-  border-bottom-right-radius: var(--acc-radius-bottom-right, var(--acc-radius));
-}
 .accordion-wrapper .accordion-item.active .accordion-icon i,
 .accordion-wrapper .accordion-item.active .accordion-icon svg {
-  transition: transform var(--acc-anim-duration, 0.3s) var(--acc-anim-timing, ease);
+  transition: transform var(--acc-anim-duration, 0.3s) var(--acc-anim-timing, ease-in-out);
 }
 .accordion-wrapper .accordion-title:hover {
   background-color: var(--acc-hover-bg, inherit);
