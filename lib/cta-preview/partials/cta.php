@@ -17,7 +17,7 @@ if ($columns) {
                 $layout = $block['acf_fc_layout'];
                 $partial = __DIR__ . '/' . $layout . '.php';
                 if (file_exists($partial)) {
-                    include $partial;
+                    include_once $partial;
                 }
             }
         }

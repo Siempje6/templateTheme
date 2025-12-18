@@ -12,7 +12,7 @@ if (!$ctas) {
 
         $file = get_template_directory() . '/lib/cta-preview/render.php';
         if (file_exists($file)) {
-            include $file;
+            include_once $file;
         } else {
             echo '<p style="color:red;">CTA render bestand niet gevonden!</p>';
         }

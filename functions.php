@@ -204,7 +204,7 @@ function render_cta_preview_page()
 {
     $file = get_template_directory() . '/lib/cta-preview/render.php';
     if (file_exists($file)) {
-        include $file;
+        include_once $file;
     } else {
         echo '<div class="notice notice-error"><p>CTA Preview bestand niet gevonden in lib/cta-preview/!</p></div>';
     }
@@ -214,7 +214,7 @@ function render_fonts_preview_page()
 {
     $file = get_template_directory() . '/lib/theme-settings/render.php';
     if (file_exists($file)) {
-        include $file;
+        include_once $file;
     } else {
         echo '<div class="notice notice-error"><p>Settings page bestand niet gevonden in lib/theme-settings/!</p></div>';
     }
@@ -224,7 +224,7 @@ function render_settings_page()
 {
     $file = get_template_directory() . '/lib/settings/render.php';
     if (file_exists($file)) {
-        include $file;
+        include_once $file;
     } else {
         echo '<div class="notice notice-error"><p>Settings page bestand niet gevonden in lib/settings/!</p></div>';
     }
@@ -364,7 +364,7 @@ add_action('acf/render_field', function ($field) {
     $cta_rows = [$cta];
     $file = get_template_directory() . '/lib/cta-preview/render.php';
     if (file_exists($file)) {
-        include $file;
+        include_once $file;
     } else {
         echo '<p style="color:red;">Herbruikbaar blok render bestand niet gevonden!</p>';
     }

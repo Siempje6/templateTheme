@@ -44,7 +44,7 @@ foreach ($fields as $label => $info) {
             $field      = $field_object;
             $is_preview = true;
 
-            include $template;
+            include_once $template;
 
             echo '<pre style="background:#111;color:#0f0;padding:20px;margin-top:20px;">';
             print_r($layout);
