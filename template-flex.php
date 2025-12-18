@@ -134,12 +134,13 @@ Template Name: Flexibele Pagina
             }
         }
 
+        /*
         .column-item,
         .header-column,
         .footer-column {
             border: none !important;
         }
-
+        */
 
     </style>
 
