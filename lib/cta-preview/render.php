@@ -15,7 +15,9 @@ echo '<label for="cta_class">Selecteer een Herbruikbaar blok:</label> ';
 echo '<select name="cta_class" id="cta_class" class="regular-text">';
 foreach ($ctas as $cta) {
     $class = $cta['class'] ?? '';
-    if (!$class) continue;
+    if (!$class)  {
+        continue;
+    }
     echo '<option value="' . esc_attr($class) . '">' . esc_html($class) . '</option>';
 }
 echo '</select> ';
@@ -124,7 +126,7 @@ echo '</div>';
                                         Instagram: '<i class="fa fa-instagram"></i>',
                                         LinkedIn: '<i class="fa fa-linkedin"></i>',
                                         YouTube: '<i class="fa fa-youtube-play"></i>',
-                                        TikTok: '<i class="fa fa-music"></i>', 
+                                        TikTok: '<i class="fa fa-music"></i>',
                                         X: '<i class="fa fa-twitter"></i>',
                                         Pinterest: '<i class="fa fa-pinterest"></i>',
                                         Snapchat: '<i class="fa fa-snapchat-ghost"></i>',

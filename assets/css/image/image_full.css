@@ -27,4 +27,12 @@
   display: block;
 }
 
+@media (max-width: 768px) {
+  .image-container {
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
 /*# sourceMappingURL=image_full.css.map */
