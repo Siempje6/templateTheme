@@ -33,6 +33,7 @@
 }
 .accordion-wrapper .accordion-item.active .accordion-content {
   max-height: 500px;
+  opacity: 1;
 }
 
 .accordion-title .accordion-icon {
@@ -116,9 +117,6 @@
   opacity: 0;
   overflow: hidden;
   transition: max-height var(--acc-anim-duration, 0.3s) var(--acc-anim-timing, ease), opacity var(--acc-anim-duration, 0.3s) var(--acc-anim-timing, ease);
-}
-.accordion-wrapper .accordion-item.active .accordion-content {
-  opacity: 1;
 }
 .accordion-wrapper .accordion-title {
   transition: background-color var(--acc-anim-duration, 0.3s) var(--acc-anim-timing, ease), color var(--acc-anim-duration, 0.3s) var(--acc-anim-timing, ease);

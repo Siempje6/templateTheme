@@ -5,7 +5,7 @@ $button_text = $settings['button_text'] ?? 'Zoeken';
 $show_button = $settings['show_button'] ?? true;
 ?>
 
-<div style="display:flex; justify-content:center; align-items:center;">
+<div style="display:flex; justify-content:center; align-items:center; display: none;">
     <form class="search-header-form" action="<?php echo esc_url(home_url('/zoeken/')); ?>" method="get" style="position:relative; max-width:400px; display:flex; gap:0;">
         <input
             type="text"

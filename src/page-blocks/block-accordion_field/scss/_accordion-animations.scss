@@ -7,10 +7,6 @@
             opacity var(--acc-anim-duration, 0.3s) var(--acc-anim-timing, ease);
     }
 
-    .accordion-item.active .accordion-content {
-        opacity: 1;
-    }
-
     .accordion-title {
         transition:
             background-color var(--acc-anim-duration, 0.3s) var(--acc-anim-timing, ease),

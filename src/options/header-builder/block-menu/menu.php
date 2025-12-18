@@ -43,7 +43,7 @@
 .rs-mega-brand a {
     font-size: 20px;
     font-weight: 700;
-    color: #111;
+    color: #fff;
     text-decoration: none;
 }
 
@@ -69,7 +69,7 @@
 }
 .rs-mega-menu a {
     text-decoration: none;
-    color: #111;
+    color: #fff;
     font-weight: 500;
     padding: 8px 0;
     display: inline-block;
